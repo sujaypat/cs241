@@ -1,8 +1,9 @@
-#include <"stdio.h">
+#include <stdio.h>
 
 int main(){
-  int* ebola = 1;
-  
-  return 1;
 
+  char* ebola = NULL;
+  printf(*ebola);
+
+  return 1;
 }
