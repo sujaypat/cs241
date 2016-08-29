@@ -17,9 +17,8 @@ int main() {
   first_step(81);
 
 
-  int* second = malloc(sizeof(int));
-  *second = 132;
-  second_step(second);
+  int second = 132;
+  second_step(&second);
   free(second);
 
 
