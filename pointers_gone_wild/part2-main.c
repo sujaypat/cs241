@@ -31,7 +31,7 @@ int main() {
   free(arr);
 
 
-  char *strange = malloc(sizeof(int));
+  char *strange = malloc(32);
   strange = strcat("0\0\0\0\0", "5");
   printf("%d", *(int *)(strange + 5));
   strange_step(strange);
