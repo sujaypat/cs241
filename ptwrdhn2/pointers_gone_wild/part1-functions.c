@@ -173,6 +173,7 @@ void ten(int *x) {
  */
 void eleven(const char *str) {
   char *s = malloc(7 + strlen(str));
+  strcpy(s, "");
   strcat(s, "Hello ");
   strcat(s, str);
   printf("%s\n", s);
@@ -191,7 +192,9 @@ void twelve() {
 
   for (i = 0; i < n; i++)
     printf("%f ", values[i]);
+	free(values[i]);
   printf("\n");
+  free(values);
 }
 
 /**
