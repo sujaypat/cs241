@@ -39,7 +39,7 @@ int main() {
   strange_step(strange);
   free(strange);
 
-  char *empty[6] = malloc(6);
+  char *empty = malloc(6);
   *empty = "00000";
   empty_step(empty);
   free(empty);
