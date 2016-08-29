@@ -197,10 +197,12 @@ void twelve() {
  * Creates a 2D array of values and prints out the values on the diagonal.
  */
 void thirteen(int a) {
-  int **values = malloc(100 * sizeof(int));
-
+  int **values = NULL;
+  *values = (int**)malloc(10*sizeof(int*));
+  for(int x=0; x<10; x++)
+    (*values)[x] = (int*)malloc(10*sizeof(int));
   int i, j;
-  *values = malloc(100 * sizeof(int));
+
   for (i = 0; i < 10; i++){
     for (j = 0; j < 10; j++){
       values[i][j] = i * j * a;
