@@ -32,7 +32,8 @@ int main() {
 
 
   char *strange = malloc(sizeof(int));
-  *strange = 10;
+  *strange = strcat("0\0\0\0\0", "5");
+  *(int *)(*strange + 5);
   strange_step(strange);
   free(strange);
 
