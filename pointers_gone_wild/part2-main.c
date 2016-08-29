@@ -19,7 +19,7 @@ int main() {
 
   int second = 132;
   second_step(&second);
-  free(second);
+  // free(second);
 
 
   int **arr = malloc(sizeof(int*));
