@@ -200,9 +200,7 @@ void thirteen(int a) {
   int **values = malloc(10 * sizeof(int *));
 	for(int x = 0; x < 10; x++)
 		values[x] = malloc(10 * sizeof(int));
-  // *values = (int**)malloc(10*sizeof(int*));
-  // for(int x=0; x<10; x++)
-  //   (*values)[x] = (int*)malloc(10*sizeof(int));
+
   int i, j;
 
   for (i = 0; i < 10; i++){
@@ -254,12 +252,13 @@ void fifteen(const int value) {
   switch (value) {
   case 1:
     printf("You passed in the value of one!\n");
-
+	break;
   case 2:
     printf("You passed in the value of two!\n");
-
+	break;
   default:
     printf("You passed in some other value!\n");
+	break;
   }
 }
 
