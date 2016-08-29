@@ -33,7 +33,7 @@ int main() {
 
   char *strange = malloc(16);
   *(strange + 5) = (char)15;
-  printf("%d", *(int *)(strange + 5));
+  // printf("%d", *(int *)(strange + 5));
   strange_step(strange);
   free(strange);
 
