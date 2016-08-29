@@ -326,7 +326,7 @@ void eighteen(const int k) {
  */
 long int clear_bits(long int value, long int flag) {
   // TODO clear_bits
-  return value ^ flag;
+  return (value ^ flag) & value;
 }
 
 /**
