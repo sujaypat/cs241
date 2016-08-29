@@ -16,13 +16,23 @@ int main() {
   // your code here
   first_step(81);
 
-  int* second = 132;
-  second_step(*second);
 
-  int **double[] = new double[1];
-  double[0] = 8942;
-  double_step(double);
+  int* second = malloc(sizeof(int));
+  *second = 132;
+  second_step(second);
+  free(second);
 
-  strange_step();
+
+  int **arr = malloc(sizeof(int));
+  arr[0] = malloc(sizeof(int))
+  *arr[0] = 8942;
+  double_step(arr);
+  free(arr[0]);
+  free(arr);
+
+  int *strange = 10;
+  strange_step(strange);
+  free(strange);
+  
   return 0;
 }

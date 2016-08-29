@@ -359,7 +359,7 @@ int little_automaton(int (*transition)(int, char), const char *input_string) {
   int state = 0;
   int len = strlen(input_string);
   for(int i = 0; i < len; i++){
-    state = (*transition)(state,input_string[i]);
+    state = (*transition)(state, input_string[i]);
   }
   // put something here
 
