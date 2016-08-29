@@ -192,7 +192,6 @@ void twelve() {
 
   for (i = 0; i < n; i++)
     printf("%f ", values[i]);
-	free(*values[i]);
   printf("\n");
   free(values);
 }
@@ -214,8 +213,10 @@ void thirteen(int a) {
   }
   for (i = 0; i < 10; i++){
     printf("%d ", values[i][i]);
+	free(values[i]);
   }
   printf("\n");
+  free(values);
 }
 
 /**
