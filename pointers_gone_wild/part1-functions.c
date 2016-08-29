@@ -172,8 +172,8 @@ void ten(int *x) {
  * prints the concatenated string.
  */
 void eleven(const char *str) {
-  char *s = malloc(7 + strlen(str));
-  *s = "Hello ";
+  char *s = malloc(6 + strlen(str));
+  strcat(s, "Hello ");
   strcat(s, str);
   printf("%s\n", s);
 }
