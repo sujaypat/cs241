@@ -198,8 +198,8 @@ void twelve() {
  */
 void thirteen(int a) {
   int **values = malloc(10 * sizeof(int *));
-	for(x = 0; x < 10; x++)
-		array1[x] = malloc(10 * sizeof(int));
+	for(int x = 0; x < 10; x++)
+		values[x] = malloc(10 * sizeof(int));
   // *values = (int**)malloc(10*sizeof(int*));
   // for(int x=0; x<10; x++)
   //   (*values)[x] = (int*)malloc(10*sizeof(int));
