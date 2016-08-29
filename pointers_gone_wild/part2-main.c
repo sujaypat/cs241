@@ -32,9 +32,9 @@ int main() {
 
 
   char *strange = malloc(16);
-  for(int i = 0; i < 16; i++)
+  for(int i = 0; i < 16; i++){
 	  *(strange + i) = '\0';
-
+  }
   *(strange + 5) = (char)15;
   strange_step(strange);
   free(strange);
