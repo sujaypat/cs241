@@ -40,7 +40,7 @@ int main() {
   free(strange);
 
   char *empty = malloc(6);
-  *empty = "00000";
+  empty = "00000\0";
   empty_step(empty);
   free(empty);
 
