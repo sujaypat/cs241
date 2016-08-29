@@ -31,7 +31,7 @@ int main() {
   free(arr);
 
 
-  char *strange;
+  char *strange = NULL;
   *strange = 10;
   strange_step(strange);
   free(strange);
