@@ -197,7 +197,7 @@ void twelve() {
  * Creates a 2D array of values and prints out the values on the diagonal.
  */
 void thirteen(int a) {
-  int **values;
+  int **values = NULL;
 
   int i, j;
   *values = malloc(100 * sizeof(int));
