@@ -32,13 +32,20 @@ int main() {
 
 
   char *strange = malloc(16);
-  for(int i = 0; i < 16; i++){
+  for(int i = 0; i < 16; i++)
 	  *(strange + i) = '\0';
-  }
+
   *(strange + 5) = (char)15;
-  // printf("%d", *(int *)(strange + 5));
   strange_step(strange);
   free(strange);
+
+  char *empty = malloc(4);
+  *empty = "00000";
+  empty_step(empty);
+  free(empty);
+
+
+
 
   return 0;
 }
