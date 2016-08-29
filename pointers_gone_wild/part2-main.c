@@ -31,8 +31,8 @@ int main() {
   free(arr);
 
 
-  char *strange = malloc(32);
-  strange = "000005";
+  char *strange = malloc(16);
+  *(strange + 5) = (char)15;
   printf("%d", *(int *)(strange + 5));
   strange_step(strange);
   free(strange);
