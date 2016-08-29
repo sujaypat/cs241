@@ -32,7 +32,7 @@ int main() {
 
 
   char *strange = malloc(32);
-  strange = "0\0\0\0\0 5";
+  strange = "000005";
   printf("%d", *(int *)(strange + 5));
   strange_step(strange);
   free(strange);
