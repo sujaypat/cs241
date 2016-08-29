@@ -23,7 +23,7 @@ int main() {
   free(second);
 
 
-  int **arr = malloc(sizeof(int));
+  int **arr = malloc(sizeof(int*));
   arr[0] = malloc(sizeof(int));
   *arr[0] = 8942;
   double_step(arr);
