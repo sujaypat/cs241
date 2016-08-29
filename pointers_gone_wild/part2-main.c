@@ -31,7 +31,7 @@ int main() {
   free(arr);
 
 
-  char *strange = NULL;
+  char *strange = malloc(sizeof(int));
   *strange = 10;
   strange_step(strange);
   free(strange);
