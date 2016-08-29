@@ -176,6 +176,7 @@ void eleven(const char *str) {
   strcat(s, "Hello ");
   strcat(s, str);
   printf("%s\n", s);
+  free(s);
 }
 
 /**
@@ -270,7 +271,7 @@ void fifteen(const int value) {
  *     A newly allocated string, stored on the heap, with the value "Hello".
  */
 char *sixteen() {
-  char *s = malloc(5);
+  char *s = malloc(6);
   strcpy(s, "Hello");
   return s;
 }
