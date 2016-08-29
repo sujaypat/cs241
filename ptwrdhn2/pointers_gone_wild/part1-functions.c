@@ -154,6 +154,7 @@ void nine() {
   *p = (float)12.5;
 
   printf("The value of p is: %f\n", *p);
+  free(p);
 }
 
 /**
