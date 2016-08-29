@@ -14,5 +14,15 @@
  */
 int main() {
   // your code here
+  first_step(81);
+
+  int* second = 132;
+  second_step(*second);
+
+  int **double[] = new double[1];
+  double[0] = 8942;
+  double_step(double);
+
+  strange_step();
   return 0;
 }
