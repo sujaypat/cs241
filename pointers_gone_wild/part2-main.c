@@ -49,9 +49,9 @@ int main() {
   three_step((char*)420, (char*)422, (char*)424);
 
 
-  empty[1] = 1337;
-  empty[2] = 1345;
-  empty[3] = 1353;
+  empty[1] = 57;
+  empty[2] = 65;
+  empty[3] = 73;
   step_step_step(empty, empty, empty);
 
 
