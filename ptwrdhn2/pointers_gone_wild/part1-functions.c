@@ -192,7 +192,7 @@ void twelve() {
 
   for (i = 0; i < n; i++)
     printf("%f ", values[i]);
-	free(values[i]);
+	free(*values[i]);
   printf("\n");
   free(values);
 }
