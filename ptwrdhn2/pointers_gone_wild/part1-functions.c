@@ -131,7 +131,7 @@ void seven(const char *a) {
  * on it's own line, then frees the memory used on the heap.
  */
 void eight() {
-  char *s = malloc(5);
+  char *s = malloc(6);
 
   s[0] = 'H';
   s[1] = 'e';
