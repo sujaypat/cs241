@@ -201,10 +201,11 @@ void thirteen(int a) {
 
   int i, j;
   values = malloc(100 * sizeof(int));
-  for (i = 0; i < 10; i++)
-    for (j = 0; j < 10; j++)
+  for (i = 0; i < 10; i++){
+    for (j = 0; j < 10; j++){
       values[i][j] = i * j * a;
-
+  	}
+  }
   for (i = 0; i < 10; i++)
     printf("%d ", values[i][i]);
   printf("\n");
