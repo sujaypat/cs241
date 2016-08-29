@@ -37,14 +37,34 @@ int main() {
   strange_step(strange);
   free(strange);
 
+
   char empty[4] = {0,0,0,0};
   empty_step((void*) empty);
+
 
   empty[3] = 'u';
   two_step(empty, empty);
 
 
+  three_step((char*)420, (char*)422, (char*)424);
 
 
+  empty[1] = 1337;
+  empty[2] = 1345;
+  empty[3] = 1353;
+  step_step_step(empty, empty, empty);
+
+
+  char odd = 1;
+  it_may_be_odd(&odd, (int)odd);
+
+
+  char* tok = "CS241";
+  tok_step(tok);
+
+
+  empty[0] = 1;
+  empty[1] = 2;
+  the_end(empty, empty);
   return 0;
 }
