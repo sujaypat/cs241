@@ -37,11 +37,11 @@ int main() {
   strange_step(strange);
   free(strange);
 
-  char arr[4] = {0,0,0,0};
-  empty_step((void*) arr);
+  char empty[4] = {0,0,0,0};
+  empty_step((void*) empty);
 
-  arr[3] = 'u';
-  two_step(arr, arr);
+  empty[3] = 'u';
+  two_step(empty, empty);
 
 
 
