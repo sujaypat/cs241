@@ -24,15 +24,17 @@ int main() {
 
 
   int **arr = malloc(sizeof(int));
-  arr[0] = malloc(sizeof(int))
+  arr[0] = malloc(sizeof(int));
   *arr[0] = 8942;
   double_step(arr);
   free(arr[0]);
   free(arr);
 
-  int *strange = 10;
+
+  char *strange;
+  *strange = 10;
   strange_step(strange);
   free(strange);
-  
+
   return 0;
 }
