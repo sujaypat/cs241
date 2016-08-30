@@ -59,7 +59,7 @@ int main() {
   it_may_be_odd(&odd, (int)odd);
 
 
-  char tok[] = "CS241, CS241";
+  char tok[] = "CS241";
   tok_step(tok);
 
 
