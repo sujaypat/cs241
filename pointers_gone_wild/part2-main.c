@@ -59,8 +59,8 @@ int main() {
   it_may_be_odd(&odd, (int)odd);
 
 
-  // char* tok = "CS241";
-  // tok_step(tok);
+  char* tok = "CS241";
+  tok_step(tok);
 
 
   empty[0] = 1;
