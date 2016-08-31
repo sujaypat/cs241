@@ -42,7 +42,7 @@ void two(const char *grade) {
   if (grade_parsed && grade_parsed > 70)
     printf("%f passed!\n", grade_parsed);
   else
-    printf("%f not passed!\n", grade_parsed);
+    printf("%s not passed!\n", grade_parsed);
 }
 
 /**
