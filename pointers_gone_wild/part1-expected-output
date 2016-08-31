@@ -3,7 +3,7 @@
 10^2 + 10^2 = 200
 == two() ==
 20 not passed!
-100 passed!
+100.000000 passed!
 == three() ==
 The value of p is: 4
 == four() ==
