@@ -40,9 +40,9 @@ void two(const char *grade) {
   char * ebola;
   float grade_parsed = strtof(grade, &ebola);
   if (grade_parsed && grade_parsed > 70)
-    printf("%d passed!\n", (int)grade_parsed);
+    printf("%d passed!\n", grade_parsed);
   else
-    printf("%d not passed!\n", (int)grade_parsed);
+    printf("%d not passed!\n", grade_parsed);
 }
 
 /**
