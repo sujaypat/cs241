@@ -66,9 +66,9 @@ int main() {
   one(10, 10);
 
   printf("== two() ==\n");
-  const char *a = "20";
+  const char *a = "it's over 9000!!!!";
   two(a);
-  const char *b = "100";
+  const char *b = "73.58";
   two(b);
 
   printf("== three() ==\n");
