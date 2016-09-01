@@ -20,7 +20,7 @@ char **camel_caser(const char *input_str) {
 	const char *input_beg = input_str;
 	while(input_str){
 
-		if(!isPunct(*input_str)){
+		if(!ispunct(*input_str)){
 			input_str++;
 			i++;
 		}
