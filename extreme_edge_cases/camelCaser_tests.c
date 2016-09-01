@@ -18,5 +18,9 @@
  */
 int test_camelCaser(char **(*camelCaser)(const char *)) {
   // TODO: Return 1 if the passed in function works properly; 0 if it doesn't.
-  return 1;
+  char *input = "ayy lmao";
+  char *correct = "ayyLmao";
+  int result = 0;
+  result = !strcmp(correct, *camelCaser(input));
+  return result;
 }
