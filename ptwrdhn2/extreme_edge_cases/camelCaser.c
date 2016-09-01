@@ -10,13 +10,13 @@
 
 char **camel_caser(const char *input_str) {
 	// char *buf = NULL;
-	char ** res;
-	size_t linecap = 0;
-	ssize_t linelen;
+	char ** res = NULL;
+	// size_t linecap = 0;
+	// ssize_t linelen;
 
 	int c = 0;
 	int i = 0;
-	int numStrings = 0;
+	// int numStrings = 0;
 	char *input_beg = input_str;
 	while(input_str){
 
@@ -26,7 +26,7 @@ char **camel_caser(const char *input_str) {
 		}
 		res[c] = malloc(i);
 		for(int b = 0; b < i; b++){
-			strcat(res[c], input_beg[b]);
+			strcat(res[c], &input_beg[b]);
 		}
 		c++;
 	}
@@ -34,6 +34,7 @@ char **camel_caser(const char *input_str) {
 		printf("%s\n",res[a]);
 	}
 
+	return res;
 
 
 }
