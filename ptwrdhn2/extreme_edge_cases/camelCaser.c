@@ -4,36 +4,28 @@
 */
 #include "camelCaser.h"
 #include <stdlib.h>
-#include <stdio.h>
 
-char **camel_caser(const char *input_str) { return NULL;
+char **camel_caser(const char *input_str) {
 	char *buf = NULL;
 	char ** res;
-	char* delims = "!&+:?^}\"\',;@_~#(-<[`$).=\\{%%*/>]|";
 	size_t linecap = 0;
-	// ssize_t linelen;
-	// while((linelen = getline(&buf, &linecap, &input_str)) > 0){
-	//
-	// }
+	ssize_t linelen;
 
 	int c = 0;
 	int i = 0;
 	int numStrings = 0;
-	while(c != -1){
-		// c = fgetc(input_str);
-		c = getdelim(&buf, &linecap, delims, input_str);
-		strcpy(res[i++], buf);
+	char *input_beg = input_str;
+	while(input_str){
 
-		// if((isalpha(c) || isdigit(c))){
-		// 	strcat(buf, c);
-		// }
-		// else if((isspace(c) || ispunct(c))){
-		// 	*res[numStrings++] = buf;
-		// 	buf = NULL;
-		// }
-		// else{
-		// 	// probably NULL
-		// }
+		if(!ispunct(*input_str)){
+			input_str++;
+			i++;
+		}
+		res[c] = malloc(i);
+		for(int b = 0; b < i; b++){
+			strcat(res[c], input_beg[b]);
+		}
+		c++;
 	}
 	for(int a = 0; a < i; a++){
 		printf("%s\n",res[a]);
