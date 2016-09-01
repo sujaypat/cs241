@@ -4,9 +4,10 @@
 */
 #include "camelCaser.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 char **camel_caser(const char *input_str) {
-	char *buf = NULL;
+	// char *buf = NULL;
 	char ** res;
 	size_t linecap = 0;
 	ssize_t linelen;
