@@ -4,12 +4,13 @@
 */
 #include "camelCaser.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 char **camel_caser(const char *input_str) { return NULL;
 	char *buf = NULL;
 	char ** res;
 	char* delims = "!&+:?^}\"\',;@_~#(-<[`$).=\\{%%*/>]|";
-	// size_t linecap = 0;
+	size_t linecap = 0;
 	// ssize_t linelen;
 	// while((linelen = getline(&buf, &linecap, &input_str)) > 0){
 	//
