@@ -17,7 +17,7 @@ char **camel_caser(const char *input_str) {
 	int c = 0;
 	int i = 0;
 	int numStrings = 0;
-	const char *input_beg = input_str;
+	char *input_beg = input_str;
 	while(input_str){
 
 		if(!ispunct(*input_str)){
