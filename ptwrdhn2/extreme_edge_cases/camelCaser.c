@@ -10,7 +10,7 @@
 
 char **camel_caser(const char *input_str) {
 	// char *buf = NULL;
-	char ** res = calloc(strlen(input_str) + 1 * sizeof(char *));
+	char ** res = calloc(strlen(input_str) + 1, sizeof(char *));
 	// size_t linecap = 0;
 	// ssize_t linelen;
 
@@ -21,7 +21,7 @@ char **camel_caser(const char *input_str) {
 	while(input_str){
 
 		if(ispunct(*input_str)){
-			res[c] = malloc(i + 1, sizeof(char *));
+			res[c] = malloc(i + 1 * sizeof(char *));
 			strncat(res[c], input_beg, i);
 
 			c++;
