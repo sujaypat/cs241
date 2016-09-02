@@ -10,7 +10,7 @@
 
 char **camel_caser(const char *input_str) {
 	// char *buf = NULL;
-	char ** res = malloc(strlen(input_str) * sizeof(char *));
+	char ** res = malloc(strlen(input_str) + 1 * sizeof(char *));
 	// size_t linecap = 0;
 	// ssize_t linelen;
 
@@ -31,14 +31,11 @@ char **camel_caser(const char *input_str) {
 		}
 		input_str++;
 		i++;
-		// continue;
 	}
 
-	for(int a = 0; a < i; a++){
+	for(int a = 0; a < c; a++){
 		printf("%s\n",res[a]);
 	}
 
 	return res;
-
-
 }
