@@ -11,8 +11,6 @@
 char **camel_caser(const char *input_str) {
 	// char *buf = NULL;
 	char ** res = calloc(strlen(input_str) + 1, sizeof(char *));
-	// size_t linecap = 0;
-	// ssize_t linelen;
 
 	int c = 0;
 	int i = 0;
@@ -22,7 +20,8 @@ char **camel_caser(const char *input_str) {
 
 		if(ispunct(*input_str)){
 			res[c] = calloc(i + 1, sizeof(char));
-			strncpy(res[c], "\0", i+1);
+			res[c] = {'\0'};
+			// strncpy(res[c], "\0", 1);
 			strncat(res[c], input_beg, i);
 
 			c++;
