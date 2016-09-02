@@ -26,7 +26,7 @@ char **camel_caser(const char *input_str) {
 			i++;
 			continue;
 		}
-		res[c] = calloc(i + 1, sizeof(char *));
+		res[c] = calloc(i + 2, sizeof(char *));
 		// for(int b = 0; b < i; b++){
 		strncat(res[c], input_beg, i);
 		// }
