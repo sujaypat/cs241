@@ -23,8 +23,9 @@ char **camel_caser(const char *input_str) {
 		if(!ispunct(*input_str)){
 			input_str++;
 			i++;
+			continue;
 		}
-		res[c] = malloc(strlen(input_beg) * sizeof(char *));
+		res[c] = malloc(i * sizeof(char *));
 		for(int b = 0; b < i; b++){
 			strcat(res[c], &input_beg[b]);
 		}
