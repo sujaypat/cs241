@@ -23,4 +23,5 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
   int result = 0;
   result = !strcmp(correct, *camelCaser(input));
   return result;
+  // use assert
 }
