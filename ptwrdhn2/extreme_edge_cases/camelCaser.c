@@ -30,6 +30,7 @@ char **camel_caser(const char *input_str) {
 			strcat(res[c], &input_beg[b]);
 		}
 		c++;
+		input_beg = ++input_str;
 	}
 	for(int a = 0; a < i; a++){
 		printf("%s\n",res[a]);
