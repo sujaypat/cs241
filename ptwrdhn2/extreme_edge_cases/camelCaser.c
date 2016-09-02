@@ -20,20 +20,20 @@ char **camel_caser(const char *input_str) {
 	char *input_beg = (char *)input_str;
 	while(input_str){
 
-		if(!ispunct(*input_str)){
-			// printf("%c\n",*input_str);
-			input_str++;
-			i++;
-			continue;
+		if(ispunct(*input_str)){
+			res[c] = calloc(i + 1, sizeof(char *));
+			strncat(res[c], input_beg, i);
+
+			c++;
+			i=-1;
+			input_beg = (char *)++input_str;
+
 		}
-		res[c] = calloc(i + 2, sizeof(char *));
-		// for(int b = 0; b < i; b++){
-		strncat(res[c], input_beg, i);
-		// }
-		c++;
+		input_str++;
 		i++;
-		input_beg = (char *)++input_str;
+		// continue;
 	}
+
 	for(int a = 0; a < i; a++){
 		printf("%s\n",res[a]);
 	}
