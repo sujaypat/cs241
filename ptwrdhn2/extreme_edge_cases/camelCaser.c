@@ -10,7 +10,7 @@
 
 char **camel_caser(const char *input_str) {
 	// char *buf = NULL;
-	char ** res = calloc(strlen(input_str) + 1, sizeof(char *));
+	char ** res = calloc(strlen(input_str) + 1 * sizeof(char *));
 	// size_t linecap = 0;
 	// ssize_t linelen;
 
