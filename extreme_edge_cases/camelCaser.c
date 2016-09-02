@@ -21,7 +21,7 @@ char **camel_caser(const char *input_str) {
 	while(input_str){
 
 		if(!ispunct(*input_str)){
-			printf("%c\n",*input_str);
+			// printf("%c\n",*input_str);
 			input_str++;
 			i++;
 			continue;
