@@ -10,7 +10,7 @@
 
 char **camel_caser(const char *input_str) {
 	if(!input_str) return NULL;
-	char ** res = calloc(strlen(input_str) + 1, sizeof(char *));
+	char ** res = calloc(1, sizeof(char *));
 
 	int c = 0;
 	int i = -1;
@@ -23,7 +23,7 @@ char **camel_caser(const char *input_str) {
 		if(ispunct(*input_copy)){
 			*input_copy = '\0';
 			input_copy++;
-
+			realloc(res, (c + 1) * sizeof(char *));
 			res[c] = calloc(i + 1, sizeof(char *));
 			res[c][0] = '\0';
 			strncat(res[c], input_beg, i + 1);
@@ -34,6 +34,16 @@ char **camel_caser(const char *input_str) {
 		}
 		input_copy++;
 		i++;
+	}
+	res[c + 1] = NULL;
+
+	for(int a = 0; a < c; a++){
+		char *word;
+		word = strtok(res[a], " ");
+		tolower(word[0]);
+		while((word = strtok(NULL, " ")) != NULL){
+			toupper(word[0]);
+		}
 	}
 
 	return res;
