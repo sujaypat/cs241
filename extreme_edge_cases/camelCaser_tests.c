@@ -48,7 +48,9 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	char * inputs[] = {
 		"",
 		" ",
-		" dude same. fail",
+		".,.,.,.,.,.,",
+		"\t",
+		"\n",
 		"ayy    lmao.",
 		".jet fuel can't melt steel beams!",
 		"Hello,... World.",
