@@ -20,10 +20,10 @@ char **camel_caser(const char *input_str) {
 	while(*input_str){
 		// printf("%p\n", &input_str);
 		if(ispunct(*input_copy)){
-			*input_copy = '\0';
+			// *input_copy = '\0';
 			input_copy++;
-			// printf("c is: %d\n", c);
-			res[c] = calloc(i + 1, sizeof(char *));
+
+			res[c] = calloc(i + 1, 1);
 			res[c][0] = '\0';
 			strncat(res[c], input_beg, i + 1);
 
