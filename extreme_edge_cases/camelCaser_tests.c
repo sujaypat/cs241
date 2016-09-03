@@ -18,7 +18,7 @@
  */
 int test_camelCaser(char **(*camelCaser)(const char *)) {
   // TODO: Return 1 if the passed in function works properly; 0 if it doesn't.
-  char *input = "ayy lmao";
+  char *input = "ayy lmao. same tbh";
   char *correct = "ayyLmao";
   int result = 0;
   char **res = (*camelCaser)(input);
