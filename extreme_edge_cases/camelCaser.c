@@ -23,7 +23,7 @@ char **camel_caser(const char *input_str) {
 			// *input_copy = '\0';
 			input_copy++;
 
-			res[c] = calloc(i + 1, 1);
+			res[c] = calloc(i + 1, sizeof(char *));
 			res[c][0] = '\0';
 			strncat(res[c], input_beg, i + 1);
 
