@@ -19,12 +19,12 @@ char **camel_caser(const char *input_str) {
 	while(*input_str){
 		// printf("%p\n", &input_str);
 		if(ispunct(*input_str)){
-			*input_str = '\0';
+			// *input_str = '\0';
 			input_str++;
 			// printf("c is: %d\n", c);
 			res[c] = calloc(i + 1, sizeof(char *));
 			res[c][0] = '\0';
-			strncat(res[c], input_beg, i);
+			strncat(res[c], input_str, i);
 
 			c++;
 			i=-1;
