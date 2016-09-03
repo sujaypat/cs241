@@ -34,7 +34,7 @@ char **camel_caser(const char *input_str) {
 	}
 
 	for(int a = 0; a < c; a++){
-		printf("%s\n",res[a]);
+		printf("res: %s\n", res[a]);
 	}
 
 	return res;
