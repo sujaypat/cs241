@@ -17,7 +17,7 @@ char **camel_caser(const char *input_str) {
 	// int numStrings = 0;
 	char *input_beg = (char *)input_str;
 	while(input_str){
-		printf("%p\n", &input_str);
+		// printf("%p\n", &input_str);
 		if(ispunct(*input_str)){
 			res[c] = calloc(i + 1, sizeof(char *));
 			strncpy(res[c], "\0", 1);
