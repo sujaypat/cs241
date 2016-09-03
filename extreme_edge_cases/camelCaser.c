@@ -43,14 +43,16 @@ char **camel_caser(const char *input_str) {
 		char *newres = malloc(strlen(res[a]) + 1);
 		char *word = NULL;
 		word = strtok(res[a], " ");
-		word[0] += 32;
+		if(isupper(word[0])){
+			word[0] += 32;
+		}
 		newres[0] = '\0';
 		strcat(newres, word);
 		while((word = strtok(NULL, " ")) != NULL){
 			for(int w = 0; w < (int)strlen(word); w++){
-				word[w] += 32;
+				word[w] = tolower(word[w]);
 			}
-			word[0] -= 32;
+			word[0] = toupper(word[0]);
 			strcat(newres, word);
 		}
 		res[a] = newres;
