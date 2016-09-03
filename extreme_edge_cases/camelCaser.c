@@ -14,14 +14,15 @@ char **camel_caser(const char *input_str) {
 
 	int c = 0;
 	int i = -1;
-	// int numStrings = 0;
+
 	char *input_copy = malloc(strlen(input_str) + 1);
 	strcpy(input_copy, input_str);
 	char *input_beg = (char *)input_str;
+
 	while(*input_copy){
 		if(ispunct(*input_copy)){
 			*input_copy = '\0';
-			// input_copy++;
+
 			res = realloc(res, (c + 1) * sizeof(char *));
 			res[c] = calloc(i + 1, sizeof(char *));
 			res[c][0] = '\0';
@@ -53,6 +54,5 @@ char **camel_caser(const char *input_str) {
 		}
 		res[a] = newres;
 	}
-
 	return res;
 }
