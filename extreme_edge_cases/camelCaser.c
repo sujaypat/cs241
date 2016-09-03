@@ -9,13 +9,14 @@
 #include <ctype.h>
 
 char **camel_caser(const char *input_str) {
-	// char *buf = NULL;
+	if(!input_str) return NULL;
 	char ** res = calloc(strlen(input_str) + 1, sizeof(char *));
 
 	int c = 0;
 	int i = 0;
 	// int numStrings = 0;
-	char *input_copy = (char *)input_str;
+	char *input_copy = NULL;
+	strcpy(input_copy, input_str);
 	char *input_beg = (char *)input_str;
 	while(*input_str){
 		// printf("%p\n", &input_str);
