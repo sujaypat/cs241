@@ -49,6 +49,7 @@ char **camel_caser(const char *input_str) {
 			word[0] += 32;
 		}
 		newres[0] = '\0';
+		if(!word) continue;
 		strcat(newres, word);
 		while((word = strtok(NULL, " ")) != NULL){
 			for(int w = 1; w < (int)strlen(word); w++){
