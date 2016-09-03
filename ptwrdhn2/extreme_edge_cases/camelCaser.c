@@ -16,7 +16,7 @@ char **camel_caser(const char *input_str) {
 	int i = 0;
 	// int numStrings = 0;
 	char *input_beg = (char *)input_str;
-	while(input_str){
+	while(*input_str){
 		// printf("%p\n", &input_str);
 		if(ispunct(*input_str)){
 			printf("c is: %d\n", c);
