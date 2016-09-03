@@ -28,7 +28,7 @@ char **camel_caser(const char *input_str) {
 
 			c++;
 			i=-1;
-			input_beg = (char *)input_str;
+			input_beg = (char *)++input_str;
 
 		}
 		input_str++;
