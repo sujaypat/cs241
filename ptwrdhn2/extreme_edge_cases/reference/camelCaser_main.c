@@ -21,13 +21,15 @@ void print_input(char * input){
 }
 
 int main() {
-    char * inputs[] = {
+	char * inputs[] = {
+		"",
 		" ",
-		"ayy lmao",
-        "Hello World.",
-        "The Heisenbug is an incredible creature. Facenovel servers get their power from its indeterminism. Code smell can be ignored with INCREDIBLE use of air freshener. God objects are the new religion.",
-        NULL
-    };
+		"ayy    lmao.",
+		"Hello,... World.",
+		"same tbh. lmao",
+		"The Heisenbug is an incredible creature. Facenovel servers get their power from its indeterminism. Code smell can be ignored with INCREDIBLE use of air freshener. God objects are the new religion.",
+		NULL
+	};
 
     char ** input = inputs;
     while(*input){
