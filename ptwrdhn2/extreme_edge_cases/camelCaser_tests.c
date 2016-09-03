@@ -47,7 +47,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	// return result;
 	char * inputs[] = {
 		" ",
-		"ayy lmao",
+		"ayy lmao.",
 		"Hello World.",
 		"The Heisenbug is an incredible creature. Facenovel servers get their power from its indeterminism. Code smell can be ignored with INCREDIBLE use of air freshener. God objects are the new religion.",
 		NULL
