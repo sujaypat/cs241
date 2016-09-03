@@ -15,12 +15,13 @@ char **camel_caser(const char *input_str) {
 	int c = 0;
 	int i = 0;
 	// int numStrings = 0;
+	char *input_copy = (char *)input_str;
 	char *input_beg = (char *)input_str;
 	while(*input_str){
 		// printf("%p\n", &input_str);
-		if(ispunct(*input_str)){
-			// *input_str = '\0';
-			input_str++;
+		if(ispunct(*input_copy)){
+			*input_copy = '\0';
+			input_copy++;
 			// printf("c is: %d\n", c);
 			res[c] = calloc(i + 1, sizeof(char *));
 			res[c][0] = '\0';
@@ -28,15 +29,10 @@ char **camel_caser(const char *input_str) {
 
 			c++;
 			i=-1;
-			input_beg = (char *)++input_str;
-
+			input_beg = (char *)++input_copy;
 		}
-		input_str++;
+		input_copy++;
 		i++;
-	}
-
-	for(int a = 0; a < c; a++){
-		printf("res: %s\n", res[a]);
 	}
 
 	return res;
