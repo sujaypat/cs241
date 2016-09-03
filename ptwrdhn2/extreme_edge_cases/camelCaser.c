@@ -22,7 +22,7 @@ char **camel_caser(const char *input_str) {
 	while(*input_copy){
 		if(ispunct(*input_copy)){
 			*input_copy = '\0';
-			if(i == -1) i = 0;
+			if(i == -1) i = 1;
 			// input_copy++;
 			res = realloc(res, (numStrings + 1) * sizeof(char *));
 			res[numStrings] = calloc(i + 1, sizeof(char *));
@@ -43,7 +43,7 @@ char **camel_caser(const char *input_str) {
 		char *newres = malloc(strlen(res[a]) + 1);
 		char *word = NULL;
 		word = strtok(res[a], " ");
-		if(isupper(word[0])){
+		if(isupper(word[0]) && *word){
 			word[0] += 32;
 		}
 		newres[0] = '\0';
