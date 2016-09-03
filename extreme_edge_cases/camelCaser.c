@@ -15,7 +15,7 @@ char **camel_caser(const char *input_str) {
 	int c = 0;
 	int i = 0;
 	// int numStrings = 0;
-	char *input_copy = NULL;
+	char *input_copy = malloc(strlen(input_str) + 1);
 	strcpy(input_copy, input_str);
 	char *input_beg = (char *)input_str;
 	while(*input_str){
