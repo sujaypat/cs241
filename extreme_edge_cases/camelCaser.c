@@ -17,7 +17,7 @@ char **camel_caser(const char *input_str) {
 
 	char *input_copy = malloc(strlen(input_str) + 1);
 	strcpy(input_copy, input_str);
-	char *input_beg = (char *)input_str;
+	char *input_beg = (char *)input_copy;
 
 	while(*input_copy){
 		if(ispunct(*input_copy)){
