@@ -48,6 +48,10 @@ char **camel_caser(const char *input_str) {
 		if(word && isupper(word[0])){
 			word[0] += 32;
 		}
+		else{
+			newres[0] = '\0';
+			continue;
+		}
 		newres[0] = '\0';
 		strcat(newres, word);
 		while((word = strtok(NULL, " ")) != NULL){
