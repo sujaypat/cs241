@@ -22,6 +22,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
   char *correct = "ayyLmao";
   int result = 0;
   char **res = (*camelCaser)(input);
+  printf("%s\n", res[0]);
   result = !strcmp(correct, res[0]);
   return result;
   // use assert
