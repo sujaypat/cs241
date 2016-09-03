@@ -46,6 +46,7 @@ char **camel_caser(const char *input_str) {
 		newres[0] = '\0';
 		strcat(newres, word);
 		while((word = strtok(NULL, " ")) != NULL){
+			word = tolower(word);
 			word[0] = toupper(word[0]);
 			strcat(newres, word);
 		}
