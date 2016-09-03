@@ -24,6 +24,9 @@ int main() {
 	char * inputs[] = {
 		"",
 		" ",
+		".,.,.,.,.,.,",
+		"\t",
+		"\n",
 		"ayy    lmao.",
 		".jet fuel can't melt steel beams!",
 		"Hello,... World.",
