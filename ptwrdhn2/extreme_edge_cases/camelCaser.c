@@ -39,7 +39,7 @@ char **camel_caser(const char *input_str) {
 	res[c] = NULL;
 
 	for(int a = 0; a < c; a++){
-		char *newres = NULL;
+		char *newres = malloc(strlen(res[a]) + 1);
 		char *word = NULL;
 		word = strtok(res[a], " ");
 		tolower(word[0]);
