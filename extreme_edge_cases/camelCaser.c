@@ -22,7 +22,7 @@ char **camel_caser(const char *input_str) {
 	while(*input_copy){
 		if(ispunct(*input_copy)){
 			*input_copy = '\0';
-			// if(i == -1) i = 0;
+			if(i == -1) i = 0;
 			// input_copy++;
 			res = realloc(res, (numStrings + 1) * sizeof(char *));
 			res[numStrings] = calloc(i + 1, sizeof(char *));
