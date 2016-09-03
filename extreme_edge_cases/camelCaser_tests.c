@@ -60,6 +60,6 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 		print_output(output);
 		input++;
 	}
-	return 0;
+	return 69;
 	// use assert
 }
