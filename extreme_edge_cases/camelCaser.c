@@ -33,7 +33,7 @@ char **camel_caser(const char *input_str) {
 
 			numStrings++;
 			i = -1;
-			input_beg = (char *)(input_copy++);
+			input_beg = (char *)(++input_copy);
 		}
 		input_copy++;
 		i++;
