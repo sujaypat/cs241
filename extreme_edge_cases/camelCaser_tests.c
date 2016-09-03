@@ -46,9 +46,11 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	// result = !strcmp(correct, res[0]);
 	// return result;
 	char * inputs[] = {
+		"",
 		" ",
-		"ayy lmao.",
-		"Hello World.",
+		"ayy    lmao.",
+		"Hello,... World.",
+		"same tbh. lmao",
 		"The Heisenbug is an incredible creature. Facenovel servers get their power from its indeterminism. Code smell can be ignored with INCREDIBLE use of air freshener. God objects are the new religion.",
 		NULL
 	};
