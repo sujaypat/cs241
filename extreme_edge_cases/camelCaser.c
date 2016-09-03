@@ -13,7 +13,7 @@ char **camel_caser(const char *input_str) {
 	char ** res = calloc(strlen(input_str) + 1, sizeof(char *));
 
 	int c = 0;
-	int i = 0;
+	int i = -1;
 	// int numStrings = 0;
 	char *input_copy = malloc(strlen(input_str) + 1);
 	strcpy(input_copy, input_str);
