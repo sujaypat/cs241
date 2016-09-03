@@ -36,7 +36,7 @@ char **camel_caser(const char *input_str) {
 		i++;
 	}
 	res = realloc(res, (c + 1) * sizeof(char *));
-	res[c + 1] = NULL;
+	res[c] = NULL;
 
 	for(int a = 0; a < c; a++){
 		char *newres = NULL;
