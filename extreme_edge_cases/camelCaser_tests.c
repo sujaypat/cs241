@@ -92,6 +92,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 			printf("%s\n", output[i]);
 			printf("%s\n", correct[c][i]);
 			if(strcmp(output[i], correct[c][i])) return 0;
+			output++;
 			i++;
 		}
 	}
