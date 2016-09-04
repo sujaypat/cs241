@@ -83,11 +83,10 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 
 
 	char ** input = inputs;
-	char **output = NULL;
 	int c = 0;
 	while(*input){
 		// print_input(*input);
-		output = (*camelCaser)(*input);
+		char **output = (*camelCaser)(*input);
 		for(int i = 0; i < (int)(sizeof(output)/sizeof(output[0])); i++){
 			if(strcmp(output[i], correct[c][i])) return 0;
 		}
