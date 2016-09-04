@@ -59,7 +59,13 @@ char **camel_caser(const char *input_str) {
 			for(int w = 1; w < (int)strlen(word); w++){
 				word[w] = tolower(word[w]);
 			}
-			word[0] = toupper(word[0]);
+			for(int w2 = 1; w2 < (int)strlen(word); w2++){
+				if(isalpha(word[w2])){
+					word[w2] = toupper(word[w2]);
+					break;
+				}
+			}
+			// word[0] = toupper(word[0]);
 			strcat(newres, word);
 		}
 		res[a] = newres;
