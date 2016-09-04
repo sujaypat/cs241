@@ -24,7 +24,6 @@ void print_output(char **output){
 	} else{
 		printf("NULL POINTER!\n");
 	}
-	// printf("-----------------------------------------------------------------------------------------\n");
 }
 
 void print_input(char * input){
@@ -38,13 +37,6 @@ void print_input(char * input){
 */
 int test_camelCaser(char **(*camelCaser)(const char *)) {
 	// TODO: Return 1 if the passed in function works properly; 0 if it doesn't.
-	// char *input = "ayy lmao. same tbh";
-	// char *correct = "ayyLmao";
-	// int result = 0;
-	// char **res = (*camelCaser)(input);
-	// printf("res is supposed to be: %s\n", res[0]);
-	// result = !strcmp(correct, res[0]);
-	// return result;
 	char * inputs[] = {
 		"",
 		" ",
@@ -81,29 +73,17 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 		{NULL}
 	};
 
-
 	char ** input = inputs;
 	int c = 0;
 	while(*input){
-		// print_input(*input);
 		int i = 0;
 		char **output = (*camelCaser)(*input);
-		printf("new output, c,i is %d, %d\n",c, i );
-
-		// if (c==3){print_output(output);};
-
 		while(output[i]){
-			printf("comparing %s", output[i]);
-			printf(" to %s\n", correct[c][i]);
-			printf("%d, %d\n",c, i );
 			if(strcmp(output[i], correct[c][i])) return 0;
-			// output++;
 			i++;
 		}
 		c++;
 		input++;
 	}
-	// print_output(output);
-
 	return 1;
 }
