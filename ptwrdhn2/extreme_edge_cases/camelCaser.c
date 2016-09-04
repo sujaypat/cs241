@@ -56,7 +56,7 @@ char **camel_caser(const char *input_str) {
 		newres[0] = '\0';
 		if(!word) continue;
 		strcat(newres, word);
-		while((word = strtok(NULL, " ")) != NULL){
+		while((word = strtok(NULL, isSpaceChars)) != NULL){
 			// lowercase the word
 			for(int w = 0; w < (int)strlen(word); w++){
 				word[w] = tolower(word[w]);
