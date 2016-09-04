@@ -65,7 +65,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	char * correct[15][15] = {
 		{""},
 		{""},
-		{"", "","",	"",	"",	"",	"", ""},
+		{"", "","",	"",	"",	"",	"", "","",	"",	"", ""},
 		{""},
 		{""},
 		{"ayyLmao"},
