@@ -27,9 +27,9 @@ void print_output(char **output){
 	// printf("-----------------------------------------------------------------------------------------\n");
 }
 
-// void print_input(char * input){
-// 	printf("testing: \n\t'%s'\n\n", input);
-// }
+void print_input(char * input){
+	printf("testing: \n\t'%s'\n\n", input);
+}
 /*
 * Testing function for various implementations of camelCaser.
 *
@@ -86,7 +86,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	int c = 0;
 	int i = 0;
 	while(*input){
-		// print_input(*input);
+		print_input(*input);
 		char **output = (*camelCaser)(*input);
 		while(*output){
 			printf("%s\n", output[i]);
