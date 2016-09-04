@@ -40,11 +40,11 @@ char **camel_caser(const char *input_str) {
 	}
 	res = realloc(res, (numStrings + 1) * sizeof(char *));
 	res[numStrings] = NULL;
-
+	char isSpaceChars[]=" \t\r\n\v\f";
 	for(int a = 0; a < numStrings; a++){
 		char *newres = malloc(strlen(res[a]) + 1);
 		char *word = NULL;
-		word = strtok(res[a], " ");
+		word = strtok(res[a], isSpaceChars);
 
 		if(word){
 			// lowercase entire word
