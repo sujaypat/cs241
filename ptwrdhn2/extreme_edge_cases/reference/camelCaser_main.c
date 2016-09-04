@@ -39,9 +39,10 @@ int main() {
 	};
 
     char ** input = inputs;
+	char **output = NULL;
     while(*input){
         print_input(*input);
-        char **output = camel_caser(*input);
+        output = camel_caser(*input);
         // print_output(output);
         input++;
     }
