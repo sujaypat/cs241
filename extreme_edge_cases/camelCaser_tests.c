@@ -14,7 +14,7 @@
 
 
 void print_output(char **output){
-	printf("Got the following:\n");
+	// printf("Got the following:\n");
 	if(output){
         char ** line = output;
         while(*line){
