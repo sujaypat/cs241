@@ -86,7 +86,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	int c = 0;
 	int i = 0;
 	while(*input){
-		print_input(*input);
+		// print_input(*input);
 		char **output = (*camelCaser)(*input);
 		while(*output){
 			printf("%s\n", output[i]);
@@ -95,11 +95,10 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 			output++;
 			i++;
 		}
+		c++;
+		input++;
 	}
 	// print_output(output);
-	c++;
-	input++;
-	// for(int i = 0; i < )
-	// 	assert(!strcmp());
+
 	return 1;
 }
