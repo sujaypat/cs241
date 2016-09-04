@@ -14,21 +14,21 @@
 
 
 void print_output(char **output){
-    printf("Got the following:\n");
-    if(output){
-        char ** line = output;
-        while(*line){
-            printf("\t'%s'\n", *line);
-            line++;
-        }
-    } else{
-        printf("NULL POINTER!\n");
-    }
-    printf("-----------------------------------------------------------------------------------------\n");
+	printf("Got the following:\n");
+	if(output){
+		char ** line = output;
+		while(*line){
+			printf("\t'%s'\n", *line);
+			line++;
+		}
+	} else{
+		printf("NULL POINTER!\n");
+	}
+	printf("-----------------------------------------------------------------------------------------\n");
 }
 
 void print_input(char * input){
-    printf("testing: \n\t'%s'\n\n", input);
+	printf("testing: \n\t'%s'\n\n", input);
 }
 /*
 * Testing function for various implementations of camelCaser.
@@ -56,30 +56,55 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 		"Hello,... World.",
 		"69test 420numbers.",
 		"69 test 420 numbers.",
+		"memes \n dank."
 		"same tbh. lmao",
 		"AYY LMAO. ME tOO thanks.",
 		"The Heisenbug is an incredible creature. Facenovel servers get their power from its indeterminism. Code smell can be ignored with INCREDIBLE use of air freshener. God objects are the new religion.",
 		NULL
 	};
-	// char * correct[] = {
-	// 	NULL,
-	// 	NULL,
-	// 	NULL,
-	// 	NULL,
-	// 	NULL,
-	// 	"ayyLmao",
-	// 	NULL
-	// };
+	char * correct[] = {
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"ayyLmao",
+		"",
+		"jetFuelCan",
+		"tMeltSteelBeams",
+		"hello",
+		"",
+		"",
+		"",
+		"world",
+		"69test420Numbers",
+		"69Test420Numbers",
+		"sameTbh",
+		"ayyLmao",
+		"meTooThanks",
+		"theHeisenbugIsAnIncredibleCreature",
+		"facenovelServersGetTheirPowerFromItsIndeterminism",
+		"codeSmellCanBeIgnoredWithIncredibleUseOfAirFreshener",
+		"godObjectsAreTheNewReligion",
+		NULL
+	};
 
 
 	char ** input = inputs;
 	while(*input){
 		print_input(*input);
 		char **output = (*camelCaser)(*input);
-		print_output(output);
+		// print_output(output);
 		input++;
 	}
-	// for(int i = 0; i < )
+	for(int i = 0; i < )
 	// 	assert(!strcmp());
 	return 0;
 }
