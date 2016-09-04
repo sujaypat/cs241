@@ -62,39 +62,39 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 		"The Heisenbug is an incredible creature. Facenovel servers get their power from its indeterminism. Code smell can be ignored with INCREDIBLE use of air freshener. God objects are the new religion.",
 		NULL
 	};
-	char * correct[] = {
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"ayyLmao",
-		"",
-		"jetFuelCan",
-		"tMeltSteelBeams",
-		"hello",
-		"",
-		"",
-		"",
-		"world",
-		"69test420Numbers",
-		"69Test420Numbers",
-		"sameTbh",
-		"ayyLmao",
-		"meTooThanks",
-		"theHeisenbugIsAnIncredibleCreature",
-		"facenovelServersGetTheirPowerFromItsIndeterminism",
-		"codeSmellCanBeIgnoredWithIncredibleUseOfAirFreshener",
-		"godObjectsAreTheNewReligion",
-		NULL
-	};
+	// char * correct[] = {
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"ayyLmao",
+	// 	"",
+	// 	"jetFuelCan",
+	// 	"tMeltSteelBeams",
+	// 	"hello",
+	// 	"",
+	// 	"",
+	// 	"",
+	// 	"world",
+	// 	"69test420Numbers",
+	// 	"69Test420Numbers",
+	// 	"sameTbh",
+	// 	"ayyLmao",
+	// 	"meTooThanks",
+	// 	"theHeisenbugIsAnIncredibleCreature",
+	// 	"facenovelServersGetTheirPowerFromItsIndeterminism",
+	// 	"codeSmellCanBeIgnoredWithIncredibleUseOfAirFreshener",
+	// 	"godObjectsAreTheNewReligion",
+	// 	NULL
+	// };
 
 
 	char ** input = inputs;
@@ -104,7 +104,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 		// print_output(output);
 		input++;
 	}
-	for(int i = 0; i < )
+	// for(int i = 0; i < )
 	// 	assert(!strcmp());
 	return 0;
 }
