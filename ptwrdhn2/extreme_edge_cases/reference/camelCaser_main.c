@@ -3,17 +3,17 @@
 #include "camelCaser.h"
 
 void print_output(char **output){
-    printf("Got the following:\n");
+    // printf("Got the following:\n");
     if(output){
         char ** line = output;
         while(*line){
-            printf("\t'%s'\n", *line);
+            printf("\"%s\"\n", *line);
             line++;
         }
     } else{
         printf("NULL POINTER!\n");
     }
-    printf("-----------------------------------------------------------------------------------------\n");
+    // printf("-----------------------------------------------------------------------------------------\n");
 }
 
 void print_input(char * input){
@@ -39,15 +39,11 @@ int main() {
 	};
 
     char ** input = inputs;
-	char **output = NULL;
     while(*input){
         print_input(*input);
-        output = camel_caser(*input);
-        // print_output(output);
+        char **output = camel_caser(*input);
+        print_output(output);
         input++;
     }
-	for(int i = 0; i < (int)(sizeof(output)/sizeof(char *)); i++){
-		printf("%s\n", output[i]);
-	}
     return 0;
 }
