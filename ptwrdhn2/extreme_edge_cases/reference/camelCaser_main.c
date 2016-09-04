@@ -42,7 +42,10 @@ int main() {
     while(*input){
         print_input(*input);
         char **output = camel_caser(*input);
-        print_output(output);
+		for(int i = 0; i < sieof(output)/sizeof(char *); i++){
+			printf("%s\n", output[i]);
+		}
+        // print_output(output);
         input++;
     }
     return 0;
