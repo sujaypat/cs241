@@ -88,7 +88,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	while(*input){
 		// print_input(*input);
 		char **output = (*camelCaser)(*input);
-		while(*output){
+		while(output[i]){
 			printf("comparing %s", output[i]);
 			printf(" to %s\n", correct[c][i]);
 			if(strcmp(output[i], correct[c][i])) return 0;
