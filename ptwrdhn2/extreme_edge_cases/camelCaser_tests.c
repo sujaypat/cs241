@@ -101,7 +101,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	while(*input){
 		print_input(*input);
 		char **output = (*camelCaser)(*input);
-		// print_output(output);
+		print_output(output);
 		input++;
 	}
 	// for(int i = 0; i < )
