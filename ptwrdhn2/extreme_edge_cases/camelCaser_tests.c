@@ -55,6 +55,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 		".jet fuel can't melt steel beams!",
 		"Hello,... World.",
 		"same tbh. lmao",
+		"AYY LMAO. ME tOO thanks.",
 		"The Heisenbug is an incredible creature. Facenovel servers get their power from its indeterminism. Code smell can be ignored with INCREDIBLE use of air freshener. God objects are the new religion.",
 		NULL
 	};
@@ -66,6 +67,6 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 		print_output(output);
 		input++;
 	}
-	return 69;
-	// use assert
+	for(int i = 0; i < )
+		assert(!strcmp());
 }
