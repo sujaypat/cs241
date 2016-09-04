@@ -84,13 +84,15 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 
 	char ** input = inputs;
 	int c = 0;
+	int i = 0;
 	while(*input){
 		// print_input(*input);
 		char **output = (*camelCaser)(*input);
-		for(int i = 0; i < (int)(sizeof(output)/sizeof(output[0])) - 1; i++){
+		while(*output)
 			printf("%s\n", output[i]);
 			printf("%s\n", correct[c][i]);
 			if(strcmp(output[i], correct[c][i])) return 0;
+			i++;
 		}
 		// print_output(output);
 		c++;
