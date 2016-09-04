@@ -3,6 +3,132 @@
     "timestamp": "2016-09-03 12:00:00.782086", 
     "testcases": [
       {
+        "description": "Test that camelCaser returns NULL when given NULL", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "implementationNullTerminated", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that camelCaser returns an array that is null terminated", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "implementationLastElementNull", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that camelCaser returns an array with the correct number of elements", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "implementationCorrectNumberSentences", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that camelCaser returns an array with elements that are the correct length", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "implementationCorrectNumberWords", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that camelCaser returns sentences with the correct capitalization", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "implementationCorrectCapitals", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that camelCaser returns a correct array with edge case punctuation and spaces", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
+        "name": "implementationMultiplePunc", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test that camelCaser returns output where incomplete sentences are ignored", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "implementationIncompleteSentences", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Mysterious camelCaser implementation...", 
+        "ptsEarned": -1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
+        "name": "Function1", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Mysterious camelCaser implementation...", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "Function2", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Mysterious camelCaser implementation...", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "Function3", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Mysterious camelCaser implementation...", 
+        "ptsEarned": -1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
+        "name": "Function4", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Mysterious camelCaser implementation...", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "Function5", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Mysterious camelCaser implementation...", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "Function6", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Mysterious camelCaser implementation...", 
+        "ptsEarned": -1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
+        "name": "Function7", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Mysterious camelCaser implementation...", 
+        "ptsEarned": -1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
+        "name": "Function8", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Mysterious camelCaser implementation...", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "Function9", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Mysterious camelCaser implementation...", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "name": "Function10", 
+        "ptsPossible": 1.0
+      }
+    ], 
+    "revision": "4400", 
+    "checksum": "b05d4ad4fc39a1373cd5df464ac5c0b8c38a06c6  camelCaser.c\n57ef974e725fbff6a707cdb88024b2079593af9f  camelCaser_tests.c"
+  }, 
+  {
+    "timestamp": "2016-09-04 12:00:00.806657", 
+    "testcases": [
+      {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
         "ptsEarned": 1.0, 
@@ -38,9 +164,9 @@
         "description": "Test that camelCaser returns sentences with the correct capitalization"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "implementationMultiplePunc", 
         "description": "Test that camelCaser returns a correct array with edge case punctuation and spaces"
       }, 
@@ -52,16 +178,16 @@
         "description": "Test that camelCaser returns output where incomplete sentences are ignored"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": -1.0, 
+        "ptsEarned": 1.0, 
         "name": "Function1", 
         "description": "Mysterious camelCaser implementation..."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
+        "ptsEarned": -1.0, 
         "name": "Function2", 
         "description": "Mysterious camelCaser implementation..."
       }, 
@@ -73,56 +199,56 @@
         "description": "Mysterious camelCaser implementation..."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": -1.0, 
+        "ptsEarned": 1.0, 
         "name": "Function4", 
         "description": "Mysterious camelCaser implementation..."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
+        "ptsEarned": -1.0, 
         "name": "Function5", 
         "description": "Mysterious camelCaser implementation..."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
+        "ptsEarned": -1.0, 
         "name": "Function6", 
         "description": "Mysterious camelCaser implementation..."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": -1.0, 
+        "ptsEarned": 1.0, 
         "name": "Function7", 
         "description": "Mysterious camelCaser implementation..."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": -1.0, 
+        "ptsEarned": 1.0, 
         "name": "Function8", 
         "description": "Mysterious camelCaser implementation..."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
+        "ptsEarned": -1.0, 
         "name": "Function9", 
         "description": "Mysterious camelCaser implementation..."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed test", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
+        "ptsEarned": -1.0, 
         "name": "Function10", 
         "description": "Mysterious camelCaser implementation..."
       }
     ], 
-    "checksum": "b05d4ad4fc39a1373cd5df464ac5c0b8c38a06c6  camelCaser.c\n57ef974e725fbff6a707cdb88024b2079593af9f  camelCaser_tests.c", 
-    "revision": "4400"
+    "checksum": "5d1f2b12da4fedb3549f8e46bf5ff0b49e0024e7  camelCaser.c\n5c09ebdc5b70127022971cce6741f73a5402b9e4  camelCaser_tests.c", 
+    "revision": "5079"
   }
 ]
