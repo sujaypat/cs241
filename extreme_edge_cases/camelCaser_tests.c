@@ -78,7 +78,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 		{"ayyLmao",
 		"meTooThanks"},
 		{"theHeisenbugIsAnIncredibleCreature", "facenovelServersGetTheirPowerFromItsIndeterminism", "codeSmellCanBeIgnoredWithIncredibleUseOfAirFreshener", "godObjectsAreTheNewReligion"},
-		NULL
+		{NULL}
 	};
 
 
@@ -88,7 +88,7 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	while(*input){
 		// print_input(*input);
 		output = (*camelCaser)(*input);
-		for(int i = 0; i < sizeof(output)/sizeof(output[0]); i++){
+		for(int i = 0; i < (int)(sizeof(output)/sizeof(output[0])); i++){
 			if(strcmp(output[i], correct[c][i])) return 0;
 		}
 		// print_output(output);
