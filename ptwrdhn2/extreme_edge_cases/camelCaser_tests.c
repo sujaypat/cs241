@@ -46,8 +46,8 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	// result = !strcmp(correct, res[0]);
 	// return result;
 	char * inputs[] = {
-		// "",
-		// " ",
+		"",
+		" ",
 		".,.,.,.,.,.,",
 		"\t",
 		"\n",
@@ -63,8 +63,8 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 		NULL
 	};
 	char * correct[15][15] = {
-		// {""},
-		// {""},
+		{""},
+		{""},
 		{"", "","",	"",	"",	"",	"", ""},
 		{""},
 		{""},
@@ -89,8 +89,8 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 		// print_input(*input);
 		char **output = (*camelCaser)(*input);
 		while(*output){
-			printf("%s\n", output[i]);
-			printf("%s\n", correct[c][i]);
+			printf("comparing %s", output[i]);
+			printf(" to %s\n", correct[c][i]);
 			if(strcmp(output[i], correct[c][i])) return 0;
 			output++;
 			i++;
