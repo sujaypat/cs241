@@ -69,4 +69,5 @@ int test_camelCaser(char **(*camelCaser)(const char *)) {
 	}
 	for(int i = 0; i < )
 		assert(!strcmp());
+	return 0;
 }
