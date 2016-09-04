@@ -16,9 +16,10 @@ void print_output(char **output){
     // printf("-----------------------------------------------------------------------------------------\n");
 }
 
-void print_input(char * input){
-    printf("testing: \n\t'%s'\n\n", input);
-}
+// void print_input(char * input){
+
+    // printf("testing: \n\t'%s'\n\n", input);
+// }
 
 int main() {
 	char * inputs[] = {
@@ -40,7 +41,7 @@ int main() {
 
     char ** input = inputs;
     while(*input){
-        print_input(*input);
+        // print_input(*input);
         char **output = camel_caser(*input);
         print_output(output);
         input++;
