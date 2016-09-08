@@ -5,4 +5,6 @@
 
 #include "document.h"
 // test your document here
-int main() { return 0; }
+int main() {
+	return 0; 
+}

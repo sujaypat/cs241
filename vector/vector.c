@@ -37,28 +37,38 @@ struct Vector {
 Vector *Vector_create(copy_constructor_type copy_constructor,
                       destructor_type destructor) {
   // your code here
+  vec = malloc(sizeof());
+  vec -> copy_constructor = copy_constructor;
+  vec -> destructor = destructor;
+  vec -> array = malloc(INITIAL_CAPACITY * sizeof());
+  vec -> size = 0;
+  vec -> capacity = INITIAL_CAPACITY;
   return NULL;
 }
 
 void Vector_destroy(Vector *vector) {
   assert(vector);
   // your code here
+
 }
 
 size_t Vector_size(Vector *vector) {
   assert(vector);
   // your code here
-  return 0;
+  return vector -> size;
 }
 
 size_t Vector_capacity(Vector *vector) {
   assert(vector);
   // your code here
-  return 0;
+  return vector -> capacity;
 }
 
 void Vector_resize(Vector *vector, size_t new_size) {
   assert(vector);
+  while(new_size > vector -> size){
+	vector -> capacity *= 2;
+  }
   // your code here
 }
 
