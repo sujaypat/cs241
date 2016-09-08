@@ -41,7 +41,7 @@ Vector *Vector_create(copy_constructor_type copy_constructor,
   //malloc(sizeof(copy_constructor_type) + sizeof(destructor_type) + 10*sizeof(void *) + 2*sizeof(size_t));
   vec -> copy_constructor = copy_constructor;
   vec -> destructor = destructor;
-  vec -> array = malloc(INITIAL_CAPACITY * sizeof());
+  vec -> array = malloc(INITIAL_CAPACITY * sizeof(void *));
   vec -> size = 0;
   vec -> capacity = INITIAL_CAPACITY;
   return NULL;
