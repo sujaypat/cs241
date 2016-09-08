@@ -37,7 +37,7 @@ struct Vector {
 Vector *Vector_create(copy_constructor_type copy_constructor,
                       destructor_type destructor) {
   // your code here
-  vec = malloc(sizeof());
+  Vector vec = malloc(sizeof());
   vec -> copy_constructor = copy_constructor;
   vec -> destructor = destructor;
   vec -> array = malloc(INITIAL_CAPACITY * sizeof());
