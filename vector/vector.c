@@ -49,7 +49,7 @@ Vector *Vector_create(copy_constructor_type copy_constructor, destructor_type de
 void Vector_destroy(Vector *vector) {
 	assert(vector);
 	// your code here
-	for(int i = 0; i < vector -> size; i++){
+	for(int i = 0; i < (int)vector -> size; i++){
 		if(vector -> array[i]){
 			free(vector -> array[i]);
 		}
@@ -57,8 +57,8 @@ void Vector_destroy(Vector *vector) {
 	free(vector -> copy_constructor);
 	free(vector -> destructor);
 	free(vector -> array);
-	free(vector -> size);
-	free(vector -> capacity);
+	// free(vector -> size);
+	// free(vector -> capacity);
 	free(vector);
 }
 
