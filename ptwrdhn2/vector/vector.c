@@ -78,7 +78,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 	while(new_size > vector -> size){
 		vector -> capacity *= 2;
 	}
-	while (vector -> size > 10 && vector -> size > 2 * new_size) {
+	while (Vector_size(vector) < 10 && Vector_size(vector) < 2 * new_size) {
 		vector -> capacity /= 2;
 	}
 }
@@ -112,10 +112,17 @@ void Vector_insert(Vector *vector, size_t index, void *elem) {
 void Vector_delete(Vector *vector, size_t index) {
 	assert(vector);
 	// your code here, what asserts might you want?
+	if(Vector_size(vector) < index){
 
+	}
+	vector -> array[index] = NULL;
 }
 
 void Vector_append(Vector *vector, void *elem) {
 	assert(vector);
 	// your code here
+	if(Vector_size(vector) >= Vector_capacity(vector) - 1){
+		Vector_resize(vector, Vector_size(vector) + 1)
+	}
+	vector -> array[Vector_size(vector) - 1] = elem;
 }

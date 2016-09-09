@@ -35,7 +35,8 @@ Document *Document_create() {
 	// if size isn't zero, the interface to vector changed and we might have NULLs
 	// in the vector
 	// your code here!
-
+	// document ->
+	document -> vector = Vector_create(my_copy_ctor, my_destructor);
 	return NULL;
 }
 
@@ -64,34 +65,32 @@ size_t Document_size(Document *document) {
 	return Vector_size(document->vector);
 }
 
-void Document_set_line(Document *document, size_t line_number,
-	const char *str) {
-		assert(document);
-		assert(str);
-		assert(line_number > 0);
-		size_t index = line_number - 1;
-		Vector_set(document->vector, index, (void *)str);
-	}
+void Document_set_line(Document *document, size_t line_number, const char *str) {
+	assert(document);
+	assert(str);
+	assert(line_number > 0);
+	size_t index = line_number - 1;
+	Vector_set(document->vector, index, (void *)str);
+}
 
-	const char *Document_get_line(Document *document, size_t line_number) {
-		assert(document);
-		assert(line_number > 0);
-		size_t index = line_number - 1;
-		return (const char *)Vector_get(document->vector, index);
-	}
+const char *Document_get_line(Document *document, size_t line_number) {
+	assert(document);
+	assert(line_number > 0);
+	size_t index = line_number - 1;
+	return (const char *)Vector_get(document->vector, index);
+}
 
-	void Document_insert_line(Document *document, size_t line_number,
-		const char *str) {
-			assert(document);
-			assert(str);
-			assert(line_number > 0);
-			size_t index = line_number - 1;
-			Vector_insert(document->vector, index, (void *)str);
-		}
+void Document_insert_line(Document *document, size_t line_number, const char *str) {
+	assert(document);
+	assert(str);
+	assert(line_number > 0);
+	size_t index = line_number - 1;
+	Vector_insert(document->vector, index, (void *)str);
+}
 
-		void Document_delete_line(Document *document, size_t line_number) {
-			assert(document);
-			assert(line_number > 0);
-			size_t index = line_number - 1;
-			Vector_delete(document->vector, index);
-		}
+void Document_delete_line(Document *document, size_t line_number) {
+	assert(document);
+	assert(line_number > 0);
+	size_t index = line_number - 1;
+	Vector_delete(document->vector, index);
+}
