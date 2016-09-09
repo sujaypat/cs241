@@ -122,7 +122,7 @@ void Vector_append(Vector *vector, void *elem) {
 	assert(vector);
 	// your code here
 	if(Vector_size(vector) >= Vector_capacity(vector) - 1){
-		Vector_resize(vector, Vector_size(vector) + 1)
+		Vector_resize(vector, Vector_size(vector) + 1);
 	}
 	vector -> array[Vector_size(vector) - 1] = elem;
 }
