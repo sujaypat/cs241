@@ -75,12 +75,12 @@ size_t Vector_capacity(Vector *vector) {
 void Vector_resize(Vector *vector, size_t new_size) {
 	assert(vector);
 	// your code here
-	// while(new_size > vector -> size){
-	// 	vector -> capacity *= 2;
-	// }
-	// while (vector -> size > 10 && vector -> size > 2 * new_size) {
-	// 	vector -> capacity /= 2;
-	// }
+	while(new_size > vector -> size){
+		vector -> capacity *= 2;
+	}
+	while (vector -> size > 10 && vector -> size > 2 * new_size) {
+		vector -> capacity /= 2;
+	}
 }
 
 void Vector_set(Vector *vector, size_t index, void *elem) {
@@ -112,7 +112,7 @@ void Vector_insert(Vector *vector, size_t index, void *elem) {
 void Vector_delete(Vector *vector, size_t index) {
 	assert(vector);
 	// your code here, what asserts might you want?
-	
+
 }
 
 void Vector_append(Vector *vector, void *elem) {
