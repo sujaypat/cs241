@@ -8,20 +8,20 @@
 #include <stdlib.h>
 
 /**
- * An automatically-expanding array that can store any kind of (homogenous) data
+ * An automatically expanding array that can store any kind of homogenous data
  *
- * Note: NULL is considered to be a valid entry. This means users can insert a
- * NULL into the vector if they choose to.
+ * Note: NULL is considered to be a valid entry. This means users can insert
+ * a NULL into the vector if they choose to.
  *
- * As entries are added to it, the array will automatically grow.
- * (sort of like a C++ vector or Java ArrayList)
+ * As entries are added to it, the array will automatically grow
+ * (sort of like a C++ vector or Java ArrayList).
  *
  * 'size' is the number of actual objects held in the vector,
  * which is not necessarily equal to its storage capacity.
  *
  * 'capacity' is the storage space currently allocated for the vector,
  * expressed in terms of elements. This is also the maximum number of elements
- the array can currently hold.
+ * the array can currently hold.
  * 'size' will always be less than or equal to 'capacity'.
  *
  * The reason size and capacity are two different variables is that
@@ -32,37 +32,34 @@
  * the vector is at index 'size - 1', but the array reserves memory for
  * 'capacity' elements.
  *
- * The vector is initialized with a capacity of 10 and size of 0.  The user can
- * add up to 10 entries and the array will not need to be reallocated-- just
- change
- * 'size'.  For example, if you have inserted two entries into the vector, the
- * capacity will still be 10, but the size will be 2.
+ * The vector is initialized with a capacity of 10 and size of 0. The user can
+ * add up to 10 entries and the array will not need to be reallocated--
+ * just change 'size'. For example, if you have inserted two entries into
+ * the vector, the capacity will still be 10, but the size will be 2.
  *
- * When the user wants to add the 11th entry, the array will be reallocated to
- * hold 20 entries. If that fills up, reallocate it to hold 40 entries, and so
- * on.
-
- * Why double the size each time rather than just adding another 10
- * elements? Reallocations can be expensive, and the performance
- * will probably suffer if you do a lot of them.
+ * When the user wants to add the 11th entry, the array will be reallocated
+ * to hold 20 entries. If that fills up, reallocate it to hold 40 entries,
+ * and so on.
  *
- * When the vector is relatively empty, that is, when its size is 1/4th
- * of its capacity, it should be reduced to half capacity to free up space.
+ * Why double the size each time rather than just adding another 10 elements?
+ * Reallocations can be expensive, and the performance will probably suffer
+ * if you make a lot of them.
+ *
+ * When the vector is relatively empty (that is, when its size is 1/4th of
+ * its capacity), it should be reduced to half capacity to free up space.
  */
 
-/*
- * Forward declare vector structure
- */
+/* Forward declare vector structure. */
 struct Vector;
 typedef struct Vector Vector;
 
-/*
- * This callback function takes in a pointer to arbitary
+/**
+ * This callback function takes in a pointer to arbitary data
  * and returns a void pointer pointing to a copy of said data.
 */
 typedef void *(*copy_constructor_type)(void *elem);
 
-/*
+/**
  * This callback function takes in a pointer to arbitary data
  * and frees the memory allocated for it.
 */
@@ -73,6 +70,7 @@ Vector *Vector_create(copy_constructor_type c, destructor_type d);
 
 /**
  * Deallocate a Vector structure.
+ *
  * Every non-NULL entry in array from array[0] to array[size-1] will
  * need to be 'destroyed'.
 */
@@ -97,19 +95,19 @@ size_t Vector_capacity(Vector *vector);
  * than the 'new_size'.
  *
  * Also, if the new size of vector is less than or equal to 1/4th the capacity,
- * then you should keep halving the capacity until it is just about twice the
- * 'new size'.
- * However, to avoid repeated realloc()s with small capacity, maintain a minimum
- * capacity of 10.
- *
+ * then you should keep halving the capacity until it is just about twice
+ * the 'new size'. However, to avoid repeated realloc()s with small capacity,
+ * maintain a minimum capacity of 10.
 */
 void Vector_resize(Vector *vector, size_t new_size);
 
 /**
- * Allocate a copy of 'elem' and store it in array[index].  If 'elem' is NULL,
- * just store NULL in array[index]. Note that if the vector is allocating
- * memory for the entry (which will happen when the entry is not NULL), then it
- * should also be the freeing it (hint,hint).
+ * Allocate a copy of 'elem' and store it in array[index].
+ * If 'elem' is NULL, just store NULL in array[index].
+ *
+ * Note that if the vector is allocating memory for the entry
+ * (which will happen when the entry is not NULL),
+ * then it should also be the freeing it (hint, hint).
 */
 void Vector_set(Vector *vector, size_t index, void *elem);
 
@@ -124,25 +122,23 @@ void Vector_set(Vector *vector, size_t index, void *elem);
 void *Vector_get(Vector *vector, size_t index);
 
 /**
- * Inserts a copy of 'elem' or NULL if elem is NULL then stores it in
- * array[index].
+ * Inserts a copy of 'elem' into array[index].
+ * If 'elem' is NULL, then NULL is inserted.
  *
- * Note the array[index] could already contain a entry, in which case the entry
- * at array[index] and all subsequent entries should be shifted down.
+ * If the index is past the last element of the vector, it should resize() to
+ * accommodate the new entry.
  *
- * Also note that index could be well beyond the position of the last entry. In
- * which case the vector should resize() to accommodate that new entry.
+ * Otherwise, the existing entry at array[index] and any subsequent entries
+ * should be shifted towards the end of the array, and the vector should be
+ * resized accordingly.
 */
 void Vector_insert(Vector *vector, size_t index, void *elem);
 
 /**
  * Removes whatever entry is contained in array[index].
  *
- * Note that index does not have to be the last element of the vector, in which
- * case you should not only remove the entry at array[index], but also shift all
- * subsequent entries down.
- *
- * Do not forget to resize the vector accordingly.
+ * You should also shift any subsequent entries towards the beginning of
+ * the array. Do not forget to resize the vector accordingly.
 */
 void Vector_delete(Vector *vector, size_t index);
 
