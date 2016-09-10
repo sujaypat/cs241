@@ -1,0 +1,79 @@
+[
+  {
+    "timestamp": "2016-09-10 00:00:00.205191", 
+    "testcases": [
+      {
+        "log": "Did not find correct output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "time_test_usage", 
+        "description": "Test time usage"
+      }, 
+      {
+        "log": "Did not find correct output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "env_test_usage", 
+        "description": "Test env usage"
+      }, 
+      {
+        "log": "Did not find correct output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "time_test_exec", 
+        "description": "Test time exec failure"
+      }, 
+      {
+        "log": "Did not find correct output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "env_test_exec", 
+        "description": "Test env exec failure"
+      }, 
+      {
+        "log": "Invalid reported time", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "time_test", 
+        "description": "Test time"
+      }, 
+      {
+        "log": "Something Failed, report to Autograding staff", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "env_test", 
+        "description": "Test env"
+      }, 
+      {
+        "log": "Did not find correct output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "env_test_one", 
+        "description": "Test env"
+      }, 
+      {
+        "log": "Something Failed, report to Autograding staff", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "env_test_two", 
+        "description": "Test env"
+      }, 
+      {
+        "log": "Something Failed, report to Autograding staff", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "env_test_ref", 
+        "description": "Test env referencing variable"
+      }, 
+      {
+        "log": "Something Failed, report to Autograding staff", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "env_test_ref_empty", 
+        "description": "Test env referencing nonexistence variable"
+      }
+    ], 
+    "checksum": "034a86d0649e74b23984b18d419f41c4176aea32  env.c\n1649c787d7f52f05cd78940e3ecc3760b07764ac  time.c", 
+    "revision": "12194"
+  }
+]
