@@ -131,7 +131,7 @@ void Vector_insert(Vector *vector, size_t index, void *elem) {
 	if(index > Vector_size(vector)){
 		Vector_resize(vector, index);
 	}
-	memcpy(vector -> array[index + 1], vector -> array[index], (Vector_size(vector) - vector -> array) * sizeof(void *));
+	memcpy(vector -> array[index + 1], vector -> array[index], (Vector_size(vector) - index) * sizeof(void *));
 	vector -> array[index] = elem;
 }
 
@@ -142,7 +142,7 @@ void Vector_delete(Vector *vector, size_t index) {
 
 	}
 	vector -> array[index] = NULL;
-	for(int i = 0; i < Vector_size(vector) - 1; i++){
+	for(int i = 0; i < (int)Vector_size(vector) - 1; i++){
 		if(vector -> array[i] == NULL){
 
 		}
