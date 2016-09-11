@@ -4,7 +4,9 @@
 */
 
 #include "vector.h"
-
+#include <assert.h>
+#include <stdio.h>
+#include <string.h>
 // This is the constructor function for string element.
 // Use this as copy_constructor callback in vector.
 void *my_copy_ctor(void *elem) {
