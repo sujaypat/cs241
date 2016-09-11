@@ -36,7 +36,7 @@ Document *Document_create() {
 	// in the vector
 	// your code here!
 	document -> vector = Vector_create(my_copy_ctor, my_destructor);
-	return NULL;
+	return document;
 }
 
 void Document_write_to_file(Document *document, const char *filename) {
@@ -44,13 +44,34 @@ void Document_write_to_file(Document *document, const char *filename) {
 	assert(filename);
 	// see the comment in the header file for a description of how to do this!
 	// your code here!
+	size_t docSize = Document_size(document);
+	size_t currLine = 0;
+	FILE *f = fopen(filename, "w");
+	while(currLine < docSize){
+		fprintf(f, "%s\n", line);
+		currLine++;
+	}
 }
 
 Document *Document_create_from_file(const char *filename) {
 	assert(filename);
 	// this function will read a file which is created by Document_write_to_file
 	// your code here!
-	return NULL;
+	Document *d = Document_create();
+	size_t lineNum = 0;
+	FILE *fp = fopen(filename, "r");
+	if(!fp) return d;
+
+	char *line = NULL;
+	size_t len = 0;
+	ssize_t read;
+
+	if (fp == NULL) exit(EXIT_FAILURE);
+	while ((read = getline(&line, &len, fp)) != -1) {
+		Document_set_line(d, lineNum, line);
+	}
+	return d;
+
 }
 
 void Document_destroy(Document *document) {
