@@ -95,7 +95,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 				vector -> destructor(vector -> array[i]);
 			}
 		}
-		realloc(vector -> array, Vector_capacity(vector) * sizeof(void *));
+		vector -> array = realloc(vector -> array, Vector_capacity(vector) * sizeof(void *));
 	}
 	if(Vector_size(vector) > Vector_capacity(vector)) vector -> size = Vector_capacity(vector);
 }
