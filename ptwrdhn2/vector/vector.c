@@ -37,21 +37,22 @@ struct Vector {
 Vector *Vector_create(copy_constructor_type copy_constructor, destructor_type destructor) {
 	// your code here
 	Vector *vec = malloc(sizeof(Vector));
-	//malloc(sizeof(copy_constructor_type) + sizeof(destructor_type) + 10*sizeof(void *) + 2*sizeof(size_t));
+
 	vec -> copy_constructor = copy_constructor;
 	vec -> destructor = destructor;
-	vec -> array = malloc(INITIAL_CAPACITY * sizeof(void *));
+	vec -> array = calloc(INITIAL_CAPACITY * sizeof(void *));
 	vec -> size = 0;
 	vec -> capacity = INITIAL_CAPACITY;
-	return NULL;
+
+	return vec;
 }
 
 void Vector_destroy(Vector *vector) {
 	assert(vector);
 	// your code here
-	for(int i = 0; i < (int)vector -> size; i++){
+	for(int i = 0; i < (int)Vector_size(vector); i++){
 		if(vector -> array[i]){
-			free(vector -> array[i]);
+			vector -> destructor(vector -> array[i]);
 		}
 	}
 	free(vector -> copy_constructor);
@@ -74,27 +75,51 @@ size_t Vector_capacity(Vector *vector) {
 
 void Vector_resize(Vector *vector, size_t new_size) {
 	assert(vector);
+	assert(new_size >= 0);
+	size_t initCap = Vector_capacity(vector);
 	// your code here
-	while(new_size > vector -> size){
-		vector -> capacity *= 2;
+	if(new_size > initCap){
+		while(new_size > Vector_capacity(vector)){
+			vector -> capacity *= 2;
+		}
+		//memset vector array + initial capacity
+		vector -> array = realloc(vector -> array, Vector_capacity(vector) * sizeof(void *));
+		memset(vector -> array + initCap, 0, (initCap - Vector_capacity(vector) * sizeof(void *)));
 	}
-	while (Vector_size(vector) < 10 && Vector_size(vector) < 2 * new_size) {
-		vector -> capacity /= 2;
+	else if(4 * new_size < Vector_capacity(vector)){
+		while (Vector_capacity(vector) > 2 * new_size) {
+			vector -> capacity /= 2;
+		}
+		for(size_t i = Vector_capacity(vector); i < initCap; i++){
+			if(vector -> array[i]){
+				vector -> destructor(vector -> array[i]);
+			}
+		}
+		realloc(vector -> array, Vector_capacity(vector) * sizeof(void *));
 	}
+	if(Vector_size(vector) > Vector_capacity(vector)) vector -> size = Vector_capacity(vector);
 }
 
 void Vector_set(Vector *vector, size_t index, void *elem) {
 	assert(vector);
+	assert(index >= 0);
 	// your code here
-	if(index < Vector_size(vector)){
-		vector -> array[index] = elem;
+	if(index < Vector_capacity(vector)){
+		if(vector -> array[index]) vector -> destructor(vector -> array[index]);
+		if(elem) vector -> array[index] = vector -> copy_constructor(elem);
+		else vector -> array[index] = NULL;
+	}
+	else{
+		Vector_resize(vector, index + 1);
+		if(elem) vector -> array[index] = vector -> copy_constructor(elem);
+		else vector -> array[index] = NULL;
 	}
 }
 
 void *Vector_get(Vector *vector, size_t index) {
 	assert(vector);
 	// your code here
-	if(index < Vector_size(vector) && vector -> array[index]){
+	if(index < Vector_size(vector)){
 		return vector -> array[index];
 	}
 	return NULL;
@@ -106,6 +131,7 @@ void Vector_insert(Vector *vector, size_t index, void *elem) {
 	if(index > Vector_size(vector)){
 		Vector_resize(vector, index);
 	}
+	memcpy(vector -> array[index])
 	vector -> array[index] = elem;
 }
 
@@ -116,6 +142,11 @@ void Vector_delete(Vector *vector, size_t index) {
 
 	}
 	vector -> array[index] = NULL;
+	for(int i = 0; i < Vector_size(vector) - 1; i++){
+		if(vector -> array[i] == NULL){
+
+		}
+	}
 }
 
 void Vector_append(Vector *vector, void *elem) {
@@ -124,5 +155,5 @@ void Vector_append(Vector *vector, void *elem) {
 	if(Vector_size(vector) >= Vector_capacity(vector) - 1){
 		Vector_resize(vector, Vector_size(vector) + 1);
 	}
-	vector -> array[Vector_size(vector) - 1] = elem;
+	vector -> array[Vector_size(vector) - 1] = vector -> copy_constructor(elem);
 }
