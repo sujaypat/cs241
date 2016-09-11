@@ -35,7 +35,6 @@ Document *Document_create() {
 	// if size isn't zero, the interface to vector changed and we might have NULLs
 	// in the vector
 	// your code here!
-	// document ->
 	document -> vector = Vector_create(my_copy_ctor, my_destructor);
 	return NULL;
 }
