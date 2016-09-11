@@ -3,6 +3,83 @@
     "timestamp": "2016-09-10 00:00:00.205191", 
     "testcases": [
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test time usage", 
+        "name": "time_test_usage", 
+        "log": "Did not find correct output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test env usage", 
+        "name": "env_test_usage", 
+        "log": "Did not find correct output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test time exec failure", 
+        "name": "time_test_exec", 
+        "log": "Did not find correct output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test env exec failure", 
+        "name": "env_test_exec", 
+        "log": "Did not find correct output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test time", 
+        "name": "time_test", 
+        "log": "Invalid reported time"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test env", 
+        "name": "env_test", 
+        "log": "Something Failed, report to Autograding staff"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test env", 
+        "name": "env_test_one", 
+        "log": "Did not find correct output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test env", 
+        "name": "env_test_two", 
+        "log": "Something Failed, report to Autograding staff"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test env referencing variable", 
+        "name": "env_test_ref", 
+        "log": "Something Failed, report to Autograding staff"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test env referencing nonexistence variable", 
+        "name": "env_test_ref_empty", 
+        "log": "Something Failed, report to Autograding staff"
+      }
+    ], 
+    "checksum": "034a86d0649e74b23984b18d419f41c4176aea32  env.c\n1649c787d7f52f05cd78940e3ecc3760b07764ac  time.c", 
+    "revision": "12194"
+  }, 
+  {
+    "timestamp": "2016-09-10 20:40:00.114211", 
+    "testcases": [
+      {
         "description": "Test time usage", 
         "ptsEarned": 0.0, 
         "log": "Did not find correct output", 
@@ -40,7 +117,7 @@
       {
         "description": "Test env", 
         "ptsEarned": 0.0, 
-        "log": "Something Failed, report to Autograding staff", 
+        "log": "Did not find correct output", 
         "name": "env_test", 
         "ptsPossible": 1.0
       }, 
@@ -54,30 +131,30 @@
       {
         "description": "Test env", 
         "ptsEarned": 0.0, 
-        "log": "Something Failed, report to Autograding staff", 
+        "log": "Did not find correct output", 
         "name": "env_test_two", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Test env referencing variable", 
         "ptsEarned": 0.0, 
-        "log": "Something Failed, report to Autograding staff", 
+        "log": "Did not find correct output", 
         "name": "env_test_ref", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Test env referencing nonexistence variable", 
         "ptsEarned": 0.0, 
-        "log": "Something Failed, report to Autograding staff", 
+        "log": "Did not find correct output", 
         "name": "env_test_ref_empty", 
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "12194", 
+    "revision": "12702", 
     "checksum": "034a86d0649e74b23984b18d419f41c4176aea32  env.c\n1649c787d7f52f05cd78940e3ecc3760b07764ac  time.c"
   }, 
   {
-    "timestamp": "2016-09-10 20:40:00.114211", 
+    "timestamp": "2016-09-11 00:00:00.573402", 
     "testcases": [
       {
         "log": "Did not find correct output", 
@@ -151,6 +228,6 @@
       }
     ], 
     "checksum": "034a86d0649e74b23984b18d419f41c4176aea32  env.c\n1649c787d7f52f05cd78940e3ecc3760b07764ac  time.c", 
-    "revision": "12702"
+    "revision": "13069"
   }
 ]
