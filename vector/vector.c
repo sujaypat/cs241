@@ -40,7 +40,7 @@ Vector *Vector_create(copy_constructor_type copy_constructor, destructor_type de
 
 	vec -> copy_constructor = copy_constructor;
 	vec -> destructor = destructor;
-	vec -> array = calloc(INITIAL_CAPACITY * sizeof(void *));
+	vec -> array = calloc(INITIAL_CAPACITY, sizeof(void *));
 	vec -> size = 0;
 	vec -> capacity = INITIAL_CAPACITY;
 
@@ -131,7 +131,7 @@ void Vector_insert(Vector *vector, size_t index, void *elem) {
 	if(index > Vector_size(vector)){
 		Vector_resize(vector, index);
 	}
-	memcpy(vector -> array[index])
+	memcpy(vector -> array[index + 1], vector -> array[index], (Vector_size(vector) - vector -> array) * sizeof(void *));
 	vector -> array[index] = elem;
 }
 
