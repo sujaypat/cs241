@@ -24,7 +24,7 @@ void my_destructor(void *elem) {
 // Test your vector here
 int main() {
 	char *val = "same";
-	Vector *test = Vector_create(my_copy_ctor(), my_destructor());
+	Vector *test = Vector_create(my_copy_ctor, my_destructor;
 	Vector_resize(test, 100);
 	Vector_set(test, 20, val);
 
