@@ -43,9 +43,9 @@ int main() {
 	Vector_append(test, val);
 	Vector_append(test, val);
 	Vector_append(test, val);
-	
+
 	Vector_set(test, 20, val);
-	Vector_delete(test, 20);
+	Vector_delete(test, 2);
 	Vector_destroy(test);
 	return 0;
 }
