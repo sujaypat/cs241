@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
 	int status;
 		struct timespec start, end;
 
-	if(argc <= 3) print_time_usage();
+	if(argc < 3) print_time_usage();
 
 	for(int i = 1; i <= argc; i++){
 		child_argv[i - 1] = argv[i];
@@ -39,6 +39,6 @@ int main(int argc, char *argv[]) {
 
 	double time_diff = (double)(end.tv_sec - start.tv_sec) + (double)(end.tv_nsec - start.tv_nsec)/(1000000000);
 	display_results(argv, time_diff);
-	
+
 	return 0;
 }
