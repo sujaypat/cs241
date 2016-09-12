@@ -2,7 +2,10 @@
 * Lab: Utilities Unleashed
 * CS 241 - Fall 2016
 */
-
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main(int argc, char *argv[]) {
 	struct timespec start, end;
