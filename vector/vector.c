@@ -142,7 +142,7 @@ void Vector_insert(Vector *vector, size_t index, void *elem) {
 
 void Vector_delete(Vector *vector, size_t index) {
 	assert(vector);
-	// assert(index < Vector_size(vector));
+	assert(index < Vector_size(vector));
 	// your code here, what asserts might you want?
 
 	vector -> destructor(vector -> array[index]);
