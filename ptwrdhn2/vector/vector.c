@@ -106,7 +106,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 void Vector_set(Vector *vector, size_t index, void *elem) {
 	assert(vector);
 	assert(index >= 0);
-	// assert(index < Vector_size(vector));
+	assert(vector -> array);
 	assert(Vector_size(vector));
 	// your code here
 	if(index < Vector_capacity(vector)){
