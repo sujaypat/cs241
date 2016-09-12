@@ -29,6 +29,5 @@ int main() {
 	Vector_resize(test, 100);
 	Vector_set(test, 20, val);
 	Vector_destroy(test);
-	free(val);
 	return 0;
 }
