@@ -15,14 +15,14 @@
 int main(int argc, char *argv[]) {
 	char *child_argv[argc];
 	int status;
+		struct timespec start, end;
 
 	if(argc <= 3) print_time_usage();
-	
+
 	for(int i = 1; i <= argc; i++){
 		child_argv[i - 1] = argv[i];
 	}
-	struct timespec start, end;
-	// if(!strcmp(argv[0],"time"))
+
 	clock_gettime(CLOCK_MONOTONIC, &start);
 	pid_t p = fork();
 	if(p > 0){
@@ -39,5 +39,6 @@ int main(int argc, char *argv[]) {
 
 	double time_diff = (double)(end.tv_sec - start.tv_sec) + (double)(end.tv_nsec - start.tv_nsec)/(1000000000);
 	display_results(argv, time_diff);
+	
 	return 0;
 }
