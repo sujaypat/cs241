@@ -27,7 +27,23 @@ int main() {
 	Vector *test = Vector_create(my_copy_ctor, my_destructor);
 	if(!test) printf("vector is null!");
 	Vector_resize(test, 100);
+
 	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	Vector_append(test, val);
+	
 	Vector_set(test, 20, val);
 	Vector_delete(test, 20);
 	Vector_destroy(test);
