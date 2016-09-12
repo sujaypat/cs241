@@ -25,10 +25,10 @@ void my_destructor(void *elem) {
 int main() {
 	char *val = "same";
 	Vector *test = Vector_create(my_copy_ctor, my_destructor);
-	if(!test) printf("fuck you");
+	if(!test) printf("vector is null!");
 	Vector_resize(test, 100);
 	Vector_set(test, 20, val);
 	Vector_destroy(test);
-
+	free(val);
 	return 0;
 }
