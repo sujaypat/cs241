@@ -28,6 +28,7 @@ int main(int argc, char *argv[]) {
 	}
 	else if(p == 0){
 		execvp(child_argv[0], child_argv);
+		print_exec_failed();
 	}
 	else{
 		print_fork_failed();
@@ -36,6 +37,7 @@ int main(int argc, char *argv[]) {
 	// fork and get parent time
 	// then exec sleep and get time on child
 	// compare timestamps
-	display_results(argv, start.tv_nsec- end.tv_nsec);
+	double time_diff = (double)(end.tv_sec - start.tv_sec) + (double)(end.tv_nsec - start.tv_nsec)/(1000000000);
+	display_results(argv, time_diff);
 	return 0;
 }
