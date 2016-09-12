@@ -58,7 +58,7 @@ Document *Document_create_from_file(const char *filename) {
 	// this function will read a file which is created by Document_write_to_file
 	// your code here!
 	Document *d = Document_create();
-	size_t lineNum = 0;
+	size_t lineNum = 1;
 	FILE *fp = fopen(filename, "r");
 	if(!fp) return d;
 
