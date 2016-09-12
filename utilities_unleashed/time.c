@@ -2,6 +2,7 @@
 * Lab: Utilities Unleashed
 * CS 241 - Fall 2016
 */
+#include <format.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
