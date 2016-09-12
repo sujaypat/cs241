@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
 	char *child_argv[argc];
 	int status;
 
-	for(int i = 1; i < argc; i++){
+	for(int i = 1; i <= argc; i++){
 		child_argv[i - 1] = argv[i];
 	}
 	struct timespec start, end;
