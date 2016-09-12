@@ -147,11 +147,11 @@ void Vector_delete(Vector *vector, size_t index) {
 
 	}
 	vector -> array[index] = NULL;
-	for(int i = 0; i < (int)Vector_size(vector) - 1; i++){
-		if(vector -> array[i] == NULL){
-
-		}
-	}
+	// for(int i = 0; i < (int)Vector_size(vector) - 1; i++){
+	// 	if(vector -> array[i] == NULL){
+	//
+	// 	}
+	// }
 }
 
 void Vector_append(Vector *vector, void *elem) {
