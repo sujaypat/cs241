@@ -55,8 +55,8 @@ void Vector_destroy(Vector *vector) {
 			vector -> destructor(vector -> array[i]);
 		}
 	}
-	free(vector -> copy_constructor);
-	free(vector -> destructor);
+	// free(vector -> copy_constructor);
+	// free(vector -> destructor);
 	free(vector -> array);
 	free(vector);
 }
