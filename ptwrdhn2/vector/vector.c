@@ -98,7 +98,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 				vector -> destructor(vector -> array[i]);
 			}
 		}
-		vector -> array = realloc(vector -> array, new_size * sizeof(void *));
+		// vector -> array = realloc(vector -> array, new_size * sizeof(void *));
 	}
 	if(Vector_size(vector) > Vector_capacity(vector)) vector -> size = Vector_capacity(vector);
 }
@@ -107,37 +107,35 @@ void Vector_set(Vector *vector, size_t index, void *elem) {
 	assert(vector);
 	assert(index >= 0);
 	assert(vector -> array);
-	// assert(Vector_size(vector));
+	assert(Vector_size(vector));
 	// your code here
 	if(index < Vector_capacity(vector)){
 		if(vector -> array[index]) vector -> destructor(vector -> array[index]);
-		if(elem) vector -> array[index] = vector -> copy_constructor(elem);
-		else vector -> array[index] = NULL;
+		// if(elem) vector -> array[index] = vector -> copy_constructor(elem);
+		// else vector -> array[index] = NULL;
 	}
 	else{
 		Vector_resize(vector, index + 1);
-		if(elem) vector -> array[index] = vector -> copy_constructor(elem);
-		else vector -> array[index] = NULL;
 	}
+	if(elem) vector -> array[index] = vector -> copy_constructor(elem);
+	else vector -> array[index] = NULL;
 }
 
 void *Vector_get(Vector *vector, size_t index) {
 	assert(vector);
+	assert(index < Vector_size(vector));
 	// your code here
-	if(index < Vector_size(vector)){
-		return vector -> array[index];
-	}
-	return NULL;
+	return vector -> array[index];
 }
 
 void Vector_insert(Vector *vector, size_t index, void *elem) {
 	assert(vector);
 	// your code here
 	if(index > Vector_size(vector)){
-		Vector_resize(vector, index);
+		Vector_resize(vector, index + 1);
 	}
 	memcpy(vector -> array[index + 1], vector -> array[index], (Vector_size(vector) - index) * sizeof(void *));
-	vector -> array[index] = elem;
+	vector -> array[index] = elem ? vector ->copy_constructor(elem) : NULL;
 }
 
 void Vector_delete(Vector *vector, size_t index) {
@@ -145,7 +143,7 @@ void Vector_delete(Vector *vector, size_t index) {
 	assert(index < Vector_size(vector));
 	// your code here, what asserts might you want?
 
-	vector -> destructor(vector -> array[index]);
+	if(vector -> array[index]) vector -> destructor(vector -> array[index]);
 	memcpy(vector -> array[index], vector -> array[index + 1], (Vector_size(vector) - index) * sizeof(void *));
 }
 
@@ -155,5 +153,6 @@ void Vector_append(Vector *vector, void *elem) {
 	if(Vector_size(vector) >= Vector_capacity(vector) - 1){
 		Vector_resize(vector, Vector_size(vector) + 1);
 	}
-	vector -> array[Vector_size(vector)] = vector -> copy_constructor(elem);
+	if(elem) vector -> array[Vector_size(vector)] = vector -> copy_constructor(elem);
+	else vector -> array[Vector_size(vector)] = NULL;
 }
