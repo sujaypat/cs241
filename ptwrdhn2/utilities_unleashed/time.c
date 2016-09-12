@@ -8,7 +8,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
-#include <sys>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 int main(int argc, char *argv[]) {
 	char *child_argv[] = NULL;
