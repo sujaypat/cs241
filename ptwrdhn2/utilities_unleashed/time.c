@@ -29,6 +29,6 @@ int main(int argc, char *argv[]) {
 	// fork and get parent time
 	// then exec sleep and get time on child
 	// compare timestamps
-	printf("%s %s took %lf seconds", argv[0], argv[1], difftime(start, end));
+	display_results(argv, start.tv_nsec- end.tv_nsec);
 	return 0;
 }
