@@ -8,6 +8,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
+#include <sys>
 
 int main(int argc, char *argv[]) {
 	char *child_argv[] = NULL;
@@ -19,7 +20,7 @@ int main(int argc, char *argv[]) {
 	clock_gettime(CLOCK_MONOTONIC, &start);
 	pid_t p = fork();
 	if(p == 0){
-		execvp(child_argv[0], child_argv[]);
+		execvp(child_argv[0], child_argv);
 	}
 	int status;
 	waitpid(p, status, WUNTRACED);
