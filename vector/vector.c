@@ -84,7 +84,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 			vector -> capacity *= 2;
 		}
 		vector -> array = realloc(vector -> array, new_size * sizeof(void *));
-		memset(vector -> array + initSize, 0, (initSize - new_size) * sizeof(void *));
+		memset(vector -> array + initSize, 0, (initSize - new_size - 1) * sizeof(void *));
 	}
 	else if(4 * new_size <= Vector_capacity(vector) || new_size <= 10){
 		if(new_size > 10){
