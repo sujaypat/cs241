@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 		waitpid(p, &status, 0);
 	}
 	else if(p == 0){
-		execvp(child_argv[0], child_argv);
+		execvp(argv[1], child_argv + 1);
 		print_exec_failed();
 	}
 	else{
