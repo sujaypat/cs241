@@ -160,5 +160,5 @@ void Vector_append(Vector *vector, void *elem) {
 	if(Vector_size(vector) >= Vector_capacity(vector) - 1){
 		Vector_resize(vector, Vector_size(vector) + 1);
 	}
-	vector -> array[Vector_size(vector) - 1] = vector -> copy_constructor(elem);
+	vector -> array[Vector_size(vector)] = vector -> copy_constructor(elem);
 }
