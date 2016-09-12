@@ -117,8 +117,7 @@ void Vector_set(Vector *vector, size_t index, void *elem) {
 	else{
 		Vector_resize(vector, index + 1);
 	}
-	if(elem) vector -> array[index] = vector -> copy_constructor(elem);
-	else vector -> array[index] = NULL;
+	vector -> array[index] = elem ? vector ->copy_constructor(elem) : NULL;
 }
 
 void *Vector_get(Vector *vector, size_t index) {
@@ -153,6 +152,5 @@ void Vector_append(Vector *vector, void *elem) {
 	if(Vector_size(vector) >= Vector_capacity(vector) - 1){
 		Vector_resize(vector, Vector_size(vector) + 1);
 	}
-	if(elem) vector -> array[Vector_size(vector)] = vector -> copy_constructor(elem);
-	else vector -> array[Vector_size(vector)] = NULL;
+	vector -> array[index] = elem ? vector ->copy_constructor(elem) : NULL;
 }
