@@ -12,7 +12,7 @@
 #include <sys/wait.h>
 
 int main(int argc, char *argv[]) {
-	char *child_argv[] = NULL;
+	char *child_argv[argc] = NULL;
 	for(int i = 1; i < argc; i++){
 		child_argv[i - 1] = argv[i];
 	}
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
 		execvp(child_argv[0], child_argv);
 	}
 	int status;
-	waitpid(p, status, WUNTRACED);
+	waitpid(p, &status, WUNTRACED);
 	clock_gettime(CLOCK_MONOTONIC, &end);
 	// fork and get parent time
 	// then exec sleep and get time on child
