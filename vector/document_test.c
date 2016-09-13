@@ -6,5 +6,12 @@
 #include "document.h"
 // test your document here
 int main() {
-	return 0; 
+	Document *d = Document_create();
+
+
+
+
+	
+	Document_destroy(d);
+	return 0;
 }
