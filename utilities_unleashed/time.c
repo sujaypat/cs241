@@ -13,23 +13,20 @@
 #include <sys/wait.h>
 
 int main(int argc, char *argv[]) {
-	char *child_argv[argc];
 	int status;
-		struct timespec start, end;
+	struct timespec start, end;
 
 	if(argc < 3) print_time_usage();
 
-	for(int i = 1; i <= argc; i++){
-		child_argv[i - 1] = argv[i];
-	}
 
+	// fork exec wait block with timing
 	clock_gettime(CLOCK_MONOTONIC, &start);
 	pid_t p = fork();
 	if(p > 0){
 		waitpid(p, &status, 0);
 	}
 	else if(p == 0){
-		execvp(child_argv[0], child_argv);
+		execvp(argv[1], argv + 1);
 		print_exec_failed();
 	}
 	else{
@@ -37,6 +34,7 @@ int main(int argc, char *argv[]) {
 	}
 	clock_gettime(CLOCK_MONOTONIC, &end);
 
+	// calculate time difference
 	double time_diff = (double)(end.tv_sec - start.tv_sec) + (double)(end.tv_nsec - start.tv_nsec)/(1000000000);
 	display_results(argv, time_diff);
 
