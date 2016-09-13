@@ -29,6 +29,10 @@ void dumplmaos(Vector * vector){
 	printf("//lmao\n" );
 }
 // Test your vector here
+void dicks(Vector * vector){
+	printf("%d/%d dicks\n",vector->size, vector->capacity );
+}
+
 int main() {
 	char *val = "same";
 	Vector *test = Vector_create(my_copy_ctor, my_destructor);
