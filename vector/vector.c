@@ -57,7 +57,7 @@ void Vector_destroy(Vector *vector) {
 	}
 	free(vector -> array);
 	free(vector);
-	vector = NULL:
+	vector = NULL;
 }
 
 size_t Vector_size(Vector *vector) {
@@ -93,7 +93,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 				if(vector -> array[i]){
 					vector -> destructor(vector -> array[i]);
 				}
-				array[i] = NULL;
+				vector -> array[i] = NULL;
 			}
 			if(4 * new_size <= Vector_capacity(vector)){
 				while (Vector_capacity(vector) > 2 * new_size) {
