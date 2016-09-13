@@ -8,6 +8,15 @@
 #include <stdio.h>
 #include <string.h>
 // test your document here
+
+void printdicks(Document * dick){
+	printf("8====D\n" );
+	size_t i =0;
+	for(i = 1; i <= Document_size(target); i++){
+		printf("%d: %s\n",i, Document_get_line(dick, i) );
+
+	}
+}
 int main() {
 	Document *d = Document_create();
 	Document_destroy(d);
@@ -28,6 +37,7 @@ int main() {
 	Document_set_line(d_file10, 19, "ldhlkadhvlkadjhvkdjfvsdfj435345345fkjsdfkjdshfjdshkhjsfb");
 	Document_set_line(d_file10, 23, "ldhlkadhvlkadjhvkdjfvsdfjb6345sfkjsdfkjdshfjdshkhjsfb");
 	// Document_delete_line(d_file10, 7);
+	printdicks(d_file10);
 	Document_write_to_file(d_file10, "blah.txt");
 	Document_destroy(d_file10);
 	return 0;
