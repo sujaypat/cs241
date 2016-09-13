@@ -16,7 +16,7 @@ extern char **environ;
 
 int main(int argc, char *argv[]) {
 	int status_env, status_cmd;
-	char *env_args = NULL;
+	// char *env_args = NULL;
 
 	if(argc == 1){
 		for (char **env = environ; *env; ++env){
