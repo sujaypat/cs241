@@ -30,7 +30,7 @@ void dumplmaos(Vector * vector){
 }
 // Test your vector here
 void dicks(Vector * vector){
-	printf("%d/%d dicks\n",vector->size, vector->capacity );
+	printf("%d/%d dicks\n",Vector_size(vector), Vector_capacity(vector) );
 }
 
 int main() {
