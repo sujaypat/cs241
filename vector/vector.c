@@ -78,7 +78,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 	size_t initSize = Vector_size(vector);
 	size_t initCap = Vector_capacity(vector);
 	// your code here
-	if(new_size != initSize && new_size >= 10){
+	if(new_size != initSize && new_size > 10){
 		if(new_size > initSize){
 			if(new_size > initCap){
 				while(new_size > Vector_capacity(vector)){
