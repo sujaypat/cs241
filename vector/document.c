@@ -72,13 +72,13 @@ Document *Document_create_from_file(const char *filename) {
 	while ((read = getline(&line, &len, fp)) != -1) {
 		// Vector_append(d -> vector, line);//      (d, lineNum, line);
 		i++;
-		Document_insert_line(d, i, line);
-		if(line[read-2]=='\n'){
-			line[read-2] = '\0';
+		if(line[read-1]=='\n'){
+			line[read-1] = '\0';
 		}
-
+		Document_insert_line(d, i, line);
 
 	}
+	free(line);
 	return d;
 
 }
