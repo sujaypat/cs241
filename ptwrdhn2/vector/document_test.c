@@ -38,7 +38,7 @@ int main() {
 	Document_set_line(d_file10, 23, "ldhlkadhvlkadjhvkdjfvsdfjb6345sfkjsdfkjdshfjdshkhjsfb");
 	Document_delete_line(d_file10, 7);
 	// printdicks(d_file10);
-	Document_write_to_file(d_file10, "blah-me.txt");
+	Document_write_to_file(d_file10, "blah.txt");
 	Document_destroy(d_file10);
 	return 0;
 }
