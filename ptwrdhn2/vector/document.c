@@ -48,7 +48,9 @@ void Document_write_to_file(Document *document, const char *filename) {
 	size_t currLine = 1;
 	FILE *f = fopen(filename, "w");
 	while(currLine <= docSize){
-		fprintf(f, "%s\n", Document_get_line(document, currLine));
+		if(Document_get_line(document, currLine) == NULL)
+			fprintf(f, "%s\n", "\n");
+		else fprintf(f, "%s\n", Document_get_line(document, currLine));
 		currLine++;
 	}
 	fclose(f);
