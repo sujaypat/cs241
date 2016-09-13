@@ -84,7 +84,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 				while(new_size > Vector_capacity(vector)){
 					vector -> capacity *= 2;
 				}
-				vector -> array = realloc(vector -> array, new_size * sizeof(void *));
+				vector -> array = realloc(vector -> array, Vector_capacity(vector) * sizeof(void *));
 			}
 			memset(vector -> array + initSize, 0, (new_size - initSize) * sizeof(void *));
 		}
