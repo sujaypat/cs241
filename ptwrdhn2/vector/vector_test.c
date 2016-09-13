@@ -118,6 +118,7 @@ int main() {
 	Vector_delete(test, 2);
 	Vector_delete(test, 2);
 	Vector_delete(test, 2);
+	dicks(test);
 	Vector_delete(test, 2);
 	Vector_delete(test, 2);
 	Vector_delete(test, 2);
