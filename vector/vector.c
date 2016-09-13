@@ -81,7 +81,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 	if(new_size != initSize && new_size >= 10){
 		if(new_size > initSize){
 			if(new_size >= initCap){
-				while(new_size > Vector_capacity(vector)){
+				while(new_size >= Vector_capacity(vector)){
 					vector -> capacity *= 2;
 				}
 				vector -> array = realloc(vector -> array, Vector_capacity(vector) * sizeof(void *));
