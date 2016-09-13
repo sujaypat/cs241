@@ -152,6 +152,11 @@ int main() {
 	dumplmaos(test);
 	Vector_insert(test, Vector_size(test)*2, val);
 
+	Vector_resize(test, 11);
+	dicks(test);
+	Vector_resize(test, 20);
+	dicks(test);
+
 	// Vector_set(test, 20, val);
 	// Vector_delete(test, Vector_size(test) - 1);
 	Vector_destroy(test);
