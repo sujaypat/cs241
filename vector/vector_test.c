@@ -150,7 +150,7 @@ int main() {
 	dicks(test);
 	dicks(test);
 	dumplmaos(test);
-	Vector_inserttest, (test)*2, val);
+	Vector_insert(test, Vector_size(test)*2, val);
 
 	// Vector_set(test, 20, val);
 	// Vector_delete(test, Vector_size(test) - 1);
