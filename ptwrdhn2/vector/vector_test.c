@@ -37,7 +37,7 @@ int main() {
 	char *val = "same";
 	Vector *test = Vector_create(my_copy_ctor, my_destructor);
 	if(!test) printf("vector is null!");
-	Vector_resize(test, 100);
+	// Vector_resize(test, 100);
 
 	Vector_append(test, val);
 	Vector_append(test, val);
