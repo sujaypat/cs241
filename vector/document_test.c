@@ -17,9 +17,9 @@ int main() {
 	// printf("line 2: %s\n", Document_get_line(d_file, 2));
 	Document_destroy(d_file);
 
-	Document *d_file10 = Document_create_from_file("memes10.txt");
+	Document *d_file10 = Document_create_from_file("memes_emptylines.txt");
 	printf("line 1: %s\n", Document_get_line(d_file10, 1));
-	printf("line 8: %s\n", Document_get_line(d_file10, 8));
+	printf("line 8: %s\n", Document_get_line(d_file10, 2));
 	Document_insert_line(d_file10, 24, "line 24");
 	Document_set_line(d_file10, 4, "ldhlkadhvlkadjhvkdjfvsdfjbvjdsfkjsdfkjdshfjdshkhjsfb");
 	Document_set_line(d_file10, 11, "ldhlkadhvlkadjhvkdjfvsdfjbvjdsfkjsdf0890890890hfjdshkhjsfb");
