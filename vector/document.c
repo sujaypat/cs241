@@ -59,6 +59,7 @@ Document *Document_create_from_file(const char *filename) {
 	// your code here!
 	Document *d = Document_create();
 	size_t lineNum = 1;
+	lineNum +=0;
 	FILE *fp = fopen(filename, "r");
 	if(!fp) return d;
 
