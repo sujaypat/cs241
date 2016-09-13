@@ -114,7 +114,7 @@ void Vector_set(Vector *vector, size_t index, void *elem) {
 void *Vector_get(Vector *vector, size_t index) {
 	assert(vector);
 	assert(index < Vector_size(vector));
-	asserT(Vector_size(vector));
+	// assert(Vector_size(vector));
 	assert(index >= 0);
 	// your code here
 	return vector -> array[index];
