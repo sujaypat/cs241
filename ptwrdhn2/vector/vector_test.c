@@ -20,14 +20,14 @@ void *my_copy_ctor(void *elem) {
 void my_destructor(void *elem) {
 	free(elem);
 }
-void dumplmaos(Vector * vector){
-	size_t i = 0;
-	printf("ayyy//");
-	for(i = 0; i<vector->size; i++){
-		printf("%s | ", Vector_get(vector, i) );
-	}
-	printf("//lmao\n" );
-}
+// void dumplmaos(Vector * vector){
+// 	size_t i = 0;
+// 	printf("ayyy//");
+// 	for(i = 0; i<vector->size; i++){
+// 		printf("%s | ", Vector_get(vector, i) );
+// 	}
+// 	printf("//lmao\n" );
+// }
 // Test your vector here
 int main() {
 	char *val = "same";
