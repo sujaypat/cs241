@@ -43,7 +43,7 @@ int main() {
 	Vector_append(test, val);
 	Vector_append(test, val);
 	Vector_append(test, val);
-		dicks(test);
+	dicks(test);
 	Vector_append(test, val);
 	Vector_append(test, val);
 	Vector_append(test, val);
@@ -53,7 +53,7 @@ int main() {
 	Vector_append(test, val);
 	Vector_append(test, val);
 	Vector_append(test, val);
-		dicks(test);
+	dicks(test);
 	Vector_append(test, val);
 	Vector_append(test, val);
 	Vector_append(test, val);
@@ -62,6 +62,7 @@ int main() {
 	Vector_append(test, val);
 	Vector_append(test, val);
 	Vector_append(test, val);
+	dicks(test);
 	Vector_append(test, val);
 	Vector_append(test, val);
 	Vector_append(test, val);
