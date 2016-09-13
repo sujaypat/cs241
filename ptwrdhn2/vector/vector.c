@@ -57,6 +57,7 @@ void Vector_destroy(Vector *vector) {
 	}
 	free(vector -> array);
 	free(vector);
+	vector = NULL:
 }
 
 size_t Vector_size(Vector *vector) {
@@ -77,27 +78,32 @@ void Vector_resize(Vector *vector, size_t new_size) {
 	size_t initSize = Vector_size(vector);
 	size_t initCap = Vector_capacity(vector);
 	// your code here
-	if(new_size > initCap && new_size > 10){
-		while(new_size > Vector_capacity(vector)){
-			vector -> capacity *= 2;
-		}
-		vector -> array = realloc(vector -> array, new_size * sizeof(void *));
-		memset(vector -> array + initSize, 0, (new_size - initSize) * sizeof(void *));
-	}
-	else if(4 * new_size <= Vector_capacity(vector) || new_size <= 10){
-		if(new_size > 10){
-			while (Vector_capacity(vector) > 2 * new_size) {
-				vector -> capacity /= 2;
+	if(new_size != initSize && new_size > 10){
+		if(new_size > initSize){
+			if(new_size > initCap){
+				while(new_size > Vector_capacity(vector)){
+					vector -> capacity *= 2;
+				}
+				vector -> array = realloc(vector -> array, new_size * sizeof(void *));
 			}
+			memset(vector -> array + initSize, 0, (new_size - initSize) * sizeof(void *));
 		}
-		else vector -> capacity = 10;
-		for(size_t i = new_size; i <= initSize; i++){
-			if(vector -> array[i]){
-				vector -> destructor(vector -> array[i]);
+		else if(new_size < initSize){
+			for(size_t i = new_size; i <= initSize; i++){
+				if(vector -> array[i]){
+					vector -> destructor(vector -> array[i]);
+				}
+				array[i] = NULL;
 			}
+			if(4 * new_size <= Vector_capacity(vector)){
+				while (Vector_capacity(vector) > 2 * new_size) {
+					vector -> capacity /= 2;
+				}
+			}
+			vector -> capacity = Vector_capacity(vector) < 10 ? 10 : Vector_capacity(vector);
 		}
 	}
-	if(Vector_size(vector) > Vector_capacity(vector)) vector -> size = Vector_capacity(vector);
+	vector -> size = new_size;
 }
 
 void Vector_set(Vector *vector, size_t index, void *elem) {
