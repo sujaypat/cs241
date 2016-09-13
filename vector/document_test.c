@@ -12,8 +12,8 @@
 void printdicks(Document * dick){
 	printf("8====D\n" );
 	size_t i =0;
-	for(i = 1; i <= Document_size(dick); i++){
-		printf("%zu: %s\n",i, Document_get_line(dick, i) );
+	for(i = 1; i < Document_size(dick); i++){
+		printf("%zu: %s\n", i, Document_get_line(dick, i));
 
 	}
 }
