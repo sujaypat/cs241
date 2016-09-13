@@ -14,7 +14,7 @@ int main() {
 
 	Document *d_file = Document_create_from_file("memes1.txt");
 	printf("line 1: %s\n", Document_get_line(d_file, 1));
-	printf("line 2: %s\n", Document_get_line(d_file, 2));
+	// printf("line 2: %s\n", Document_get_line(d_file, 2));
 	Document_destroy(d_file);
 
 	Document *d_file10 = Document_create_from_file("memes10.txt");
