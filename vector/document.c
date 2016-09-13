@@ -73,8 +73,8 @@ Document *Document_create_from_file(const char *filename) {
 		// Vector_append(d -> vector, line);//      (d, lineNum, line);
 		i++;
 		Document_insert_line(d, i, line);
-		if(line[len-2]=='\n'){
-			line[len-2] = '\0';
+		if(line[read-1]=='\n'){
+			line[read-1] = '\0';
 		}
 
 
