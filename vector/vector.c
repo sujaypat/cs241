@@ -55,8 +55,6 @@ void Vector_destroy(Vector *vector) {
 			vector -> destructor(vector -> array[i]);
 		}
 	}
-	// free(vector -> copy_constructor);
-	// free(vector -> destructor);
 	free(vector -> array);
 	free(vector);
 }
@@ -98,7 +96,6 @@ void Vector_resize(Vector *vector, size_t new_size) {
 				vector -> destructor(vector -> array[i]);
 			}
 		}
-		// vector -> array = realloc(vector -> array, new_size * sizeof(void *));
 	}
 	if(Vector_size(vector) > Vector_capacity(vector)) vector -> size = Vector_capacity(vector);
 }
@@ -106,23 +103,19 @@ void Vector_resize(Vector *vector, size_t new_size) {
 void Vector_set(Vector *vector, size_t index, void *elem) {
 	assert(vector);
 	assert(index >= 0);
-	assert(vector -> array);
+	assert(index < Vector_size(vector));
 	assert(Vector_size(vector));
 	// your code here
-	if(index < Vector_capacity(vector)){
-		if(vector -> array[index]) vector -> destructor(vector -> array[index]);
-		// if(elem) vector -> array[index] = vector -> copy_constructor(elem);
-		// else vector -> array[index] = NULL;
-	}
-	else{
-		Vector_resize(vector, index + 1);
-	}
-	vector -> array[index] = elem ? vector ->copy_constructor(elem) : NULL;
+
+	if(vector -> array[index]) vector -> destructor(vector -> array[index]);
+	vector -> array[index] = elem ? vector -> copy_constructor(elem) : NULL;
 }
 
 void *Vector_get(Vector *vector, size_t index) {
 	assert(vector);
 	assert(index < Vector_size(vector));
+	asserT(Vector_size(vector));
+	assert(index >= 0);
 	// your code here
 	return vector -> array[index];
 }
@@ -149,8 +142,6 @@ void Vector_delete(Vector *vector, size_t index) {
 void Vector_append(Vector *vector, void *elem) {
 	assert(vector);
 	// your code here
-	if(Vector_size(vector) >= Vector_capacity(vector) - 1){
-		Vector_resize(vector, Vector_size(vector) + 1);
-	}
+	Vector_resize(vector, Vector_size(vector) + 1);
 	vector -> array[Vector_size(vector)] = elem ? vector ->copy_constructor(elem) : NULL;
 }

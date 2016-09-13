@@ -45,9 +45,9 @@ void Document_write_to_file(Document *document, const char *filename) {
 	// see the comment in the header file for a description of how to do this!
 	// your code here!
 	size_t docSize = Document_size(document);
-	size_t currLine = 0;
+	size_t currLine = 1;
 	FILE *f = fopen(filename, "w");
-	while(currLine < docSize){
+	while(currLine <= docSize){
 		fprintf(f, "%s\n", Document_get_line(document, currLine));
 		currLine++;
 	}
@@ -66,9 +66,9 @@ Document *Document_create_from_file(const char *filename) {
 	size_t len = 0;
 	ssize_t read;
 
-	if (fp == NULL) exit(EXIT_FAILURE);
+	// if (fp == NULL) exit(EXIT_FAILURE);
 	while ((read = getline(&line, &len, fp)) != -1) {
-		Document_set_line(d, lineNum, line);
+		Vector_append(d -> vector, line);//      (d, lineNum, line);
 	}
 	return d;
 
