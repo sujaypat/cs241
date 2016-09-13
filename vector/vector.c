@@ -131,8 +131,8 @@ void Vector_insert(Vector *vector, size_t index, void *elem) {
 		Vector_resize(vector, index + 1);
 	}
 	else Vector_resize(vector, Vector_size(vector) + 1);
-	
-	memcpy(vector -> array[index + 1], vector -> array[index], (Vector_size(vector) - index - 1) * sizeof(void *));
+
+	memmove(vector -> array[index + 1], vector -> array[index], (Vector_size(vector) - index - 1) * sizeof(void *));
 	vector -> array[index] = elem ? vector ->copy_constructor(elem) : NULL;
 }
 
