@@ -102,9 +102,9 @@ void Vector_resize(Vector *vector, size_t new_size) {
 				while (Vector_capacity(vector) > 2 * new_size) {
 					vector -> capacity /= 2;
 				}
+				vector -> array = realloc(vector -> array, Vector_capacity(vector) * sizeof(void *));
 			}
 			vector -> capacity = Vector_capacity(vector) < 10 ? 10 : Vector_capacity(vector);
-			vector -> array = realloc(vector -> array, Vector_capacity(vector) * sizeof(void *));
 		}
 	}
 	vector -> size = new_size;
