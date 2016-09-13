@@ -71,11 +71,11 @@ Document *Document_create_from_file(const char *filename) {
 	int i = 0;
 	while ((read = getline(&line, &len, fp)) != -1) {
 		// Vector_append(d -> vector, line);//      (d, lineNum, line);
-		Document_insert_line(document, i, line);
+		Document_insert_line(d, i, line);
 		if(line[len-1]=='\n'){
 			line[len-1] = '\0';
 		}
-		
+
 
 	}
 	return d;
