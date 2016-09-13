@@ -15,14 +15,14 @@
 extern char **environ;
 
 int main(int argc, char *argv[]) {
+	int status_env, status_cmd;
+	char *env_args = NULL;
+
 	if(argc == 1){
 		for (char **env = environ; *env; ++env){
 			printf("%s\n", *env);
 		}
 	}
-	int status_env, status_cmd;
-	char *env_args = NULL;
-
 	// if parent, fork for env changes, fork for command after
 	// 1 arg for env, 2 args for command
 	else{
@@ -35,10 +35,18 @@ int main(int argc, char *argv[]) {
 			}
 			else if(command > 0){
 				execvp(argv[2], argv + 2);
+				print_exec_failed();
+			}
+			else{
+				print_fork_failed();
 			}
 		}
 		else if(env_change > 0){
 			execvp(argv[1], argv);
+			print_exec_failed();
+		}
+		else{
+			print_fork_failed();
 		}
 	}
 
