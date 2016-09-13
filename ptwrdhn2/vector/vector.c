@@ -53,6 +53,7 @@ void Vector_destroy(Vector *vector) {
 	for(int i = 0; i < (int)Vector_size(vector); i++){
 		if(vector -> array[i]){
 			vector -> destructor(vector -> array[i]);
+			vector -> array[i] = NULL;
 		}
 	}
 	free(vector -> array);
