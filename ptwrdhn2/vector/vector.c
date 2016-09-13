@@ -104,7 +104,6 @@ void Vector_resize(Vector *vector, size_t new_size) {
 		}
 	}
 	vector -> size = new_size;
-
 }
 
 void Vector_set(Vector *vector, size_t index, void *elem) {
@@ -151,5 +150,5 @@ void Vector_append(Vector *vector, void *elem) {
 	assert(vector);
 	// your code here
 	Vector_resize(vector, Vector_size(vector) + 1);
-	vector -> array[Vector_size(vector)] = elem ? vector ->copy_constructor(elem) : NULL;
+	vector -> array[Vector_size(vector) - 1] = elem ? vector ->copy_constructor(elem) : NULL;
 }
