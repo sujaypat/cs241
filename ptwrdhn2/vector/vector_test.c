@@ -115,6 +115,7 @@ int main() {
 	Vector_append(test, val);
 	Vector_append(test, val);
 	printf("%s\n", Vector_get(test, 2));
+	dicks(test);
 	Vector_delete(test, 2);
 	Vector_delete(test, 2);
 	Vector_delete(test, 2);
