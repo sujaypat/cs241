@@ -90,7 +90,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 		}
 		else if(new_size < initSize){
 			for(size_t i = new_size; i <= initSize; i++){
-				if(vector -> array[i]){
+				if(vector -> array[i] != NULL){
 					vector -> destructor(vector -> array[i]);
 				}
 				vector -> array[i] = NULL;
