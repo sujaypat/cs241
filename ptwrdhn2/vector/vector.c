@@ -142,7 +142,7 @@ void Vector_delete(Vector *vector, size_t index) {
 	// your code here, what asserts might you want?
 
 	if(vector -> array[index]) vector -> destructor(vector -> array[index]);
-	memcpy(vector -> array[index], vector -> array[index + 1], (Vector_size(vector) - index - 1) * sizeof(void *));
+	memmove(vector -> array[index], vector -> array[index + 1], (Vector_size(vector) - index - 1) * sizeof(void *));
 	Vector_resize(vector, Vector_size(vector) - 1);
 }
 
