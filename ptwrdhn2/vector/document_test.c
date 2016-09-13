@@ -4,6 +4,9 @@
  */
 
 #include "document.h"
+#include <assert.h>
+#include <stdio.h>
+#include <string.h>
 // test your document here
 int main() {
 	Document *d = Document_create();
