@@ -23,7 +23,7 @@ void my_destructor(void *elem) {
 void dumplmaos(Vector * vector){
 	size_t i = 0;
 	printf("ayyy//");
-	for(i = 0; i<vector->size; i++){
+	for(i = 0; i< Vector_size(vector); i++){
 		printf("%s | ", Vector_get(vector, i) );
 	}
 	printf("//lmao\n" );
