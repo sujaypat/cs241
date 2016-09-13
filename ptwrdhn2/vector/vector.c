@@ -112,7 +112,6 @@ void Vector_set(Vector *vector, size_t index, void *elem) {
 	assert(index < Vector_size(vector));
 	assert(Vector_size(vector));
 	// your code here
-
 	if(vector -> array[index]) vector -> destructor(vector -> array[index]);
 	vector -> array[index] = elem ? vector -> copy_constructor(elem) : NULL;
 }
@@ -120,7 +119,6 @@ void Vector_set(Vector *vector, size_t index, void *elem) {
 void *Vector_get(Vector *vector, size_t index) {
 	assert(vector);
 	assert(index < Vector_size(vector));
-	// assert(Vector_size(vector));
 	assert(index >= 0);
 	// your code here
 	return vector -> array[index];
@@ -130,9 +128,11 @@ void Vector_insert(Vector *vector, size_t index, void *elem) {
 	assert(vector);
 	// your code here
 	if(index > Vector_size(vector)){
-		Vector_resize(vector, Vector_size(vector) + 1);
+		Vector_resize(vector, index + 1);
 	}
-	memcpy(vector -> array[index + 1], vector -> array[index], (Vector_size(vector) - index) * sizeof(void *));
+	else Vector_resize(vector, Vector_size(vector) + 1);
+	
+	memcpy(vector -> array[index + 1], vector -> array[index], (Vector_size(vector) - index - 1) * sizeof(void *));
 	vector -> array[index] = elem ? vector ->copy_constructor(elem) : NULL;
 }
 
@@ -143,7 +143,7 @@ void Vector_delete(Vector *vector, size_t index) {
 
 	if(vector -> array[index]) vector -> destructor(vector -> array[index]);
 	memcpy(vector -> array[index], vector -> array[index + 1], (Vector_size(vector) - index - 1) * sizeof(void *));
-	vector -> size--;
+	Vector_resize(vector, Vector_size(vector) - 1);
 }
 
 void Vector_append(Vector *vector, void *elem) {
