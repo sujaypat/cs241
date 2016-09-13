@@ -51,7 +51,7 @@ int main() {
 	Vector_append(test, val);
 	Vector_append(test, val);
 	// dumplmaos(test);
-	Vector_set(test, 20, val);
+	// Vector_set(test, 20, val);
 	Vector_delete(test, Vector_size(test) - 1);
 	Vector_destroy(test);
 	return 0;
