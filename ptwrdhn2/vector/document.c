@@ -51,6 +51,7 @@ void Document_write_to_file(Document *document, const char *filename) {
 		fprintf(f, "%s\n", Document_get_line(document, currLine));
 		currLine++;
 	}
+	fclose(f);
 }
 
 Document *Document_create_from_file(const char *filename) {
@@ -79,6 +80,7 @@ Document *Document_create_from_file(const char *filename) {
 
 	}
 	free(line);
+	fclose(fp)
 	return d;
 
 }
