@@ -89,7 +89,7 @@ void Vector_resize(Vector *vector, size_t new_size) {
 			memset(vector -> array + initSize, 0, (new_size - initSize) * sizeof(void *));
 		}
 		else if(new_size < initSize){
-			for(size_t i = new_size + 1; i < initSize; i++){
+			for(size_t i = new_size ; i < initSize; i++){
 				printf("%p\n", vector -> array[i]);
 				if(vector -> array[i]){
 					vector -> destructor(vector -> array[i]);
