@@ -3,442 +3,659 @@
     "timestamp": "2016-09-10 00:00:00.210243", 
     "testcases": [
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Resize past the current capacity", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_past_capacity_test", 
-        "description": "Vector: Resize past the current capacity"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Resize and set/get elements", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_set_get_test", 
-        "description": "Vector: Resize and set/get elements"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Appending then checking/getting", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "append_get_test", 
-        "description": "Vector: Appending then checking/getting"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Appending some elements and checking/getting", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "append_few_get_test", 
-        "description": "Vector: Appending some elements and checking/getting"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Appending 100 times and checking/getting elements", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "append_100_check_get_test", 
-        "description": "Vector: Appending 100 times and checking/getting elements"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Appending 1000000 times and checking/getting elements", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "append_1mil_check_get_test", 
-        "description": "Vector: Appending 1000000 times and checking/getting elements"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Resize past capacity and set/get elements", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_past_set_get_test", 
-        "description": "Vector: Resize past capacity and set/get elements"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Resize, set elements resize smaller then get get all", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_set_resizesmall_test", 
-        "description": "Vector: Resize, set elements resize smaller then get get all"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Resizing greater than double capacity", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_greater_double_test", 
-        "description": "Vector: Resizing greater than double capacity"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Secret test. Hope you don't fail this one...", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "secret_test", 
-        "description": "Vector: Secret test. Hope you don't fail this one..."
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Resizing to 11 then 20.", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_11_20_test", 
-        "description": "Vector: Resizing to 11 then 20."
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Resize and check that all elements are NULL", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_check_NULL_test", 
-        "description": "Vector: Resize and check that all elements are NULL"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Appending NULL", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "append_NULL_test", 
-        "description": "Vector: Appending NULL"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Appending an empty string", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "append_empty_test", 
-        "description": "Vector: Appending an empty string"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Set null at random index", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "set_NULL_test", 
-        "description": "Vector: Set null at random index"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Set an empty string at random index", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "set_empty_string_test", 
-        "description": "Vector: Set an empty string at random index"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Resizing under capacity and checking for no allocs.", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_check_no_alloc_test", 
-        "description": "Vector: Resizing under capacity and checking for no allocs."
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Too much stuff happening to count, but basically everything.", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "Big_test", 
-        "description": "Vector: Too much stuff happening to count, but basically everything."
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Inserting One entry", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "insert_one", 
-        "description": "Vector: Inserting One entry"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Inserting a bunch of times", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "insert_many", 
-        "description": "Vector: Inserting a bunch of times"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Inserting beyond index", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "insert_beyond_index", 
-        "description": "Vector: Inserting beyond index"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Deleting a few entries...", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "delete_small_vector", 
-        "description": "Vector: Deleting a few entries..."
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Vector: Deleting a lot...", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "delete_full_vector", 
-        "description": "Vector: Deleting a lot..."
+        "ptsPossible": 1.0
       }, 
       {
+        "description": "Vector: Checking for memory issues for vector.", 
+        "ptsEarned": 0.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==2815== Memcheck, a memory error detector\n==2815== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==2815== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==2815== Command: .../ptwrdhn2/vector/vector_test 18\n==2815== \nvector_test: vector.c:76: void Vector_resize(Vector *, size_t): Assertion `vector' failed.\n==2815== \n==2815== Process terminating with default action of signal 6 (SIGABRT)\n==2815==    at 0x5073418: raise (raise.c:54)\n==2815==    by 0x5075019: abort (abort.c:89)\n==2815==    by 0x506BBD6: __assert_fail_base (assert.c:92)\n==2815==    by 0x506BC81: __assert_fail (assert.c:101)\n==2815==    by 0x400B2C: Vector_resize (in .../ptwrdhn2/vector/vector_test)\n==2815==    by 0x4018BF: check_memory (in .../ptwrdhn2/vector/vector_test)\n==2815==    by 0x402B69: main (in .../ptwrdhn2/vector/vector_test)\n==2815== \n==2815== HEAP SUMMARY:\n==2815==     in use at exit: 0 bytes in 0 blocks\n==2815==   total heap usage: 2 allocs, 2 frees, 192 bytes allocated\n==2815== \n==2815== All heap blocks were freed -- no leaks are possible\n==2815== \n==2815== For counts of detected and suppressed errors, rerun with: -v\n==2815== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
         "name": "check_memory_vector", 
-        "description": "Vector: Checking for memory issues for vector."
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Document: Test document write/read to/from file when document is empty.", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "document_empty_file", 
-        "description": "Document: Test document write/read to/from file when document is empty."
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Document: Test document write/read to/from file when document has 1 line in it.", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "document_one_line", 
-        "description": "Document: Test document write/read to/from file when document has 1 line in it."
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Document: Test document write/read to/from file when document has 10 lines in it.", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "document_ten_line", 
-        "description": "Document: Test document write/read to/from file when document has 10 lines in it."
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Document: Test document write/read to/from file multiple times with changes in between.", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "document_multiple_write_read", 
-        "description": "Document: Test document write/read to/from file multiple times with changes in between."
+        "ptsPossible": 1.0
       }, 
       {
+        "description": "Document: Test document write/read to/from file when document has some empty lines.", 
+        "ptsEarned": 0.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
         "name": "document_empty_lines", 
-        "description": "Document: Test document write/read to/from file when document has some empty lines."
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==2845== Memcheck, a memory error detector\n==2845== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==2845== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==2845== Command: ./document_test 3\n==2845== \ndocument_test: document.c:84: void Document_insert_line(Document *, size_t, const char *): Assertion `document' failed.\n==2845== \n==2845== Process terminating with default action of signal 6 (SIGABRT)\n==2845==    at 0x5073418: raise (raise.c:54)\n==2845==    by 0x5075019: abort (abort.c:89)\n==2845==    by 0x506BBD6: __assert_fail_base (assert.c:92)\n==2845==    by 0x506BC81: __assert_fail (assert.c:101)\n==2845==    by 0x400A04: Document_insert_line (in .../ptwrdhn2/vector/document_test)\n==2845==    by 0x400E72: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==2845==    by 0x505E82F: (below main) (libc-start.c:291)\n==2845== \n==2845== HEAP SUMMARY:\n==2845==     in use at exit: 0 bytes in 0 blocks\n==2845==   total heap usage: 3 allocs, 3 frees, 521 bytes allocated\n==2845== \n==2845== All heap blocks were freed -- no leaks are possible\n==2845== \n==2845== For counts of detected and suppressed errors, rerun with: -v\n==2845== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
+        "description": "Document: Test document write/read to/from file when document has 10 lines in it (but with valgrind).", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==2845== Memcheck, a memory error detector\n==2845== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==2845== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==2845== Command: ./document_test 3\n==2845== \ndocument_test: document.c:84: void Document_insert_line(Document *, size_t, const char *): Assertion `document' failed.\n==2845== \n==2845== Process terminating with default action of signal 6 (SIGABRT)\n==2845==    at 0x5073418: raise (raise.c:54)\n==2845==    by 0x5075019: abort (abort.c:89)\n==2845==    by 0x506BBD6: __assert_fail_base (assert.c:92)\n==2845==    by 0x506BC81: __assert_fail (assert.c:101)\n==2845==    by 0x400A04: Document_insert_line (in .../ptwrdhn2/vector/document_test)\n==2845==    by 0x400E72: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==2845==    by 0x505E82F: (below main) (libc-start.c:291)\n==2845== \n==2845== HEAP SUMMARY:\n==2845==     in use at exit: 0 bytes in 0 blocks\n==2845==   total heap usage: 3 allocs, 3 frees, 521 bytes allocated\n==2845== \n==2845== All heap blocks were freed -- no leaks are possible\n==2845== \n==2845== For counts of detected and suppressed errors, rerun with: -v\n==2845== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
         "name": "document_check_memory", 
-        "description": "Document: Test document write/read to/from file when document has 10 lines in it (but with valgrind)."
+        "ptsPossible": 1.0
       }
     ], 
-    "revision": "12194", 
-    "checksum": "f783c45470b6399a3ffd5f59099549dd5652f94a  vector.c\n0e03be095687e3e621c46b6aedb857547d73b523  document.c"
+    "checksum": "f783c45470b6399a3ffd5f59099549dd5652f94a  vector.c\n0e03be095687e3e621c46b6aedb857547d73b523  document.c", 
+    "revision": "12194"
   }, 
   {
     "timestamp": "2016-09-11 00:00:00.547325", 
     "testcases": [
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Resize past the current capacity", 
+        "ptsPossible": 1.0, 
         "name": "resize_past_capacity_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Resize past the current capacity"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Resize and set/get elements", 
+        "ptsPossible": 1.0, 
         "name": "resize_set_get_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Resize and set/get elements"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Appending then checking/getting", 
+        "ptsPossible": 1.0, 
         "name": "append_get_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Appending then checking/getting"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Appending some elements and checking/getting", 
+        "ptsPossible": 1.0, 
         "name": "append_few_get_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Appending some elements and checking/getting"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Appending 100 times and checking/getting elements", 
+        "ptsPossible": 1.0, 
         "name": "append_100_check_get_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Appending 100 times and checking/getting elements"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Appending 1000000 times and checking/getting elements", 
+        "ptsPossible": 1.0, 
         "name": "append_1mil_check_get_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Appending 1000000 times and checking/getting elements"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Resize past capacity and set/get elements", 
+        "ptsPossible": 1.0, 
         "name": "resize_past_set_get_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Resize past capacity and set/get elements"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Resize, set elements resize smaller then get get all", 
+        "ptsPossible": 1.0, 
         "name": "resize_set_resizesmall_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Resize, set elements resize smaller then get get all"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Resizing greater than double capacity", 
+        "ptsPossible": 1.0, 
         "name": "resize_greater_double_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Resizing greater than double capacity"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Secret test. Hope you don't fail this one...", 
+        "ptsPossible": 1.0, 
         "name": "secret_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Secret test. Hope you don't fail this one..."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Resizing to 11 then 20.", 
+        "ptsPossible": 1.0, 
         "name": "resize_11_20_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Resizing to 11 then 20."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Resize and check that all elements are NULL", 
+        "ptsPossible": 1.0, 
         "name": "resize_check_NULL_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Resize and check that all elements are NULL"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Appending NULL", 
+        "ptsPossible": 1.0, 
         "name": "append_NULL_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Appending NULL"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Appending an empty string", 
+        "ptsPossible": 1.0, 
         "name": "append_empty_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Appending an empty string"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Set null at random index", 
+        "ptsPossible": 1.0, 
         "name": "set_NULL_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Set null at random index"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Set an empty string at random index", 
+        "ptsPossible": 1.0, 
         "name": "set_empty_string_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Set an empty string at random index"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Resizing under capacity and checking for no allocs.", 
+        "ptsPossible": 1.0, 
         "name": "resize_check_no_alloc_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Resizing under capacity and checking for no allocs."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Too much stuff happening to count, but basically everything.", 
+        "ptsPossible": 1.0, 
         "name": "Big_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Too much stuff happening to count, but basically everything."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Inserting One entry", 
+        "ptsPossible": 1.0, 
         "name": "insert_one", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Inserting One entry"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Inserting a bunch of times", 
+        "ptsPossible": 1.0, 
         "name": "insert_many", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Inserting a bunch of times"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Inserting beyond index", 
+        "ptsPossible": 1.0, 
         "name": "insert_beyond_index", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Inserting beyond index"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Deleting a few entries...", 
+        "ptsPossible": 1.0, 
         "name": "delete_small_vector", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Deleting a few entries..."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Deleting a lot...", 
+        "ptsPossible": 1.0, 
         "name": "delete_full_vector", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Vector: Deleting a lot..."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==17491== Memcheck, a memory error detector\n==17491== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==17491== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==17491== Command: .../ptwrdhn2/vector/vector_test 18\n==17491== \nvector_test: vector.c:76: void Vector_resize(Vector *, size_t): Assertion `vector' failed.\n==17491== \n==17491== Process terminating with default action of signal 6 (SIGABRT)\n==17491==    at 0x5073418: raise (raise.c:54)\n==17491==    by 0x5075019: abort (abort.c:89)\n==17491==    by 0x506BBD6: __assert_fail_base (assert.c:92)\n==17491==    by 0x506BC81: __assert_fail (assert.c:101)\n==17491==    by 0x400B2C: Vector_resize (in .../ptwrdhn2/vector/vector_test)\n==17491==    by 0x4018BF: check_memory (in .../ptwrdhn2/vector/vector_test)\n==17491==    by 0x402B69: main (in .../ptwrdhn2/vector/vector_test)\n==17491== \n==17491== HEAP SUMMARY:\n==17491==     in use at exit: 0 bytes in 0 blocks\n==17491==   total heap usage: 2 allocs, 2 frees, 192 bytes allocated\n==17491== \n==17491== All heap blocks were freed -- no leaks are possible\n==17491== \n==17491== For counts of detected and suppressed errors, rerun with: -v\n==17491== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
         "ptsEarned": 0.0, 
-        "description": "Vector: Checking for memory issues for vector.", 
+        "ptsPossible": 1.0, 
         "name": "check_memory_vector", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==17491== Memcheck, a memory error detector\n==17491== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==17491== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==17491== Command: .../ptwrdhn2/vector/vector_test 18\n==17491== \nvector_test: vector.c:76: void Vector_resize(Vector *, size_t): Assertion `vector' failed.\n==17491== \n==17491== Process terminating with default action of signal 6 (SIGABRT)\n==17491==    at 0x5073418: raise (raise.c:54)\n==17491==    by 0x5075019: abort (abort.c:89)\n==17491==    by 0x506BBD6: __assert_fail_base (assert.c:92)\n==17491==    by 0x506BC81: __assert_fail (assert.c:101)\n==17491==    by 0x400B2C: Vector_resize (in .../ptwrdhn2/vector/vector_test)\n==17491==    by 0x4018BF: check_memory (in .../ptwrdhn2/vector/vector_test)\n==17491==    by 0x402B69: main (in .../ptwrdhn2/vector/vector_test)\n==17491== \n==17491== HEAP SUMMARY:\n==17491==     in use at exit: 0 bytes in 0 blocks\n==17491==   total heap usage: 2 allocs, 2 frees, 192 bytes allocated\n==17491== \n==17491== All heap blocks were freed -- no leaks are possible\n==17491== \n==17491== For counts of detected and suppressed errors, rerun with: -v\n==17491== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n"
+        "description": "Vector: Checking for memory issues for vector."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Document: Test document write/read to/from file when document is empty.", 
+        "ptsPossible": 1.0, 
         "name": "document_empty_file", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Document: Test document write/read to/from file when document is empty."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Document: Test document write/read to/from file when document has 1 line in it.", 
+        "ptsPossible": 1.0, 
         "name": "document_one_line", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Document: Test document write/read to/from file when document has 1 line in it."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Document: Test document write/read to/from file when document has 10 lines in it.", 
+        "ptsPossible": 1.0, 
         "name": "document_ten_line", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Document: Test document write/read to/from file when document has 10 lines in it."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Document: Test document write/read to/from file multiple times with changes in between.", 
+        "ptsPossible": 1.0, 
         "name": "document_multiple_write_read", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Document: Test document write/read to/from file multiple times with changes in between."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Document: Test document write/read to/from file when document has some empty lines.", 
+        "ptsPossible": 1.0, 
         "name": "document_empty_lines", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Document: Test document write/read to/from file when document has some empty lines."
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==17521== Memcheck, a memory error detector\n==17521== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==17521== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==17521== Command: ./document_test 3\n==17521== \ndocument_test: document.c:84: void Document_insert_line(Document *, size_t, const char *): Assertion `document' failed.\n==17521== \n==17521== Process terminating with default action of signal 6 (SIGABRT)\n==17521==    at 0x5073418: raise (raise.c:54)\n==17521==    by 0x5075019: abort (abort.c:89)\n==17521==    by 0x506BBD6: __assert_fail_base (assert.c:92)\n==17521==    by 0x506BC81: __assert_fail (assert.c:101)\n==17521==    by 0x400A04: Document_insert_line (in .../ptwrdhn2/vector/document_test)\n==17521==    by 0x400E72: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==17521==    by 0x505E82F: (below main) (libc-start.c:291)\n==17521== \n==17521== HEAP SUMMARY:\n==17521==     in use at exit: 0 bytes in 0 blocks\n==17521==   total heap usage: 3 allocs, 3 frees, 521 bytes allocated\n==17521== \n==17521== All heap blocks were freed -- no leaks are possible\n==17521== \n==17521== For counts of detected and suppressed errors, rerun with: -v\n==17521== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
         "ptsEarned": 0.0, 
-        "description": "Document: Test document write/read to/from file when document has 10 lines in it (but with valgrind).", 
+        "ptsPossible": 1.0, 
         "name": "document_check_memory", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==17521== Memcheck, a memory error detector\n==17521== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==17521== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==17521== Command: ./document_test 3\n==17521== \ndocument_test: document.c:84: void Document_insert_line(Document *, size_t, const char *): Assertion `document' failed.\n==17521== \n==17521== Process terminating with default action of signal 6 (SIGABRT)\n==17521==    at 0x5073418: raise (raise.c:54)\n==17521==    by 0x5075019: abort (abort.c:89)\n==17521==    by 0x506BBD6: __assert_fail_base (assert.c:92)\n==17521==    by 0x506BC81: __assert_fail (assert.c:101)\n==17521==    by 0x400A04: Document_insert_line (in .../ptwrdhn2/vector/document_test)\n==17521==    by 0x400E72: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==17521==    by 0x505E82F: (below main) (libc-start.c:291)\n==17521== \n==17521== HEAP SUMMARY:\n==17521==     in use at exit: 0 bytes in 0 blocks\n==17521==   total heap usage: 3 allocs, 3 frees, 521 bytes allocated\n==17521== \n==17521== All heap blocks were freed -- no leaks are possible\n==17521== \n==17521== For counts of detected and suppressed errors, rerun with: -v\n==17521== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n"
+        "description": "Document: Test document write/read to/from file when document has 10 lines in it (but with valgrind)."
       }
     ], 
-    "checksum": "f783c45470b6399a3ffd5f59099549dd5652f94a  vector.c\n0e03be095687e3e621c46b6aedb857547d73b523  document.c", 
-    "revision": "13069"
+    "revision": "13069", 
+    "checksum": "f783c45470b6399a3ffd5f59099549dd5652f94a  vector.c\n0e03be095687e3e621c46b6aedb857547d73b523  document.c"
   }, 
   {
     "timestamp": "2016-09-11 14:35:00.164436", 
     "testcases": [
       {
-        "description": "Vector: Resize past the current capacity", 
+        "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
+        "description": "Vector: Resize past the current capacity", 
+        "name": "resize_past_capacity_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Resize and set/get elements", 
+        "name": "resize_set_get_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Appending then checking/getting", 
+        "name": "append_get_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Appending some elements and checking/getting", 
+        "name": "append_few_get_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Appending 100 times and checking/getting elements", 
+        "name": "append_100_check_get_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Appending 1000000 times and checking/getting elements", 
+        "name": "append_1mil_check_get_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Resize past capacity and set/get elements", 
+        "name": "resize_past_set_get_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Resize, set elements resize smaller then get get all", 
+        "name": "resize_set_resizesmall_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Resizing greater than double capacity", 
+        "name": "resize_greater_double_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Secret test. Hope you don't fail this one...", 
+        "name": "secret_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Resizing to 11 then 20.", 
+        "name": "resize_11_20_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Resize and check that all elements are NULL", 
+        "name": "resize_check_NULL_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Appending NULL", 
+        "name": "append_NULL_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Appending an empty string", 
+        "name": "append_empty_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Set null at random index", 
+        "name": "set_NULL_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Set an empty string at random index", 
+        "name": "set_empty_string_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Resizing under capacity and checking for no allocs.", 
+        "name": "resize_check_no_alloc_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Too much stuff happening to count, but basically everything.", 
+        "name": "Big_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Inserting One entry", 
+        "name": "insert_one", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Inserting a bunch of times", 
+        "name": "insert_many", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Inserting beyond index", 
+        "name": "insert_beyond_index", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Deleting a few entries...", 
+        "name": "delete_small_vector", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Deleting a lot...", 
+        "name": "delete_full_vector", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Vector: Checking for memory issues for vector.", 
+        "name": "check_memory_vector", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==32254== Memcheck, a memory error detector\n==32254== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==32254== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==32254== Command: .../ptwrdhn2/vector/vector_test 18\n==32254== \n==32254== Invalid read of size 1\n==32254==    at 0x4C31F93: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32254==    by 0x401BD7: check_memory (in .../ptwrdhn2/vector/vector_test)\n==32254==    by 0x402DB9: main (in .../ptwrdhn2/vector/vector_test)\n==32254==  Address 0x0 is not stack'd, malloc'd or (recently) free'd\n==32254== \n==32254== \n==32254== Process terminating with default action of signal 11 (SIGSEGV)\n==32254==  Access not within mapped region at address 0x0\n==32254==    at 0x4C31F93: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32254==    by 0x401BD7: check_memory (in .../ptwrdhn2/vector/vector_test)\n==32254==    by 0x402DB9: main (in .../ptwrdhn2/vector/vector_test)\n==32254==  If you believe this happened as a result of a stack\n==32254==  overflow in your program's main thread (unlikely but\n==32254==  possible), you can try to increase the size of the\n==32254==  main thread stack using the --main-stacksize= flag.\n==32254==  The main thread stack size used in this run was 8388608.\n==32254== \n==32254== HEAP SUMMARY:\n==32254==     in use at exit: 240 bytes in 12 blocks\n==32254==   total heap usage: 12 allocs, 0 frees, 240 bytes allocated\n==32254== \n==32254== 240 (40 direct, 200 indirect) bytes in 1 blocks are definitely lost in loss record 12 of 12\n==32254==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32254==    by 0x400AA4: Vector_create (in .../ptwrdhn2/vector/vector_test)\n==32254==    by 0x401AFF: check_memory (in .../ptwrdhn2/vector/vector_test)\n==32254==    by 0x402DB9: main (in .../ptwrdhn2/vector/vector_test)\n==32254== \n==32254== LEAK SUMMARY:\n==32254==    definitely lost: 40 bytes in 1 blocks\n==32254==    indirectly lost: 200 bytes in 11 blocks\n==32254==      possibly lost: 0 bytes in 0 blocks\n==32254==    still reachable: 0 bytes in 0 blocks\n==32254==         suppressed: 0 bytes in 0 blocks\n==32254== \n==32254== For counts of detected and suppressed errors, rerun with: -v\n==32254== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Document: Test document write/read to/from file when document is empty.", 
+        "name": "document_empty_file", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Document: Test document write/read to/from file when document has 1 line in it.", 
+        "name": "document_one_line", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Document: Test document write/read to/from file when document has 10 lines in it.", 
+        "name": "document_ten_line", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Document: Test document write/read to/from file multiple times with changes in between.", 
+        "name": "document_multiple_write_read", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Document: Test document write/read to/from file when document has some empty lines.", 
+        "name": "document_empty_lines", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Document: Test document write/read to/from file when document has 10 lines in it (but with valgrind).", 
+        "name": "document_check_memory", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==32284== Memcheck, a memory error detector\n==32284== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==32284== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==32284== Command: ./document_test 3\n==32284== \n==32284== Invalid read of size 8\n==32284==    at 0x40111F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  Address 0x54071a0 is 0 bytes after a block of size 16 alloc'd\n==32284==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401005: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551608)\n==32284==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401133: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Invalid read of size 8\n==32284==    at 0x40111F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401386: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  Address 0x54071a8 is 8 bytes after a block of size 16 alloc'd\n==32284==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401005: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Invalid read of size 8\n==32284==    at 0x401124: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401386: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  Address 0x54071a0 is 0 bytes after a block of size 16 alloc'd\n==32284==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401005: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551600)\n==32284==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401133: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401386: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Invalid write of size 8\n==32284==    at 0x401138: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401386: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  Address 0x54071a0 is 0 bytes after a block of size 16 alloc'd\n==32284==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401005: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Invalid write of size 8\n==32284==    at 0x4C3453F: memset (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x400F90: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401398: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  Address 0x5407200 is 0 bytes after a block of size 32 alloc'd\n==32284==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x400F6F: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401398: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== \n==32284== Process terminating with default action of signal 11 (SIGSEGV)\n==32284==  Access not within mapped region at address 0x5807000\n==32284==    at 0x4C3453F: memset (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x400F90: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401398: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  If you believe this happened as a result of a stack\n==32284==  overflow in your program's main thread (unlikely but\n==32284==  possible), you can try to increase the size of the\n==32284==  main thread stack using the --main-stacksize= flag.\n==32284==  The main thread stack size used in this run was 8388608.\n==32284== \n==32284== HEAP SUMMARY:\n==32284==     in use at exit: 80 bytes in 3 blocks\n==32284==   total heap usage: 5 allocs, 2 frees, 176 bytes allocated\n==32284== \n==32284== LEAK SUMMARY:\n==32284==    definitely lost: 0 bytes in 0 blocks\n==32284==    indirectly lost: 0 bytes in 0 blocks\n==32284==      possibly lost: 0 bytes in 0 blocks\n==32284==    still reachable: 80 bytes in 3 blocks\n==32284==         suppressed: 0 bytes in 0 blocks\n==32284== Reachable blocks (those to which a pointer was found) are not shown.\n==32284== To see them, rerun with: --leak-check=full --show-leak-kinds=all\n==32284== \n==32284== For counts of detected and suppressed errors, rerun with: -v\n==32284== ERROR SUMMARY: 524231 errors from 7 contexts (suppressed: 0 from 0)\n"
+      }
+    ], 
+    "checksum": "3292ca2abf688013ccebc6897c5661421dcff5ea  vector.c\n0557907a211be29b634fd9b7d1873d767fd89082  document.c", 
+    "revision": "13327"
+  }, 
+  {
+    "timestamp": "2016-09-12 00:00:00.275868", 
+    "testcases": [
+      {
+        "description": "Vector: Resize past the current capacity", 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_past_capacity_test", 
         "ptsPossible": 1.0
@@ -501,21 +718,21 @@
       }, 
       {
         "description": "Vector: Secret test. Hope you don't fail this one...", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "secret_test", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Vector: Resizing to 11 then 20.", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_11_20_test", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Vector: Resize and check that all elements are NULL", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "resize_check_NULL_test", 
         "ptsPossible": 1.0
@@ -529,21 +746,21 @@
       }, 
       {
         "description": "Vector: Appending an empty string", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "append_empty_test", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Vector: Set null at random index", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "set_NULL_test", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Vector: Set an empty string at random index", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "set_empty_string_test", 
         "ptsPossible": 1.0
@@ -600,13 +817,13 @@
       {
         "description": "Vector: Checking for memory issues for vector.", 
         "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==32254== Memcheck, a memory error detector\n==32254== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==32254== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==32254== Command: .../ptwrdhn2/vector/vector_test 18\n==32254== \n==32254== Invalid read of size 1\n==32254==    at 0x4C31F93: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32254==    by 0x401BD7: check_memory (in .../ptwrdhn2/vector/vector_test)\n==32254==    by 0x402DB9: main (in .../ptwrdhn2/vector/vector_test)\n==32254==  Address 0x0 is not stack'd, malloc'd or (recently) free'd\n==32254== \n==32254== \n==32254== Process terminating with default action of signal 11 (SIGSEGV)\n==32254==  Access not within mapped region at address 0x0\n==32254==    at 0x4C31F93: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32254==    by 0x401BD7: check_memory (in .../ptwrdhn2/vector/vector_test)\n==32254==    by 0x402DB9: main (in .../ptwrdhn2/vector/vector_test)\n==32254==  If you believe this happened as a result of a stack\n==32254==  overflow in your program's main thread (unlikely but\n==32254==  possible), you can try to increase the size of the\n==32254==  main thread stack using the --main-stacksize= flag.\n==32254==  The main thread stack size used in this run was 8388608.\n==32254== \n==32254== HEAP SUMMARY:\n==32254==     in use at exit: 240 bytes in 12 blocks\n==32254==   total heap usage: 12 allocs, 0 frees, 240 bytes allocated\n==32254== \n==32254== 240 (40 direct, 200 indirect) bytes in 1 blocks are definitely lost in loss record 12 of 12\n==32254==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32254==    by 0x400AA4: Vector_create (in .../ptwrdhn2/vector/vector_test)\n==32254==    by 0x401AFF: check_memory (in .../ptwrdhn2/vector/vector_test)\n==32254==    by 0x402DB9: main (in .../ptwrdhn2/vector/vector_test)\n==32254== \n==32254== LEAK SUMMARY:\n==32254==    definitely lost: 40 bytes in 1 blocks\n==32254==    indirectly lost: 200 bytes in 11 blocks\n==32254==      possibly lost: 0 bytes in 0 blocks\n==32254==    still reachable: 0 bytes in 0 blocks\n==32254==         suppressed: 0 bytes in 0 blocks\n==32254== \n==32254== For counts of detected and suppressed errors, rerun with: -v\n==32254== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==14406== Memcheck, a memory error detector\n==14406== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==14406== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==14406== Command: .../ptwrdhn2/vector/vector_test 18\n==14406== \n==14406== Invalid read of size 1\n==14406==    at 0x4C31F93: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14406==    by 0x401C17: check_memory (in .../ptwrdhn2/vector/vector_test)\n==14406==    by 0x402DF9: main (in .../ptwrdhn2/vector/vector_test)\n==14406==  Address 0x0 is not stack'd, malloc'd or (recently) free'd\n==14406== \n==14406== \n==14406== Process terminating with default action of signal 11 (SIGSEGV)\n==14406==  Access not within mapped region at address 0x0\n==14406==    at 0x4C31F93: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14406==    by 0x401C17: check_memory (in .../ptwrdhn2/vector/vector_test)\n==14406==    by 0x402DF9: main (in .../ptwrdhn2/vector/vector_test)\n==14406==  If you believe this happened as a result of a stack\n==14406==  overflow in your program's main thread (unlikely but\n==14406==  possible), you can try to increase the size of the\n==14406==  main thread stack using the --main-stacksize= flag.\n==14406==  The main thread stack size used in this run was 8388608.\n==14406== \n==14406== HEAP SUMMARY:\n==14406==     in use at exit: 240 bytes in 12 blocks\n==14406==   total heap usage: 13 allocs, 1 frees, 320 bytes allocated\n==14406== \n==14406== 240 (40 direct, 200 indirect) bytes in 1 blocks are definitely lost in loss record 12 of 12\n==14406==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14406==    by 0x400AA4: Vector_create (in .../ptwrdhn2/vector/vector_test)\n==14406==    by 0x401B3F: check_memory (in .../ptwrdhn2/vector/vector_test)\n==14406==    by 0x402DF9: main (in .../ptwrdhn2/vector/vector_test)\n==14406== \n==14406== LEAK SUMMARY:\n==14406==    definitely lost: 40 bytes in 1 blocks\n==14406==    indirectly lost: 200 bytes in 11 blocks\n==14406==      possibly lost: 0 bytes in 0 blocks\n==14406==    still reachable: 0 bytes in 0 blocks\n==14406==         suppressed: 0 bytes in 0 blocks\n==14406== \n==14406== For counts of detected and suppressed errors, rerun with: -v\n==14406== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)\n", 
         "name": "check_memory_vector", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Document: Test document write/read to/from file when document is empty.", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "document_empty_file", 
         "ptsPossible": 1.0
@@ -642,16 +859,16 @@
       {
         "description": "Document: Test document write/read to/from file when document has 10 lines in it (but with valgrind).", 
         "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==32284== Memcheck, a memory error detector\n==32284== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==32284== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==32284== Command: ./document_test 3\n==32284== \n==32284== Invalid read of size 8\n==32284==    at 0x40111F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  Address 0x54071a0 is 0 bytes after a block of size 16 alloc'd\n==32284==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401005: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551608)\n==32284==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401133: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Invalid read of size 8\n==32284==    at 0x40111F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401386: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  Address 0x54071a8 is 8 bytes after a block of size 16 alloc'd\n==32284==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401005: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Invalid read of size 8\n==32284==    at 0x401124: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401386: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  Address 0x54071a0 is 0 bytes after a block of size 16 alloc'd\n==32284==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401005: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551600)\n==32284==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401133: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401386: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Invalid write of size 8\n==32284==    at 0x401138: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401386: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  Address 0x54071a0 is 0 bytes after a block of size 16 alloc'd\n==32284==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x401005: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401374: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== Invalid write of size 8\n==32284==    at 0x4C3453F: memset (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x400F90: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401398: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  Address 0x5407200 is 0 bytes after a block of size 32 alloc'd\n==32284==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x400F6F: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401398: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284== \n==32284== \n==32284== Process terminating with default action of signal 11 (SIGSEGV)\n==32284==  Access not within mapped region at address 0x5807000\n==32284==    at 0x4C3453F: memset (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==32284==    by 0x400F90: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401116: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x401398: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==32284==    by 0x505E82F: (below main) (libc-start.c:291)\n==32284==  If you believe this happened as a result of a stack\n==32284==  overflow in your program's main thread (unlikely but\n==32284==  possible), you can try to increase the size of the\n==32284==  main thread stack using the --main-stacksize= flag.\n==32284==  The main thread stack size used in this run was 8388608.\n==32284== \n==32284== HEAP SUMMARY:\n==32284==     in use at exit: 80 bytes in 3 blocks\n==32284==   total heap usage: 5 allocs, 2 frees, 176 bytes allocated\n==32284== \n==32284== LEAK SUMMARY:\n==32284==    definitely lost: 0 bytes in 0 blocks\n==32284==    indirectly lost: 0 bytes in 0 blocks\n==32284==      possibly lost: 0 bytes in 0 blocks\n==32284==    still reachable: 80 bytes in 3 blocks\n==32284==         suppressed: 0 bytes in 0 blocks\n==32284== Reachable blocks (those to which a pointer was found) are not shown.\n==32284== To see them, rerun with: --leak-check=full --show-leak-kinds=all\n==32284== \n==32284== For counts of detected and suppressed errors, rerun with: -v\n==32284== ERROR SUMMARY: 524231 errors from 7 contexts (suppressed: 0 from 0)\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==14436== Memcheck, a memory error detector\n==14436== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==14436== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==14436== Command: ./document_test 3\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54071a0 is 8 bytes after a block of size 8 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407198 is 0 bytes after a block of size 8 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551608)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407198 is 0 bytes after a block of size 8 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54071f8 is 8 bytes after a block of size 16 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54071f0 is 0 bytes after a block of size 16 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551600)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54071f0 is 0 bytes after a block of size 16 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407250 is 8 bytes after a block of size 24 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407248 is 0 bytes after a block of size 24 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551592)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407248 is 0 bytes after a block of size 24 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54072b8 is 8 bytes after a block of size 32 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54072b0 is 0 bytes after a block of size 32 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551584)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54072b0 is 0 bytes after a block of size 32 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407320 is 8 bytes after a block of size 40 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407318 is 0 bytes after a block of size 40 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551576)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407318 is 0 bytes after a block of size 40 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407398 is 8 bytes after a block of size 48 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407390 is 0 bytes after a block of size 48 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551568)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407390 is 0 bytes after a block of size 48 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407410 is 8 bytes after a block of size 56 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407408 is 0 bytes after a block of size 56 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551560)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407408 is 0 bytes after a block of size 56 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407498 is 8 bytes after a block of size 64 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407490 is 0 bytes after a block of size 64 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551552)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407490 is 0 bytes after a block of size 64 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407520 is 8 bytes after a block of size 72 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407518 is 0 bytes after a block of size 72 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551544)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407518 is 0 bytes after a block of size 72 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \nIncorrect size of document: 0\n==14436== \n==14436== HEAP SUMMARY:\n==14436==     in use at exit: 1,224 bytes in 3 blocks\n==14436==   total heap usage: 19 allocs, 16 frees, 5,936 bytes allocated\n==14436== \n==14436== 120 bytes in 1 blocks are definitely lost in loss record 1 of 3\n==14436==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x50AC927: getdelim (iogetdelim.c:62)\n==14436==    by 0x400BE6: Document_create_from_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40148B: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== LEAK SUMMARY:\n==14436==    definitely lost: 120 bytes in 1 blocks\n==14436==    indirectly lost: 0 bytes in 0 blocks\n==14436==      possibly lost: 0 bytes in 0 blocks\n==14436==    still reachable: 1,104 bytes in 2 blocks\n==14436==         suppressed: 0 bytes in 0 blocks\n==14436== Reachable blocks (those to which a pointer was found) are not shown.\n==14436== To see them, rerun with: --leak-check=full --show-leak-kinds=all\n==14436== \n==14436== For counts of detected and suppressed errors, rerun with: -v\n==14436== ERROR SUMMARY: 37 errors from 37 contexts (suppressed: 0 from 0)\n", 
         "name": "document_check_memory", 
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "13327", 
-    "checksum": "3292ca2abf688013ccebc6897c5661421dcff5ea  vector.c\n0557907a211be29b634fd9b7d1873d767fd89082  document.c"
+    "revision": "14320", 
+    "checksum": "29fe0b1af662f65bfebbd1a07bf07ffb5b49b01e  vector.c\n04cb5a3f1108d41b19797761d11b837391dbf732  document.c"
   }, 
   {
-    "timestamp": "2016-09-12 00:00:00.275868", 
+    "timestamp": "2016-09-13 00:00:00.603862", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
@@ -663,70 +880,70 @@
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "resize_set_get_test", 
         "description": "Vector: Resize and set/get elements"
       }, 
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "append_get_test", 
         "description": "Vector: Appending then checking/getting"
       }, 
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "append_few_get_test", 
         "description": "Vector: Appending some elements and checking/getting"
       }, 
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "append_100_check_get_test", 
         "description": "Vector: Appending 100 times and checking/getting elements"
       }, 
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "append_1mil_check_get_test", 
         "description": "Vector: Appending 1000000 times and checking/getting elements"
       }, 
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "resize_past_set_get_test", 
         "description": "Vector: Resize past capacity and set/get elements"
       }, 
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "resize_set_resizesmall_test", 
         "description": "Vector: Resize, set elements resize smaller then get get all"
       }, 
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "resize_greater_double_test", 
         "description": "Vector: Resizing greater than double capacity"
       }, 
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
+        "ptsEarned": 0.0, 
         "name": "secret_test", 
         "description": "Vector: Secret test. Hope you don't fail this one..."
       }, 
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
+        "ptsEarned": 0.0, 
         "name": "resize_11_20_test", 
         "description": "Vector: Resizing to 11 then 20."
       }, 
@@ -740,7 +957,7 @@
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "append_NULL_test", 
         "description": "Vector: Appending NULL"
       }, 
@@ -803,7 +1020,7 @@
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "delete_small_vector", 
         "description": "Vector: Deleting a few entries..."
       }, 
@@ -815,9 +1032,9 @@
         "description": "Vector: Deleting a lot..."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==14406== Memcheck, a memory error detector\n==14406== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==14406== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==14406== Command: .../ptwrdhn2/vector/vector_test 18\n==14406== \n==14406== Invalid read of size 1\n==14406==    at 0x4C31F93: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14406==    by 0x401C17: check_memory (in .../ptwrdhn2/vector/vector_test)\n==14406==    by 0x402DF9: main (in .../ptwrdhn2/vector/vector_test)\n==14406==  Address 0x0 is not stack'd, malloc'd or (recently) free'd\n==14406== \n==14406== \n==14406== Process terminating with default action of signal 11 (SIGSEGV)\n==14406==  Access not within mapped region at address 0x0\n==14406==    at 0x4C31F93: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14406==    by 0x401C17: check_memory (in .../ptwrdhn2/vector/vector_test)\n==14406==    by 0x402DF9: main (in .../ptwrdhn2/vector/vector_test)\n==14406==  If you believe this happened as a result of a stack\n==14406==  overflow in your program's main thread (unlikely but\n==14406==  possible), you can try to increase the size of the\n==14406==  main thread stack using the --main-stacksize= flag.\n==14406==  The main thread stack size used in this run was 8388608.\n==14406== \n==14406== HEAP SUMMARY:\n==14406==     in use at exit: 240 bytes in 12 blocks\n==14406==   total heap usage: 13 allocs, 1 frees, 320 bytes allocated\n==14406== \n==14406== 240 (40 direct, 200 indirect) bytes in 1 blocks are definitely lost in loss record 12 of 12\n==14406==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14406==    by 0x400AA4: Vector_create (in .../ptwrdhn2/vector/vector_test)\n==14406==    by 0x401B3F: check_memory (in .../ptwrdhn2/vector/vector_test)\n==14406==    by 0x402DF9: main (in .../ptwrdhn2/vector/vector_test)\n==14406== \n==14406== LEAK SUMMARY:\n==14406==    definitely lost: 40 bytes in 1 blocks\n==14406==    indirectly lost: 200 bytes in 11 blocks\n==14406==      possibly lost: 0 bytes in 0 blocks\n==14406==    still reachable: 0 bytes in 0 blocks\n==14406==         suppressed: 0 bytes in 0 blocks\n==14406== \n==14406== For counts of detected and suppressed errors, rerun with: -v\n==14406== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==29439== Memcheck, a memory error detector\n==29439== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==29439== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==29439== Command: .../ptwrdhn2/vector/vector_test 18\n==29439== \n==29439== \n==29439== HEAP SUMMARY:\n==29439==     in use at exit: 0 bytes in 0 blocks\n==29439==   total heap usage: 14 allocs, 14 frees, 412 bytes allocated\n==29439== \n==29439== All heap blocks were freed -- no leaks are possible\n==29439== \n==29439== For counts of detected and suppressed errors, rerun with: -v\n==29439== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)\n", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "check_memory_vector", 
         "description": "Vector: Checking for memory issues for vector."
       }, 
@@ -857,14 +1074,14 @@
         "description": "Document: Test document write/read to/from file when document has some empty lines."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==14436== Memcheck, a memory error detector\n==14436== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==14436== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==14436== Command: ./document_test 3\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54071a0 is 8 bytes after a block of size 8 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407198 is 0 bytes after a block of size 8 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551608)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407198 is 0 bytes after a block of size 8 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013E4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54071f8 is 8 bytes after a block of size 16 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54071f0 is 0 bytes after a block of size 16 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551600)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54071f0 is 0 bytes after a block of size 16 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x4013F6: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407250 is 8 bytes after a block of size 24 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407248 is 0 bytes after a block of size 24 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551592)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407248 is 0 bytes after a block of size 24 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401408: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54072b8 is 8 bytes after a block of size 32 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54072b0 is 0 bytes after a block of size 32 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551584)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x54072b0 is 0 bytes after a block of size 32 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40141A: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407320 is 8 bytes after a block of size 40 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407318 is 0 bytes after a block of size 40 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551576)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407318 is 0 bytes after a block of size 40 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40142C: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407398 is 8 bytes after a block of size 48 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407390 is 0 bytes after a block of size 48 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551568)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407390 is 0 bytes after a block of size 48 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40143E: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407410 is 8 bytes after a block of size 56 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407408 is 0 bytes after a block of size 56 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551560)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407408 is 0 bytes after a block of size 56 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401450: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407498 is 8 bytes after a block of size 64 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407490 is 0 bytes after a block of size 64 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551552)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407490 is 0 bytes after a block of size 64 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401462: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x40113F: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407520 is 8 bytes after a block of size 72 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid read of size 8\n==14436==    at 0x401144: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407518 is 0 bytes after a block of size 72 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Source and destination overlap in memcpy(0x0, 0x0, 18446744073709551544)\n==14436==    at 0x4C32513: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401153: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== Invalid write of size 8\n==14436==    at 0x401158: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436==  Address 0x5407518 is 0 bytes after a block of size 72 alloc'd\n==14436==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x401008: Vector_resize (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401136: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x401474: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \nIncorrect size of document: 0\n==14436== \n==14436== HEAP SUMMARY:\n==14436==     in use at exit: 1,224 bytes in 3 blocks\n==14436==   total heap usage: 19 allocs, 16 frees, 5,936 bytes allocated\n==14436== \n==14436== 120 bytes in 1 blocks are definitely lost in loss record 1 of 3\n==14436==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==14436==    by 0x50AC927: getdelim (iogetdelim.c:62)\n==14436==    by 0x400BE6: Document_create_from_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x40148B: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==14436==    by 0x505E82F: (below main) (libc-start.c:291)\n==14436== \n==14436== LEAK SUMMARY:\n==14436==    definitely lost: 120 bytes in 1 blocks\n==14436==    indirectly lost: 0 bytes in 0 blocks\n==14436==      possibly lost: 0 bytes in 0 blocks\n==14436==    still reachable: 1,104 bytes in 2 blocks\n==14436==         suppressed: 0 bytes in 0 blocks\n==14436== Reachable blocks (those to which a pointer was found) are not shown.\n==14436== To see them, rerun with: --leak-check=full --show-leak-kinds=all\n==14436== \n==14436== For counts of detected and suppressed errors, rerun with: -v\n==14436== ERROR SUMMARY: 37 errors from 37 contexts (suppressed: 0 from 0)\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==29469== Memcheck, a memory error detector\n==29469== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==29469== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==29469== Command: ./document_test 3\n==29469== \n==29469== Invalid read of size 8\n==29469==    at 0x4011A2: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==29469==    by 0x4014F4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==29469==    by 0x505E82F: (below main) (libc-start.c:291)\n==29469==  Address 0x5407150 is 0 bytes after a block of size 80 alloc'd\n==29469==    at 0x4C2FB55: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==29469==    by 0x400E43: Vector_create (in .../ptwrdhn2/vector/document_test)\n==29469==    by 0x400A4C: Document_create (in .../ptwrdhn2/vector/document_test)\n==29469==    by 0x40143D: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==29469==    by 0x505E82F: (below main) (libc-start.c:291)\n==29469== \nIncorrect size of document: 0\n==29469== \n==29469== HEAP SUMMARY:\n==29469==     in use at exit: 1,272 bytes in 4 blocks\n==29469==   total heap usage: 21 allocs, 17 frees, 10,240 bytes allocated\n==29469== \n==29469== 48 bytes in 1 blocks are definitely lost in loss record 1 of 4\n==29469==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==29469==    by 0x50C8A59: strdup (strdup.c:42)\n==29469==    by 0x4011C2: Vector_insert (in .../ptwrdhn2/vector/document_test)\n==29469==    by 0x4014F4: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==29469==    by 0x505E82F: (below main) (libc-start.c:291)\n==29469== \n==29469== 120 bytes in 1 blocks are definitely lost in loss record 2 of 4\n==29469==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n==29469==    by 0x50AC927: getdelim (iogetdelim.c:62)\n==29469==    by 0x400C36: Document_create_from_file (in .../ptwrdhn2/vector/document_test)\n==29469==    by 0x40150B: test_write_ten_line_file (in .../ptwrdhn2/vector/document_test)\n==29469==    by 0x505E82F: (below main) (libc-start.c:291)\n==29469== \n==29469== LEAK SUMMARY:\n==29469==    definitely lost: 168 bytes in 2 blocks\n==29469==    indirectly lost: 0 bytes in 0 blocks\n==29469==      possibly lost: 0 bytes in 0 blocks\n==29469==    still reachable: 1,104 bytes in 2 blocks\n==29469==         suppressed: 0 bytes in 0 blocks\n==29469== Reachable blocks (those to which a pointer was found) are not shown.\n==29469== To see them, rerun with: --leak-check=full --show-leak-kinds=all\n==29469== \n==29469== For counts of detected and suppressed errors, rerun with: -v\n==29469== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)\n", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "document_check_memory", 
         "description": "Document: Test document write/read to/from file when document has 10 lines in it (but with valgrind)."
       }
     ], 
-    "checksum": "29fe0b1af662f65bfebbd1a07bf07ffb5b49b01e  vector.c\n04cb5a3f1108d41b19797761d11b837391dbf732  document.c", 
-    "revision": "14320"
+    "checksum": "89ef2c8b76ff6261ce9c71e114132f2490a221da  vector.c\nf108db95f9d38699501d3156faccc8566c7cee1f  document.c", 
+    "revision": "16163"
   }
 ]
