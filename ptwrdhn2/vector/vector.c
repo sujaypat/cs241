@@ -154,10 +154,10 @@ void Vector_delete(Vector *vector, size_t index) {
 
 	if(vector -> array[index]) vector -> destructor(vector -> array[index]);
 	vector -> array[index] = NULL;
-	for(size_t i = index; i < (Vector_size(vector) - 1); i++){
+	for(size_t i = index; i < (Vector_size(vector)); i++){
 		vector -> array[i] = vector -> array[i + 1];
 	}
-	vector -> array[(Vector_size(vector) - 1)] = NULL;
+	// vector -> array[(Vector_size(vector) - 1)] = NULL;
 }
 
 void Vector_append(Vector *vector, void *elem) {
