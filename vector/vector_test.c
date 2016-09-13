@@ -114,7 +114,7 @@ int main() {
 	dicks(test);
 	Vector_append(test, val);
 	Vector_append(test, val);
-	Vector_delete(test, 6);
+	// Vector_delete(test, 6);
 	// Vector_delete(test, 12);
 	// Vector_delete(test, 12);
 	// Vector_delete(test, 12);
