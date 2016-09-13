@@ -80,7 +80,7 @@ Document *Document_create_from_file(const char *filename) {
 
 	}
 	free(line);
-	fclose(fp)
+	fclose(fp);
 	return d;
 
 }
