@@ -63,7 +63,10 @@ char ** comma_split(char * input){
 	return res;
 }
 
-char ** replace_vars(char * input){
+char ** replace_vars(char ** input){
+	while(*input){
+		input++;
+	}
 	char ** res = NULL;
 	return res;
 }
