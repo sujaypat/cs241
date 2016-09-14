@@ -28,8 +28,8 @@ void handle_display_command(Document *document, const char *command) {
 		}
 	}
 	else{
-		size_t line_num = stoi(command + 2);
-		for(size_t j = line_num - 5; j < line_num + 5; j++){
+		int line_num = stoi(command + 2);
+		for(int j = line_num - 5; j < line_num + 5; j++){
 			if(j >= 0 && j < Document_size(document)){
 				print_line(document, j);
 			}
