@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 	}
 	clock_gettime(CLOCK_MONOTONIC, &end);
 	if(WIFEXITED(status)){
-		if(!WEXITSTATUS(status))
+		if(WEXITSTATUS(status))
 			exit(WEXITSTATUS(status));
 	}
 	// calculate time difference
