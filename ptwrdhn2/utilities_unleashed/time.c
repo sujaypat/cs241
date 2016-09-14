@@ -35,9 +35,10 @@ int main(int argc, char *argv[]) {
 		exit(errno);
 	}
 	clock_gettime(CLOCK_MONOTONIC, &end);
-	// if(WIFEXITED(status)){
-	// 	exit(WIFEXITED(status));
-	// }
+	if(WIFEXITED(status)){
+		if(!WEXITSTATUS(status))
+			exit(WEXITSTATUS(status));
+	}
 	// calculate time difference
 	double time_diff = (double)(end.tv_sec - start.tv_sec) + (double)(end.tv_nsec - start.tv_nsec)/(1000000000);
 	display_results(argv, time_diff);
