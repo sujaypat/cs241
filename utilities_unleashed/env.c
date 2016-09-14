@@ -54,10 +54,10 @@ int main(int argc, char *argv[]) {
 }
 
 char ** comma_split(char * input){
-	char ** res;
+	char ** res = NULL;
 	int i = 0;
-	char *token;
-	while (token = strsep(&input, ",") != NULL) {
+	char *token = NULL;
+	while ((token = strsep(&input, ",")) != NULL) {
 		res[i] = token;
 	}
 	return res;
