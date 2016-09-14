@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
 	int status;
 	struct timespec start, end;
 
-	if(argc < 3) print_time_usage();
+	if(argc < 2) print_time_usage();
 
 	// fork exec wait block with timing
 	clock_gettime(CLOCK_MONOTONIC, &start);
