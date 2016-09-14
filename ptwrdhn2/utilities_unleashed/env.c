@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
 			}
 		}
 		else if(env_change > 0){
-			execvpe(argv[1], argv);
+			execvp(argv[1], argv);
 			print_exec_failed();
 		}
 		else{
@@ -59,6 +59,7 @@ char ** comma_split(const char * input){
 	while (token = strsep(input, ",") != NULL) {
 		res[i] = token;
 	}
+	return res;
 }
 
 char ** replace_vars(const char * input){
