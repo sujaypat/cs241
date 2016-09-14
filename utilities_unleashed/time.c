@@ -9,6 +9,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
+#include <errno.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 
@@ -27,12 +28,16 @@ int main(int argc, char *argv[]) {
 	else if(p == 0){
 		execvp(argv[1], argv + 1);
 		print_exec_failed();
+		exit(errno);
 	}
 	else{
 		print_fork_failed();
+		exit(errno);
 	}
 	clock_gettime(CLOCK_MONOTONIC, &end);
-
+	if(WIFEXITED(status)){
+		exit(WIFEXITED(status));
+	}
 	// calculate time difference
 	double time_diff = (double)(end.tv_sec - start.tv_sec) + (double)(end.tv_nsec - start.tv_nsec)/(1000000000);
 	display_results(argv, time_diff);
