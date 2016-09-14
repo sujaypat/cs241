@@ -17,12 +17,13 @@ extern char **environ;
 int main(int argc, char *argv[]) {
 	int status_env, status_cmd;
 	// char *env_args = NULL;
-
-	if(argc == 1){
+	char *env_args = argv[1];
+	if(argc == 1 && !strcmp(argv[0], "env")){
 		for (char **env = environ; *env; ++env){
 			printf("%s\n", *env);
 		}
 	}
+
 	// if parent, fork for env changes, fork for command after
 	// 1 arg for env, 2 args for command
 	else{
@@ -42,14 +43,24 @@ int main(int argc, char *argv[]) {
 			}
 		}
 		else if(env_change > 0){
-			execvp(argv[1], argv);
+			execvpe(argv[1], argv);
 			print_exec_failed();
 		}
 		else{
 			print_fork_failed();
 		}
 	}
-
-
 	return 0;
+}
+
+char ** comma_split(const char * input){
+	char ** res;
+	int i = 0;
+	while (token = strsep(input, ",") != NULL) {
+		res[i] = token;
+	}
+}
+
+char ** replace_vars(const char * input){
+
 }

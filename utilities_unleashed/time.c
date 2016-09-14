@@ -18,7 +18,6 @@ int main(int argc, char *argv[]) {
 
 	if(argc < 3) print_time_usage();
 
-
 	// fork exec wait block with timing
 	clock_gettime(CLOCK_MONOTONIC, &start);
 	pid_t p = fork();
