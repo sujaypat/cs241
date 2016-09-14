@@ -23,7 +23,7 @@ void handle_display_command(Document *document, const char *command) {
 	// TODO implement handle_display_command
 	if(strlen(command) == 1){
 		//print full document if exists
-		for(size_t i = 0; i < Document_size(document); i++){
+		for(size_t i = 1; i <= Document_size(document); i++){
 			print_line(document, i);
 		}
 	}
