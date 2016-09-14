@@ -14,6 +14,7 @@
 
 char *get_filename(int argc, char *argv[]) {
   // TODO implement get_filename
+  return argv[1];
   // take a look at editor_main.c to see what this is used for
   return NULL;
 }
