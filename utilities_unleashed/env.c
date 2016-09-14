@@ -64,5 +64,6 @@ char ** comma_split(char * input){
 }
 
 char ** replace_vars(char * input){
-
+	// char ** res = NULL;
+	return &input;
 }
