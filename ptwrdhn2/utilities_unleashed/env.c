@@ -56,6 +56,7 @@ int main(int argc, char *argv[]) {
 char ** comma_split(char * input){
 	char ** res;
 	int i = 0;
+	char *token;
 	while (token = strsep(&input, ",") != NULL) {
 		res[i] = token;
 	}
