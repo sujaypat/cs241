@@ -28,9 +28,9 @@ void handle_display_command(Document *document, const char *command) {
 		}
 	}
 	else{
-		int line_num = stoi(command + 2);
+		int line_num = atoi(command + 2);
 		for(int j = line_num - 5; j < line_num + 5; j++){
-			if(j >= 0 && j < Document_size(document)){
+			if(j >= 0 && j < (int)Document_size(document)){
 				print_line(document, j);
 			}
 		}
