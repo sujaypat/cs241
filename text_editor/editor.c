@@ -13,14 +13,11 @@
 #include <string.h>
 
 char *get_filename(int argc, char *argv[]) {
-	// TODO implement get_filename
-	return argc == 2 ? argv[1] : NULL;
+	return argc == 2 ? argv[argc - 1] : NULL;
 	// take a look at editor_main.c to see what this is used for
-	// return NULL;
 }
 
 void handle_display_command(Document *document, const char *command) {
-	// TODO implement handle_display_command
 	if(strlen(command) == 1){
 		//print full document if exists
 		for(size_t i = 1; i <= Document_size(document); i++){
@@ -29,7 +26,7 @@ void handle_display_command(Document *document, const char *command) {
 	}
 	else{
 		int line_num = atoi(command + 2);
-		for(int j = line_num - 5; j < line_num + 5; j++){
+		for(int j = line_num - 5; j <= line_num + 5; j++){
 			if(j > 0 && j <= (int)Document_size(document)){
 				print_line(document, j);
 			}
@@ -39,6 +36,7 @@ void handle_display_command(Document *document, const char *command) {
 
 void handle_write_command(Document *document, const char *command) {
 	// TODO implement handle_write_command
+
 }
 
 void handle_append_command(Document *document, const char *command) {
