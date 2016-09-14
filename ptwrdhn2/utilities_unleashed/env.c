@@ -17,7 +17,7 @@ extern char **environ;
 int main(int argc, char *argv[]) {
 	int status_env, status_cmd;
 	// char *env_args = NULL;
-	char *env_args = argv[1];
+	// char *env_args = argv[1];
 	if(argc == 1 && !strcmp(argv[0], "env")){
 		for (char **env = environ; *env; ++env){
 			printf("%s\n", *env);
@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
-char ** comma_split(const char * input){
+char ** comma_split(char * input){
 	char ** res;
 	int i = 0;
 	while (token = strsep(&input, ",") != NULL) {
@@ -62,6 +62,6 @@ char ** comma_split(const char * input){
 	return res;
 }
 
-char ** replace_vars(const char * input){
+char ** replace_vars(char * input){
 
 }
