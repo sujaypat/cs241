@@ -34,11 +34,11 @@ char * replace_vars(char * input){
 	int i = 0;
 	while(*input){ //printf("35 input: %s\n", input);
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
-			// printf("36 var before replacement: %s\n", var);
+			printf("36 var before replacement: %s\n", var);
 			printf("input: %s\n", input);
 			char *endpart = strdup(input);
 			var = getenv(var);
-			// printf("38 var after replacement: %s\n", var);
+			printf("38 var after replacement: %s\n", var);
 			res = strcat(beg, var);
 			res = strcat(res, endpart);
 			// printf("input: %s\n", input);
