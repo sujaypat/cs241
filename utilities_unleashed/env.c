@@ -38,24 +38,14 @@ char * replace_vars(char * input){
 			printf("res so far: %s\n", res);
 			beg = strsep(&input, "%%");
 			var = memset(var, 0, 128);
-			input++;
+			// input++;
 			i = 0;
 			continue;
 		}
 		printf("%c\n", *input);
 		var[i++] = *input;
-		// printf("%s\n", input);
 		input ++;
 	}
-	// printf("beginning: %s\n", beg);
-
-
-	// var = getenv(var);
-
-	// char *a = malloc(strlen(beg) + strlen(var) + strlen(end) + 64);
-
-	// a = strcat(beg, var);
-	// res = strcat(a, end);
 	return res;
 }
 
