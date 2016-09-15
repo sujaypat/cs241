@@ -85,7 +85,7 @@ char ** comma_split(char * input){
 int main(int argc, char *argv[]) {
 	int status;
 
-	if(argc == 1 && !strcmp(argv[0], "env")){
+	if(argc == 1){
 		for (char **env = environ; *env; ++env){
 			printf("%s\n", *env);
 		}
