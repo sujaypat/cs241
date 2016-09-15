@@ -19,7 +19,7 @@ extern char **environ;
 char * replace_vars(char * input){
 	char *beg;
 	char *var = NULL;
-	var = malloc(64);
+	var = calloc(128);
 	char *end;
 	beg = strsep(&input, "%%");
 	int i = 0;
