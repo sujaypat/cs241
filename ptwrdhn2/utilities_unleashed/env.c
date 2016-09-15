@@ -22,7 +22,7 @@ char * replace_vars(char * input){
 	char *end = NULL;
 	beg = strsep(&input, "%%");
 	while(*input){
-		if(!(isalpha(*input) || isdigit(*input) || !strcmp(*input,"_"))){
+		if(!(isalpha(*input) || isdigit(*input)) || strcmp('_', *input)){
 			break;
 		}
 		var = strcat(var, *input);
