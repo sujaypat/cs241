@@ -32,7 +32,7 @@ char * replace_vars(char * input){
 	// printf("31 beg: %s\n", beg);
 	// printf("32 input: %s\n", input);
 	int i = 0;
-	while(index(input, '%')){
+	while(*input){
 
 		printf("beg at top of loop: %s\n", beg);
 		printf("input at top of loop: %s\n", input);
@@ -75,7 +75,7 @@ char ** comma_split(char * input){
 	char *token = NULL;
 	while ((token = strsep(&input, ",")) != NULL) {
 		res = realloc(res, (i + 1) * sizeof(char *));
-		res[i] = malloc(sizeof(token));
+		// res[i] = malloc(sizeof(token));
 		res[i] = replace_vars(token);
 		i++;
 	}
@@ -100,10 +100,6 @@ int main(int argc, char *argv[]) {
 		}
 		else if(p > 0){
 			char **env_changes = comma_split(argv[1]);
-			// while(*env_changes){
-			// 	printf("%s\n", *env_changes);
-			// 	env_changes++;
-			// }
 			execvpe(argv[2], argv + 2, env_changes);
 			print_exec_failed();
 			exit(errno);
