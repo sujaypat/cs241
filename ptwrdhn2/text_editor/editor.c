@@ -18,7 +18,8 @@ char *get_filename(int argc, char *argv[]) {
 }
 
 void handle_display_command(Document *document, const char *command) {
-	if(strlen(command) == 1){
+	if(!Document_size(document)) print_document_empty_error();
+	if(!strcmp(command, "p")){
 		//print full document if exists
 		for(size_t i = 1; i <= Document_size(document); i++){
 			print_line(document, i);
@@ -36,7 +37,23 @@ void handle_display_command(Document *document, const char *command) {
 
 void handle_write_command(Document *document, const char *command) {
 	// TODO implement handle_write_command
+	printf("%s\n", command);
+	char *num;
+	size_t line_num = 0;
+	int i = 0;
+	while(*command){
+		if(isspace(*command)){
+			line_num = atoi(num);
+			break;
+		}
+		num[i++] = *command;
+	}
+	printf("%d\n", line_num);
+	size_t len = strlen(test);
+	size_t spn = strcspn(test, "invald");
 
+	if()
+	// while $ keep inserting line
 }
 
 void handle_append_command(Document *document, const char *command) {
