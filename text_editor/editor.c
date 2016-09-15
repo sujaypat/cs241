@@ -38,7 +38,7 @@ void handle_display_command(Document *document, const char *command) {
 void handle_write_command(Document *document, const char *command) {
 	// TODO implement handle_write_command
 	printf("%s\n", command);
-	char *num = 0;
+	char *num = malloc(4);
 	size_t line_num = 0;
 	int i = 0;
 	while(*command){
