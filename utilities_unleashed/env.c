@@ -28,7 +28,7 @@ char * replace_vars(char * input){
 		var = strcat(var, input);
 		input ++;
 	}
-	end = strsep(input, "\0");
+	end = strsep(&input, "\0");
 	var = getenv(var);
 	char *res = strcat(beg, var);
 	res = strcat(res, end);
