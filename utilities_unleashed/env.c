@@ -15,6 +15,26 @@
 
 extern char **environ;
 
+char ** comma_split(char * input){
+	char ** res = NULL;
+	int i = 0;
+	char *token = NULL;
+	while ((token = strsep(&input, ",")) != NULL) {
+		res = realloc(res, (i + 1) * sizeof(char *));
+		res[i] = malloc(sizeof(token));
+		res[i] = token;
+	}
+	return res;
+}
+
+char ** replace_vars(char * input){
+	char *beg = NULL;
+	char *end = NULL;
+	beg = strsep(input, "%%");
+		// input++;
+	return res;
+}
+
 int main(int argc, char *argv[]) {
 	int status;
 
@@ -50,22 +70,4 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
-char ** comma_split(char * input){
-	char ** res = NULL;
-	int i = 0;
-	char *token = NULL;
-	while ((token = strsep(&input, ",")) != NULL) {
-		res = realloc(res, (i + 1) * sizeof(char *));
-		res[i] = malloc(sizeof(token));
-		res[i] = token;
-	}
-	return res;
-}
 
-char ** replace_vars(char * input){
-	char *beg = NULL;
-	char *end = NULL;
-	beg = strsep(input, "%%");
-		// input++;
-	return res;
-}
