@@ -57,8 +57,8 @@ char * replace_vars(char * input){
 			i = 0;
 			continue;
 		}
-		printf("60 %c\n", *input);
-		printf("61 %s\n", input);
+		// printf("60 %c\n", *input);
+		// printf("61 %s\n", input);
 		var[i++] = *input;
 		input ++;
 	}
