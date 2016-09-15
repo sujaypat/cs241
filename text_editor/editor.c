@@ -48,11 +48,11 @@ void handle_write_command(Document *document, const char *command) {
 		}
 		num[i++] = *command;
 	}
-	printf("%d\n", line_num);
-	size_t len = strlen(test);
-	size_t spn = strcspn(test, "invald");
+	printf("%zu\n", line_num);
+	// size_t len = strlen(command);
+	// size_t spn = strcspn(command, "$");
 
-	if()
+	// if()
 	// while $ keep inserting line
 }
 
