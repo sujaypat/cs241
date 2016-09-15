@@ -25,11 +25,13 @@ char * replace_vars(char * input){
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
 			break;
 		}
-		var = strcat(var, *input);
+		var = strcat(var, input);
 		input ++;
 	}
+	end = strsep(input, "\0");
 	var = getenv(var);
-	char *res = strcat(beg, var, end);
+	char *res = strcat(beg, var);
+	res = strcat(res, end);
 	return res;
 }
 
