@@ -17,20 +17,23 @@
 extern char **environ;
 
 char * replace_vars(char * input){
-	char *beg = NULL;
-	char *var = "\0";
-	char *end = NULL;
+	char *beg[] = NULL;
+	char *var[] = NULL;
+	char *end[] = NULL;
 	beg = strsep(&input, "%%");
+	int i = 0;
 	while(*input){
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
 			break;
 		}
-		var = strcat(var, input);
+		var[i++] = *input;
+		printf("%s\n", input);
 		input ++;
 	}
 	end = strsep(&input, "\0");
 	var = getenv(var);
-	char *res = strcat(beg, var);
+	char *res[] = malloc(strlen(beg) + strlen(var) + strlen(end) + 1);
+	res = strcat(beg, var);
 	res = strcat(res, end);
 	return res;
 }
