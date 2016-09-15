@@ -41,6 +41,8 @@ char * replace_vars(char * input){
 			printf("40 res so far: %s\n", res);
 			printf("41 input: %s\n", input);
 			beg = strsep(&input, "%%");
+			input = strcat(input, beg);
+			res = strcat(res, beg);
 			printf("43 beg: %s\n", beg);
 			var = memset(var, 0, 128);
 			// input++;
