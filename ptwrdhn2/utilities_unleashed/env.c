@@ -17,13 +17,13 @@
 extern char **environ;
 
 char * replace_vars(char * input){
-	char *res = malloc(256);
+	char *res = malloc(512);
 	// char *a = malloc(512);
 	char *beg;
-	beg = calloc(strlen(input), 1);
+	beg = calloc(512, 1);
 
 	char *var = NULL;
-	var = calloc(128, 1);
+	var = calloc(512, 1);
 
 	char *end;
 	end = calloc(strlen(input), 1);
@@ -32,7 +32,7 @@ char * replace_vars(char * input){
 	// printf("31 beg: %s\n", beg);
 	// printf("32 input: %s\n", input);
 	int i = 0;
-	while(*input){
+	while(index(str, "%%")){
 
 		printf("beg at top of loop: %s\n", beg);
 		printf("input at top of loop: %s\n", input);
