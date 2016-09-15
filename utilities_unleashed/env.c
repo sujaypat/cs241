@@ -30,7 +30,7 @@ char * replace_vars(char * input){
 	// printf("29 input: %s\n", input);
 	beg = strsep(&input, "%%");
 	printf("31 beg: %s\n", beg);
-	// printf("32 input: %s\n", input);
+	printf("32 input: %s\n", input);
 	int i = 0;
 	while(*input){
 
