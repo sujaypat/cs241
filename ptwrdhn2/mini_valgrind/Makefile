@@ -30,7 +30,7 @@ all: release
 .PHONY: debug
 
 release: $(EXES_STUDENT) $(EXES_PROVIDED)
-debug:   clean $(EXES_STUDENT:%=%-debug)$(EXES_PROVIDED)
+debug:   clean $(EXES_STUDENT:%=%-debug) $(EXES_PROVIDED)
 
 # include dependencies
 -include $(OBJS_DIR)/*.d
@@ -55,7 +55,7 @@ $(EXE_MEMTEST)-debug: $(OBJS_MEMTEST:%.o=$(OBJS_DIR)/%-debug.o)
 $(EXE_MEMTEST): $(OBJS_MEMTEST:%.o=$(OBJS_DIR)/%-release.o)
 	$(LD) $^ $(LDFLAGS) -o $@
 
-$(EXE_MEMTEST)-reference: $(OBJS_MEMTEST:%.o=$(OBJS_DIR)/%-release.o)
+$(EXE_MEMTEST)-reference: $(OBJS_MEMTESTa:%.o=$(OBJS_DIR)/%-release.o)
 	$(LD) $^ $(LDFLAGS-reference) -o $@
 
 .PHONY: clean
