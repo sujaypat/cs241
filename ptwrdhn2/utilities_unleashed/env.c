@@ -17,7 +17,7 @@
 extern char **environ;
 
 char * replace_vars(char * input){
-	char *res = calloc(512,1);
+	char *res = malloc(256);
 	// char *a = malloc(512);
 	char *beg;
 	beg = calloc(strlen(input), 1);
