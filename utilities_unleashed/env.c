@@ -15,19 +15,6 @@
 
 extern char **environ;
 
-char ** comma_split(char * input){
-	char ** res = NULL;
-	int i = 0;
-	char *token = NULL;
-	while ((token = strsep(&input, ",")) != NULL) {
-		res = realloc(res, (i + 1) * sizeof(char *));
-		res[i] = malloc(sizeof(token));
-		res[i] = replace_vars(token);
-		i++;
-	}
-	return res;
-}
-
 char * replace_vars(char * input){
 	char *beg = NULL;
 	char *var = "\0";
@@ -42,6 +29,19 @@ char * replace_vars(char * input){
 	}
 	var = getenv(var);
 	char *res = strcat(beg, var, end);
+	return res;
+}
+
+char ** comma_split(char * input){
+	char ** res = NULL;
+	int i = 0;
+	char *token = NULL;
+	while ((token = strsep(&input, ",")) != NULL) {
+		res = realloc(res, (i + 1) * sizeof(char *));
+		res[i] = malloc(sizeof(token));
+		res[i] = replace_vars(token);
+		i++;
+	}
 	return res;
 }
 
