@@ -47,6 +47,7 @@ char * replace_vars(char * input){
 			continue;
 		}
 		printf("49 %c\n", *input);
+		printf("50 %s\n", input);
 		var[i++] = *input;
 		input ++;
 	}
