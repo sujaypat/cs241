@@ -26,8 +26,9 @@ char * replace_vars(char * input){
 
 	char *end;
 	end = calloc(strlen(input), 1);
-
+	printf("input: %s\n", input);
 	beg = strsep(&input, "%%");
+	printf("input: %s\n", input);
 	int i = 0;
 	while(*input){
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
@@ -36,6 +37,7 @@ char * replace_vars(char * input){
 			printf("var after replacement: %s\n", var);
 			res = strcat(beg, var);
 			printf("res so far: %s\n", res);
+			printf("input: %s\n", input);
 			beg = strsep(&input, "%%");
 			var = memset(var, 0, 128);
 			// input++;
