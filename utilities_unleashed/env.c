@@ -40,8 +40,8 @@ char * replace_vars(char * input){
 	printf("var before replacement: %s\n", var);
 	var = getenv(var);
 	printf("var after replacement: %s\n", var);
-	char *a = malloc(strlen(beg) + strlen(var) + strlen(end) + 16);
-	char *res = malloc(strlen(beg) + strlen(var) + strlen(end) + 16);
+	char *a = malloc(strlen(beg) + strlen(var) + strlen(end) + 64);
+	char *res = malloc(strlen(beg) + strlen(var) + strlen(end) + 64);
 	a = strcat(beg, var);
 	res = strcat(a, end);
 	return res;
