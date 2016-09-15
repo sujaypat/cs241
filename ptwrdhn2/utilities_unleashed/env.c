@@ -32,7 +32,7 @@ char * replace_vars(char * input){
 	printf("31 beg: %s\n", beg);
 	printf("32 input: %s\n", input);
 	int i = 0;
-	while(*input){
+	while(*input){ printf("35 input: %s\n", input);
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
 			printf("36 var before replacement: %s\n", var);
 			var = getenv(var);
