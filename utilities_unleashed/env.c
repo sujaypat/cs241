@@ -32,6 +32,7 @@ char ** replace_vars(char * input){
 	char *end = NULL;
 	beg = strsep(&input, "%%");
 		// input++;
+	res = strcat(beg, end);
 	return res;
 }
 
