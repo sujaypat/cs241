@@ -23,7 +23,7 @@ char * replace_vars(char * input){
 	// beg = calloc(512, 1);
 
 	char *var = NULL;
-	var = calloc(512, 1);
+	// var = calloc(512, 1);
 
 	char *end;
 	end = calloc(strlen(input), 1);
@@ -53,7 +53,7 @@ char * replace_vars(char * input){
 			// // printf("50 input: %s\n", input);
 			// input = strcat(input, beg);
 			// res = strcat(res, beg);
-			// printf("53 input: %s\n", input);
+			printf("53 input: %s\n", input);
 			// printf("54 beg: %s\n", beg);
 			var = memset(var, 0, 128);
 			// input++;
