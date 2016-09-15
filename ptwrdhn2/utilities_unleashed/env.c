@@ -34,7 +34,7 @@ char * replace_vars(char * input){
 	int i = 0;
 	while(*input){ //printf("35 input: %s\n", input);
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
-			printf("36 var before replacement: %s\n", var);
+			printf("37 var before replacement: %s\n", var);
 			printf("input: %s\n", input);
 			char *endpart = strdup(input);
 			var = getenv(var);
@@ -43,22 +43,22 @@ char * replace_vars(char * input){
 			res = strcat(beg, var);
 			res = strcat(res, endpart);
 			// printf("input: %s\n", input);
-			printf("40 res so far: %s\n", res);
-			printf("41 endpart: %s\n", endpart);
+			printf("46 res so far: %s\n", res);
+			printf("47 endpart: %s\n", endpart);
 			input = strdup(endpart);
 			beg = strsep(&input, "%%");
-			printf("49 input: %s\n", input);
+			printf("50 input: %s\n", input);
 			input = strcat(input, beg);
 			res = strcat(res, beg);
-			printf("52 input: %s\n", input);
-			printf("53 beg: %s\n", beg);
+			printf("53 input: %s\n", input);
+			printf("54 beg: %s\n", beg);
 			var = memset(var, 0, 128);
 			// input++;
 			i = 0;
 			continue;
 		}
-		printf("49 %c\n", *input);
-		printf("50 %s\n", input);
+		printf("60 %c\n", *input);
+		printf("61 %s\n", input);
 		var[i++] = *input;
 		input ++;
 	}
