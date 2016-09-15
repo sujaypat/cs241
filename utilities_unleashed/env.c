@@ -23,7 +23,7 @@ char * replace_vars(char * input){
 	// beg = calloc(512, 1);
 
 	char *var = NULL;
-	// var = calloc(512, 1);
+	var = calloc(512, 1);
 
 	char *end;
 	end = calloc(strlen(input), 1);
