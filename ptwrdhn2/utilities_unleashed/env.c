@@ -18,9 +18,11 @@ extern char **environ;
 
 char * replace_vars(char * input){
 	char *beg;
+	beg = calloc(strlen(input), 1);
 	char *var = NULL;
 	var = calloc(128, 1);
 	char *end;
+	end = calloc(strlen(input), 1);
 	beg = strsep(&input, "%%");
 	int i = 0;
 	while(*input){
