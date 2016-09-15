@@ -45,12 +45,12 @@ char * replace_vars(char * input){
 			// printf("input: %s\n", input);
 			printf("40 res so far: %s\n", res);
 			printf("41 endpart: %s\n", endpart);
-			input = endpart;
+			input = strdup(endpart);
 			beg = strsep(&input, "%%");
 			printf("49 input: %s\n", input);
 			input = strcat(input, beg);
 			res = strcat(res, beg);
-			printf("52input: %s\n", input);
+			printf("52 input: %s\n", input);
 			printf("53 beg: %s\n", beg);
 			var = memset(var, 0, 128);
 			// input++;
