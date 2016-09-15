@@ -32,7 +32,7 @@ char ** replace_vars(char * input){
 	char *end = NULL;
 	beg = strsep(&input, "%%");
 		// input++;
-	res = strcat(beg, end);
+	char *res = strcat(beg, end);
 	return res;
 }
 
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
 				printf("%s\n", *env_changes);
 				env_changes++;
 			}
-			// char **modifications = replace_vars(env_changes);
+			char **modifications = replace_vars(env_changes);
 			execvpe(argv[2], argv + 2, modifications);
 			print_exec_failed();
 			exit(errno);
