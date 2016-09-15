@@ -32,7 +32,7 @@ char * replace_vars(char * input){
 	// printf("31 beg: %s\n", beg);
 	// printf("32 input: %s\n", input);
 	int i = 0;
-	while((beg = strsep(input, "%%")) != NULL){
+	while((beg = strsep(&input, "%%")) != NULL){
 		printf("beg at top of loop: %s\n", beg);
 		printf("input at top of loop: %s\n", input);
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
