@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <errno.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 
@@ -15,9 +16,8 @@
 extern char **environ;
 
 int main(int argc, char *argv[]) {
-	int status_env, status_cmd;
-	// char *env_args = NULL;
-	// char *env_args = argv[1];
+	int status;
+
 	if(argc == 1 && !strcmp(argv[0], "env")){
 		for (char **env = environ; *env; ++env){
 			printf("%s\n", *env);
@@ -27,27 +27,24 @@ int main(int argc, char *argv[]) {
 	// if parent, fork for env changes, fork for command after
 	// 1 arg for env, 2 args for command
 	else{
-		pid_t env_change = fork();
-		if(env_change == 0){
-			waitpid(env_change, &status_env, 0);
-			pid_t command = fork();
-			if(command == 0){
-				waitpid(command, &status_cmd, 0);
-			}
-			else if(command > 0){
-				execvp(argv[2], argv + 2);
-				print_exec_failed();
-			}
-			else{
-				print_fork_failed();
-			}
+		pid_t p = fork();
+		if(p == 0){
+			waitpid(p, &status, 0);
 		}
-		else if(env_change > 0){
-			execvp(argv[1], argv);
+		else if(p > 0){
+			char **env_changes = comma_split(argv[1]);
+			while(*env_changes){
+				printf("%s\n", *env_changes);
+				env_changes++;
+			}
+			// char **modifications = replace_vars(env_changes);
+			execvpe(argv[2], argv + 2, modifications);
 			print_exec_failed();
+			exit(errno);
 		}
 		else{
 			print_fork_failed();
+			exit(errno);
 		}
 	}
 	return 0;
@@ -58,15 +55,17 @@ char ** comma_split(char * input){
 	int i = 0;
 	char *token = NULL;
 	while ((token = strsep(&input, ",")) != NULL) {
+		res = realloc(res, (i + 1) * sizeof(char *));
+		res[i] = malloc(sizeof(token));
 		res[i] = token;
 	}
 	return res;
 }
 
-char ** replace_vars(char ** input){
-	while(*input){
-		input++;
-	}
-	char ** res = NULL;
+char ** replace_vars(char * input){
+	char *beg = NULL;
+	char *end = NULL;
+	beg = strsep(input, "%%");
+		// input++;
 	return res;
 }
