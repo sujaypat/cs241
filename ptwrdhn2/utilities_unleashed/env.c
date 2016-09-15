@@ -39,6 +39,7 @@ char * replace_vars(char * input){
 			char *endpart = strdup(input);
 			var = getenv(var);
 			printf("38 var after replacement: %s\n", var);
+			printf("42 beg before strcat:   %s\n", beg);
 			res = strcat(beg, var);
 			res = strcat(res, endpart);
 			// printf("input: %s\n", input);
