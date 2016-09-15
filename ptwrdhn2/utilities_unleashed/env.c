@@ -42,7 +42,7 @@ char * replace_vars(char * input){
 			res = strcat(beg, var);
 			res = strcat(res, endpart);
 			// printf("input: %s\n", input);
-			// printf("40 res so far: %s\n", res);
+			printf("40 res so far: %s\n", res);
 			// printf("41 input: %s\n", input);
 			input = endpart;
 			beg = strsep(&input, "%%");
