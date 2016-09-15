@@ -37,7 +37,7 @@ char * replace_vars(char * input){
 			res = strcat(beg, var);
 			printf("res so far: %s\n", res);
 			beg = strsep(&input, "%%");
-			var = 0;
+			var = memset(var, 0, 128);
 			input++;
 			i = 0;
 			continue;
