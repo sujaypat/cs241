@@ -74,7 +74,7 @@ char ** comma_split(char * input){
 	int i = 0;
 	char *token = NULL;
 	while ((token = strsep(&input, ",")) != NULL) {
-		res = realloc(res, (i + 1) * sizeof(char *));
+		// res = realloc(res, (i + 1) * sizeof(char *));
 		// res[i] = malloc(sizeof(token));
 		res[i] = replace_vars(token);
 		i++;
