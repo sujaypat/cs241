@@ -97,10 +97,10 @@ int main(int argc, char *argv[]) {
 		}
 		else if(p > 0){
 			char **env_changes = comma_split(argv[1]);
-			while(*env_changes){
-				printf("%s\n", *env_changes);
-				env_changes++;
-			}
+			// while(*env_changes){
+			// 	printf("%s\n", *env_changes);
+			// 	env_changes++;
+			// }
 			execvpe(argv[2], argv + 2, env_changes);
 			print_exec_failed();
 			exit(errno);
