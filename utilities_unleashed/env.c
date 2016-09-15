@@ -28,6 +28,7 @@ char * replace_vars(char * input){
 	end = calloc(strlen(input), 1);
 	printf("input: %s\n", input);
 	beg = strsep(&input, "%%");
+	printf("beg: %s\n", beg);
 	printf("input: %s\n", input);
 	int i = 0;
 	while(*input){
@@ -39,6 +40,7 @@ char * replace_vars(char * input){
 			printf("res so far: %s\n", res);
 			printf("input: %s\n", input);
 			beg = strsep(&input, "%%");
+			printf("beg: %s\n", beg);
 			var = memset(var, 0, 128);
 			// input++;
 			i = 0;
