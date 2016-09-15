@@ -26,7 +26,7 @@ char * replace_vars(char * input){
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
 			break;
 		}
-		printf("%s\n", *input);
+		printf("%c\n", *input);
 		var[i++] = *input;
 		// printf("%s\n", input);
 		input ++;
