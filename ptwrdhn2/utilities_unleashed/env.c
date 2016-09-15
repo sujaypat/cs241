@@ -17,33 +17,45 @@
 extern char **environ;
 
 char * replace_vars(char * input){
+	char *res = malloc(512);
 	char *beg;
 	beg = calloc(strlen(input), 1);
+
 	char *var = NULL;
 	var = calloc(128, 1);
+
 	char *end;
 	end = calloc(strlen(input), 1);
+
 	beg = strsep(&input, "%%");
 	int i = 0;
 	while(*input){
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
-			break;
+			printf("var before replacement: %s\n", var);
+			var = getenv(var);
+			printf("var after replacement: %s\n", var);
+			res = strcat(beg, var);
+			printf("res so far: %s\n", res);
+			beg = strsep(&input, "%%");
+			var = 0;
+			input++;
+			i = 0;
+			continue;
 		}
 		printf("%c\n", *input);
 		var[i++] = *input;
 		// printf("%s\n", input);
 		input ++;
 	}
-	end = strsep(&input, "");
-	printf("beginning: %s\n", beg);
-	printf("end: %s\n", end);
-	printf("var before replacement: %s\n", var);
-	var = getenv(var);
-	printf("var after replacement: %s\n", var);
-	char *a = malloc(strlen(beg) + strlen(var) + strlen(end) + 64);
-	char *res = malloc(strlen(beg) + strlen(var) + strlen(end) + 64);
-	a = strcat(beg, var);
-	res = strcat(a, end);
+	// printf("beginning: %s\n", beg);
+
+
+	// var = getenv(var);
+
+	// char *a = malloc(strlen(beg) + strlen(var) + strlen(end) + 64);
+
+	// a = strcat(beg, var);
+	// res = strcat(a, end);
 	return res;
 }
 
