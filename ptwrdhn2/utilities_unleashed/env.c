@@ -32,7 +32,7 @@ char * replace_vars(char * input){
 		// printf("%s\n", input);
 		input ++;
 	}
-	end = strsep(&input, "\0");
+	end = strsep(&input, "");
 	printf("%s\n", var);
 	var = getenv(var);
 	printf("%s\n", var);
