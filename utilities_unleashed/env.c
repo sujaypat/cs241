@@ -29,32 +29,32 @@ char * replace_vars(char * input){
 	end = calloc(strlen(input), 1);
 	// printf("29 input: %s\n", input);
 	beg = strsep(&input, "%%");
-	// printf("31 beg: %s\n", beg);
+	printf("31 beg: %s\n", beg);
 	// printf("32 input: %s\n", input);
 	int i = 0;
 	while(*input){
 
-		printf("beg at top of loop: %s\n", beg);
-		printf("input at top of loop: %s\n", input);
+		// printf("beg at top of loop: %s\n", beg);
+		// printf("input at top of loop: %s\n", input);
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
-			printf("37 var before replacement: %s\n", var);
-			printf("input: %s\n", input);
+			// printf("37 var before replacement: %s\n", var);
+			// printf("input: %s\n", input);
 			char *endpart = strdup(input);
 			var = getenv(var);
-			printf("38 var after replacement: %s\n", var);
-			printf("42 beg before strcat:   %s\n", beg);
+			// printf("38 var after replacement: %s\n", var);
+			// printf("42 beg before strcat:   %s\n", beg);
 			res = strcat(beg, var);
 			res = strcat(res, endpart);
 			// printf("input: %s\n", input);
-			printf("46 res so far: %s\n", res);
-			printf("47 endpart: %s\n", endpart);
+			// printf("46 res so far: %s\n", res);
+			// printf("47 endpart: %s\n", endpart);
 			input = strdup(endpart);
 			beg = strsep(&input, "%%");
-			printf("50 input: %s\n", input);
+			// printf("50 input: %s\n", input);
 			input = strcat(input, beg);
 			res = strcat(res, beg);
-			printf("53 input: %s\n", input);
-			printf("54 beg: %s\n", beg);
+			// printf("53 input: %s\n", input);
+			// printf("54 beg: %s\n", beg);
 			var = memset(var, 0, 128);
 			// input++;
 			i = 0;
@@ -74,7 +74,7 @@ char ** comma_split(char * input){
 	int i = 0;
 	char *token = NULL;
 	while ((token = strsep(&input, ",")) != NULL) {
-		// res = realloc(res, (i + 1) * sizeof(char *));
+		res = realloc(res, (i + 1) * sizeof(char *));
 		// res[i] = malloc(sizeof(token));
 		res[i] = replace_vars(token);
 		i++;
