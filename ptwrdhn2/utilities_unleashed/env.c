@@ -18,6 +18,7 @@ extern char **environ;
 
 char * replace_vars(char * input){
 	char *res = malloc(512);
+	char *a = malloc(512);
 	char *beg;
 	beg = calloc(strlen(input), 1);
 
@@ -36,8 +37,8 @@ char * replace_vars(char * input){
 			printf("36 var before replacement: %s\n", var);
 			var = getenv(var);
 			printf("38 var after replacement: %s\n", var);
-			res = strcat(beg, var);
-			res = strcat(res, input);
+			a = strcat(beg, var);
+			res = strcat(a, input);
 			printf("40 res so far: %s\n", res);
 			printf("41 input: %s\n", input);
 			beg = strsep(&input, "%%");
