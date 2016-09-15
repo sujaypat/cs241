@@ -28,11 +28,11 @@ char * replace_vars(char * input){
 	char *end;
 	end = calloc(strlen(input), 1);
 	// printf("29 input: %s\n", input);
-	beg = strsep(&input, "%%");
+
 	// printf("31 beg: %s\n", beg);
 	// printf("32 input: %s\n", input);
 	int i = 0;
-	while(*input){ //printf("35 input: %s\n", input);
+	while(*input){ beg = strsep(&input, "%%");
 		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
 			printf("37 var before replacement: %s\n", var);
 			printf("input: %s\n", input);
@@ -46,10 +46,10 @@ char * replace_vars(char * input){
 			printf("46 res so far: %s\n", res);
 			printf("47 endpart: %s\n", endpart);
 			input = strdup(endpart);
-			beg = strsep(&input, "%%");
+			// beg = strsep(&input, "%%");
 			printf("50 input: %s\n", input);
-			input = strcat(input, beg);
-			res = strcat(res, beg);
+			// input = strcat(input, beg);
+			// res = strcat(res, beg);
 			printf("53 input: %s\n", input);
 			printf("54 beg: %s\n", beg);
 			var = memset(var, 0, 128);
