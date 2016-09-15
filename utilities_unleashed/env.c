@@ -30,7 +30,7 @@ char ** comma_split(char * input){
 char ** replace_vars(char * input){
 	char *beg = NULL;
 	char *end = NULL;
-	beg = strsep(input, "%%");
+	beg = strsep(&input, "%%");
 		// input++;
 	return res;
 }
