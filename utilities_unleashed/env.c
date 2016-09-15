@@ -20,7 +20,7 @@ char * replace_vars(char * input){
 	char *res = malloc(512);
 	// char *a = malloc(512);
 	char *beg;
-	beg = calloc(512, 1);
+	// beg = calloc(512, 1);
 
 	char *var = NULL;
 	var = calloc(512, 1);
@@ -46,13 +46,13 @@ char * replace_vars(char * input){
 			res = strcat(beg, var);
 			res = strcat(res, endpart);
 			// printf("input: %s\n", input);
-			// printf("46 res so far: %s\n", res);
+			printf("46 res so far: %s\n", res);
 			// printf("47 endpart: %s\n", endpart);
-			input = strdup(endpart);
-			beg = strsep(&input, "%%");
-			// printf("50 input: %s\n", input);
-			input = strcat(input, beg);
-			res = strcat(res, beg);
+			// input = strdup(endpart);
+			// beg = strsep(&input, "%%");
+			// // printf("50 input: %s\n", input);
+			// input = strcat(input, beg);
+			// res = strcat(res, beg);
 			// printf("53 input: %s\n", input);
 			// printf("54 beg: %s\n", beg);
 			var = memset(var, 0, 128);
