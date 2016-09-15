@@ -32,7 +32,7 @@ char * replace_vars(char * input){
 	// printf("31 beg: %s\n", beg);
 	// printf("32 input: %s\n", input);
 	int i = 0;
-	while(index(input, "%%")){
+	while(index(input, '%')){
 
 		printf("beg at top of loop: %s\n", beg);
 		printf("input at top of loop: %s\n", input);
