@@ -46,11 +46,11 @@ char * replace_vars(char * input){
 			// printf("41 input: %s\n", input);
 			input = endpart;
 			beg = strsep(&input, "%%");
-			// printf("input: %s\n", input);
-			// input = strcat(input, beg);
+			printf("input: %s\n", input);
+			input = strcat(input, beg);
 			res = strcat(res, beg);
-			// printf("input: %s\n", input);
-			// printf("43 beg: %s\n", beg);
+			printf("input: %s\n", input);
+			printf("43 beg: %s\n", beg);
 			var = memset(var, 0, 128);
 			// input++;
 			i = 0;
@@ -61,7 +61,7 @@ char * replace_vars(char * input){
 		var[i++] = *input;
 		input ++;
 	}
-	printf("res at the end:    %s\n", res);
+	// printf("res at the end:    %s\n", res);
 	return res;
 }
 
