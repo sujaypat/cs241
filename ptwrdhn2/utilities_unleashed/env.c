@@ -22,17 +22,26 @@ char ** comma_split(char * input){
 	while ((token = strsep(&input, ",")) != NULL) {
 		res = realloc(res, (i + 1) * sizeof(char *));
 		res[i] = malloc(sizeof(token));
-		res[i] = token;
+		res[i] = replace_vars(token);
+		i++;
 	}
 	return res;
 }
 
 char * replace_vars(char * input){
 	char *beg = NULL;
+	char *var = "\0";
 	char *end = NULL;
 	beg = strsep(&input, "%%");
-		// input++;
-	char *res = strcat(beg, end);
+	while(*input){
+		if(!(isalpha(*input) || isdigit(*input) || *input == "_")){
+			break;
+		}
+		var = strcat(var, *input);
+		input ++;
+	}
+	var = getenv(var);
+	char *res = strcat(beg, var, end);
 	return res;
 }
 
@@ -58,8 +67,7 @@ int main(int argc, char *argv[]) {
 				printf("%s\n", *env_changes);
 				env_changes++;
 			}
-			// char **modifications = replace_vars(env_changes);
-			// execvpe(argv[2], argv + 2, modifications);
+			execvpe(argv[2], argv + 2, env_changes);
 			print_exec_failed();
 			exit(errno);
 		}
