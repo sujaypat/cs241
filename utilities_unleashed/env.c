@@ -32,7 +32,7 @@ char * replace_vars(char * input){
 	}
 	end = strsep(&input, "\0");
 	var = getenv(var);
-	char *res[] = malloc(strlen(beg) + strlen(var) + strlen(end) + 1);
+	char *res = malloc(strlen(beg) + strlen(var) + strlen(end) + 1);
 	res = strcat(beg, var);
 	res = strcat(res, end);
 	return res;
