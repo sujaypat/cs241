@@ -6,6 +6,9 @@
 #ifndef MINI_VALGRIND_H
 #define MINI_VALGRIND_H
 
+#include <stddef.h>
+#include <stdlib.h>
+
 #define MAX_FILENAME_LENGTH 128
 #define malloc(size) mini_malloc(size, __FILE__, __LINE__)
 #define free(ptr) mini_free(ptr)
