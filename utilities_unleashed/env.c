@@ -33,9 +33,11 @@ char * replace_vars(char * input){
 		input ++;
 	}
 	end = strsep(&input, "");
-	printf("%s\n", var);
+	printf("beginning: %s\n", beg);
+	printf("end: %s\n", end);
+	printf("var before replacement: %s\n", var);
 	var = getenv(var);
-	printf("%s\n", var);
+	printf("var after replacement: %s\n", var);
 	char *res = malloc(strlen(beg) + strlen(var) + strlen(end) + 1);
 	res = strcat(beg, var);
 	res = strcat(res, end);
