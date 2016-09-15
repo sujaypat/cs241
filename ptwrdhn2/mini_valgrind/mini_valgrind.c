@@ -93,6 +93,11 @@ void *mini_realloc(void *ptr, size_t size, const char *file, size_t line) {
 *	passed, no action occurs.
 */
 void mini_free(void *ptr) {
+	if(ptr){
+		remove_meta_data(ptr);
+	}
+	free(ptr);
+	ptr = NULL;
 	// your code here
 }
 
@@ -111,6 +116,7 @@ void mini_free(void *ptr) {
 */
 void insert_meta_data(meta_data *md, size_t size, const char *file, size_t line) {
 	/* set value for malloc_info*/
+
 }
 
 /*
@@ -121,6 +127,7 @@ void insert_meta_data(meta_data *md, size_t size, const char *file, size_t line)
 *	Pointer to a memory block previously allocated.
 */
 void remove_meta_data(void *ptr) {
+
 	/* check if ptr is in the list and delete it from list */
 }
 
