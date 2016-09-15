@@ -17,9 +17,9 @@
 extern char **environ;
 
 char * replace_vars(char * input){
-	char *beg[] = NULL;
-	char *var[] = NULL;
-	char *end[] = NULL;
+	char *beg[] = malloc(64);
+	char *var[] = malloc(64);
+	char *end[] = malloc(64);
 	beg = strsep(&input, "%%");
 	int i = 0;
 	while(*input){
