@@ -51,6 +51,7 @@ void handle_write_command(Document *document, const char *command) {
 		if(input[i] == '$'){
 			j++;
 			curr = 0;
+			i++;
 		}
 		res[j][curr++] = input[i];
 	}
