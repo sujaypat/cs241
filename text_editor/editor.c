@@ -41,8 +41,8 @@ void handle_write_command(Document *document, const char *command) {
 	char *input = (char *)(command + 2);
 	char *num = strsep(&input, " ");
 	printf("num string: %s\n", num);
-	char *res = malloc(strlen(input));
-	for(int i = 2; i < strlen(input); i++){
+	// char *res = malloc(strlen(input));
+	for(size_t i = 2; i < strlen(input); i++){
 
 	}
 	// printf("%s\n", command);
