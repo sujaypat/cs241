@@ -48,6 +48,9 @@ void handle_write_command(Document *document, const char *command) {
 
 	while(*end){
 		if(*end == '$'){
+					printf("start: %s\n", start);
+					printf("length: %d\n", length);
+							printf("end: %s\n", res);
 			strncpy(res, start, length);
 			Document_set_line(document, line_num++, res);
 			printf("res: %s\n", res);
@@ -58,7 +61,6 @@ void handle_write_command(Document *document, const char *command) {
 		}
 		printf("end: %c\n", *end);
 		end++;
-		// printf("end: %c\n", *end);
 		length++;
 	}
 	res = NULL;
