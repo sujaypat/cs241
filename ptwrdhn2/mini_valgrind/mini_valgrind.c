@@ -140,6 +140,7 @@ void remove_meta_data(void *ptr) {
 	meta_data *curr = head;
 	if(del == head){
 		total_free += del -> size;
+		head = del -> next;
 		free(del);
 		return;
 	}
