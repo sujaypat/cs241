@@ -141,7 +141,7 @@ void remove_meta_data(void *ptr) {
 	meta_data *curr = head;
 	while(curr != NULL){
 		if(curr -> next == ptr && ptr){
-			curr -> next = (*ptr).next;
+			curr -> next = (*ptr) -> next;
 			free(ptr);
 			total_free += curr -> size;
 			break;
