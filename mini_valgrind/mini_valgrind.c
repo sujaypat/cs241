@@ -95,7 +95,7 @@ void *mini_realloc(void *ptr, size_t size, const char *file, size_t line) {
 void mini_free(void *ptr) {
 	if(ptr){
 		remove_meta_data(ptr - sizeof(meta_data));
-		// free(ptr);
+		// free(ptr - sizeof(meta_data));
 	}
 	ptr = NULL;
 }
@@ -136,26 +136,28 @@ void insert_meta_data(meta_data *md, size_t size, const char *file, size_t line)
 void remove_meta_data(void *ptr) {
 
 	if(ptr == NULL || head == NULL){
+		bad_frees++;
 		return;
 	}
 	meta_data *del = (meta_data *)ptr;
 	meta_data *curr = head;
 	if(del == head){
+		total_free += del -> size;
 		free(del);
 		return;
 	}
 	while(curr -> next != NULL){
-		printf("148: %p\n", curr -> next);
-		printf("149: %p\n", del -> next);
-		printf("150: %p\n", del);
+		// printf("148: %p\n", curr -> next);
+		// printf("149: %p\n", del -> next);
+		// printf("150: %p\n", del);
 		if(curr -> next == del && del){
 			curr -> next = del -> next;
 			free(del);
-			total_free += curr -> size;
 			break;
 		}
 		curr++;
 	}
+	total_free += del -> size;
 	/* check if ptr is in the list and delete it from list */
 }
 
