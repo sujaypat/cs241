@@ -38,7 +38,7 @@ void handle_display_command(Document *document, const char *command) {
 
 void handle_write_command(Document *document, const char *command) {
 	// TODO implement handle_write_command
-	char *start = (char *)(command + 2);
+	char *start = (char *)(command += 2);
 	char *end = start;
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
@@ -46,8 +46,8 @@ void handle_write_command(Document *document, const char *command) {
 	char *res;
 	int length = 0;
 
-	while(*input){
-		if(*input == '$'){
+	while(*command){
+		if(*command == '$'){
 			strncpy(res, start, length);
 			Document_set_line(document, line_num, res);
 			res = 0;
