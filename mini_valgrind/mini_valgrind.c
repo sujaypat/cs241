@@ -45,10 +45,8 @@ void *mini_malloc(size_t size, const char *file, size_t line) {
 
 	newmem -> size = size;
 	newmem -> line_num = line;
-	newmem -> file_name = calloc(1, MAX_FILENAME_LENGTH);
-
 	//memset(newmem -> file_name, 0, MAX_FILENAME_LENGTH);
-	strcpy(newmem -> file_name, file);
+	strncpy(newmem -> file_name, file, MAX_FILENAME_LENGTH);
 	newmem -> next = NULL;
 	insert_meta_data((meta_data *)newmem, size, file, line);
 	return (void *)(newmem) + sizeof(meta_data);
