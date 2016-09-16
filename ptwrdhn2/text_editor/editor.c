@@ -46,8 +46,8 @@ void handle_write_command(Document *document, const char *command) {
 	char *res;
 	int length = 0;
 
-	while(*command){
-		if(*command == '$'){
+	while(*end){
+		if(*end == '$'){
 			strncpy(res, start, length);
 			Document_set_line(document, line_num, res);
 			res = 0;
