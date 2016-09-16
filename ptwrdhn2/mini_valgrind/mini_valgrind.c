@@ -40,7 +40,7 @@
 void *mini_malloc(size_t size, const char *file, size_t line) {
 	// your code here
 	if(size == 0) return NULL;
-	meta_data *newmem = malloc(sizeof(meta_data) + size);
+	meta_data *newmem = calloc(1, sizeof(meta_data) + size);
 	if(!newmem) return NULL;
 
 	newmem -> size = size;
@@ -170,7 +170,7 @@ void destroy() {
 	meta_data *p2 = NULL;
 	while(p1 != NULL){
 		p2 = p1 -> next;
-		if(p1) free(p1);
+		free(p1);
 		p1 = p2;
 	}
 }
