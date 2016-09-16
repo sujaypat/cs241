@@ -56,7 +56,9 @@ void handle_write_command(Document *document, const char *command) {
 			start = ++end;
 			continue;
 		}
+		printf("end: %c\n", end);
 		end++;
+		printf("end: %c\n", end);
 		length++;
 	}
 	res = NULL;
