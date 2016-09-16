@@ -97,7 +97,7 @@ void mini_free(void *ptr) {
 		remove_meta_data(ptr - sizeof(meta_data));
 		// free(ptr - sizeof(meta_data));
 	}
-	ptr = NULL;
+	// ptr = NULL;
 }
 
 /*
@@ -164,18 +164,18 @@ void remove_meta_data(void *ptr) {
 */
 void destroy() {
 	// your code here
-	if(head == NULL){
-		return;
+	// if(head == NULL){
+	// 	return;
+	// }
+	// else{
+	meta_data *p1 = head;
+	meta_data *p2 = NULL;
+	while(p1 != NULL){
+		p2 = p1 -> next;
+		free(p1);
+		p1 = p2;
 	}
-	else{
-		meta_data *p1 = head;
-		meta_data *p2 = head;
-		while(p1 != NULL && p2 != NULL){
-			p2 = p1 -> next;
-			free(p1);
-			p1 = p2;
-		}
-	}
+	// }
 }
 
 /*
