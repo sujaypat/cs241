@@ -44,15 +44,15 @@ void handle_write_command(Document *document, const char *command) {
 	int line_num = atoi(num);
 	printf("num: %d\n", line_num);
 	char *res;
-	int length = 0;
+	int length = 1;
 
 	while(*end){
 		if(*end == '$'){
 			strncpy(res, start, length);
-			Document_set_line(document, line_num, res);
+			Document_set_line(document, line_num++, res);
 			printf("res: %s\n", res);
 			res = 0;
-			length = 0;
+			length = 1;
 			start = ++end;
 			continue;
 		}
