@@ -83,7 +83,7 @@ void handle_delete_command(Document *document, const char *command) {
 	char *start = strdup(command + 2);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
-	if(line_num > Document_size(document)) invalid_line();
+	if((size_t)line_num > Document_size(document)) invalid_line();
 	else Document_delete_line(document, line_num);
 }
 
