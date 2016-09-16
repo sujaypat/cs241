@@ -51,20 +51,20 @@ void handle_write_command(Document *document, const char *command) {
 			// printf("start: %s\n", start);
 			// printf("length: %d\n", length);
 			// printf("end: %c\n", *end);
-			res = malloc(length + 1);
+			res = calloc(1, length + 1);
 			strncpy(res, start, length);
 			if((size_t)line_num > Document_size(document)){
 				Document_insert_line(document, line_num++, res);
 			}
 			else Document_set_line(document, line_num++, res);
-			printf("res: %s\n", res);
+			// printf("res: %s\n", res);
 			free(res);
 			res = NULL;
 			length = 0;
 			start = ++end;
 			continue;
 		}
-		printf("end: %c\n", *end);
+		// printf("end: %c\n", *end);
 		end++;
 		length++;
 	}
