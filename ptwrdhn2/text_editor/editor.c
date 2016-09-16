@@ -42,8 +42,8 @@ void handle_display_command(Document *document, const char *command) {
 void handle_write_command(Document *document, const char *command) {
 	char *start = strdup(command + 2);
 	// (char *)(command + 2);
-	printf("%p\n", &start);
-	printf("%s\n", start);
+	// printf("%p\n", &start);
+	// printf("%s\n", start);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
 	if(line_num < 1){
@@ -84,8 +84,8 @@ void handle_write_command(Document *document, const char *command) {
 void handle_append_command(Document *document, const char *command) {
 	char *start = strdup(command + 2);
 	// (char *)(command + 2);
-	printf("%p\n", &start);
-	printf("%s\n", start);
+	// printf("%p\n", &start);
+	// printf("%s\n", start);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
 	if(line_num < 1){
