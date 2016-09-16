@@ -139,7 +139,7 @@ void remove_meta_data(void *ptr) {
 		return;
 	}
 	meta_data *curr = head;
-	while(*curr != NULL){
+	while(curr != NULL){
 		if(curr -> next == ptr){
 			curr -> next = ptr -> next;
 			free(ptr);
@@ -163,7 +163,7 @@ void destroy() {
 	else{
 		meta_data *p1 = head;
 		meta_data *p2 = head;
-		while(*p1 != NULL && *p2 != NULL){
+		while(p1 != NULL && p2 != NULL){
 			p2 = p1 -> next;
 			free(p1);
 			p1 = p2;
