@@ -40,7 +40,7 @@
 void *mini_malloc(size_t size, const char *file, size_t line) {
 	// your code here
 	meta_data *newmem = malloc(sizeof(meta_data) + size);
-	if(!newmem) return NULL;
+	if(!newmem || size == 0) return NULL;
 	newmem -> size = size;
 	newmem -> line_num = line;
 	memset(newmem -> file_name, 0, MAX_FILENAME_LENGTH);
@@ -94,9 +94,9 @@ void *mini_realloc(void *ptr, size_t size, const char *file, size_t line) {
 */
 void mini_free(void *ptr) {
 	if(ptr){
-		remove_meta_data(ptr);
+		remove_meta_data(ptr - sizeof(meta_data));
+		free(ptr);
 	}
-	free(ptr);
 	ptr = NULL;
 	// your code here
 }
@@ -116,7 +116,15 @@ void mini_free(void *ptr) {
 */
 void insert_meta_data(meta_data *md, size_t size, const char *file, size_t line) {
 	/* set value for malloc_info*/
+	if(!md) return;
+	md -> size = size;
+	memset(newmem -> file_name, 0, MAX_FILENAME_LENGTH);
+	strcpy(newmem -> file_name, file);
+	md -> line_num = line;
 
+	md -> next = head;
+	head = md;
+	total_usage += size;
 }
 
 /*
@@ -127,7 +135,19 @@ void insert_meta_data(meta_data *md, size_t size, const char *file, size_t line)
 *	Pointer to a memory block previously allocated.
 */
 void remove_meta_data(void *ptr) {
-
+	if(ptr == NULL){
+		return;
+	}
+	meta_data *curr = head;
+	while(*curr){
+		if(curr -> next == ptr){
+			curr -> next = ptr -> next;
+			free(ptr);
+			total_free += (sizeof(meta_data) + size);
+			break;
+		}
+		curr++;
+	}
 	/* check if ptr is in the list and delete it from list */
 }
 
@@ -137,6 +157,18 @@ void remove_meta_data(void *ptr) {
 */
 void destroy() {
 	// your code here
+	if(head == NULL){
+		return;
+	}
+	else{
+		meta_data *p1 = head;
+		meta_data *p2 = head;
+		while(*p1 && *p2){
+			p2 = p1 -> next;
+			free(p1);
+			p1 = p2;
+		}
+	}
 }
 
 /*
