@@ -98,7 +98,6 @@ void mini_free(void *ptr) {
 		// free(ptr);
 	}
 	ptr = NULL;
-	// your code here
 }
 
 /*
@@ -147,6 +146,8 @@ void remove_meta_data(void *ptr) {
 	}
 	while(curr != NULL){
 		if(curr -> next == del && del){
+			printf("%p\n", curr -> next);
+			printf("%p\n", del -> next);
 			curr -> next = del -> next;
 			free(del);
 			total_free += curr -> size;
