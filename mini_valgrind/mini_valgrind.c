@@ -163,11 +163,7 @@ void remove_meta_data(void *ptr) {
 * to not count these blocks as freed.
 */
 void destroy() {
-	// your code here
-	// if(head == NULL){
-	// 	return;
-	// }
-	// else{
+
 	meta_data *p1 = head;
 	meta_data *p2 = NULL;
 	while(p1 != NULL){
@@ -175,7 +171,6 @@ void destroy() {
 		free(p1);
 		p1 = p2;
 	}
-	// }
 }
 
 /*
