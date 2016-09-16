@@ -37,42 +37,31 @@ void handle_display_command(Document *document, const char *command) {
 }
 
 void handle_write_command(Document *document, const char *command) {
-	// TODO implement handle_write_command
 	char *start = (char *)(command + 2);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
-	printf("line num: %d\n", line_num);
 	char *end = start;
 	char *res;
 	int length = 0;
 
 	while(*end){
 		if(*end == '$'){
-			// printf("start: %s\n", start);
-			// printf("length: %d\n", length);
-			// printf("end: %c\n", *end);
 			res = calloc(1, length + 1);
 			strncpy(res, start, length);
-			if((size_t)line_num > Document_size(document)){
-				Document_insert_line(document, line_num++, res);
-			}
+			if((size_t)line_num > Document_size(document)) Document_insert_line(document, line_num++, res);
 			else Document_set_line(document, line_num++, res);
-			// printf("res: %s\n", res);
 			free(res);
 			res = NULL;
 			length = 0;
 			start = ++end;
 			continue;
 		}
-		// printf("end: %c\n", *end);
 		end++;
 		length++;
 	}
 	res = calloc(1, length + 1);
 	strncpy(res, start, length);
-	if((size_t)line_num > Document_size(document)){
-		Document_insert_line(document, line_num++, res);
-	}
+	if((size_t)line_num > Document_size(document)) Document_insert_line(document, line_num++, res);
 	else Document_set_line(document, line_num++, res);
 	free(res);
 	res = NULL;
