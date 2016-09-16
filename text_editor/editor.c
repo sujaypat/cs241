@@ -19,6 +19,7 @@ char *get_filename(int argc, char *argv[]) {
 
 void handle_display_command(Document *document, const char *command) {
 	if(!Document_size(document)) print_document_empty_error();
+
 	if(!strcmp(command, "p")){
 		//print full document if exists
 		for(size_t i = 1; i <= Document_size(document); i++){
@@ -37,18 +38,23 @@ void handle_display_command(Document *document, const char *command) {
 
 void handle_write_command(Document *document, const char *command) {
 	// TODO implement handle_write_command
-	printf("%s\n", command);
-	char *num = malloc(4 * sizeof(int));
-	size_t line_num = 0;
-	int i = 0;
-	while(*command){
-		if(isspace(*command)){
-			line_num = atoi(num);
-			break;
-		}
-		num[i++] = *command++;
+	char *num = strsep(&(command + 1), " ");
+	printf("num string: %s\n", num);
+	char *res = malloc(strlen(command));
+	for(int i = 2; i < strlen(command); i++){
+
 	}
-	printf("%zu\n", line_num);
+	// printf("%s\n", command);
+	// size_t line_num = 0;
+	// int i = 0;
+	// while(*command){
+	// 	if(isspace(*command)){
+	// 		line_num = atoi(num);
+	// 		break;
+	// 	}
+	// 	num[i++] = *command++;
+	// }
+	// printf("%zu\n", line_num);
 	// size_t len = strlen(command);
 	// size_t spn = strcspn(command, "$");
 
