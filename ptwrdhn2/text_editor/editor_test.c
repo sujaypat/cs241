@@ -16,7 +16,7 @@
 */
 int main() {
 	// Setting up a docment based on the file named 'filename'.
-	char *filename = "test.txt";
+	char *filename = "test-ref.txt";
 	Document *document = Document_create_from_file(filename);
 
 	handle_write_command(document, "w 1 hello");
