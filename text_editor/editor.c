@@ -41,9 +41,19 @@ void handle_write_command(Document *document, const char *command) {
 	char *input = (char *)(command + 2);
 	char *num = strsep(&input, " ");
 	printf("num string: %s\n", num);
-	// char *res = malloc(strlen(input));
-	for(size_t i = 2; i < strlen(input); i++){
-
+	char **res = malloc(strlen(input));
+	int j = 0;
+	for(int init = 0; init < strlen(input); init++){
+		res[init] = malloc(strlen(input));
+	}
+	for(size_t i = 0; i < strlen(input); i++){
+		if(input[i] == '$'){
+			j++;
+		}
+		res[j][i] = input[i];
+	}
+	for(int print = 0; print < strlen(input); print++){
+		printf("res: %s\n", res[print]);
 	}
 	// printf("%s\n", command);
 	// size_t line_num = 0;
