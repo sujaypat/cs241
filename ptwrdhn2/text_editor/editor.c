@@ -80,6 +80,11 @@ void handle_append_command(Document *document, const char *command) {
 
 void handle_delete_command(Document *document, const char *command) {
 	// TODO implement handle_delete_command
+	char *start = strdup(command + 2);
+	char *num = strsep(&start, " ");
+	int line_num = atoi(num);
+	if(line_num > Document_size(document)) invalid_line();
+	else Document_delete_line(document, line_num);
 }
 
 void handle_search_command(Document *document, const char *command) {
@@ -87,6 +92,5 @@ void handle_search_command(Document *document, const char *command) {
 }
 
 void handle_save_command(Document *document, const char *filename) {
-	// TODO implement handle_save_command
 	Document_write_to_file(document, filename);
 }
