@@ -153,7 +153,7 @@ void remove_meta_data(void *ptr) {
 			curr -> next = del -> next;
 			total_free += del -> size;
 			free(del);
-			break;
+			return;
 		}
 		curr = curr -> next;
 	}
@@ -170,7 +170,7 @@ void destroy() {
 	meta_data *p2 = NULL;
 	while(p1 != NULL){
 		p2 = p1 -> next;
-		free(p1);
+		if(!*p1) free(p1);
 		p1 = p2;
 	}
 }
