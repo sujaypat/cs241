@@ -135,7 +135,7 @@ void insert_meta_data(meta_data *md, size_t size, const char *file, size_t line)
 */
 void remove_meta_data(void *ptr) {
 
-	if(ptr == NULL){
+	if(ptr == NULL || head == NULL){
 		return;
 	}
 	meta_data *del = (meta_data *)ptr;
@@ -145,9 +145,9 @@ void remove_meta_data(void *ptr) {
 		return;
 	}
 	while(curr -> next != NULL){
-		printf("%p\n", curr -> next);
-		printf("%p\n", del -> next);
-		printf("%p\n", del);
+		printf("148: %p\n", curr -> next);
+		printf("149: %p\n", del -> next);
+		printf("150: %p\n", del);
 		if(curr -> next == del && del){
 			curr -> next = del -> next;
 			free(del);
