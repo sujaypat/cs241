@@ -43,14 +43,16 @@ void handle_write_command(Document *document, const char *command) {
 	printf("num string: %s\n", num);
 	char **res = malloc(strlen(input));
 	int j = 0;
+	int curr = 0;
 	for(size_t init = 0; init < strlen(input); init++){
 		res[init] = malloc(strlen(input));
 	}
 	for(size_t i = 0; i < strlen(input); i++){
 		if(input[i] == '$'){
 			j++;
+			curr = 0;
 		}
-		res[j][i] = input[i];
+		res[j][curr++] = input[i];
 	}
 	for(size_t print = 0; print < strlen(input); print++){
 		printf("res: %s\n", res[print]);
