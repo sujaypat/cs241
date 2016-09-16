@@ -138,12 +138,12 @@ void remove_meta_data(void *ptr) {
 	if(ptr == NULL){
 		return;
 	}
-	void *curr = head;
-	while(*curr){
+	meta_data *curr = head;
+	while(*curr != NULL){
 		if(curr -> next == ptr){
 			curr -> next = ptr -> next;
 			free(ptr);
-			total_free += (meta_data)curr -> size;
+			total_free += curr -> size;
 			break;
 		}
 		curr++;
