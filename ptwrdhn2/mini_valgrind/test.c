@@ -19,7 +19,8 @@ int main() {
 	mini_free(p2);
 
 	mini_free(p1 - 50);
-
+	
+	destroy();
 	// Do NOT modify this line
 	atexit(print_report);
 	return 0;
