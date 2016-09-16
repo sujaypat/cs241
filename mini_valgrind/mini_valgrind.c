@@ -141,6 +141,10 @@ void remove_meta_data(void *ptr) {
 	}
 	meta_data *del = (meta_data *)ptr;
 	meta_data *curr = head;
+	if(del == head){
+		free(del);
+		return;
+	}
 	while(curr != NULL){
 		if(curr -> next == del && del){
 			curr -> next = del -> next;
