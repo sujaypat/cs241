@@ -152,7 +152,7 @@ void remove_meta_data(void *ptr) {
 		}
 		curr = curr -> next;
 	}
-	/* check if ptr is in the list and delete it from list */
+	bad_frees++;
 }
 
 /*
