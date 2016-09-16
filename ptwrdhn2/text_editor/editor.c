@@ -54,6 +54,8 @@ void handle_write_command(Document *document, const char *command) {
 			i++;
 		}
 		res[j][curr++] = input[i];
+		printf("i: %s\n", i);
+		printf("strlen %s\n", strlen(input));
 	}
 	for(size_t print = 0; print < strlen(input); print++){
 		printf("res: %s\n", res[print]);
