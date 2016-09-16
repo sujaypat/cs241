@@ -48,12 +48,15 @@ void handle_write_command(Document *document, const char *command) {
 
 	while(*end){
 		if(*end == '$'){
-			printf("start: %s\n", start);
-			printf("length: %d\n", length);
-			printf("end: %c\n", *end);
+			// printf("start: %s\n", start);
+			// printf("length: %d\n", length);
+			// printf("end: %c\n", *end);
 			res = malloc(length + 1);
 			strncpy(res, start, length);
-			Document_set_line(document, line_num++, res);
+			if(line_num > Document_size(document)){
+				Document_insert_line(document, line_num++, res);
+			}
+			else Document_set_line(document, line_num++, res);
 			printf("res: %s\n", res);
 			free(res);
 			res = NULL;
@@ -65,6 +68,7 @@ void handle_write_command(Document *document, const char *command) {
 		end++;
 		length++;
 	}
+	free(res);
 	res = NULL;
 	num = NULL;
 	start = NULL;
@@ -85,4 +89,5 @@ void handle_search_command(Document *document, const char *command) {
 
 void handle_save_command(Document *document, const char *filename) {
 	// TODO implement handle_save_command
+	Document_write_to_file(document, filename);
 }
