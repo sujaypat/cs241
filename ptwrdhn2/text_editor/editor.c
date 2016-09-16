@@ -42,7 +42,7 @@ void handle_write_command(Document *document, const char *command) {
 	char *num = strsep(&input, " ");
 	int line_num = atoi(num);
 	printf("num string: %s\n", num);
-	char **res = malloc(strlen(input));
+	char **res = calloc(1, strlen(input));
 	int j = 0;
 	int curr = 0;
 	for(size_t init = 0; init < strlen(input); init++){
@@ -56,7 +56,7 @@ void handle_write_command(Document *document, const char *command) {
 		}
 		res[j][curr++] = input[i];
 		// printf("i: %zu\n", i);
-		// printf("input i: %c\n", input[i]);
+		printf("input i: %c\n", input[i]);
 	}
 	for(size_t print = 0; print <= (size_t)j; print++){
 		Document_set_line(document, line_num++, res[print]);
