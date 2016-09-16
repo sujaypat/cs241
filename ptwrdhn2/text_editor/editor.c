@@ -46,7 +46,7 @@ void handle_write_command(Document *document, const char *command) {
 	int j = 0;
 	int curr = 0;
 	for(size_t init = 0; init < strlen(input); init++){
-		res[init] = malloc(strlen(input));
+		res[init] = calloc(1, strlen(input));
 	}
 	for(size_t i = 0; i < strlen(input); i++){
 		if(input[i] == '$'){
