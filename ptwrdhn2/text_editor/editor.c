@@ -38,7 +38,7 @@ void handle_display_command(Document *document, const char *command) {
 
 void handle_write_command(Document *document, const char *command) {
 	// TODO implement handle_write_command
-	char *num = strsep(&(command + 1), " ");
+	char *num = strsep((command + 1), " ");
 	printf("num string: %s\n", num);
 	char *res = malloc(strlen(command));
 	for(int i = 2; i < strlen(command); i++){
