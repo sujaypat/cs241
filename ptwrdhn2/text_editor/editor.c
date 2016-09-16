@@ -38,11 +38,11 @@ void handle_display_command(Document *document, const char *command) {
 
 void handle_write_command(Document *document, const char *command) {
 	// TODO implement handle_write_command
-	char *start = (char *)(command += 2);
-	char *end = start;
+	char *start = (char *)(command + 2);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
-	printf("num: %d\n", line_num);
+	printf("line num: %d\n", line_num);
+	char *end = start;
 	char *res;
 	int length = 1;
 
