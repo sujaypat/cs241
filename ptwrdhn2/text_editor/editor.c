@@ -42,7 +42,7 @@ void handle_write_command(Document *document, const char *command) {
 	char *end = start;
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
-	printf("num string: %s\n", num);
+	printf("num: %d\n", line_num);
 	char *res;
 	int length = 0;
 
@@ -50,6 +50,7 @@ void handle_write_command(Document *document, const char *command) {
 		if(*end == '$'){
 			strncpy(res, start, length);
 			Document_set_line(document, line_num, res);
+			printf("res: %s\n", res);
 			res = 0;
 			length = 0;
 			start = ++end;
