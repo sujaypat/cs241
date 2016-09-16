@@ -40,6 +40,7 @@ void handle_write_command(Document *document, const char *command) {
 	// TODO implement handle_write_command
 	char *input = (char *)(command + 2);
 	char *num = strsep(&input, " ");
+	int line_num = atoi(num);
 	printf("num string: %s\n", num);
 	char **res = malloc(strlen(input));
 	int j = 0;
@@ -58,24 +59,15 @@ void handle_write_command(Document *document, const char *command) {
 		// printf("input i: %c\n", input[i]);
 	}
 	for(size_t print = 0; print <= (size_t)j; print++){
-		printf("res: %s\n", res[print]);
+		Document_set_line(document, line_num++, res[print]);
+		free(res[print]);
 	}
-	// printf("%s\n", command);
-	// size_t line_num = 0;
-	// int i = 0;
-	// while(*command){
-	// 	if(isspace(*command)){
-	// 		line_num = atoi(num);
-	// 		break;
-	// 	}
-	// 	num[i++] = *command++;
-	// }
-	// printf("%zu\n", line_num);
-	// size_t len = strlen(command);
-	// size_t spn = strcspn(command, "$");
-
-	// if()
-	// while $ keep inserting line
+	free(res);
+	free(num);
+	free(input);
+	res = NULL;
+	num = NULL;
+	input = NULL;
 }
 
 void handle_append_command(Document *document, const char *command) {
