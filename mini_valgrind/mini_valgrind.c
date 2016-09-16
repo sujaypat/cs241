@@ -145,9 +145,10 @@ void remove_meta_data(void *ptr) {
 		return;
 	}
 	while(curr != NULL){
+		printf("%p\n", curr -> next);
+		printf("%p\n", del -> next);
+		printf("%p\n", del);
 		if(curr -> next == del && del){
-			printf("%p\n", curr -> next);
-			printf("%p\n", del -> next);
 			curr -> next = del -> next;
 			free(del);
 			total_free += curr -> size;
