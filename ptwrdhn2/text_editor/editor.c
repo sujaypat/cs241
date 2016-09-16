@@ -63,7 +63,7 @@ void handle_write_command(Document *document, const char *command) {
 		free(res[print]);
 	}
 	free(res);
-	free(num);
+	// free(num);
 	free(input);
 	res = NULL;
 	num = NULL;
