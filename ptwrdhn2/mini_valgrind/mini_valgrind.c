@@ -118,8 +118,8 @@ void insert_meta_data(meta_data *md, size_t size, const char *file, size_t line)
 	/* set value for malloc_info*/
 	if(!md) return;
 	md -> size = size;
-	memset(newmem -> file_name, 0, MAX_FILENAME_LENGTH);
-	strcpy(newmem -> file_name, file);
+	memset(md -> file_name, 0, MAX_FILENAME_LENGTH);
+	strcpy(md -> file_name, file);
 	md -> line_num = line;
 
 	md -> next = head;
@@ -138,12 +138,12 @@ void remove_meta_data(void *ptr) {
 	if(ptr == NULL){
 		return;
 	}
-	meta_data *curr = head;
+	void *curr = head;
 	while(*curr){
 		if(curr -> next == ptr){
 			curr -> next = ptr -> next;
 			free(ptr);
-			total_free += (sizeof(meta_data) + size);
+			total_free += (meta_data)curr -> size;
 			break;
 		}
 		curr++;
@@ -163,7 +163,7 @@ void destroy() {
 	else{
 		meta_data *p1 = head;
 		meta_data *p2 = head;
-		while(*p1 && *p2){
+		while(*p1 != NULL && *p2 != NULL){
 			p2 = p1 -> next;
 			free(p1);
 			p1 = p2;
