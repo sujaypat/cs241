@@ -8,7 +8,6 @@
 #include <stdlib.h>
 int main() {
 	// your tests here using malloc and free
-	char * f = "test.c";
 	void * p1 = mini_malloc(32, __FILE__, __LINE__);
 	printf("p1 => %p\n", p1);
 
