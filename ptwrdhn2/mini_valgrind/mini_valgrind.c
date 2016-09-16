@@ -144,7 +144,7 @@ void remove_meta_data(void *ptr) {
 		free(del);
 		return;
 	}
-	while(curr != NULL){
+	while(curr -> next != NULL){
 		printf("%p\n", curr -> next);
 		printf("%p\n", del -> next);
 		printf("%p\n", del);
