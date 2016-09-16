@@ -95,7 +95,7 @@ void handle_append_command(Document *document, const char *command) {
 	char *end = start;
 	char *res;
 	int length = 0;
-
+	int count = 0;
 	while(*end){
 		if(*end == '$'){
 			res = calloc(1, length + 1);
@@ -104,12 +104,17 @@ void handle_append_command(Document *document, const char *command) {
 				Document_insert_line(document, line_num++, res);
 			}
 			else { //if(strlen(Document_get_line(document, line_num)))
-				char *tmpres = strdup(res);
-				strcpy(res, Document_get_line(document, line_num))
-				res = realloc(strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
-				strcat(res, tmpres);
-				Document_set_line(document, line_num++, res);
-				free(tmpres);
+				if(count == 0){
+					char *tmpres = strdup(res);
+					strcpy(res, Document_get_line(document, line_num))
+					res = realloc(strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
+					strcat(res, tmpres);
+					Document_set_line(document, line_num++, res);
+					free(tmpres);
+				}
+				else{
+					Document_insert_line(document, line_num++, res);
+				}
 			}
 			free(res);
 			res = NULL;
