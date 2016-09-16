@@ -95,7 +95,7 @@ void *mini_realloc(void *ptr, size_t size, const char *file, size_t line) {
 void mini_free(void *ptr) {
 	if(ptr){
 		remove_meta_data(ptr - sizeof(meta_data));
-		free(ptr);
+		// free(ptr);
 	}
 	ptr = NULL;
 	// your code here
