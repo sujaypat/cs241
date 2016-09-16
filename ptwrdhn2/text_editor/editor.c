@@ -46,7 +46,7 @@ void handle_write_command(Document *document, const char *command) {
 			line_num = atoi(num);
 			break;
 		}
-		num[i++] = *command;
+		num[i++] = *command++;
 	}
 	printf("%zu\n", line_num);
 	// size_t len = strlen(command);
