@@ -37,11 +37,11 @@ void handle_display_command(Document *document, const char *command) {
 }
 
 void handle_write_command(Document *document, const char *command) {
-	char *start = (char *)(command + 2);
+	char *start = strdup(command + 2);
+	// (char *)(command + 2);
 	printf("%p\n", &start);
 	printf("%s\n", start);
-	char *num = malloc(strlen(start));
-	num = strsep(&start, " ");
+	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
 	char *end = start;
 	char *res;
