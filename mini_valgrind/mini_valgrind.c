@@ -135,14 +135,16 @@ void insert_meta_data(meta_data *md, size_t size, const char *file, size_t line)
 *	Pointer to a memory block previously allocated.
 */
 void remove_meta_data(void *ptr) {
+
 	if(ptr == NULL){
 		return;
 	}
+	meta_data *del = (meta_data *)ptr;
 	meta_data *curr = head;
 	while(curr != NULL){
-		if(curr -> next == ptr && ptr){
-			curr -> next = (ptr) -> next;
-			free(ptr);
+		if(curr -> next == del && del){
+			curr -> next = del -> next;
+			free(del);
 			total_free += curr -> size;
 			break;
 		}
@@ -164,7 +166,7 @@ void destroy() {
 		meta_data *p1 = head;
 		meta_data *p2 = head;
 		while(p1 != NULL && p2 != NULL){
-			p2 = (*p1).next;
+			p2 = p1 -> next;
 			free(p1);
 			p1 = p2;
 		}
