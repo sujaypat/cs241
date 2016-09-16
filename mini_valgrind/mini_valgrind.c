@@ -95,11 +95,7 @@ void *mini_realloc(void *ptr, size_t size, const char *file, size_t line) {
 *	passed, no action occurs.
 */
 void mini_free(void *ptr) {
-	if(ptr){
-		remove_meta_data(ptr - sizeof(meta_data));
-		// free(ptr - sizeof(meta_data));
-	}
-	// ptr = NULL;
+	if(ptr) remove_meta_data(ptr - sizeof(meta_data));
 }
 
 /*
@@ -116,7 +112,6 @@ void mini_free(void *ptr) {
 *	Line in the file that causes memory leak
 */
 void insert_meta_data(meta_data *md, size_t size, const char *file, size_t line) {
-	/* set value for malloc_info*/
 	if(!md) return;
 	md -> size = size;
 	memset(md -> file_name, 0, MAX_FILENAME_LENGTH);
