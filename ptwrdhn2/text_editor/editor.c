@@ -43,7 +43,7 @@ void handle_write_command(Document *document, const char *command) {
 	printf("num string: %s\n", num);
 	char **res = malloc(strlen(input));
 	int j = 0;
-	for(int init = 0; init < strlen(input); init++){
+	for(size_t init = 0; init < strlen(input); init++){
 		res[init] = malloc(strlen(input));
 	}
 	for(size_t i = 0; i < strlen(input); i++){
@@ -52,7 +52,7 @@ void handle_write_command(Document *document, const char *command) {
 		}
 		res[j][i] = input[i];
 	}
-	for(int print = 0; print < strlen(input); print++){
+	for(size_t print = 0; print < strlen(input); print++){
 		printf("res: %s\n", res[print]);
 	}
 	// printf("%s\n", command);
