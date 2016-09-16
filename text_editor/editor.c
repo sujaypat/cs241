@@ -44,7 +44,7 @@ void handle_write_command(Document *document, const char *command) {
 	printf("line num: %d\n", line_num);
 	char *end = start;
 	char *res;
-	int length = 1;
+	int length = 0;
 
 	while(*end){
 		if(*end == '$'){
@@ -55,8 +55,9 @@ void handle_write_command(Document *document, const char *command) {
 			strncpy(res, start, length);
 			Document_set_line(document, line_num++, res);
 			printf("res: %s\n", res);
-			res = 0;
-			length = 1;
+			free(res);
+			res = NULL;
+			length = 0;
 			start = ++end;
 			continue;
 		}
