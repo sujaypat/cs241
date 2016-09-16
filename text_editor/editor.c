@@ -19,7 +19,6 @@ char *get_filename(int argc, char *argv[]) {
 
 void handle_display_command(Document *document, const char *command) {
 	if(!Document_size(document)) print_document_empty_error();
-
 	if(!strcmp(command, "p")){
 		//print full document if exists
 		for(size_t i = 1; i <= Document_size(document); i++){
@@ -28,6 +27,10 @@ void handle_display_command(Document *document, const char *command) {
 	}
 	else{
 		int line_num = atoi(command + 2);
+		if(line_num > Document_size(document) || line_num < 1){
+			invalid_line();
+			return;
+		}
 		for(int j = line_num - 5; j <= line_num + 5; j++){
 			if(j > 0 && j <= (int)Document_size(document)){
 				print_line(document, j);
@@ -43,6 +46,10 @@ void handle_write_command(Document *document, const char *command) {
 	printf("%s\n", start);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
+	if(line_num < 1){ i
+		invalid_line();
+		return;
+	}
 	char *end = start;
 	char *res;
 	int length = 0;
@@ -75,7 +82,54 @@ void handle_write_command(Document *document, const char *command) {
 }
 
 void handle_append_command(Document *document, const char *command) {
-	// TODO implement handle_append_command
+	char *start = strdup(command + 2);
+	// (char *)(command + 2);
+	printf("%p\n", &start);
+	printf("%s\n", start);
+	char *num = strsep(&start, " ");
+	int line_num = atoi(num);
+	if(line_num < 1){ i
+		invalid_line();
+		return;
+	}
+	char *end = start;
+	char *res;
+	int length = 0;
+
+	while(*end){
+		if(*end == '$'){
+			res = calloc(1, length + 1);
+			strncpy(res, start, length);
+			if((size_t)line_num > Document_size(document)){
+				Document_insert_line(document, line_num++, res);
+			}
+			else { //if(strlen(Document_get_line(document, line_num)))
+				char *tmpres = strdup(res);
+				strcpy(res, Document_get_line(document, line_num))
+				res = realloc(strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
+				strcat(res, tmpres);
+				Document_set_line(document, line_num++, res);
+				free(tmpres);
+			}
+			free(res);
+			res = NULL;
+			length = 0;
+			start = ++end;
+			continue;
+		}
+		end++;
+		length++;
+	}
+	res = calloc(1, length + 1);
+	strncpy(res, start, length);
+	if((size_t)line_num > Document_size(document)) Document_insert_line(document, line_num++, res);
+	else Document_set_line(document, line_num++, res);
+	free(res);
+	free(num);
+	res = NULL;
+	num = NULL;
+	start = NULL;
+	end = NULL;
 }
 
 void handle_delete_command(Document *document, const char *command) {
@@ -85,10 +139,13 @@ void handle_delete_command(Document *document, const char *command) {
 	int line_num = atoi(num);
 	if((size_t)line_num > Document_size(document)) invalid_line();
 	else Document_delete_line(document, line_num);
+	free(start);
+	free(num);
 }
 
 void handle_search_command(Document *document, const char *command) {
 	// TODO implement handle_search_command
+	// use strstr
 }
 
 void handle_save_command(Document *document, const char *filename) {
