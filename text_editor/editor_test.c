@@ -19,7 +19,7 @@ int main() {
 	char *filename = "test-ref.txt";
 	Document *document = Document_create_from_file(filename);
 
-	// handle_write_command(document, "w 1 hello");
+	handle_write_command(document, "w 1 hello");
 	// handle_write_command(document, "w 69 a;dslkjf;asdljf;asdlk$adsfas$asdfasf4$AF$sfA$$AF$G$GSAGFJBSKGNNFEF$BJSDGIRT*^SFJE $J KG  $   $  $   $   SAJF KJG%% W($U#$#JJEGA)");
 	handle_display_command(document, "p");
 }
