@@ -40,7 +40,7 @@
 void *mini_malloc(size_t size, const char *file, size_t line) {
 	// your code here
 	if(size == 0) return NULL;
-	meta_data *newmem = calloc(1, sizeof(meta_data) + size);
+	meta_data *newmem = malloc(sizeof(meta_data) + size);
 	if(!newmem) return NULL;
 
 	newmem -> size = size;
