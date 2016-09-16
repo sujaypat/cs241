@@ -50,7 +50,7 @@ void handle_write_command(Document *document, const char *command) {
 		if(*end == '$'){
 					printf("start: %s\n", start);
 					printf("length: %d\n", length);
-							printf("end: %s\n", res);
+							printf("end: %c\n", *end);
 			strncpy(res, start, length);
 			Document_set_line(document, line_num++, res);
 			printf("res: %s\n", res);
