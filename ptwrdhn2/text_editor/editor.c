@@ -38,36 +38,30 @@ void handle_display_command(Document *document, const char *command) {
 
 void handle_write_command(Document *document, const char *command) {
 	// TODO implement handle_write_command
-	char *input = (char *)(command + 2);
-	char *num = strsep(&input, " ");
+	char *start = (char *)(command + 2);
+	char *end = start;
+	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
 	printf("num string: %s\n", num);
-	char **res = calloc(1, strlen(input));
-	int j = 0;
-	int curr = 0;
-	for(size_t init = 0; init < strlen(input); init++){
-		res[init] = calloc(1, strlen(input));
-	}
-	for(size_t i = 0; i < strlen(input); i++){
-		if(input[i] == '$'){
-			j++;
-			curr = 0;
-			i++;
+	char *res;
+	int length = 0;
+
+	while(*input){
+		if(*input == '$'){
+			strncpy(res, start, length);
+			Document_set_line(document, line_num, res);
+			res = 0;
+			length = 0;
+			start = ++end;
+			continue;
 		}
-		res[j][curr++] = input[i];
-		// printf("i: %zu\n", i);
-		printf("input i: %c\n", input[i]);
+		end++;
+		length++;
 	}
-	for(size_t print = 0; print <= (size_t)j; print++){
-		Document_set_line(document, line_num++, res[print]);
-		free(res[print]);
-	}
-	free(res);
-	// free(num);
-	free(input);
 	res = NULL;
 	num = NULL;
-	input = NULL;
+	start = NULL;
+	end = NULL;
 }
 
 void handle_append_command(Document *document, const char *command) {
