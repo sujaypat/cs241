@@ -27,7 +27,7 @@ void handle_display_command(Document *document, const char *command) {
 	}
 	else{
 		int line_num = atoi(command + 2);
-		if(line_num > Document_size(document) || line_num < 1){
+		if((size_t)line_num > Document_size(document) || line_num < 1){
 			invalid_line();
 			return;
 		}
@@ -46,7 +46,7 @@ void handle_write_command(Document *document, const char *command) {
 	printf("%s\n", start);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
-	if(line_num < 1){ i
+	if(line_num < 1){
 		invalid_line();
 		return;
 	}
@@ -106,8 +106,8 @@ void handle_append_command(Document *document, const char *command) {
 			else { //if(strlen(Document_get_line(document, line_num)))
 				if(count == 0){
 					char *tmpres = strdup(res);
-					strcpy(res, Document_get_line(document, line_num))
-					res = realloc(strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
+					strcpy(res, Document_get_line(document, line_num));
+					res = realloc(res, strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
 					strcat(res, tmpres);
 					Document_set_line(document, line_num++, res);
 					free(tmpres);
