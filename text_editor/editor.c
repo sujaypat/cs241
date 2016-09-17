@@ -134,6 +134,7 @@ void handle_append_command(Document *document, const char *command) {
 		res = strcat(res, tmpres);
 		printf("132 tmpres: %s\n", tmpres);
 		printf("133 res: %s\n", res);
+		printf("137 docline: %s\n", Document_get_line(document, line_num));
 		Document_set_line(document, line_num++, res);
 		free(tmpres);
 	}
