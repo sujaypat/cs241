@@ -128,7 +128,8 @@ void handle_append_command(Document *document, const char *command) {
 		char *tmpres = strdup(res);
 		strcpy(res, Document_get_line(document, line_num));
 		res = realloc(res, strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
-		strcat(res, tmpres);
+		res = strcat(res, tmpres);
+		printf("%s\n", res);
 		Document_set_line(document, line_num++, res);
 		free(tmpres);
 	}
