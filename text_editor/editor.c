@@ -169,6 +169,8 @@ void handle_search_command(Document *document, const char *command) {
 			print_search_line(i, Document_get_line(document, i), loc, search);
 		}
 	}
+	free(search);
+	search = NULL;
 }
 
 void handle_save_command(Document *document, const char *filename) {
