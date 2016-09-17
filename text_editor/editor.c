@@ -124,7 +124,7 @@ void handle_append_command(Document *document, const char *command) {
 	if((size_t)line_num > Document_size(document)){
 		Document_insert_line(document, line_num++, res);
 	}
-	if(count++ == 0){
+	else if(count++ == 0){
 		char *tmpres = strdup(res);
 		strcpy(res, Document_get_line(document, line_num));
 		res = realloc(res, strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
