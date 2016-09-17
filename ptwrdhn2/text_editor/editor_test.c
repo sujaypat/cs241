@@ -28,6 +28,7 @@ int main() {
 	handle_delete_command(document, "d 1");
 	handle_append_command(document, "a 6 appendtest");
 	handle_append_command(document, "a 1 appendtest1$test2$test3");
+	handle_display_command(document, "p");
 	handle_save_command(document, "aids.txt");
 	Document_destroy(document);
 }
