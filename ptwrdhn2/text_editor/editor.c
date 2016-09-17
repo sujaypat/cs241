@@ -82,6 +82,7 @@ void handle_append_command(Document *document, const char *command) {
 	char *start = strdup(command + 2);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
+	printf("wtf: %s\n", Document_get_line(document, line_num));
 	if(line_num < 1){
 		invalid_line();
 		return;
