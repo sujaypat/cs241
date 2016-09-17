@@ -19,16 +19,16 @@ int main() {
 	char *filename = "test-ref.txt";
 	Document *document = Document_create_from_file(filename);
 
-	handle_write_command(document, "w 1 helloblah");
-	handle_write_command(document, "w 10 a;dslkjf;asdljf;asdlk$adsfas$asdfasf4$AF$sfA$$AF$G$GSAGFJBSKGNNFEF$BJSDGIRT*^SFJE $J KG  $   $  $   $   SAJF KJG%% W($U#$#JJEGA)");
-	handle_display_command(document, "p");
-	handle_delete_command(document, "d 1");
-	handle_delete_command(document, "d 1");
-	handle_delete_command(document, "d 1");
-	handle_delete_command(document, "d 1");
-	handle_append_command(document, "a 6 appendtest");
-	handle_append_command(document, "a 1 appendtest1$test2$test3");
-	handle_display_command(document, "p");
+	// handle_write_command(document, "w 1 helloblah");
+	// handle_write_command(document, "w 10 a;dslkjf;asdljf;asdlk$adsfas$asdfasf4$AF$sfA$$AF$G$GSAGFJBSKGNNFEF$BJSDGIRT*^SFJE $J KG  $   $  $   $   SAJF KJG%% W($U#$#JJEGA)");
+	// handle_display_command(document, "p");
+	// handle_delete_command(document, "d 1");
+	// handle_delete_command(document, "d 1");
+	// handle_delete_command(document, "d 1");
+	// handle_delete_command(document, "d 1");
+	// handle_append_command(document, "a 6 appendtest");
+	// handle_append_command(document, "a 1 appendtest1$test2$test3");
+	handle_display_command(document, "p              40");
 	handle_save_command(document, "aids.txt");
 	Document_destroy(document);
 }
