@@ -126,7 +126,7 @@ void handle_append_command(Document *document, const char *command) {
 	}
 	else if(count++ == 0){
 		char *tmpres = strdup(res);
-
+		printf("line num: %d\n", line_num);
 		printf("132 tmpres: %s\n", tmpres);
 		printf("133 res: %s\n", res);
 		res = realloc(res, strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
