@@ -27,7 +27,7 @@ int main() {
 	handle_delete_command(document, "d 1");
 	handle_delete_command(document, "d 1");
 	handle_append_command(document, "a 1 appendtest");
-	handle_append_command(document, "a 1 appendtest1$test2$test3");
+	// handle_append_command(document, "a 1 appendtest1$test2$test3");
 	handle_save_command(document, "s");
 	Document_destroy(document);
 }
