@@ -164,7 +164,7 @@ void handle_delete_command(Document *document, const char *command) {
 void handle_search_command(Document *document, const char *command) {
 	char *search = strdup(command + 1);
 	for(int i = 1; i < Document_size(document); i++){
-		if((char *loc = strstr(Document_get_line(document, i), search))){
+		if((char *loc = strstr(Document_get_line(document, i), search)) != NULL){
 			print_search_line(i, Document_get_line(document, i), loc, search);
 		}
 	}
