@@ -144,7 +144,6 @@ void handle_append_command(Document *document, const char *command) {
 }
 
 void handle_delete_command(Document *document, const char *command) {
-	// TODO implement handle_delete_command
 	char *start = strdup(command + 2);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
@@ -156,6 +155,7 @@ void handle_delete_command(Document *document, const char *command) {
 
 void handle_search_command(Document *document, const char *command) {
 	// TODO implement handle_search_command
+	
 	// use strstr
 }
 
