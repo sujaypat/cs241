@@ -119,6 +119,11 @@ void handle_append_command(Document *document, const char *command) {
 		end++;
 		length++;
 	}
+	res = calloc(1, length + 1);
+	strncpy(res, start, length);
+	if((size_t)line_num > Document_size(document)){
+		Document_insert_line(document, line_num++, res);
+	}
 	if(count++ == 0){
 		char *tmpres = strdup(res);
 		strcpy(res, Document_get_line(document, line_num));
