@@ -41,9 +41,6 @@ void handle_display_command(Document *document, const char *command) {
 
 void handle_write_command(Document *document, const char *command) {
 	char *start = strdup(command + 2);
-	// (char *)(command + 2);
-	// printf("%p\n", &start);
-	// printf("%s\n", start);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
 	if(line_num < 1){
@@ -83,9 +80,6 @@ void handle_write_command(Document *document, const char *command) {
 
 void handle_append_command(Document *document, const char *command) {
 	char *start = strdup(command + 2);
-	// (char *)(command + 2);
-	// printf("%p\n", &start);
-	// printf("%s\n", start);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
 	if(line_num < 1){
@@ -104,7 +98,7 @@ void handle_append_command(Document *document, const char *command) {
 				Document_insert_line(document, line_num++, res);
 			}
 			else { //if(strlen(Document_get_line(document, line_num)))
-				if(count == 0){
+				if(count++ == 0){
 					char *tmpres = strdup(res);
 					strcpy(res, Document_get_line(document, line_num));
 					res = realloc(res, strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
@@ -125,10 +119,17 @@ void handle_append_command(Document *document, const char *command) {
 		end++;
 		length++;
 	}
-	res = calloc(1, length + 1);
-	strncpy(res, start, length);
-	if((size_t)line_num > Document_size(document)) Document_insert_line(document, line_num++, res);
-	else Document_set_line(document, line_num++, res);
+	if(count++ == 0){
+		char *tmpres = strdup(res);
+		strcpy(res, Document_get_line(document, line_num));
+		res = realloc(res, strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
+		strcat(res, tmpres);
+		Document_set_line(document, line_num++, res);
+		free(tmpres);
+	}
+	else{
+		Document_insert_line(document, line_num++, res);
+	}
 	free(res);
 	free(num);
 	res = NULL;
