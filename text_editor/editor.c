@@ -82,8 +82,6 @@ void handle_append_command(Document *document, const char *command) {
 	char *start = strdup(command + 2);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
-	printf("wtf: %s\n", (char *)Document_get_line(document, line_num));
-	print_line(document, line_num);
 	if(line_num < 1){
 		invalid_line();
 		return;
@@ -99,7 +97,7 @@ void handle_append_command(Document *document, const char *command) {
 			if((size_t)line_num > Document_size(document)){
 				Document_insert_line(document, line_num++, res);
 			}
-			else { //if(strlen(Document_get_line(document, line_num)))
+			else {
 				if(count++ == 0){
 					char *tmpres = strdup(res);
 					strcpy(res, Document_get_line(document, line_num));
@@ -128,15 +126,9 @@ void handle_append_command(Document *document, const char *command) {
 	}
 	else if(count++ == 0){
 		char *tmpres = strdup(res);
-		printf("line num: %d\n", line_num);
-		printf("132 tmpres: %s\n", tmpres);
-		printf("133 res: %s\n", res);
 		res = realloc(res, strlen(Document_get_line(document, line_num)) + strlen(tmpres) + 1);
 		strcpy(res, Document_get_line(document, line_num));
 		res = strcat(res, tmpres);
-		printf("132 tmpres: %s\n", tmpres);
-		printf("133 res: %s\n", res);
-		printf("137 docline: %s\n", Document_get_line(document, line_num));
 		Document_set_line(document, line_num++, res);
 		free(tmpres);
 	}
