@@ -18,7 +18,10 @@ char *get_filename(int argc, char *argv[]) {
 }
 
 void handle_display_command(Document *document, const char *command) {
-	if(!Document_size(document)) print_document_empty_error();
+	if(!Document_size(document)){
+		print_document_empty_error();
+		return;
+	}
 	if(!strcmp(command, "p")){
 		//print full document if exists
 		for(size_t i = 1; i <= Document_size(document); i++){
@@ -149,16 +152,22 @@ void handle_delete_command(Document *document, const char *command) {
 	char *start = strdup(command + 2);
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
-	if((size_t)line_num > Document_size(document)) invalid_line();
+	if((size_t)line_num > Document_size(document)){
+		 invalid_line();
+		 return;
+	 }
 	else Document_delete_line(document, line_num);
 	free(start);
 	free(num);
 }
 
 void handle_search_command(Document *document, const char *command) {
-	// TODO implement handle_search_command
-
-	// use strstr
+	char *search = strdup(command + 1);
+	for(int i = 1; i < Document_size(document); i++){
+		if((char *loc = strstr(Document_get_line(document, i), search))){
+			print_search_line(i, Document_get_line(document, i), loc, search);
+		}
+	}
 }
 
 void handle_save_command(Document *document, const char *filename) {
