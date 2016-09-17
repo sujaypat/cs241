@@ -26,7 +26,9 @@ void handle_display_command(Document *document, const char *command) {
 		}
 	}
 	else{
-		int line_num = atoi(command + 2);
+		char *start = strdup(command + 2);
+		char *num = strsep(&start, " ");
+		int line_num = atoi(num);
 		if((size_t)line_num > Document_size(document) || line_num < 1){
 			invalid_line();
 			return;
@@ -155,7 +157,7 @@ void handle_delete_command(Document *document, const char *command) {
 
 void handle_search_command(Document *document, const char *command) {
 	// TODO implement handle_search_command
-	
+
 	// use strstr
 }
 
