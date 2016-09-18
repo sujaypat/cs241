@@ -29,9 +29,9 @@ void handle_display_command(Document *document, const char *command) {
 		}
 	}
 	else{
-		char *start = strdup(command + 2);
-		char *num = strsep(&start, " ");
-		int line_num = atoi(num);
+		// char *start = strdup(command + 2);
+		// char *num = strsep(&start, " ");
+		int line_num = atoi(command + 2);
 		if((size_t)line_num > Document_size(document) || line_num < 1){
 			invalid_line();
 			return;
