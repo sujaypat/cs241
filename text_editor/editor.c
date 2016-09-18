@@ -55,13 +55,17 @@ void handle_write_command(Document *document, const char *command) {
 	char *end = start;
 	char *res;
 	int length = 0;
-
+	int count = 0;
 	while(*end){
 		if(*end == '$'){
 			res = calloc(1, length + 1);
 			strncpy(res, start, length);
-			if((size_t)line_num > Document_size(document)) Document_insert_line(document, line_num++, res);
-			else Document_set_line(document, line_num++, res);
+			if((size_t)line_num > Document_size(document)){ Document_insert_line(document, line_num++, res);
+			}
+			else {
+				if(count++ == 0) Document_set_line(document, line_num++, res);
+				else Document_insert_line(document, line_num++, res);
+			}
 			free(res);
 			res = NULL;
 			length = 0;
@@ -73,8 +77,13 @@ void handle_write_command(Document *document, const char *command) {
 	}
 	res = calloc(1, length + 1);
 	strncpy(res, start, length);
-	if((size_t)line_num > Document_size(document)) Document_insert_line(document, line_num++, res);
-	else Document_set_line(document, line_num++, res);
+	if((size_t)line_num > Document_size(document)){
+		Document_insert_line(document, line_num++, res);
+	}
+	else {
+		if(count++ == 0) Document_set_line(document, line_num++, res);
+		else Document_insert_line(document, line_num++, res);
+	}
 	free(res);
 	free(num);
 	res = NULL;
@@ -153,9 +162,9 @@ void handle_delete_command(Document *document, const char *command) {
 	char *num = strsep(&start, " ");
 	int line_num = atoi(num);
 	if((size_t)line_num > Document_size(document)){
-		 invalid_line();
-		 return;
-	 }
+		invalid_line();
+		return;
+	}
 	else Document_delete_line(document, line_num);
 	free(start);
 	free(num);
