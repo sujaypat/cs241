@@ -3,435 +3,575 @@
     "timestamp": "2016-09-14 14:38:00.158732", 
     "testcases": [
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Appending to a line with text", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "append_to_file", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Test the deletion of a line after writing it to the document", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "delete_after_writing", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Tests that deleting last line should not shift things", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "deleting_last_line", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Tests that deletion of lines can happen without needing to write first (e.g. doc loaded from existing file, etc.)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "deleting_on_own", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Test finding a line after writing it to the document", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "find_after_writing", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Find multiple lines with a given key after writing them", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "find_test_multiple_exist", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Tests searching doc with no match for the given key", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "find_with_no_match", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Test loading in a file and checking its contents", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "load_test", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Test for no memory leaks in editor functions", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "memory_test", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Tests that document is shifted during a multi-line write", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "multi_line_write", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Tests that error is thrown when attempting to print a nonexistant line", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "print_nonexisting_line", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Test the format of printing the doc after writing lines", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "printing_test", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Test the format of printing the doc after writing lines, part 2", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "printing_test1", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Tests that file was written to disk and represents document being edited", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "saving_test", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Tests that existing line is overwritten when written to", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "write_to_existing_line", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Tests writing to multiple lines and appending to those lines", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "writing_appending_test", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Tests writing to multiple lines and appending, with more lines", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "writing_appending_test1", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
         "description": "Tests writing to multiple lines and appending", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
         "name": "writing_appending_test2", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }, 
       {
-        "description": "Tests that whitespace can be written as part of line", 
+        "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n", 
+        "description": "Tests that whitespace can be written as part of line", 
         "name": "writing_whitespace", 
-        "ptsPossible": 1.0
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmake: Makefile: No such file or directory\nmake: *** No rule to make target 'Makefile'.  Stop.\n"
       }
     ], 
-    "checksum": "f5de0dc2c2efd932d1cc8681abde4c285a7d2edb  editor.c", 
-    "revision": "19721"
+    "revision": "19721", 
+    "checksum": "f5de0dc2c2efd932d1cc8681abde4c285a7d2edb  editor.c"
   }, 
   {
     "timestamp": "2016-09-14 15:36:00.173359", 
     "testcases": [
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Appending to a line with text", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "append_to_file", 
-        "description": "Appending to a line with text"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Test the deletion of a line after writing it to the document", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "delete_after_writing", 
-        "description": "Test the deletion of a line after writing it to the document"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests that deleting last line should not shift things", 
         "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "deleting_last_line", 
-        "description": "Tests that deleting last line should not shift things"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests that deletion of lines can happen without needing to write first (e.g. doc loaded from existing file, etc.)", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "deleting_on_own", 
-        "description": "Tests that deletion of lines can happen without needing to write first (e.g. doc loaded from existing file, etc.)"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Test finding a line after writing it to the document", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "find_after_writing", 
-        "description": "Test finding a line after writing it to the document"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Find multiple lines with a given key after writing them", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "find_test_multiple_exist", 
-        "description": "Find multiple lines with a given key after writing them"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests searching doc with no match for the given key", 
         "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "find_with_no_match", 
-        "description": "Tests searching doc with no match for the given key"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Test loading in a file and checking its contents", 
         "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "load_test", 
-        "description": "Test loading in a file and checking its contents"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Test for no memory leaks in editor functions", 
         "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "memory_test", 
-        "description": "Test for no memory leaks in editor functions"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests that document is shifted during a multi-line write", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "multi_line_write", 
-        "description": "Tests that document is shifted during a multi-line write"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests that error is thrown when attempting to print a nonexistant line", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "print_nonexisting_line", 
-        "description": "Tests that error is thrown when attempting to print a nonexistant line"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Test the format of printing the doc after writing lines", 
         "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "printing_test", 
-        "description": "Test the format of printing the doc after writing lines"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Test the format of printing the doc after writing lines, part 2", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "printing_test1", 
-        "description": "Test the format of printing the doc after writing lines, part 2"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests that file was written to disk and represents document being edited", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "saving_test", 
-        "description": "Tests that file was written to disk and represents document being edited"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests that existing line is overwritten when written to", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "write_to_existing_line", 
-        "description": "Tests that existing line is overwritten when written to"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests writing to multiple lines and appending to those lines", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "writing_appending_test", 
-        "description": "Tests writing to multiple lines and appending to those lines"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests writing to multiple lines and appending, with more lines", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "writing_appending_test1", 
-        "description": "Tests writing to multiple lines and appending, with more lines"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests writing to multiple lines and appending", 
         "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "writing_appending_test2", 
-        "description": "Tests writing to multiple lines and appending"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "description": "Tests that whitespace can be written as part of line", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "writing_whitespace", 
-        "description": "Tests that whitespace can be written as part of line"
+        "ptsPossible": 1.0
       }
     ], 
-    "revision": "19805", 
-    "checksum": "f5de0dc2c2efd932d1cc8681abde4c285a7d2edb  editor.c"
+    "checksum": "f5de0dc2c2efd932d1cc8681abde4c285a7d2edb  editor.c", 
+    "revision": "19805"
   }, 
   {
     "timestamp": "2016-09-15 00:00:00.740060", 
     "testcases": [
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Appending to a line with text", 
+        "ptsPossible": 1.0, 
         "name": "append_to_file", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Appending to a line with text"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Test the deletion of a line after writing it to the document", 
+        "ptsPossible": 1.0, 
         "name": "delete_after_writing", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Test the deletion of a line after writing it to the document"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 1.0, 
-        "description": "Tests that deleting last line should not shift things", 
+        "ptsPossible": 1.0, 
         "name": "deleting_last_line", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests that deleting last line should not shift things"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Tests that deletion of lines can happen without needing to write first (e.g. doc loaded from existing file, etc.)", 
+        "ptsPossible": 1.0, 
         "name": "deleting_on_own", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests that deletion of lines can happen without needing to write first (e.g. doc loaded from existing file, etc.)"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Test finding a line after writing it to the document", 
+        "ptsPossible": 1.0, 
         "name": "find_after_writing", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Test finding a line after writing it to the document"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Find multiple lines with a given key after writing them", 
+        "ptsPossible": 1.0, 
         "name": "find_test_multiple_exist", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Find multiple lines with a given key after writing them"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 1.0, 
-        "description": "Tests searching doc with no match for the given key", 
+        "ptsPossible": 1.0, 
         "name": "find_with_no_match", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests searching doc with no match for the given key"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 1.0, 
-        "description": "Test loading in a file and checking its contents", 
+        "ptsPossible": 1.0, 
         "name": "load_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Test loading in a file and checking its contents"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 1.0, 
-        "description": "Test for no memory leaks in editor functions", 
+        "ptsPossible": 1.0, 
         "name": "memory_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Test for no memory leaks in editor functions"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Tests that document is shifted during a multi-line write", 
+        "ptsPossible": 1.0, 
         "name": "multi_line_write", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests that document is shifted during a multi-line write"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Tests that error is thrown when attempting to print a nonexistant line", 
+        "ptsPossible": 1.0, 
         "name": "print_nonexisting_line", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests that error is thrown when attempting to print a nonexistant line"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 1.0, 
-        "description": "Test the format of printing the doc after writing lines", 
+        "ptsPossible": 1.0, 
         "name": "printing_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Test the format of printing the doc after writing lines"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Test the format of printing the doc after writing lines, part 2", 
+        "ptsPossible": 1.0, 
         "name": "printing_test1", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Test the format of printing the doc after writing lines, part 2"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Tests that file was written to disk and represents document being edited", 
+        "ptsPossible": 1.0, 
         "name": "saving_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests that file was written to disk and represents document being edited"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Tests that existing line is overwritten when written to", 
+        "ptsPossible": 1.0, 
         "name": "write_to_existing_line", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests that existing line is overwritten when written to"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Tests writing to multiple lines and appending to those lines", 
+        "ptsPossible": 1.0, 
         "name": "writing_appending_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests writing to multiple lines and appending to those lines"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Tests writing to multiple lines and appending, with more lines", 
+        "ptsPossible": 1.0, 
         "name": "writing_appending_test1", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests writing to multiple lines and appending, with more lines"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 1.0, 
-        "description": "Tests writing to multiple lines and appending", 
+        "ptsPossible": 1.0, 
         "name": "writing_appending_test2", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests writing to multiple lines and appending"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsEarned": 0.0, 
-        "description": "Tests that whitespace can be written as part of line", 
+        "ptsPossible": 1.0, 
         "name": "writing_whitespace", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+        "description": "Tests that whitespace can be written as part of line"
       }
     ], 
-    "checksum": "f5de0dc2c2efd932d1cc8681abde4c285a7d2edb  editor.c", 
-    "revision": "21563"
+    "revision": "21563", 
+    "checksum": "f5de0dc2c2efd932d1cc8681abde4c285a7d2edb  editor.c"
   }, 
   {
     "timestamp": "2016-09-16 00:00:00.667236", 
     "testcases": [
       {
-        "description": "Appending to a line with text", 
+        "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
+        "description": "Appending to a line with text", 
+        "name": "append_to_file", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test the deletion of a line after writing it to the document", 
+        "name": "delete_after_writing", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Tests that deleting last line should not shift things", 
+        "name": "deleting_last_line", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Tests that deletion of lines can happen without needing to write first (e.g. doc loaded from existing file, etc.)", 
+        "name": "deleting_on_own", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test finding a line after writing it to the document", 
+        "name": "find_after_writing", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Find multiple lines with a given key after writing them", 
+        "name": "find_test_multiple_exist", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Tests searching doc with no match for the given key", 
+        "name": "find_with_no_match", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test loading in a file and checking its contents", 
+        "name": "load_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test for no memory leaks in editor functions", 
+        "name": "memory_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Tests that document is shifted during a multi-line write", 
+        "name": "multi_line_write", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Tests that error is thrown when attempting to print a nonexistant line", 
+        "name": "print_nonexisting_line", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test the format of printing the doc after writing lines", 
+        "name": "printing_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test the format of printing the doc after writing lines, part 2", 
+        "name": "printing_test1", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Tests that file was written to disk and represents document being edited", 
+        "name": "saving_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Tests that existing line is overwritten when written to", 
+        "name": "write_to_existing_line", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Tests writing to multiple lines and appending to those lines", 
+        "name": "writing_appending_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Tests writing to multiple lines and appending, with more lines", 
+        "name": "writing_appending_test1", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Tests writing to multiple lines and appending", 
+        "name": "writing_appending_test2", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Tests that whitespace can be written as part of line", 
+        "name": "writing_whitespace", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }
+    ], 
+    "checksum": "f8154fb29dd75f3848a87f22e3d0ffa42f7660f6  editor.c", 
+    "revision": "22355"
+  }, 
+  {
+    "timestamp": "2016-09-17 00:00:00.620588", 
+    "testcases": [
+      {
+        "description": "Appending to a line with text", 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "append_to_file", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Test the deletion of a line after writing it to the document", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "delete_after_writing", 
         "ptsPossible": 1.0
@@ -445,7 +585,7 @@
       }, 
       {
         "description": "Tests that deletion of lines can happen without needing to write first (e.g. doc loaded from existing file, etc.)", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "deleting_on_own", 
         "ptsPossible": 1.0
@@ -508,7 +648,7 @@
       }, 
       {
         "description": "Test the format of printing the doc after writing lines, part 2", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "printing_test1", 
         "ptsPossible": 1.0
@@ -529,14 +669,14 @@
       }, 
       {
         "description": "Tests writing to multiple lines and appending to those lines", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "writing_appending_test", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Tests writing to multiple lines and appending, with more lines", 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "writing_appending_test1", 
         "ptsPossible": 1.0
@@ -556,11 +696,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "22355", 
-    "checksum": "f8154fb29dd75f3848a87f22e3d0ffa42f7660f6  editor.c"
+    "revision": "22842", 
+    "checksum": "668441eb1b30c7b1abd92029c57d48ae2ce5c9b9  editor.c"
   }, 
   {
-    "timestamp": "2016-09-17 00:00:00.620588", 
+    "timestamp": "2016-09-18 00:00:00.670500", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
@@ -635,7 +775,7 @@
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "print_nonexisting_line", 
         "description": "Tests that error is thrown when attempting to print a nonexistant line"
       }, 
@@ -696,7 +836,7 @@
         "description": "Tests that whitespace can be written as part of line"
       }
     ], 
-    "checksum": "668441eb1b30c7b1abd92029c57d48ae2ce5c9b9  editor.c", 
-    "revision": "22842"
+    "checksum": "a8bc8832bdc21e13c4523c25f44079363b5fa845  editor.c", 
+    "revision": "23710"
   }
 ]
