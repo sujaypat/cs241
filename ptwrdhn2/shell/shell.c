@@ -31,8 +31,9 @@ int shell(int argc, char *argv[]) {
 	if(argc == 3){
 		if(!strcmp(argv[argc - 2], "-h")) handle_history(argv[argc - 1]);
 		else if(!strcmp(argv[argc - 2], "-f")) handle_file(argv[argc - 1]);
-		else print_usage();
 	}
+	if(argc != 3 && argc != 1) 	print_usage();
+
 	command_log = Log_create();
 	print_shell_owner("ptwrdhn2");
 	signal(SIGINT, sigint_handler);
@@ -42,6 +43,7 @@ int shell(int argc, char *argv[]) {
 	size_t len = 0;
 	size_t tokens = 0;
 	int done = 0;
+	int status = 0;
 
 	while (!done) {
 		print_prompt(getenv("PWD"), getpid());
@@ -57,7 +59,10 @@ int shell(int argc, char *argv[]) {
 		printf("command: %s\n", command_type);
 		if(!strcmp(command_type, "cd")){
 			puts("cd");
-			chdir(args[1]);
+			printf("%s\n", args[1]);
+			status = chdir(args[1]);
+			Log_add_command(command_log, command);
+			if(status == -1) print_no_directory(args[1]);
 		}
 		else if(!strcmp(command_type, "!history")){
 			// for(int i = 0; i < )
@@ -65,9 +70,11 @@ int shell(int argc, char *argv[]) {
 		}
 		else if(strstr(command_type, "#")){
 			puts("specfic history");
+			Log_add_command(command_log, command);
 		}
 		else if(strstr(command_type, "!")){
 			puts("repeat");
+			Log_add_command(command_log, command);
 		}
 		else{
 			puts("u dun fucked up");
