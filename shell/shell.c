@@ -17,10 +17,11 @@ void sigint_handler(int sig){
 
 int shell(int argc, char *argv[]) {
 	// TODO: This is the entry point for your shell.
+
 	print_shell_owner("ptwrdhn2");
 	signal(SIGINT, sigint_handler);
 	while(1){
-		print_prompt(getenv(pwd), getpid());
+		print_prompt(getenv("PWD"), getpid());
 
 		if(EOF) break;
 	}
