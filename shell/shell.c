@@ -6,6 +6,8 @@
 #include "log.h"
 #include "shell.h"
 
+#include <signal.h>
+
 int shell(int argc, char *argv[]) {
   // TODO: This is the entry point for your shell.
   print_shell_owner("ptwrdhn2");
