@@ -65,8 +65,6 @@ void handle_num_history(char *command){
 		print_command(Log_get_command(command_log, num));
 	}
 	else print_invalid_index();
-
-
 	free(line);
 }
 
