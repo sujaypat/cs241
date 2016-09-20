@@ -47,7 +47,7 @@ int shell(int argc, char *argv[]) {
 		print_prompt(getenv("PWD"), getpid());
 		int eof = getline(&command, &len, stdin);
 		if(eof == -1) break;
-		char ** args = strsplit(command, " ", tokens);
+		char ** args = strsplit(command, " ", &tokens);
 
 		// remove newline from the command
 		char *nl = strchr(command, '\n');
@@ -66,7 +66,7 @@ int shell(int argc, char *argv[]) {
 			puts("specfic history\n");
 		}
 		else if(strstr(command_type, "!")){
-			puts("repeat\n")
+			puts("repeat\n");
 		}
 		else{
 			puts("u dun fucked un");
