@@ -64,8 +64,8 @@ int shell(int argc, char *argv[]) {
 			if(status == -1) print_no_directory(args[1]);
 		}
 		else if(!strcmp(command_type, "!history")){
-			for(int i = 0; i < Log_size(command_log); i++){
-
+			for(size_t i = 0; i < Log_size(command_log); i++){
+				print_history_line(i, Log_get_command(command_log, i));
 			}
 			puts("history");
 		}
