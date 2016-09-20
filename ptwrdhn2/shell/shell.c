@@ -11,6 +11,7 @@
 #include <string.h>
 
 Log *command_log = NULL;
+int *status;
 void sigint_handler(int sig){
 	printf("caught signal SIGINT\n");
 	signal(sig, sigint_handler);
@@ -51,7 +52,6 @@ int shell(int argc, char *argv[]) {
 	size_t len = 0;
 	size_t tokens = 0;
 	int done = 0;
-	int status = 0;
 
 	while (!done) {
 		print_prompt(getenv("PWD"), getpid());
