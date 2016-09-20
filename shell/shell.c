@@ -10,7 +10,7 @@
 #include <unistd.h>
 #include <string.h>
 
-Log *command_log = Log_create();
+Log *command_log = NULL;
 void sigint_handler(int sig){
 	printf("caught signal SIGINT\n");
 	signal(sig, sigint_handler);
@@ -33,6 +33,7 @@ int shell(int argc, char *argv[]) {
 		else if(!strcmp(argv[argc - 2], "-f")) handle_file(argv[argc - 1]);
 		else print_usage();
 	}
+	command_log = Log_create();
 	print_shell_owner("ptwrdhn2");
 	signal(SIGINT, sigint_handler);
 
