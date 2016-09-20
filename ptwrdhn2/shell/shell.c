@@ -31,11 +31,11 @@ void handle_file(char *filename){
 void handle_cd(char *command){
 	// puts("cd");
 	print_command(command);
+	Log_add_command(command_log, command);
 	command += 3;
 	// printf("%s\n", getenv("PWD"));
 	status = chdir(command);
 	// printf("%s\n", getenv("PWD"));
-	Log_add_command(command_log, command);
 	if(status == -1) print_no_directory(command);
 }
 
@@ -98,7 +98,7 @@ int shell(int argc, char *argv[]) {
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
 
-		printf("command: %s\n", command);
+		// printf("command: %s\n", command);
 		if(!strncmp(command, "cd", 2)){
 			handle_cd(command);
 		}
