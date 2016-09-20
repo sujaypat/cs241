@@ -49,11 +49,10 @@ int shell(int argc, char *argv[]) {
 		print_prompt(getenv("PWD"), getpid());
 		int eof = getline(&command, &len, stdin);
 		if(eof == -1) break;
-		char ** args = strsplit(command, " ", &tokens);
-
 		// remove newline from the command
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
+		char ** args = strsplit(command, " ", &tokens);
 
 		char *command_type = args[0];
 		printf("command: %s\n", command_type);
@@ -65,7 +64,9 @@ int shell(int argc, char *argv[]) {
 			if(status == -1) print_no_directory(args[1]);
 		}
 		else if(!strcmp(command_type, "!history")){
-			// for(int i = 0; i < )
+			for(int i = 0; i < Log_size(command_log); i++){
+
+			}
 			puts("history");
 		}
 		else if(strstr(command_type, "#")){
