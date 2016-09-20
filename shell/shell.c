@@ -10,18 +10,15 @@
 #include <unistd.h>
 #include <string.h>
 
-
+Log *command_log = Log_create();
 void sigint_handler(int sig){
 	printf("caught signal SIGINT\n");
-	signal(sig, sigint_handler);
-}
-void sigeof_handler(int sig){
-	printf("caught EOF\n");
 	signal(sig, sigint_handler);
 }
 
 void handle_history(char *filename){
 	printf("history file %s created\n", filename);
+
 }
 
 void handle_file(char *filename){
@@ -42,56 +39,42 @@ int shell(int argc, char *argv[]) {
 
 	char *command = NULL;
 	size_t len = 0;
+	size_t tokens = 0;
 	int done = 0;
 
 	while (!done) {
 		print_prompt(getenv("PWD"), getpid());
-		getline(&command, &len, stdin);
+		int eof = getline(&command, &len, stdin);
+		if(eof == -1) break;
+		char ** args = strsplit(command, " ", tokens);
 
 		// remove newline from the command
 		char *nl = strchr(command, '\n');
-		if (nl)
-		*nl = 0;
+		if (nl) *nl = 0;
 
-
-		int command_type = command[0];
-		switch (command_type) {
-			case 'cd':
-			chdir(command[1]);
-			// handle_display_command(document, command);
-			break;
-			case 'w':
-			// handle_write_command(document, command);
-			break;
-			case 'a':
-			// handle_append_command(document, command);
-			break;
-			case 'd':
-			// handle_delete_command(document, command);
-			break;
-			case '/':
-			// handle_search_command(document, command);
-			break;
-			case 's':
-			// if (strlen(command) == 1) {
-			// 	handle_save_command(document, filename);
-			// } else {
-			// 	invalid_command(command);
-			// }
-			break;
-			case 'q':
-			// done = 1;
-			// Document_destroy(document);
-			break;
-			default:
-			fprintf(stderr, "Something bad happened! Report to CS241 Staff!\n");
-			break;
+		char *command_type = args[0];
+		if(!strcmp(command_type, "cd")){
+			puts("cd\n");
+			chdir(args[1]);
+		}
+		else if(!strcmp(command_type, "!history")){
+			// for(int i = 0; i < )
+			puts("history\n");
+		}
+		else if(strstr(command_type, "#")){
+			puts("specfic history\n");
+		}
+		else if(strstr(command_type, "!")){
+			puts("repeat\n")
+		}
+		else{
+			puts("u dun fucked un");
+			//fork, exec, wait
 		}
 	}
 
-	// Need to free the buffer that we created.
 	if (command) {
-		free(command);
+		// free(command);
 	}
 
 	return 0;
