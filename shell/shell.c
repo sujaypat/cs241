@@ -11,7 +11,6 @@
 #include <string.h>
 
 Log *command_log = NULL;
-char *curr_path =
 void sigint_handler(int sig){
 	printf("caught signal SIGINT\n");
 	signal(sig, sigint_handler);
@@ -50,7 +49,7 @@ int shell(int argc, char *argv[]) {
 
 	char *command = NULL;
 	size_t len = 0;
-	// size_t tokens = 0;
+	size_t tokens = 0;
 	int done = 0;
 	int status = 0;
 
