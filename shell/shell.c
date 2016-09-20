@@ -8,6 +8,9 @@
 
 #include <signal.h>
 
+
+
+
 int shell(int argc, char *argv[]) {
   // TODO: This is the entry point for your shell.
   print_shell_owner("ptwrdhn2");
@@ -16,6 +19,8 @@ int shell(int argc, char *argv[]) {
   return 0;
 }
 
-void sigint_handler(int signal){
+
+void sigint_handler(int sig){
 	printf("caught signal: %d\n", signal);
+	signal(sig, sigint_handler);
 }
