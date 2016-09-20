@@ -27,12 +27,12 @@ void handle_file(char *filename){
 
 void handle_cd(char *new_dir){
 	puts("cd");
-	print_command(command);
+	print_command(new_dir);
 	printf("%s\n", getenv("PWD"));
 	status = chdir(args[1]);
 	printf("%s\n", getenv("PWD"));
-	Log_add_command(command_log, command);
-	if(status == -1) print_no_directory(args[1]);
+	Log_add_command(command_log, new_dir);
+	if(status == -1) print_no_directory(new_dir);
 }
 
 int shell(int argc, char *argv[]) {
