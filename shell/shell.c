@@ -11,6 +11,7 @@
 #include <string.h>
 
 Log *command_log = NULL;
+char *curr_path =
 void sigint_handler(int sig){
 	printf("caught signal SIGINT\n");
 	signal(sig, sigint_handler);
@@ -25,6 +26,15 @@ void handle_file(char *filename){
 	printf("file %s imported\n", filename);
 }
 
+void handle_cd(char *new_dir){
+	puts("cd");
+	print_command(command);
+	printf("%s\n", getenv("PWD"));
+	status = chdir(args[1]);
+	printf("%s\n", getenv("PWD"));
+	Log_add_command(command_log, command);
+	if(status == -1) print_no_directory(args[1]);
+}
 
 int shell(int argc, char *argv[]) {
 	// TODO: This is the entry point for your shell.
@@ -35,13 +45,12 @@ int shell(int argc, char *argv[]) {
 	if(argc != 3 && argc != 1) 	print_usage();
 
 	command_log = Log_create();
-	print_shell_owner("ptwrdhn2");
 	signal(SIGINT, sigint_handler);
 
 
 	char *command = NULL;
 	size_t len = 0;
-	size_t tokens = 0;
+	// size_t tokens = 0;
 	int done = 0;
 	int status = 0;
 
@@ -52,18 +61,11 @@ int shell(int argc, char *argv[]) {
 		// remove newline from the command
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
-		char ** args = strsplit(command, " ", &tokens);
+		char *command_type = strsep(command, " ");
 
-		char *command_type = args[0];
 		printf("command: %s\n", command_type);
 		if(!strcmp(command_type, "cd")){
-			puts("cd");
-			printf("%s\n", args[1]);
-			printf("%s\n", getenv("PWD"));
-			status = chdir(args[1]);
-			printf("%s\n", getenv("PWD"));
-			Log_add_command(command_log, command);
-			if(status == -1) print_no_directory(args[1]);
+			handle_cd(command);
 		}
 		else if(!strcmp(command_type, "!history")){
 			for(size_t i = 0; i < Log_size(command_log); i++){
