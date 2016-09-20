@@ -8,6 +8,7 @@
 
 #include <signal.h>
 #include <unistd.h>
+#include <string.h>
 
 
 void sigint_handler(int sig){
