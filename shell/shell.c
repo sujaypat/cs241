@@ -19,7 +19,7 @@ void sigint_handler(int sig){
 	signal(sig, sigint_handler);
 }
 
-void handle_history(char *filename){
+void handle_history_file(char *filename){
 	printf("history file %s created\n", filename);
 
 }
@@ -39,16 +39,31 @@ void handle_cd(char *command){
 	if(status == -1) print_no_directory(command);
 }
 
+void handle_spec_history(char *command){
+
+}
+
+void handle_history(){
+
+	for(size_t i = 0; i < Log_size(command_log); i++){
+		print_history_line(i, Log_get_command(command_log, i));
+	}
+}
+
+void handle_num_history(char *command){
+
+}
+
 int shell(int argc, char *argv[]) {
 	// TODO: This is the entry point for your shell.
 	if(argc == 3){
-		if(!strcmp(argv[argc - 2], "-h")) handle_history(argv[argc - 1]);
+		if(!strcmp(argv[argc - 2], "-h")) handle_history_file(argv[argc - 1]);
 		else if(!strcmp(argv[argc - 2], "-f")) handle_file(argv[argc - 1]);
 	}
 	if(argc != 3 && argc != 1) 	print_usage();
 
 	command_log = Log_create();
-	char buff [PATH_MAX + 1] =
+	char buf[PATH_MAX + 1];
 	cwd = getcwd(buf, PATH_MAX + 1);
 
 	signal(SIGINT, sigint_handler);
@@ -56,7 +71,7 @@ int shell(int argc, char *argv[]) {
 
 	char *command = NULL;
 	size_t len = 0;
-	int dicks = 0;
+	// int dicks = 0;
 	int done = 0;
 
 	while (!done) {
@@ -67,35 +82,26 @@ int shell(int argc, char *argv[]) {
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
 
-		printf("command: %s\n", command_type);
+		printf("command: %s\n", command);
 		if(!strncmp(command, "cd", 2)){
-			dicks = 0;
 			handle_cd(command);
 		}
 		else if(!strncmp(command, "!history", 8)){
-			dicks = 1;
-			handle_history(command);
-			for(size_t i = 0; i < Log_size(command_log); i++){
-				print_history_line(i, Log_get_command(command_log, i));
-			}
-			// puts("history");
+			handle_history();
 		}
 		else if(strncmp(command, "#", 1)){
-			dicks = 2;
 			puts("specfic history");
 			// only for returned cmd if found and run
 			handle_num_history(command);
 			// Log_add_command(command_log, command);
 		}
-		else if(strstr(command_type, "!")){
-			dicks = 3;
+		else if(strncmp(command, "!", 1)){
 			puts("repeat");
 			handle_spec_history(command);
 			// only for returned cmd if found and run
 			// Log_add_command(command_log, command);
 		}
 		else{
-			dicks = 4;
 			puts("u dun fucked up");
 			//fork, exec, wait
 
