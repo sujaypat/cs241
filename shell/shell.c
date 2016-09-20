@@ -23,7 +23,7 @@ int shell(int argc, char *argv[]) {
 	while(1){
 		print_prompt(getenv("PWD"), getpid());
 
-		// if(EOF) break;
+		if(EOF) break;
 	}
 
 
