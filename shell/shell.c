@@ -7,7 +7,7 @@
 #include "shell.h"
 
 #include <signal.h>
-
+#include <unistd.h>
 
 
 void sigint_handler(int sig){
