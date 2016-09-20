@@ -11,7 +11,7 @@
 
 
 void sigint_handler(int sig){
-	printf("caught signal: %d\n", signal);
+	printf("caught signal SIGINT\n");
 	signal(sig, sigint_handler);
 }
 
