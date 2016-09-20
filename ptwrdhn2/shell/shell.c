@@ -10,6 +10,10 @@
 
 
 
+void sigint_handler(int sig){
+	printf("caught signal: %d\n", signal);
+	signal(sig, sigint_handler);
+}
 
 int shell(int argc, char *argv[]) {
   // TODO: This is the entry point for your shell.
@@ -17,10 +21,4 @@ int shell(int argc, char *argv[]) {
   signal(SIGINT, sigint_handler);
 
   return 0;
-}
-
-
-void sigint_handler(int sig){
-	printf("caught signal: %d\n", signal);
-	signal(sig, sigint_handler);
 }
