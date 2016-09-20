@@ -59,7 +59,9 @@ int shell(int argc, char *argv[]) {
 		if(!strcmp(command_type, "cd")){
 			puts("cd");
 			printf("%s\n", args[1]);
+			printf("%s\n", getenv("PWD"));
 			status = chdir(args[1]);
+			printf("%s\n", getenv("PWD"));
 			Log_add_command(command_log, command);
 			if(status == -1) print_no_directory(args[1]);
 		}
@@ -67,19 +69,22 @@ int shell(int argc, char *argv[]) {
 			for(size_t i = 0; i < Log_size(command_log); i++){
 				print_history_line(i, Log_get_command(command_log, i));
 			}
-			puts("history");
+			// puts("history");
 		}
 		else if(strstr(command_type, "#")){
 			puts("specfic history");
+			// only for returned cmd if found and run
 			Log_add_command(command_log, command);
 		}
 		else if(strstr(command_type, "!")){
 			puts("repeat");
+			// only for returned cmd if found and run
 			Log_add_command(command_log, command);
 		}
 		else{
 			puts("u dun fucked up");
 			//fork, exec, wait
+
 		}
 	}
 
