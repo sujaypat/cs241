@@ -62,7 +62,7 @@ void handle_num_history(char *command){
 	command++;
 	char *line = strsep(&command, " ");
 	int num = atoi(line);
-	char found[];
+	char found[] = 0;
 	if((size_t)num < Log_size(command_log) && num >= 0){
 		found = (Log_get_command(command_log, num));
 	}
