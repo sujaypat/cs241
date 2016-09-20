@@ -105,13 +105,13 @@ int shell(int argc, char *argv[]) {
 		else if(!strncmp(command, "!history", 8)){
 			handle_history();
 		}
-		else if(strncmp(command, "#", 1)){
+		else if(!strncmp(command, "#", 1)){
 			puts("num history");
 			// only for returned cmd if found and run
 			handle_num_history(command);
 			// Log_add_command(command_log, command);
 		}
-		else if(strncmp(command, "!", 1)){
+		else if(!strncmp(command, "!", 1)){
 			puts("specific");
 			handle_spec_history(command);
 			// only for returned cmd if found and run
