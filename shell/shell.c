@@ -106,13 +106,13 @@ int shell(int argc, char *argv[]) {
 			handle_history();
 		}
 		else if(strncmp(command, "#", 1)){
-			puts("specfic history");
+			puts("num history");
 			// only for returned cmd if found and run
 			handle_num_history(command);
 			// Log_add_command(command_log, command);
 		}
 		else if(strncmp(command, "!", 1)){
-			puts("repeat");
+			puts("specific");
 			handle_spec_history(command);
 			// only for returned cmd if found and run
 			// Log_add_command(command_log, command);
