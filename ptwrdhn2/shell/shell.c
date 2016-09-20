@@ -46,10 +46,11 @@ void handle_spec_history(char *command){
 	char *loc;
 	for(int i = Log_size(command_log) - 1; i >= 0; i--){
 		if((loc = strstr(Log_get_command(command_log, i), search)) != NULL){
-			print_history_line(i, Log_get_command(command_log, i));
+			printf("%s\n", Log_get_command(command_log, i));
 			break;
 		}
 	}
+	if(!i) print_no_history_match();
 	free(search);
 	search = NULL;
 }
