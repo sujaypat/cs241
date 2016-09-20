@@ -20,7 +20,7 @@ int shell(int argc, char *argv[]) {
 	print_shell_owner("ptwrdhn2");
 	signal(SIGINT, sigint_handler);
 	while(1){
-		print_prompt(getenv(PWD), getpid());
+		print_prompt(getenv(pwd), getpid());
 
 		if(EOF) break;
 	}
