@@ -15,6 +15,10 @@ void sigint_handler(int sig){
 	printf("caught signal SIGINT\n");
 	signal(sig, sigint_handler);
 }
+void sigeof_handler(int sig){
+	printf("caught EOF\n");
+	signal(sig, sigint_handler);
+}
 
 void handle_history(char *filename){
 	printf("history file %s created\n", filename);
@@ -52,7 +56,8 @@ int shell(int argc, char *argv[]) {
 
 		int command_type = command[0];
 		switch (command_type) {
-			case 'p':
+			case 'cd':
+			chdir(command[1]);
 			// handle_display_command(document, command);
 			break;
 			case 'w':
