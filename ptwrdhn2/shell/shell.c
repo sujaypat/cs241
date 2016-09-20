@@ -54,22 +54,23 @@ int shell(int argc, char *argv[]) {
 		if (nl) *nl = 0;
 
 		char *command_type = args[0];
+		printf("command: %s\n", command_type);
 		if(!strcmp(command_type, "cd")){
-			puts("cd\n");
+			puts("cd");
 			chdir(args[1]);
 		}
 		else if(!strcmp(command_type, "!history")){
 			// for(int i = 0; i < )
-			puts("history\n");
+			puts("history");
 		}
 		else if(strstr(command_type, "#")){
-			puts("specfic history\n");
+			puts("specfic history");
 		}
 		else if(strstr(command_type, "!")){
-			puts("repeat\n");
+			puts("repeat");
 		}
 		else{
-			puts("u dun fucked un");
+			puts("u dun fucked up");
 			//fork, exec, wait
 		}
 	}
