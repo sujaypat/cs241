@@ -44,7 +44,8 @@ void handle_cd(char *command){
 void handle_spec_history(char *command){
 	char *search = strdup(command + 1);
 	char *loc;
-	for(int i = Log_size(command_log) - 1; i >= 0; i--){
+	int i;
+	for(i = Log_size(command_log) - 1; i >= 0; i--){
 		if((loc = strstr(Log_get_command(command_log, i), search)) != NULL){
 			printf("%s\n", Log_get_command(command_log, i));
 			break;
