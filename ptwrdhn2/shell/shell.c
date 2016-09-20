@@ -51,7 +51,16 @@ void handle_history(){
 }
 
 void handle_num_history(char *command){
+	command++;
+	char *line = strsep(&command, " ");
+	int num = atoi(line);
+	if((size_t)num < Log_size(command_log) && num >= 0){
+		print_command(Log_get_command(command_log, num));
+	}
+	else print_invalid_index();
 
+
+	free(line);
 }
 
 int shell(int argc, char *argv[]) {
