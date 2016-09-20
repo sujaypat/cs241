@@ -15,8 +15,21 @@ void sigint_handler(int sig){
 	signal(sig, sigint_handler);
 }
 
+void handle_history(char *filename){
+	printf("history file %s created\n", filename);
+}
+
+void handle_file(char *filename){
+	printf("file %s imported\n", filename);
+}
+
+
 int shell(int argc, char *argv[]) {
 	// TODO: This is the entry point for your shell.
+	if(argc == 3){
+		if(argv[argc - 2] == 'h') handle_history(argv[argc - 1]);
+		else handle_file(argv[argc - 1]);
+	}
 
 	print_shell_owner("ptwrdhn2");
 	signal(SIGINT, sigint_handler);
@@ -25,9 +38,6 @@ int shell(int argc, char *argv[]) {
 
 		if(EOF) break;
 	}
-
-
-
 
 	return 0;
 }
