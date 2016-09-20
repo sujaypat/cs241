@@ -29,14 +29,14 @@ void handle_file(char *filename){
 	printf("file %s imported\n", filename);
 }
 
-void handle_cd(char *new_dir){
+void handle_cd(){
 	puts("cd");
 	print_command(new_dir);
-	printf("%s\n", getenv("PWD"));
+	// printf("%s\n", getenv("PWD"));
 	status = chdir(new_dir);
-	printf("%s\n", getenv("PWD"));
-	Log_add_command(command_log, new_dir);
-	if(status == -1) print_no_directory(new_dir);
+	// printf("%s\n", getenv("PWD"));
+	Log_add_command(command_log, cwd);
+	if(status == -1) print_no_directory(cwd);
 }
 
 int shell(int argc, char *argv[]) {
@@ -48,7 +48,9 @@ int shell(int argc, char *argv[]) {
 	if(argc != 3 && argc != 1) 	print_usage();
 
 	command_log = Log_create();
-	cwd = getcwd(buf, MAX_PATH);
+	char buff [PATH_MAX + 1] =
+	cwd = getcwd(buf, PATH_MAX);
+
 	signal(SIGINT, sigint_handler);
 
 
