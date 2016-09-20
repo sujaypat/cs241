@@ -37,6 +37,7 @@ void handle_cd(char *command){
 	status = chdir(command);
 	// printf("%s\n", getenv("PWD"));
 	if(status == -1) print_no_directory(command);
+	cwd = getcwd(buf, PATH_MAX + 1);
 }
 
 void handle_spec_history(char *command){
@@ -45,6 +46,7 @@ void handle_spec_history(char *command){
 	for(int i = Log_size(command_log) - 1; i >= 0; i--){
 		if((loc = strstr(Log_get_command(command_log, i), search)) != NULL){
 			print_history_line(i, Log_get_command(command_log, i));
+			break;
 		}
 	}
 	free(search);
