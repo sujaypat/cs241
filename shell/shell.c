@@ -62,9 +62,10 @@ void handle_num_history(char *command){
 	command++;
 	char *line = strsep(&command, " ");
 	int num = atoi(line);
-	char found[] = 0;
+	char *found;
 	if((size_t)num < Log_size(command_log) && num >= 0){
-		found = (Log_get_command(command_log, num));
+		found = malloc(Log_get_command(command_log, num));
+		strcpy(found, Log_get_command(command_log, num));
 	}
 	else{
 		print_invalid_index();
@@ -72,7 +73,7 @@ void handle_num_history(char *command){
 	}
 	Log_add_command(command_log, found);
 
-	// free(line);
+	free(found);
 }
 
 int shell(int argc, char *argv[]) {
