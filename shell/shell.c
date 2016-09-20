@@ -42,7 +42,7 @@ void handle_cd(char *command){
 void handle_spec_history(char *command){
 	char *search = strdup(command + 1);
 	char *loc;
-	for(size_t i = 0; i < Log_size(command_log); i++){
+	for(int i = Log_size(command_log) - 1; i >= 0; i--){
 		if((loc = strstr(Log_get_command(command_log, i), search)) != NULL){
 			print_history_line(i, Log_get_command(command_log, i));
 		}
