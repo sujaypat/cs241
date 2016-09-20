@@ -13,6 +13,7 @@
 
 Log *command_log = NULL;
 char *cwd;
+char buf[PATH_MAX + 1];
 int status = 0;
 void sigint_handler(int sig){
 	printf("caught signal SIGINT\n");
@@ -79,7 +80,7 @@ int shell(int argc, char *argv[]) {
 	if(argc != 3 && argc != 1) 	print_usage();
 
 	command_log = Log_create();
-	char buf[PATH_MAX + 1];
+
 	cwd = getcwd(buf, PATH_MAX + 1);
 
 	signal(SIGINT, sigint_handler);
