@@ -26,17 +26,13 @@ void handle_history_file(char *filename){
 }
 
 void handle_file(char *filename){
-	printf("file %s imported\n", filename);
+	printf("script %s imported\n", filename);
 }
 
 void handle_cd(char *command){
-	// puts("cd");
-	print_command(command);
 	Log_add_command(command_log, command);
 	command += 3;
-	// printf("%s\n", getenv("PWD"));
 	status = chdir(command);
-	// printf("%s\n", getenv("PWD"));
 	if(status == -1) print_no_directory(command);
 	cwd = getcwd(buf, PATH_MAX + 1);
 }
@@ -66,10 +62,16 @@ void handle_num_history(char *command){
 	command++;
 	char *line = strsep(&command, " ");
 	int num = atoi(line);
+	char found[];
 	if((size_t)num < Log_size(command_log) && num >= 0){
-		print_command(Log_get_command(command_log, num));
+		found = (Log_get_command(command_log, num));
 	}
-	else print_invalid_index();
+	else{
+		print_invalid_index();
+		return;
+	}
+	Log_add_command(command_log, found);
+
 	// free(line);
 }
 
@@ -84,7 +86,6 @@ int shell(int argc, char *argv[]) {
 	command_log = Log_create();
 
 	cwd = getcwd(buf, PATH_MAX + 1);
-
 	signal(SIGINT, sigint_handler);
 
 
