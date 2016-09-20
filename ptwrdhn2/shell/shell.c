@@ -8,5 +8,12 @@
 
 int shell(int argc, char *argv[]) {
   // TODO: This is the entry point for your shell.
+  print_shell_owner("ptwrdhn2");
+  signal(SIGINT, sigint_handler);
+
   return 0;
+}
+
+void sigint_handler(int signal){
+	printf("caught signal: %d\n", signal);
 }
