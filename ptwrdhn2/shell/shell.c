@@ -13,7 +13,6 @@
 
 Log *command_log = NULL;
 char *cwd;
-char buf[];
 int status = 0;
 void sigint_handler(int sig){
 	printf("caught signal SIGINT\n");
@@ -29,14 +28,15 @@ void handle_file(char *filename){
 	printf("file %s imported\n", filename);
 }
 
-void handle_cd(){
-	puts("cd");
-	print_command(cwd);
+void handle_cd(char *command){
+	// puts("cd");
+	print_command(command);
+	command += 3;
 	// printf("%s\n", getenv("PWD"));
-	status = chdir(cwd);
+	status = chdir(command);
 	// printf("%s\n", getenv("PWD"));
-	Log_add_command(command_log, cwd);
-	if(status == -1) print_no_directory(cwd);
+	Log_add_command(command_log, command);
+	if(status == -1) print_no_directory(command);
 }
 
 int shell(int argc, char *argv[]) {
@@ -56,7 +56,7 @@ int shell(int argc, char *argv[]) {
 
 	char *command = NULL;
 	size_t len = 0;
-	// size_t tokens = 0;
+	int dicks = 0;
 	int done = 0;
 
 	while (!done) {
@@ -66,29 +66,36 @@ int shell(int argc, char *argv[]) {
 		// remove newline from the command
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
-		char *command_type = strsep(&command, " ");
 
 		printf("command: %s\n", command_type);
-		if(!strcmp(command_type, "cd")){
+		if(!strncmp(command, "cd", 2)){
+			dicks = 0;
 			handle_cd(command);
 		}
-		else if(!strcmp(command_type, "!history")){
+		else if(!strncmp(command, "!history", 8)){
+			dicks = 1;
+			handle_history(command);
 			for(size_t i = 0; i < Log_size(command_log); i++){
 				print_history_line(i, Log_get_command(command_log, i));
 			}
 			// puts("history");
 		}
-		else if(strstr(command_type, "#")){
+		else if(strncmp(command, "#", 1)){
+			dicks = 2;
 			puts("specfic history");
 			// only for returned cmd if found and run
-			Log_add_command(command_log, command);
+			handle_num_history(command);
+			// Log_add_command(command_log, command);
 		}
 		else if(strstr(command_type, "!")){
+			dicks = 3;
 			puts("repeat");
+			handle_spec_history(command);
 			// only for returned cmd if found and run
-			Log_add_command(command_log, command);
+			// Log_add_command(command_log, command);
 		}
 		else{
+			dicks = 4;
 			puts("u dun fucked up");
 			//fork, exec, wait
 
