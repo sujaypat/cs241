@@ -9,8 +9,11 @@
 #include <signal.h>
 #include <unistd.h>
 #include <string.h>
+#include <limits.h>
 
 Log *command_log = NULL;
+char *cwd;
+char buf[];
 int status = 0;
 void sigint_handler(int sig){
 	printf("caught signal SIGINT\n");
@@ -45,6 +48,7 @@ int shell(int argc, char *argv[]) {
 	if(argc != 3 && argc != 1) 	print_usage();
 
 	command_log = Log_create();
+	cwd = getcwd(buf, MAX_PATH);
 	signal(SIGINT, sigint_handler);
 
 
@@ -54,7 +58,7 @@ int shell(int argc, char *argv[]) {
 	int done = 0;
 
 	while (!done) {
-		print_prompt(getenv("PWD"), getpid());
+		print_prompt(cwd, getpid());
 		int eof = getline(&command, &len, stdin);
 		if(eof == -1) break;
 		// remove newline from the command
