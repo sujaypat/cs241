@@ -49,7 +49,7 @@ int shell(int argc, char *argv[]) {
 
 	command_log = Log_create();
 	char buff [PATH_MAX + 1] =
-	cwd = getcwd(buf, PATH_MAX);
+	cwd = getcwd(buf, PATH_MAX + 1);
 
 	signal(SIGINT, sigint_handler);
 
