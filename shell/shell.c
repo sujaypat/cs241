@@ -31,9 +31,9 @@ void handle_file(char *filename){
 
 void handle_cd(){
 	puts("cd");
-	print_command(new_dir);
+	print_command(cwd);
 	// printf("%s\n", getenv("PWD"));
-	status = chdir(new_dir);
+	status = chdir(cwd);
 	// printf("%s\n", getenv("PWD"));
 	Log_add_command(command_log, cwd);
 	if(status == -1) print_no_directory(cwd);
