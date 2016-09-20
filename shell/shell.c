@@ -27,8 +27,8 @@ void handle_file(char *filename){
 int shell(int argc, char *argv[]) {
 	// TODO: This is the entry point for your shell.
 	if(argc == 3){
-		if(argv[argc - 2] == "-h") handle_history(argv[argc - 1]);
-		else if(argv[argc - 2] == "-f") handle_file(argv[argc - 1]);
+		if(!strcmp(argv[argc - 2], "-h")) handle_history(argv[argc - 1]);
+		else if(!strcmp(argv[argc - 2], "-f")) handle_file(argv[argc - 1]);
 		else print_usage();
 	}
 
