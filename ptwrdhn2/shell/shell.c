@@ -70,7 +70,7 @@ void handle_num_history(char *command){
 		print_command(Log_get_command(command_log, num));
 	}
 	else print_invalid_index();
-	free(line);
+	// free(line);
 }
 
 int shell(int argc, char *argv[]) {
