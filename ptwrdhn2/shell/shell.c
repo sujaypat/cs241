@@ -100,14 +100,16 @@ int shell(int argc, char *argv[]) {
 	int done = 0;
 
 	while (!done) {
+
 		print_prompt(cwd, getpid());
 		int eof = getline(&command, &len, stdin);
 		if(eof == -1) break;
+
 		// remove newline from the command
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
 
-		// ("command: %s\n", command);
+
 		if(!strncmp(command, "cd", 2)){
 			handle_cd(command);
 		}
@@ -115,16 +117,10 @@ int shell(int argc, char *argv[]) {
 			handle_history();
 		}
 		else if(!strncmp(command, "#", 1)){
-			// puts("num history");
-			// only for returned cmd if found and run
 			handle_num_history(command);
-			// Log_add_command(command_log, command);
 		}
 		else if(!strncmp(command, "!", 1)){
-			// puts("specific");
 			handle_spec_history(command);
-			// only for returned cmd if found and run
-			// Log_add_command(command_log, command);
 		}
 		else{
 			// puts("u dun fucked up");
@@ -135,7 +131,7 @@ int shell(int argc, char *argv[]) {
 
 	if (command) {
 		free(command);
-		free(eof);
+		// free(eof);
 	}
 	return 0;
 }
