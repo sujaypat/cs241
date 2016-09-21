@@ -55,7 +55,7 @@ void handle_spec_history(char *command){
 }
 
 void handle_history(){
-	for(size_t i = 0; i <= Log_size(command_log); i++){
+	for(size_t i = 0; i < Log_size(command_log); i++){
 		print_history_line(i, Log_get_command(command_log, i));
 	}
 }
