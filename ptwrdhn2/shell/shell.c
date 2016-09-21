@@ -15,10 +15,11 @@ Log *command_log = NULL;
 char *cwd;
 char buf[PATH_MAX + 1];
 int status = 0;
+// int argc_copy = 0;
 void sigint_handler(int sig){
 	// printf("caught signal SIGINT\n");
 	signal(sig, sigint_handler);
-	shell()
+	// shell(argc_copy, );
 }
 
 void handle_history_file(char *filename){
@@ -80,6 +81,7 @@ void handle_num_history(char *command){
 
 int shell(int argc, char *argv[]) {
 	// TODO: This is the entry point for your shell.
+	// argc_copy = argc;
 	if(argc == 3){
 		if(!strcmp(argv[argc - 2], "-h")) handle_history_file(argv[argc - 1]);
 		else if(!strcmp(argv[argc - 2], "-f")) handle_file(argv[argc - 1]);
