@@ -45,7 +45,7 @@ void handle_spec_history(char *command){
 	int i;
 	for(i = Log_size(command_log) - 1; i >= 0; i--){
 		if((loc = strstr(Log_get_command(command_log, i), search)) != NULL){
-			printf("%s\n", Log_get_command(command_log, i));
+			// printf("%s\n", Log_get_command(command_log, i));
 			break;
 		}
 	}
@@ -107,7 +107,7 @@ int shell(int argc, char *argv[]) {
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
 
-		// printf("command: %s\n", command);
+		// ("command: %s\n", command);
 		if(!strncmp(command, "cd", 2)){
 			handle_cd(command);
 		}
@@ -115,19 +115,19 @@ int shell(int argc, char *argv[]) {
 			handle_history();
 		}
 		else if(!strncmp(command, "#", 1)){
-			puts("num history");
+			// puts("num history");
 			// only for returned cmd if found and run
 			handle_num_history(command);
 			// Log_add_command(command_log, command);
 		}
 		else if(!strncmp(command, "!", 1)){
-			puts("specific");
+			// puts("specific");
 			handle_spec_history(command);
 			// only for returned cmd if found and run
 			// Log_add_command(command_log, command);
 		}
 		else{
-			puts("u dun fucked up");
+			// puts("u dun fucked up");
 			//fork, exec, wait
 
 		}
