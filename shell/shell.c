@@ -134,8 +134,8 @@ int shell(int argc, char *argv[]) {
 	}
 
 	if (command) {
-		// free(command);
+		free(command);
+		free(eof);
 	}
-
 	return 0;
 }
