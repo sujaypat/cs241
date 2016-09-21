@@ -16,8 +16,9 @@ char *cwd;
 char buf[PATH_MAX + 1];
 int status = 0;
 void sigint_handler(int sig){
-	printf("caught signal SIGINT\n");
+	// printf("caught signal SIGINT\n");
 	signal(sig, sigint_handler);
+	shell()
 }
 
 void handle_history_file(char *filename){
@@ -53,7 +54,7 @@ void handle_spec_history(char *command){
 }
 
 void handle_history(){
-	for(size_t i = 0; i < Log_size(command_log); i++){
+	for(size_t i = 0; i <= Log_size(command_log); i++){
 		print_history_line(i, Log_get_command(command_log, i));
 	}
 }
@@ -65,6 +66,7 @@ void handle_num_history(char *command){
 	char *found;
 	if((size_t)num < Log_size(command_log) && num >= 0){
 		found = malloc(strlen(Log_get_command(command_log, num)));
+		if(!found)
 		strcpy(found, Log_get_command(command_log, num));
 	}
 	else{
