@@ -16,16 +16,13 @@ Log *command_log = NULL;
 char *cwd;
 char buf[PATH_MAX + 1];
 int status = 0;
-// int argc_copy = 0;
+
 void sigint_handler(int sig){
-	// printf("caught signal SIGINT\n");
 	signal(sig, sigint_handler);
-	// shell(argc_copy, );
 }
 
 void handle_history_file(char *filename){
 	printf("history file %s created\n", filename);
-
 }
 
 void handle_file(char *filename){
@@ -81,8 +78,9 @@ void handle_num_history(char *command){
 }
 
 void handle_ext_command(char * command){
+	Log_add_command(command_log, command);
 	int background = 0;
-	if(!strncmp(command + strlen(command) - 1), "&"){
+	if(!strncmp(command + strlen(command) - 1), "&", 1){
 		background = 1;
 		command[strlen(command) - 1] = "\0";
 	}
@@ -96,6 +94,7 @@ void handle_ext_command(char * command){
 		print_exec_failed(command_copy);
 	}
 	else if(p > 0){// && !background){
+		print_command_executed(p);
 		waitpid(p, &status, 0);
 	}
 	// else if(p > 0 && background){
