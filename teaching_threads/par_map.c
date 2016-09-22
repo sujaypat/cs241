@@ -26,8 +26,8 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	int min = list_len < num_threads ? list_len : num_threads;
 	pthread_t threads[num_threads];
 	for(int i = 0; i < min; i++){
-		a -> d = list[i];
-		pthread_create(threads + i, NULL, map_func, &a);
+		a.d = list[i];
+		pthread_create(threads + i, NULL, &map_func, &a);
 	}
 	for(int i = 0; i < min; i++){
 		pthread_join(*(threads + i), NULL);
