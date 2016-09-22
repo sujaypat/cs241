@@ -39,7 +39,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 		}
 
 		for(int i = 0; i < min; i++){
-			pthread_join(*(threads + i), NULL);
+			pthread_join(*(threads + i), list[i]);
 		}
 	}
 	return res;
