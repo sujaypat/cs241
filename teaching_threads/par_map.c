@@ -44,7 +44,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 
 		for(size_t j = 0; j < num_threads && j + same < list_len; j++){
 			pthread_join(*(threads + j), NULL);
-			list[same + j] = arguments[j].d;
+			res[same + j] = arguments[j].d;
 		}
 
 	}
