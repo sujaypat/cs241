@@ -82,7 +82,7 @@ void handle_ext_command(char * command){
 	int background = 0;
 	if(!strncmp(command + strlen(command) - 1, "&", 1)){
 		background = 1;
-		command[strlen(command) - 1] = "\0";
+		command + strlen(command) - 1 = "\0";
 	}
 	size_t tokens = 0;
 	char *command_copy = strdup(command);
