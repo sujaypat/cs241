@@ -23,7 +23,7 @@ typedef struct args{
 
 void *routine(void *ptr){
 	args *input = (args *)ptr;
-	input.func(input -> d);
+	input -> func(input -> d);
 }
 
 double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threads) {
@@ -40,7 +40,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 		}
 
 		for(size_t j = 0; j < num_threads; j++){
-			pthread_join(*(threads + j), list[j]);
+			pthread_join(*(threads + j), NULL);
 		}
 	}
 	return res;
