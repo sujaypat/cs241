@@ -80,7 +80,7 @@ void handle_num_history(char *command){
 void handle_ext_command(char * command){
 	Log_add_command(command_log, command);
 	int background = 0;
-	if(!strncmp(command + strlen(command) - 1), "&", 1){
+	if(!strncmp(command + strlen(command) - 1, "&", 1)){
 		background = 1;
 		command[strlen(command) - 1] = "\0";
 	}
