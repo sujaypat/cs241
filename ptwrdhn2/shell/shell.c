@@ -133,30 +133,15 @@ int shell(int argc, char *argv[]) {
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
 
+		if(!strncmp(command, "cd", 2)) handle_cd(command);
+		else if(!strncmp(command, "!history", 8)) handle_history();
+		else if(!strncmp(command, "#", 1)) handle_num_history(command);
+		else if(!strncmp(command, "!", 1)) handle_spec_history(command);
+		else handle_ext_command(command);
 
-		if(!strncmp(command, "cd", 2)){
-			handle_cd(command);
-		}
-		else if(!strncmp(command, "!history", 8)){
-			handle_history();
-		}
-		else if(!strncmp(command, "#", 1)){
-			handle_num_history(command);
-		}
-		else if(!strncmp(command, "!", 1)){
-			handle_spec_history(command);
-		}
-		else{
-			// puts("u dun fucked up");
-			handle_ext_command(command);
-			//fork, exec, wait
-
-		}
 	}
-
 	if (command) {
 		free(command);
-		// free(eof);
 	}
 	return 0;
 }
