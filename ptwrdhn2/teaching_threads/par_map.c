@@ -28,23 +28,25 @@ void *routine(void *ptr){
 }
 
 double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threads) {
-	double *res = (double *)malloc(list_len * sizeof(double));
 
+	double *res = (double *)malloc(list_len * sizeof(double));
 
 	pthread_t threads[num_threads];
 	args arguments[num_threads];
+
 	for(size_t same = 0; same < list_len; same+= num_threads){
 
-		for(size_t i = 0; i < num_threads; i++){
+		for(size_t i = 0; i < num_threads && i + same < list_len; i++){
 			arguments[i].d = list[same + i];
 			arguments[i].func = map_func;
 			pthread_create(threads + i, NULL, routine, arguments + i);
 		}
 
-		for(size_t j = 0; j < num_threads; j++){
+		for(size_t j = 0; j < num_threads && j + same < list_len; j++){
 			pthread_join(*(threads + j), NULL);
 			list[same + j] = arguments[j].d;
 		}
+
 	}
 	return res;
 }
