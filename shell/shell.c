@@ -80,6 +80,29 @@ void handle_num_history(char *command){
 	free(found);
 }
 
+void handle_ext_command(char * command){
+	size_t tokens = 0;
+	char *command_copy = strdup(command);
+	char ** child_argv = strsplit(command, " ", &tokens);
+	pid_t p = fork();
+	int status = 0;
+	if(p == 0){
+		execvp(child_argv[0], child_argv);
+		print_exec_failed(command_copy);
+	}
+	else if(p > 0){
+		waitpid(p, &status, 0);
+	}
+	else{
+		print_fork_failed();
+	}
+	if(WIFEXITED(status)){
+		if(WEXITSTATUS(status)) print_wait_failed();
+	}
+	free_args(child_argv);
+	free(command_copy);
+}
+
 int shell(int argc, char *argv[]) {
 	// TODO: This is the entry point for your shell.
 	// argc_copy = argc;
@@ -125,26 +148,7 @@ int shell(int argc, char *argv[]) {
 		}
 		else{
 			// puts("u dun fucked up");
-			size_t tokens = 0;
-			char *command_copy = strdup(command);
-			char ** child_argv = strsplit(command, " ", &tokens);
-			pid_t p = fork();
-			int status = 0;
-			if(p == 0){
-				execvp(child_argv[0], child_argv);
-				print_exec_failed(command_copy);
-			}
-			else if(p > 0){
-				waitpid(p, &status, 0);
-			}
-			else{
-				print_fork_failed();
-			}
-			if(WIFEXITED(status)){
-				if(WEXITSTATUS(status)) print_wait_failed();
-			}
-			free_args(child_argv);
-			free(command_copy);
+			handle_ext_command(command);
 			//fork, exec, wait
 
 		}
