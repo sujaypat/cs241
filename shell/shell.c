@@ -124,6 +124,24 @@ int shell(int argc, char *argv[]) {
 		}
 		else{
 			// puts("u dun fucked up");
+			int tokens = 0;
+			char ** child_argv = strsplit(command, " ", tokens);
+			pid_t p = fork();
+			int status = 0;
+			if(p == 0){
+				execvp(child_argv[0], child_argv);
+				print_exec_failed();
+			}
+			else if(p > 0){
+				waitpid(p, &status, 0);
+			}
+			else{
+				print_fork_failed();
+			}
+			if(WIFEXITED(status)){
+				if(WEXITSTATUS(status)) print_wait_failed();
+			}
+			free_args(child_argv);
 			//fork, exec, wait
 
 		}
