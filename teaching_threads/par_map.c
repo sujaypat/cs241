@@ -22,7 +22,7 @@ typedef struct args{
 
 
 void *routine(void *ptr){
-	input = (args *)ptr
+	args *input = (args *)ptr
 	input.func(input -> d);
 }
 
