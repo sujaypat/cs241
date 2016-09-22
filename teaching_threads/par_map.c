@@ -24,7 +24,7 @@ typedef struct args{
 void *routine(void *ptr){
 	args *input = (args *)ptr;
 	input -> func(input -> d);
-	return;
+	return 0;
 }
 
 double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threads) {
