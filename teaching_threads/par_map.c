@@ -22,7 +22,7 @@ typedef struct args{
 
 
 void *routine(void *ptr){
-	args *input = (args *)ptr
+	args *input = (args *)ptr;
 	input.func(input -> d);
 }
 
@@ -31,16 +31,16 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 
 	args a;
 	a.func = map_func;
-	pthread_t threads[min];
+	pthread_t threads[num_threads];
 	for(size_t same = 0; same < list_len; same+= num_threads){
 
-		for(int i = 0; i < num_threads; i++){
+		for(size_t i = 0; i < num_threads; i++){
 			a.d = list[i];
 			pthread_create(threads + i, NULL, routine, &a);
 		}
 
-		for(int i = 0; i < min; i++){
-			pthread_join(*(threads + i), list[i]);
+		for(size_t j = 0; j < num_threads; j++){
+			pthread_join(*(threads + j), list[j]);
 		}
 	}
 	return res;
