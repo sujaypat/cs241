@@ -81,6 +81,11 @@ void handle_num_history(char *command){
 }
 
 void handle_ext_command(char * command){
+	int background = 0;
+	if(!strncmp(command + strlen(command) - 1), "&"){
+		background = 1;
+		command[strlen(command) - 1] = "\0";
+	}
 	size_t tokens = 0;
 	char *command_copy = strdup(command);
 	char ** child_argv = strsplit(command, " ", &tokens);
@@ -90,9 +95,12 @@ void handle_ext_command(char * command){
 		execvp(child_argv[0], child_argv);
 		print_exec_failed(command_copy);
 	}
-	else if(p > 0){
+	else if(p > 0){// && !background){
 		waitpid(p, &status, 0);
 	}
+	// else if(p > 0 && background){
+	//
+	// }
 	else{
 		print_fork_failed();
 	}
