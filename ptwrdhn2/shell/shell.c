@@ -29,6 +29,10 @@ void handle_history_file(char *filename){
 	printf("history file %s created\n", filename);
 	hist_file = malloc(1 + strlen(filename));
 	hist_file = strcpy(hist_file, filename);
+	FILE f;
+	if((f = fopen(filename, "rw"))){
+		command_log = Log_create_from_file(filename);
+	}
 	history = 1;
 }
 
@@ -135,7 +139,7 @@ int shell(int argc, char *argv[]) {
 	}
 	if(argc != 3 && argc != 1) 	print_usage();
 
-	command_log = Log_create();
+	if(!history) command_log = Log_create();
 
 	cwd = getcwd(buf, PATH_MAX + 1);
 	signal(SIGINT, sigint_handler);
