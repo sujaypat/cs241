@@ -48,6 +48,10 @@ void handle_spec_history(char *command){
 		}
 	}
 	if(!i) print_no_history_match();
+	else{
+		print_command(command);
+		handle_ext_command(command);
+	}
 	free(search);
 	search = NULL;
 }
