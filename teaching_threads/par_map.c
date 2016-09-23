@@ -22,7 +22,7 @@ typedef struct ${
 
 
 void *routine(void *ptr){
-	args *input = (args *)ptr;
+	$ *input = ($ *)ptr;
 	input -> func(input -> d);
 	return 0;
 }
@@ -32,7 +32,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	double *res = (double *)malloc(list_len * sizeof(double));
 
 	pthread_t threads[num_threads];
-	args arguments[num_threads];
+	$ arguments[num_threads];
 
 	for(size_t same = 0; same < list_len; same+= num_threads){
 
