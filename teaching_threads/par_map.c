@@ -25,7 +25,7 @@ typedef struct blazeit{
 
 void *routine(void *ptr){
 	blazeit *input = (blazeit *)ptr;
-	for(int i = input -> start_index; i < input -> end_index; i++){
+	for(size_t i = input -> start_index; i < input -> end_index; i++){
 		input -> func(*(input -> list + i));
 	}
 	return 0;
