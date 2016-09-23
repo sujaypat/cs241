@@ -19,6 +19,7 @@ int history = 0;
 int script = 0;
 char *hist_file;
 char *script_file;
+FILE *f;
 int status = 0;
 
 void sigint_handler(int sig){
@@ -29,7 +30,6 @@ void handle_history_file(char *filename){
 	// printf("history file %s opened\n", filename);
 	hist_file = malloc(1 + strlen(filename));
 	hist_file = strcpy(hist_file, filename);
-	FILE *f;
 	if((f = fopen(filename, "rw"))){
 		command_log = Log_create_from_file(filename);
 	}
@@ -41,11 +41,10 @@ void handle_file(char *filename){
 	printf("script %s imported\n", filename);
 	script_file = malloc(1 + strlen(filename));
 	script_file = strcpy(script_file, filename);
-	FILE *f;
 	if((f = fopen(filename, "rw"))){
 		// command_log = Log_create_from_file(filename);
 	}
-	else print_history_file_error();
+	else print_script_file_error();
 	script = 1;
 
 }
