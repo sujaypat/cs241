@@ -70,6 +70,12 @@ void handle_cd(char *command){
 	cwd = getcwd(buf, PATH_MAX + 1);
 }
 
+void handle_history(){
+	for(size_t i = 0; i < Log_size(command_log); i++){
+		print_history_line(i, Log_get_command(command_log, i));
+	}
+}
+
 void handle_spec_history(char *command){
 	char *search = strdup(command + 1);
 	char *loc;
@@ -90,12 +96,6 @@ void handle_spec_history(char *command){
 	search = NULL;
 }
 
-void handle_history(){
-	for(size_t i = 0; i < Log_size(command_log); i++){
-		print_history_line(i, Log_get_command(command_log, i));
-	}
-}
-
 void handle_num_history(char *command){
 	command++;
 	char *line = strsep(&command, " ");
@@ -104,15 +104,15 @@ void handle_num_history(char *command){
 	if((size_t)num < Log_size(command_log) && num >= 0){
 		found = malloc(strlen(Log_get_command(command_log, num)));
 		if(!found)
-		strcpy(found, Log_get_command(command_log, num));
+			strcpy(found, Log_get_command(command_log, num));
 	}
 	else{
 		print_invalid_index();
 		return;
 	}
-	print_command(command);
-	Log_add_command(command_log, command);
-	handle_ext_command(command);
+	print_command(found);
+	Log_add_command(command_log, found);
+	handle_ext_command(found);
 
 	free(found);
 }
