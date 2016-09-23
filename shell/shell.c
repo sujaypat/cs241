@@ -29,10 +29,11 @@ void handle_history_file(char *filename){
 	printf("history file %s created\n", filename);
 	hist_file = malloc(1 + strlen(filename));
 	hist_file = strcpy(hist_file, filename);
-	FILE f;
+	FILE *f;
 	if((f = fopen(filename, "rw"))){
 		command_log = Log_create_from_file(filename);
 	}
+	else print_history_file_error();
 	history = 1;
 }
 
