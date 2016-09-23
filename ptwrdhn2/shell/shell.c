@@ -38,7 +38,7 @@ void handle_history_file(char *filename){
 }
 
 void handle_file(char *filename){
-	printf("script %s imported\n", filename);
+	// printf("script %s imported\n", filename);
 	script_file = malloc(1 + strlen(filename));
 	script_file = strcpy(script_file, filename);
 	if((f = fopen(filename, "rw"))){
