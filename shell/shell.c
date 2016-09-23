@@ -44,6 +44,7 @@ void handle_ext_command(char * command){
 	if(p == 0){
 		execvp(child_argv[0], child_argv);
 		print_exec_failed(command_copy);
+		exit(1);
 	}
 	else if(p > 0){// && !background){
 		print_command_executed(p);
@@ -56,7 +57,9 @@ void handle_ext_command(char * command){
 		print_fork_failed();
 	}
 	if(WIFEXITED(status)){
-		if(WEXITSTATUS(status)) print_wait_failed();
+		if(WEXITSTATUS(status)){
+			print_wait_failed();
+		}
 	}
 	free_args(child_argv);
 	free(command_copy);
@@ -103,8 +106,7 @@ void handle_num_history(char *command){
 	char *found;
 	if((size_t)num < Log_size(command_log) && num >= 0){
 		found = malloc(strlen(Log_get_command(command_log, num)));
-		if(!found)
-			strcpy(found, Log_get_command(command_log, num));
+		strcpy(found, Log_get_command(command_log, num));
 	}
 	else{
 		print_invalid_index();
