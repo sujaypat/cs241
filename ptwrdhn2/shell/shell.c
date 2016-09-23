@@ -26,7 +26,7 @@ void sigint_handler(int sig){
 }
 
 void handle_history_file(char *filename){
-	printf("history file %s opened\n", filename);
+	// printf("history file %s opened\n", filename);
 	hist_file = malloc(1 + strlen(filename));
 	hist_file = strcpy(hist_file, filename);
 	FILE *f;
@@ -169,6 +169,10 @@ int shell(int argc, char *argv[]) {
 
 	}
 	if(command) free(command);
-	if(history) Log_save(command_log, hist_file);
+	if(history){
+		Log_save(command_log, hist_file);
+		free(command_log);
+		free(hist_file);
+	}
 	return 0;
 }
