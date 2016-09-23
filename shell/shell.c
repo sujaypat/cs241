@@ -27,6 +27,7 @@ void sigint_handler(int sig){
 
 void handle_history_file(char *filename){
 	printf("history file %s created\n", filename);
+	hist_file = malloc(1 + strlen(filename));
 	hist_file = strcpy(hist_file, filename);
 	history = 1;
 }
