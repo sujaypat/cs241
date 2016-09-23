@@ -19,6 +19,7 @@ typedef struct blazeit{
 	mapper func;
 	size_t start_index;
 	size_t end_index;
+	double *res;
 } blazeit;
 /* You should create a start routine for your threads. */
 
@@ -49,6 +50,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 		arguments[index] -> start_index = index * block_size;
 		arguments[index] -> end_index = (index + 1) * block_size - 1;
 		arguments[index] -> list = list;
+		arguments[index] -> res = res;
 		pthread_create(threads[index], NULL, (void *)routine, (void *)(arguments + index));
 
 	}
