@@ -172,7 +172,7 @@ int shell(int argc, char *argv[]) {
 		print_prompt(cwd, getpid());
 		int eof;
 		if(!script) eof = getline(&command, &len, stdin);
-		else eof = getline(&command, &len, &f);
+		else eof = getline(&command, &len, f);
 		if(eof == -1) break;
 
 		// remove newline from the command
