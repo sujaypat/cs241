@@ -42,6 +42,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 
 	for(size_t index = 0; index < list_len; index += block_size){
 		threads[index] = (pthread_t)malloc(sizeof(pthread_t));
+		arguments[index] = (blazeit *)malloc(sizeof(blazeit));
 		arguments[index].func = map_func;
 		arguments[index].start_index = index;
 		arguments[index].end_index = index + block_size - 1;
