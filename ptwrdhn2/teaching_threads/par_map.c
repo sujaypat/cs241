@@ -43,7 +43,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	// printf("%zu\n", block_size);
 
 	pthread_t ** threads = malloc(num_threads * sizeof(pthread_t *));
-	blazeit ** arguments = malloc(num_threads * sizeof(blazeit));
+	blazeit * arguments = malloc(num_threads * sizeof(blazeit));
 
 	for(size_t index = 0; index < num_threads; index ++){
 
