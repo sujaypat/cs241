@@ -162,9 +162,7 @@ int shell(int argc, char *argv[]) {
 		else handle_ext_command(command);
 
 	}
-	if (command) {
-		free(command);
-	}
+	if(command) free(command);
 	if(history) Log_save(command_log, hist_file);
 	return 0;
 }
