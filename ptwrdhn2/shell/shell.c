@@ -29,7 +29,6 @@ void sigint_handler(int sig){
 }
 
 void cleanup(int signal) {
-  int status;
   while (waitpid((pid_t) (-1), 0, WNOHANG) > 0) {}
 }
 
