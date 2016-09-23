@@ -29,7 +29,7 @@ void sigint_handler(int sig){
 }
 
 void cleanup(int signal) {
-  while (waitpid((pid_t) (-1), 0, WNOHANG) > 0) {}
+	while (waitpid((pid_t) (-1), 0, WNOHANG) > 0) {}
 }
 
 void handle_history_file(char *filename){
@@ -144,13 +144,13 @@ int shell(int argc, char *argv[]) {
 		while ((opt = getopt(argc, argv, "h:f:")) != -1) {
 			switch (opt) {
 				case 'h':
-					handle_history_file(optarg);
-					break;
+				handle_history_file(optarg);
+				break;
 				case 'f':
-					handle_file(optarg);
-					break;
+				handle_file(optarg);
+				break;
 				default:
-					print_usage();
+				print_usage();
 			}
 		}
 	}
@@ -177,11 +177,13 @@ int shell(int argc, char *argv[]) {
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
 		if(script) print_command(command);
-		if(!strncmp(command, "cd", 2)) handle_cd(command);
-		else if(!strncmp(command, "!history", 8)) handle_history();
-		else if(!strncmp(command, "#", 1)) handle_num_history(command);
-		else if(!strncmp(command, "!", 1)) handle_spec_history(command);
-		else handle_ext_command(command);
+		if(command){
+			if(!strncmp(command, "cd", 2)) handle_cd(command);
+			else if(!strncmp(command, "!history", 8)) handle_history();
+			else if(!strncmp(command, "#", 1)) handle_num_history(command);
+			else if(!strncmp(command, "!", 1)) handle_spec_history(command);
+			else handle_ext_command(command);
+		}
 	}
 	signal(SIGCHLD, cleanup);
 	if(command) free(command);
