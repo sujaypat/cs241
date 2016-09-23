@@ -171,7 +171,7 @@ int shell(int argc, char *argv[]) {
 		if(!script) eof = getline(&command, &len, stdin);
 		else eof = getline(&command, &len, f);
 		if(eof == -1) break;
-		if(!len) continue;
+		if(len == 1) continue;
 
 		// remove newline from the command
 		char *nl = strchr(command, '\n');
