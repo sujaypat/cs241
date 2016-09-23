@@ -105,7 +105,7 @@ void handle_num_history(char *command){
 	int num = atoi(line);
 	char *found;
 	if((size_t)num < Log_size(command_log) && num >= 0){
-		found = malloc(strlen(Log_get_command(command_log, num)));
+		found = malloc(1 + strlen(Log_get_command(command_log, num)));
 		strcpy(found, Log_get_command(command_log, num));
 	}
 	else{
