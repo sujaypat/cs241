@@ -26,7 +26,7 @@ typedef struct blazeit{
 void *routine(void *ptr){
 	blazeit *input = (blazeit *)ptr;
 	for(size_t i = input -> start_index; i < input -> end_index; i++){
-		input -> func(*(input -> list + i));
+		res[i] = input -> func((input -> list)[i]);
 	}
 	return 0;
 }
@@ -41,8 +41,10 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	blazeit ** arguments = malloc(num_threads * sizeof(blazeit));
 
 	for(size_t index = 0; index < num_threads; index ++){
+
 		threads[index] = malloc(sizeof(pthread_t));
 		arguments[index] = malloc(sizeof(blazeit));
+
 		arguments[index] -> func = map_func;
 		arguments[index] -> start_index = index * block_size;
 		arguments[index] -> end_index = (index + 1) * block_size - 1;
@@ -53,7 +55,9 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	for(size_t index = 0; index < num_threads; index ++){
 		pthread_join(*(threads[index]), NULL);
 		free(threads[index]);
+		free(arguments[index]);
 	}
 	free(threads);
+	free(arguments);
 	return res;
 }
