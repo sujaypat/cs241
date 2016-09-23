@@ -28,7 +28,7 @@ void *routine(void *ptr){
 	blazeit *input = (blazeit *)ptr;
 	printf("start: %zu  end: %zu\n", input -> start_index, input -> end_index);
 	for(size_t i = input -> start_index; i < input -> end_index; i++){
-		printf("%zu\n", i);
+		// printf("%zu\n", i);
 
 		(input -> res)[i] = input -> func((input -> list)[i]);
 	}
@@ -40,7 +40,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	double *res = (double *)malloc(list_len * sizeof(double));
 
 	size_t block_size = list_len / num_threads;
-	printf("%zu\n", block_size);
+	// printf("%zu\n", block_size);
 
 	pthread_t ** threads = malloc(num_threads * sizeof(pthread_t *));
 	blazeit ** arguments = malloc(num_threads * sizeof(blazeit));
@@ -52,6 +52,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 
 		arguments[index] -> func = map_func;
 		arguments[index] -> start_index = index * block_size;
+		fprintf(stderr, "%zu times %zu\n",index, block_size );
 		arguments[index] -> end_index = (index + 1) * block_size - 1;
 		arguments[index] -> list = list;
 		arguments[index] -> res = res;
