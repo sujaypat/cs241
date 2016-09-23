@@ -61,13 +61,13 @@ void handle_ext_command(char * command){
 		print_exec_failed(command_copy);
 		exit(1);
 	}
-	else if(p > 0 && !background){
+	else if(p > 0){// && !background){
 		print_command_executed(p);
 		waitpid(p, &status, 0);
 	}
-	else if(p > 0 && background){
-
-	}
+	// else if(p > 0 && background){
+	// 
+	// }
 	else{
 		print_fork_failed();
 	}
