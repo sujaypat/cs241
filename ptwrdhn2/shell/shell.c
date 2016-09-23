@@ -180,7 +180,7 @@ int shell(int argc, char *argv[]) {
 	}
 
 	if(command) free(command);
-	if(history){
+	if(history != NULL){
 		Log_save(command_log, hist_file);
 		free(command_log);
 		free(hist_file);
