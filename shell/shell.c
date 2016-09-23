@@ -180,10 +180,18 @@ int shell(int argc, char *argv[]) {
 	}
 
 	if(command) free(command);
-	if(history != NULL){
+	if(history && script){
 		Log_save(command_log, hist_file);
-		free(command_log);
+		free(hist_file);
+		free(script_file);
+	}
+	else if(history){
+		Log_save(command_log, hist_file);
 		free(hist_file);
 	}
+	else if(script){
+		free(script_file);
+	}
+	if(command_log) free(command_log);
 	return 0;
 }
