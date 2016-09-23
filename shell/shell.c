@@ -91,9 +91,9 @@ void handle_spec_history(char *command){
 	}
 	if(!i) print_no_history_match();
 	else{
-		print_command(search);
+		print_command(Log_get_command(command_log, i));
 		// Log_add_command(command_log, command);
-		handle_ext_command(search);
+		handle_ext_command(Log_get_command(command_log, i);
 	}
 	free(search);
 	search = NULL;
