@@ -52,8 +52,9 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 
 		arguments[index] -> func = map_func;
 		arguments[index] -> start_index = index * block_size;
-		fprintf(stderr, "%zu times %zu\n",index, block_size );
 		arguments[index] -> end_index = ((index + 1) * block_size - 1);
+		fprintf(stderr, "%zu", index * block_size);
+
 		arguments[index] -> list = list;
 		arguments[index] -> res = res;
 		pthread_create(threads[index], NULL, (void *)routine, (void *)(arguments + index));
