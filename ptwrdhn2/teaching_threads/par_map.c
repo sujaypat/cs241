@@ -14,10 +14,10 @@
 
 /* You should create a struct that will get passed in by reference to your
 * start_routine. */
-typedef struct args{
+typedef struct ${
 	double d;
 	mapper func;
-} args;
+} $;
 /* You should create a start routine for your threads. */
 
 
