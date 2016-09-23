@@ -15,6 +15,7 @@
 /* You should create a struct that will get passed in by reference to your
 * start_routine. */
 typedef struct blazeit{
+	double *list;
 	mapper func;
 	size_t start_index;
 	size_t end_index;
@@ -25,7 +26,7 @@ typedef struct blazeit{
 void *routine(void *ptr){
 	blazeit *input = (blazeit *)ptr;
 	for(int i = input -> start_index; i < input -> end_index; i++){
-		input -> func(input -> d);
+		input -> func(input -> list + i);
 	}
 	return 0;
 }
@@ -44,6 +45,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 		arguments[index].func = map_func;
 		arguments[index].start_index = index;
 		arguments[index].end_index = index + block_size - 1;
+		arguments[index].list = list;
 		pthread_create(num_threads + index, NULL, routine, arguments + index);
 
 		// for(size_t i = 0; i < num_threads && i + index < list_len; i++){
