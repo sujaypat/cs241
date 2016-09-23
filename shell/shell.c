@@ -93,7 +93,7 @@ void handle_spec_history(char *command){
 	else{
 		print_command(Log_get_command(command_log, i));
 		// Log_add_command(command_log, command);
-		handle_ext_command(Log_get_command(command_log, i));
+		handle_ext_command((char *)Log_get_command(command_log, i));
 	}
 	free(search);
 	search = NULL;
