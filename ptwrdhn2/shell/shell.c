@@ -98,7 +98,6 @@ void handle_spec_history(char *command){
 	int i;
 	for(i = Log_size(command_log) - 1; i >= 0; i--){
 		if((loc = strstr(Log_get_command(command_log, i), search)) != NULL){
-			// printf("%s\n", Log_get_command(command_log, i));
 			break;
 		}
 	}
@@ -133,15 +132,16 @@ void handle_num_history(char *command){
 
 int shell(int argc, char *argv[]) {
 	// TODO: This is the entry point for your shell.
-
+	extern char *optarg;
+	int opt;
 	if(argc != 1){
-		while ((opt = getopt(argc, argv, "hf")) != -1) {
+		while ((opt = getopt(argc, argv, "h:f:")) != -1) {
 			switch (opt) {
 				case 'h':
-					handle_history_file(argv[argc - 1]);
+					handle_history_file(optarg);
 					break;
 				case 'f':
-					handle_file(argv[argc - 1]);
+					handle_file(optarg);
 					break;
 				default:
 					print_usage();
