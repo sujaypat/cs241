@@ -40,12 +40,12 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	pthread_t ** threads = malloc(num_threads * sizeof(pthread_t *));
 	blazeit ** arguments = malloc(num_threads * sizeof(blazeit));
 
-	for(size_t index = 0; index < list_len; index += block_size){
+	for(size_t index = 0; index < num_threads; index ++){
 		threads[index] = malloc(sizeof(pthread_t));
 		arguments[index] = malloc(sizeof(blazeit));
 		arguments[index] -> func = map_func;
-		arguments[index] -> start_index = index;
-		arguments[index] -> end_index = index + block_size - 1;
+		arguments[index] -> start_index = index * block_size;
+		arguments[index] -> end_index = (index + 1) * block_size - 1;
 		arguments[index] -> list = list;
 		pthread_create(threads[index], NULL, (void *)routine, (void *)(arguments + index));
 
