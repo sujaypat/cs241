@@ -171,13 +171,11 @@ int shell(int argc, char *argv[]) {
 		if(!script) eof = getline(&command, &len, stdin);
 		else eof = getline(&command, &len, f);
 		if(eof == -1) break;
-		// if(len == 1) continue;
 
-		// remove newline from the command
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
+
 		if(script) print_command(command);
-		print_command(command);
 		if(command && len){
 			if(!strncmp(command, "cd", 2)) handle_cd(command);
 			else if(!strncmp(command, "!history", 8)) handle_history();
