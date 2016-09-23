@@ -19,6 +19,7 @@ int history = 0;
 int script = 0;
 char *hist_file;
 char *script_file;
+int status = 0;
 
 void sigint_handler(int sig){
 	signal(sig, sigint_handler);
@@ -98,7 +99,6 @@ void handle_spec_history(char *command){
 	if(!i) print_no_history_match();
 	else{
 		print_command(Log_get_command(command_log, i));
-		// Log_add_command(command_log, command);
 		handle_ext_command((char *)Log_get_command(command_log, i));
 	}
 	free(search);
@@ -119,7 +119,6 @@ void handle_num_history(char *command){
 		return;
 	}
 	print_command(found);
-	// Log_add_command(command_log, found);
 	handle_ext_command(found);
 
 	free(found);
@@ -166,8 +165,6 @@ int shell(int argc, char *argv[]) {
 	if (command) {
 		free(command);
 	}
-	if(history){
-		Log_save(command_log, )
-	}
+	if(history) Log_save(command_log, hist_file);
 	return 0;
 }
