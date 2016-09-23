@@ -133,12 +133,21 @@ void handle_num_history(char *command){
 
 int shell(int argc, char *argv[]) {
 	// TODO: This is the entry point for your shell.
-	// argc_copy = argc;
-	if(argc == 3){
-		if(!strcmp(argv[argc - 2], "-h")) handle_history_file(argv[argc - 1]);
-		else if(!strcmp(argv[argc - 2], "-f")) handle_file(argv[argc - 1]);
+
+	if(argc != 1){
+		while ((opt = getopt(argc, argv, "hf")) != -1) {
+			switch (opt) {
+				case 'h':
+					handle_history_file(argv[argc - 1]);
+					break;
+				case 'f':
+					handle_file(argv[argc - 1]);
+					break;
+				default:
+					print_usage();
+			}
+		}
 	}
-	if(argc != 3 && argc != 1) 	print_usage();
 
 	if(!history) command_log = Log_create();
 
