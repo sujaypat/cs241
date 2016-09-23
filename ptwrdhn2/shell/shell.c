@@ -15,7 +15,10 @@
 Log *command_log = NULL;
 char *cwd;
 char buf[PATH_MAX + 1];
-int status = 0;
+int history = 0;
+int script = 0;
+char *hist_file;
+char *script_file;
 
 void sigint_handler(int sig){
 	signal(sig, sigint_handler);
@@ -23,10 +26,13 @@ void sigint_handler(int sig){
 
 void handle_history_file(char *filename){
 	printf("history file %s created\n", filename);
+	hist_file = strcpy(filename);
+	history = 1;
 }
 
 void handle_file(char *filename){
 	printf("script %s imported\n", filename);
+	script = 1;
 }
 
 void handle_ext_command(char * command){
@@ -159,6 +165,9 @@ int shell(int argc, char *argv[]) {
 	}
 	if (command) {
 		free(command);
+	}
+	if(history){
+		Log_save(command_log, )
 	}
 	return 0;
 }
