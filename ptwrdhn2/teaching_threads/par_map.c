@@ -51,7 +51,9 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 
 	}
 	for(size_t index = 0; index < num_threads; index ++){
-		pthread_join(*threads[index], NULL);
+		pthread_join(*(threads[index]), NULL);
+		free(threads[index]);
 	}
+	free(threads);
 	return res;
 }
