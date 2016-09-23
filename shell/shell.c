@@ -29,6 +29,39 @@ void handle_file(char *filename){
 	printf("script %s imported\n", filename);
 }
 
+void handle_ext_command(char * command){
+	Log_add_command(command_log, command);
+	int background = 0;
+	if(!strncmp(command + strlen(command) - 1, "&", 1)){
+		background = 1;
+		command[strlen(command) - 1] = '\0';
+	}
+	size_t tokens = 0;
+	char *command_copy = strdup(command);
+	char ** child_argv = strsplit(command, " ", &tokens);
+	pid_t p = fork();
+	int status = 0;
+	if(p == 0){
+		execvp(child_argv[0], child_argv);
+		print_exec_failed(command_copy);
+	}
+	else if(p > 0){// && !background){
+		print_command_executed(p);
+		waitpid(p, &status, 0);
+	}
+	// else if(p > 0 && background){
+	//
+	// }
+	else{
+		print_fork_failed();
+	}
+	if(WIFEXITED(status)){
+		if(WEXITSTATUS(status)) print_wait_failed();
+	}
+	free_args(child_argv);
+	free(command_copy);
+}
+
 void handle_cd(char *command){
 	Log_add_command(command_log, command);
 	command += 3;
@@ -81,38 +114,6 @@ void handle_num_history(char *command){
 	free(found);
 }
 
-void handle_ext_command(char * command){
-	Log_add_command(command_log, command);
-	int background = 0;
-	if(!strncmp(command + strlen(command) - 1, "&", 1)){
-		background = 1;
-		command[strlen(command) - 1] = '\0';
-	}
-	size_t tokens = 0;
-	char *command_copy = strdup(command);
-	char ** child_argv = strsplit(command, " ", &tokens);
-	pid_t p = fork();
-	int status = 0;
-	if(p == 0){
-		execvp(child_argv[0], child_argv);
-		print_exec_failed(command_copy);
-	}
-	else if(p > 0){// && !background){
-		print_command_executed(p);
-		waitpid(p, &status, 0);
-	}
-	// else if(p > 0 && background){
-	//
-	// }
-	else{
-		print_fork_failed();
-	}
-	if(WIFEXITED(status)){
-		if(WEXITSTATUS(status)) print_wait_failed();
-	}
-	free_args(child_argv);
-	free(command_copy);
-}
 
 int shell(int argc, char *argv[]) {
 	// TODO: This is the entry point for your shell.
