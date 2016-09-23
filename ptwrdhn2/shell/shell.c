@@ -39,7 +39,15 @@ void handle_history_file(char *filename){
 
 void handle_file(char *filename){
 	printf("script %s imported\n", filename);
+	script_file = malloc(1 + strlen(filename));
+	script_file = strcpy(script_file, filename);
+	FILE *f;
+	if((f = fopen(filename, "rw"))){
+		// command_log = Log_create_from_file(filename);
+	}
+	else print_history_file_error();
 	script = 1;
+
 }
 
 void handle_ext_command(char * command){
@@ -163,7 +171,9 @@ int shell(int argc, char *argv[]) {
 	while (!done) {
 
 		print_prompt(cwd, getpid());
-		int eof = getline(&command, &len, stdin);
+		int eof;
+		if(!file) eof = getline(&command, &len, stdin);
+		else eof = getline(&command, &len, script_file);
 		if(eof == -1) break;
 
 		// remove newline from the command
