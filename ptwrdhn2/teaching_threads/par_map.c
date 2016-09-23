@@ -26,7 +26,7 @@ typedef struct blazeit{
 
 void *routine(void *ptr){
 	blazeit *input = (blazeit *)ptr;
-	printf("start: %zu  end: %zu\n", input -> start_index, input -> end_index);
+	// printf("start: %zu  end: %zu\n", input -> start_index, input -> end_index);
 	for(size_t i = input -> start_index; i < input -> end_index; i++){
 		// printf("%zu\n", i);
 
