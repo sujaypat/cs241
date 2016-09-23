@@ -46,7 +46,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 		arguments[index].start_index = index;
 		arguments[index].end_index = index + block_size - 1;
 		arguments[index].list = list;
-		pthread_create(threads[index], NULL, routine, arguments + index);
+		pthread_create(&threads[index], NULL, routine, arguments + index);
 
 	}
 	for(size_t index = 0; index < num_threads; index ++){
