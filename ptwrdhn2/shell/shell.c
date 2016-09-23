@@ -177,6 +177,7 @@ int shell(int argc, char *argv[]) {
 		char *nl = strchr(command, '\n');
 		if (nl) *nl = 0;
 		if(script) print_command(command);
+		print_command(command);
 		if(command && len){
 			if(!strncmp(command, "cd", 2)) handle_cd(command);
 			else if(!strncmp(command, "!history", 8)) handle_history();
