@@ -28,6 +28,11 @@ void sigint_handler(int sig){
 	signal(sig, sigint_handler);
 }
 
+void cleanup(int signal) {
+  int status;
+  while (waitpid((pid_t) (-1), 0, WNOHANG) > 0) {}
+}
+
 void handle_history_file(char *filename){
 	hist_file = malloc(1 + strlen(filename));
 	hist_file = strcpy(hist_file, filename);
@@ -61,13 +66,13 @@ void handle_ext_command(char * command){
 		print_exec_failed(command_copy);
 		exit(1);
 	}
-	else if(p > 0){// && !background){
+	else if(p > 0 && !background){
 		print_command_executed(p);
 		waitpid(p, &status, 0);
 	}
-	// else if(p > 0 && background){
-	// 
-	// }
+	else if(p > 0 && background){
+		print_command_executed(p);
+	}
 	else{
 		print_fork_failed();
 	}
@@ -178,7 +183,7 @@ int shell(int argc, char *argv[]) {
 		else if(!strncmp(command, "!", 1)) handle_spec_history(command);
 		else handle_ext_command(command);
 	}
-
+	signal(SIGCHLD, cleanup);
 	if(command) free(command);
 	if(history && script){
 		Log_save(command_log, hist_file);
