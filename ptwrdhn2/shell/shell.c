@@ -83,6 +83,7 @@ void handle_spec_history(char *command){
 	if(!i) print_no_history_match();
 	else{
 		print_command(command);
+		Log_add_command(command_log, command);
 		handle_ext_command(command);
 	}
 	free(search);
@@ -109,7 +110,9 @@ void handle_num_history(char *command){
 		print_invalid_index();
 		return;
 	}
-	Log_add_command(command_log, found);
+	print_command(command);
+	Log_add_command(command_log, command);
+	handle_ext_command(command);
 
 	free(found);
 }
