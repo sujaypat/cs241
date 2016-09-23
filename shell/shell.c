@@ -21,40 +21,35 @@ char *hist_file;
 char *script_file;
 FILE *f;
 int status = 0;
+int background = 0;
+
 
 void sigint_handler(int sig){
 	signal(sig, sigint_handler);
 }
 
 void handle_history_file(char *filename){
-	// printf("history file %s opened\n", filename);
 	hist_file = malloc(1 + strlen(filename));
 	hist_file = strcpy(hist_file, filename);
-	if((f = fopen(filename, "rw"))){
-		command_log = Log_create_from_file(filename);
-	}
+	if(access(hist_file, R_OK) != 1) command_log = Log_create_from_file(filename);
 	else print_history_file_error();
 	history = 1;
 }
 
 void handle_file(char *filename){
-	// printf("script %s imported\n", filename);
 	script_file = malloc(1 + strlen(filename));
 	script_file = strcpy(script_file, filename);
-	if((f = fopen(filename, "rw"))){
-		// command_log = Log_create_from_file(filename);
-	}
+	if((f = fopen(filename, "rw"))){}
 	else print_script_file_error();
 	script = 1;
-
 }
 
 void handle_ext_command(char * command){
 	Log_add_command(command_log, command);
-	int background = 0;
 	if(!strncmp(command + strlen(command) - 1, "&", 1)){
 		background = 1;
 		command[strlen(command) - 1] = '\0';
+
 	}
 	size_t tokens = 0;
 	char *command_copy = strdup(command);
@@ -66,13 +61,13 @@ void handle_ext_command(char * command){
 		print_exec_failed(command_copy);
 		exit(1);
 	}
-	else if(p > 0){// && !background){
+	else if(p > 0 && !background){
 		print_command_executed(p);
 		waitpid(p, &status, 0);
 	}
-	// else if(p > 0 && background){
-	//
-	// }
+	else if(p > 0 && background){
+
+	}
 	else{
 		print_fork_failed();
 	}
@@ -161,16 +156,14 @@ int shell(int argc, char *argv[]) {
 	cwd = getcwd(buf, PATH_MAX + 1);
 	signal(SIGINT, sigint_handler);
 
-
 	char *command = NULL;
 	size_t len = 0;
-	// int dicks = 0;
 	int done = 0;
+	int eof;
 
 	while (!done) {
 
 		print_prompt(cwd, getpid());
-		int eof;
 		if(!script) eof = getline(&command, &len, stdin);
 		else eof = getline(&command, &len, f);
 		if(eof == -1) break;
@@ -184,8 +177,8 @@ int shell(int argc, char *argv[]) {
 		else if(!strncmp(command, "#", 1)) handle_num_history(command);
 		else if(!strncmp(command, "!", 1)) handle_spec_history(command);
 		else handle_ext_command(command);
-
 	}
+
 	if(command) free(command);
 	if(history){
 		Log_save(command_log, hist_file);
