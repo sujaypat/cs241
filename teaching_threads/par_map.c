@@ -27,9 +27,7 @@ typedef struct blazeit{
 void *routine(void *ptr){
 	blazeit *input = (blazeit *)ptr;
 	// printf("start: %zu  end: %zu\n", input -> start_index, input -> end_index);
-	for(size_t i = input -> start_index; i < input -> end_index; i++){
-		// printf("%zu\n", i);
-
+	for(size_t i = input -> start_index; i <= input -> end_index; i++){
 		(input -> res)[i] = input -> func((input -> list)[i]);
 	}
 	return 0;
@@ -53,7 +51,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 		(arguments+index) -> func = map_func;
 		(arguments+index) -> start_index = index * block_size;
 		(arguments+index) -> end_index = ((index + 1) * block_size - 1);
-		fprintf(stderr, "PROD IS %zu\n", index * block_size);
+		// fprintf(stderr, "PROD IS %zu\n", index * block_size);
 
 		(arguments+index) -> list = list;
 		(arguments+index) -> res = res;
