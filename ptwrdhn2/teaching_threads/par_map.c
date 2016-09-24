@@ -57,8 +57,9 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 
 	}
 	if(((index + 1) * block_size - 1) != list_len - 1){
+		index++;
 		(arguments+index) -> func = map_func;
-		(arguments+index) -> start_index = (index + 1) * block_size;
+		(arguments+index) -> start_index = (index) * block_size;
 		(arguments+index) -> end_index = list_len - 1;
 
 		(arguments+index) -> list = list;
