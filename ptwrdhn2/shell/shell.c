@@ -110,7 +110,7 @@ void handle_spec_history(char *command){
 	if(!i) print_no_history_match();
 	else{
 		print_command(Log_get_command(command_log, i));
-		if(!strncmp(command, "cd", 2)) handle_cd((char *)Log_get_command(command_log, i));
+		if(!strncmp((char *)Log_get_command(command_log, i), "cd", 2)) handle_cd((char *)Log_get_command(command_log, i));
 		else handle_ext_command((char *)Log_get_command(command_log, i));
 	}
 	free(search);
