@@ -195,7 +195,8 @@ int shell(int argc, char *argv[]) {
 	if(script){
 		free(script_file);
 	}
-	if(command_log) free(command_log);
+	// if(command_log) free(command_log);
 	if(f) fclose(f);
+	Log_destroy(command_log);
 	return 0;
 }
