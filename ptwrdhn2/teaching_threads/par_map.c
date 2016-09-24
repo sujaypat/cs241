@@ -38,30 +38,36 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	double *res = (double *)malloc(list_len * sizeof(double));
 
 	size_t block_size = list_len / num_threads;
-	// printf("%zu\n", block_size);
+	size_t index;
 
 	pthread_t ** threads = malloc(num_threads * sizeof(pthread_t *));
 	blazeit * arguments = malloc(num_threads * sizeof(blazeit));
 
-	for(size_t index = 0; index < num_threads; index ++){
+	for(index = 0; index < num_threads - 1; index ++){
 
 		threads[index] = malloc(sizeof(pthread_t));
-		// (arguments+index) = malloc(sizeof(blazeit));
 
 		(arguments+index) -> func = map_func;
 		(arguments+index) -> start_index = index * block_size;
 		(arguments+index) -> end_index = ((index + 1) * block_size - 1);
-		// fprintf(stderr, "PROD IS %zu\n", index * block_size);
 
 		(arguments+index) -> list = list;
 		(arguments+index) -> res = res;
 		pthread_create(threads[index], NULL, (void *)routine, (void *)(arguments + index));
 
 	}
+	if(((index + 1) * block_size - 1) != list_len - 1){
+		(arguments+index) -> func = map_func;
+		(arguments+index) -> start_index = (index + 1) * block_size;
+		(arguments+index) -> end_index = list_len - 1;
+
+		(arguments+index) -> list = list;
+		(arguments+index) -> res = res;
+		pthread_create(threads[index], NULL, (void *)routine, (void *)(arguments + index));
+	}
 	for(size_t index = 0; index < num_threads; index ++){
 		pthread_join(*(threads[index]), NULL);
 		free(threads[index]);
-		// free(arguments[index]);
 	}
 	free(threads);
 	free(arguments);
