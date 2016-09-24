@@ -139,7 +139,7 @@ void handle_num_history(char *command){
 
 
 int shell(int argc, char *argv[]) {
-	// TODO: This is the entry point for your shell.
+
 	extern char *optarg;
 	int opt;
 	if(argc != 1){
@@ -188,16 +188,11 @@ int shell(int argc, char *argv[]) {
 	}
 	signal(SIGCHLD, cleanup);
 	if(command) free(command);
-	if(history && script){
-		Log_save(command_log, hist_file);
-		free(hist_file);
-		free(script_file);
-	}
-	else if(history){
+	if(history){
 		Log_save(command_log, hist_file);
 		free(hist_file);
 	}
-	else if(script){
+	if(script){
 		free(script_file);
 	}
 	if(command_log) free(command_log);
