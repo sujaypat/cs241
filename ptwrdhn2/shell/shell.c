@@ -192,10 +192,7 @@ int shell(int argc, char *argv[]) {
 		Log_save(command_log, hist_file);
 		free(hist_file);
 	}
-	if(script){
-		free(script_file);
-	}
-	// if(command_log) free(command_log);
+	if(script) free(script_file);
 	if(f) fclose(f);
 	Log_destroy(command_log);
 	return 0;
