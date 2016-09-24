@@ -131,7 +131,7 @@ void handle_num_history(char *command){
 		return;
 	}
 	print_command(found);
-	if(!strncmp(command, "cd", 2)) handle_cd(found);
+	if(!strncmp(found, "cd", 2)) handle_cd(found);
 	else handle_ext_command(found);
 
 	free(found);
