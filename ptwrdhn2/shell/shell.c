@@ -110,7 +110,8 @@ void handle_spec_history(char *command){
 	if(!i) print_no_history_match();
 	else{
 		print_command(Log_get_command(command_log, i));
-		handle_ext_command((char *)Log_get_command(command_log, i));
+		if(!strncmp(command, "cd", 2)) handle_cd(command);
+		else handle_ext_command((char *)Log_get_command(command_log, i));
 	}
 	free(search);
 	search = NULL;
@@ -130,7 +131,8 @@ void handle_num_history(char *command){
 		return;
 	}
 	print_command(found);
-	handle_ext_command(found);
+	if(!strncmp(command, "cd", 2)) handle_cd(command);
+	else handle_ext_command(found);
 
 	free(found);
 }
@@ -173,7 +175,7 @@ int shell(int argc, char *argv[]) {
 		if(eof == -1) break;
 
 		char *nl = strchr(command, '\n');
-		if (nl) *nl = 0;
+		if(nl) *nl = 0;
 
 		if(script) print_command(command);
 		if(command && len){
@@ -199,5 +201,6 @@ int shell(int argc, char *argv[]) {
 		free(script_file);
 	}
 	if(command_log) free(command_log);
+	if(f) fclose(f);
 	return 0;
 }
