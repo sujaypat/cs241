@@ -77,7 +77,7 @@ void handle_ext_command(char * command){
 	}
 	if(WIFEXITED(status)){
 		if(WEXITSTATUS(status)){
-			print_wait_failed();
+			// print_wait_failed();
 		}
 	}
 	free_args(child_argv);
