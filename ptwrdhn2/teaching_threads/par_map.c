@@ -56,16 +56,16 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 		pthread_create(threads[index], NULL, (void *)routine, (void *)(arguments + index));
 
 	}
-	if(((index + 1) * block_size - 1) != list_len - 1){
-		index++;
-		(arguments+index) -> func = map_func;
-		(arguments+index) -> start_index = (index) * block_size;
-		(arguments+index) -> end_index = list_len - 1;
-
-		(arguments+index) -> list = list;
-		(arguments+index) -> res = res;
-		pthread_create(threads[index], NULL, (void *)routine, (void *)(arguments + index));
-	}
+	// if(((index + 1) * block_size - 1) != list_len - 1){
+	index++;
+	(arguments+index) -> func = map_func;
+	(arguments+index) -> start_index = (index) * block_size;
+	(arguments+index) -> end_index = list_len - 1;
+	
+	(arguments+index) -> list = list;
+	(arguments+index) -> res = res;
+	pthread_create(threads[index], NULL, (void *)routine, (void *)(arguments + index));
+	// }
 	for(index = 0; index < num_threads; index ++){
 		pthread_join(*(threads[index]), NULL);
 		free(threads[index]);
