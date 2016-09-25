@@ -102,13 +102,14 @@ void handle_spec_history(char *command){
 	char *search = strdup(command + 1);
 	char *loc;
 	int i;
-	for(i = (int)Log_size(command_log) - 1; i > 0; i--){
+	int found = 0;
+	for(i = (int)Log_size(command_log) - 1; i >= 0; i--){
 		if((loc = strstr(Log_get_command(command_log, i), search)) != NULL){
+			found = 1;
 			break;
 		}
 	}
-	printf("%d\n", i);
-	if(i == 0) print_no_history_match();
+	if(!found) print_no_history_match();
 	else{
 		print_command(Log_get_command(command_log, i));
 		if(!strncmp((char *)Log_get_command(command_log, i), "cd", 2)) handle_cd((char *)Log_get_command(command_log, i));
