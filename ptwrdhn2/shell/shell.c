@@ -37,7 +37,7 @@ void cleanup(int signal) {
 void handle_history_file(char *filename){
 	hist_file = malloc(1 + strlen(filename));
 	hist_file = strcpy(hist_file, filename);
-	if(access(hist_file, R_OK) != 1) command_log = Log_create_from_file(filename);
+	if(access(hist_file, R_OK | F_OK) != 1) command_log = Log_create_from_file(filename);
 	else print_history_file_error();
 	history = 1;
 }
