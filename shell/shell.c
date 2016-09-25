@@ -104,7 +104,8 @@ void handle_spec_history(char *command){
 	int i;
 	int found = 0;
 	for(i = (int)Log_size(command_log) - 1; i >= 0; i--){
-		if((loc = strstr(Log_get_command(command_log, i), search)) != NULL){
+		// if((loc = strstr(Log_get_command(command_log, i), search)) != NULL){
+		if(!strncmp(Log_get_command(command_log, i), search, strlen(search))){
 			found = 1;
 			break;
 		}
