@@ -144,7 +144,7 @@ void handle_num_history(char *command){
 
 
 int shell(int argc, char *argv[]) {
-
+	signal(SIGCHLD, cleanup);
 	extern char *optarg;
 	int opt;
 	if(argc != 1){
@@ -191,7 +191,7 @@ int shell(int argc, char *argv[]) {
 			else handle_ext_command(command);
 		}
 	}
-	signal(SIGCHLD, cleanup);
+
 	if(command) free(command);
 	if(history){
 		Log_save(command_log, hist_file);
