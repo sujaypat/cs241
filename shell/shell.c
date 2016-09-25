@@ -107,6 +107,7 @@ void handle_spec_history(char *command){
 			break;
 		}
 	}
+	printf("%d\n", i);
 	if(i == 0) print_no_history_match();
 	else{
 		print_command(Log_get_command(command_log, i));
