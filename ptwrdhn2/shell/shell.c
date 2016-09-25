@@ -100,7 +100,7 @@ void handle_history(){
 
 void handle_spec_history(char *command){
 	char *search = strdup(command + 1);
-	char *loc;
+	// char *loc;
 	int i;
 	int found = 0;
 	for(i = (int)Log_size(command_log) - 1; i >= 0; i--){
