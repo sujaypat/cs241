@@ -181,7 +181,7 @@ int shell(int argc, char *argv[]) {
 		if(nl) *nl = 0;
 
 		if(script) print_command(command);
-		if(command && len){
+		if(strlen(command)){
 			if(!strncmp(command, "cd", 2)) handle_cd(command);
 			else if(!strncmp(command, "!history", 8)) handle_history();
 			else if(!strncmp(command, "#", 1)) handle_num_history(command);
