@@ -38,6 +38,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	double *res = (double *)malloc(list_len * sizeof(double));
 
 	size_t block_size = list_len / num_threads;
+	if(block_size == 0) block_size = 1;
 	size_t min = list_len > num_threads ? num_threads : list_len;
 	size_t index;
 
