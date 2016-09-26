@@ -182,7 +182,7 @@ int shell(int argc, char *argv[]) {
 
 		if(script) print_command(command);
 		printf("%s : %zu\n", command, len);
-		if(command && len){
+		if(command && len != 120){
 			if(!strncmp(command, "cd", 2)) handle_cd(command);
 			else if(!strncmp(command, "!history", 8)) handle_history();
 			else if(!strncmp(command, "#", 1)) handle_num_history(command);
