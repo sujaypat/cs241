@@ -38,12 +38,13 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	double *res = (double *)malloc(list_len * sizeof(double));
 
 	size_t block_size = list_len / num_threads;
+	size_t min = list_len > num_threads ? num_threads : list_len;
 	size_t index;
 
 	pthread_t ** threads = malloc(num_threads * sizeof(pthread_t *));
 	blazeit * arguments = malloc(num_threads * sizeof(blazeit));
 
-	for(index = 0; index < num_threads - 1; index ++){
+	for(index = 0; index < min - 1; index ++){
 
 		if(((index + 1) * block_size - 1) > list_len) break;
 		threads[index] = malloc(sizeof(pthread_t));
@@ -59,7 +60,7 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	}
 	// if(((index + 1) * block_size - 1) != list_len - 1){
 
-	index = num_threads-1;
+	index = min - 1;
 	threads[index] = malloc(sizeof(pthread_t));
 
 	(arguments+index) -> func = map_func;
