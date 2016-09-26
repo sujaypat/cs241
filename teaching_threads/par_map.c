@@ -41,8 +41,8 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	size_t min = list_len > num_threads ? num_threads : list_len;
 	size_t index;
 
-	pthread_t ** threads = malloc(num_threads * sizeof(pthread_t *));
-	blazeit * arguments = malloc(num_threads * sizeof(blazeit));
+	pthread_t ** threads = malloc(min * sizeof(pthread_t *));
+	blazeit * arguments = malloc(min * sizeof(blazeit));
 
 	for(index = 0; index < min - 1; index ++){
 
