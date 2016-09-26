@@ -29,9 +29,7 @@ void sigint_handler(int sig){
 }
 
 void cleanup(int signal) {
-	while (waitpid((pid_t) (-1), 0, WNOHANG) > 0) {
-		printf("cleaning...");
-	}
+	while (waitpid((pid_t) (-1), 0, WNOHANG) > 0) {}
 }
 
 void handle_history_file(char *filename){
