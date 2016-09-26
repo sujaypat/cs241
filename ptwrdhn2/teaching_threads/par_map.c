@@ -71,8 +71,8 @@ double *par_map(double *list, size_t list_len, mapper map_func, size_t num_threa
 	(arguments+index) -> res = res;
 	pthread_create(threads[index], NULL, (void *)routine, (void *)(arguments + index));
 	// }
-	for(index = 0; index < min; index ++){
-		printf("%p\n", threads[index]);
+	for(index = 0; index < min; index++){
+		// printf("%p\n", threads[index]);
 		pthread_join(*(threads[index]), NULL);
 		free(threads[index]);
 	}
