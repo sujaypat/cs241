@@ -14,7 +14,7 @@ typedef struct _meta_data {
 	size_t size;
 	void *loc;
 	struct _meta_data *next;
-	struct _meta_data *prev;
+	// struct _meta_data *prev;
 
 } meta_data;
 
@@ -43,7 +43,6 @@ meta_data *head;
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/calloc/
 */
 void *calloc(size_t num, size_t size) {
-
 	void *mem = malloc(num * size);
 	if(mem) memset(mem, 0, num * size);
 	return mem;
@@ -74,13 +73,13 @@ void *malloc(size_t size) {
 	if(size == 0) return NULL;
 	void *p = sbrk(0);
 	meta_data *newmem = sbrk(sizeof(meta_data) + size);
-	if(newmem == -1) return NULL;
+	if(newmem == (meta_data *)-1) return NULL;
 
 	newmem -> size = size;
 	newmem -> loc = p;
-	head -> prev = md;
+	// head -> prev = md;
 	newmem -> next = head;
-	newmem -> prev = NULL;
+	// newmem -> prev = NULL;
 	head = newmem;
 
 	return (void *)(newmem) + sizeof(meta_data);
@@ -117,7 +116,6 @@ void free(void *ptr) {
 	while(curr -> next != NULL){
 		if(curr -> next == del){
 			curr -> next = del -> next;
-			total_free += del -> size;
 			free(del);
 			return;
 		}
