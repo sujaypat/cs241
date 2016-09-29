@@ -116,7 +116,7 @@ void free(void *ptr) {
 	while(curr -> next != NULL){
 		if(curr -> next == del){
 			curr -> next = del -> next;
-			free(del);
+			// free(del);
 			return;
 		}
 		curr = curr -> next;
