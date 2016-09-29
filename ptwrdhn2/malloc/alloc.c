@@ -71,13 +71,13 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
-	// implement malloc!
 	if(size == 0) return NULL;
+	void *p = sbrk(0);
 	meta_data *newmem = sbrk(sizeof(meta_data) + size);
 	if(newmem == -1) return NULL;
 
 	newmem -> size = size;
-
+	newmem -> loc = p;
 	head -> prev = md;
 	newmem -> next = head;
 	newmem -> prev = NULL;
@@ -103,7 +103,26 @@ void *malloc(size_t size) {
 *    passed as argument, no action occurs.
 */
 void free(void *ptr) {
-	// implement free!
+	meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));
+	if(ptr == NULL || head == NULL){
+		return;
+	}
+	meta_data *del = to_free;
+	meta_data *curr = head;
+	if(del == head){
+		head = del -> next;
+		free(del);
+		return;
+	}
+	while(curr -> next != NULL){
+		if(curr -> next == del){
+			curr -> next = del -> next;
+			total_free += del -> size;
+			free(del);
+			return;
+		}
+		curr = curr -> next;
+	}
 
 }
 
