@@ -3,49 +3,98 @@
     "timestamp": "2016-09-28 22:00:00.585507", 
     "testcases": [
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
-        "ptsPossible": 1.0, 
+        "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
         "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "name": "part1_tester-1", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "name": "part1_tester-2", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "name": "part1_tester-3", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "name": "part1_tester-4", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "name": "part1_tester-5", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "name": "part1_tester-6", 
+        "ptsPossible": 1.0
+      }
+    ], 
+    "revision": "35748", 
+    "checksum": "1e6f7fe50ba3a22e91364fc9332411c133bf1bfa  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt"
+  }, 
+  {
+    "timestamp": "2016-09-29 22:00:00.633444", 
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 280004120\n[mcontest]: AVG: 140000018.666803\n[mcontest]: TIME: 1.212000\n\n\nstderr:\n", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
         "name": "part1_tester-1", 
         "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nSending a SIGTERM to kill the child process (pid=11416) for running for over 30sec.\n[mcontest]: STATUS: FAILED=(15)\n[mcontest]: MAX: 188743729\n[mcontest]: AVG: 115361302.624609\n[mcontest]: TIME: 30.000000\n\n\nstderr:\n", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "part1_tester-2", 
         "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(17408)\n[mcontest]: MAX: 2684416025\n[mcontest]: AVG: 1342033212.809325\n[mcontest]: TIME: 0.932000\n\n\nstderr:\nExceeded Memory Limit (2684354560)\n", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "part1_tester-3", 
         "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nMemory failed to allocate!\n[mcontest]: STATUS: FAILED=(256)\n[mcontest]: MAX: 1342181473\n[mcontest]: AVG: 966368519.400000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "part1_tester-4", 
         "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nMemory failed to allocate!\n[mcontest]: STATUS: FAILED=(256)\n[mcontest]: MAX: 9894026\n[mcontest]: AVG: 7434660.907473\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "part1_tester-5", 
         "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 1789569803\n[mcontest]: AVG: 1073741882.400000\n[mcontest]: TIME: 0.192000\n\n\nstderr:\n", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "part1_tester-6", 
         "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)"
       }
     ], 
-    "checksum": "1e6f7fe50ba3a22e91364fc9332411c133bf1bfa  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
-    "revision": "35748"
+    "checksum": "ee7e7916d04b46770d373f73a083fa40b85c6c5f  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
+    "revision": "37037"
   }
 ]
