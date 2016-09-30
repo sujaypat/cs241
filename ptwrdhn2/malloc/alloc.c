@@ -8,17 +8,21 @@
 #include <string.h>
 #include <unistd.h>
 
+unsigned long sbrk_loc;
+meta_data *head;
+meta_data *first_free;
 
 typedef struct _meta_data {
-
+	size_t is_free;
 	size_t size;
 	void *loc;
 	struct _meta_data *next;
-	// struct _meta_data *prev;
-
+	struct _meta_data *prev;
+	struct _meta_data *free_next;
+	struct _meta_data *free_prev;
 } meta_data;
 
-meta_data *head;
+
 /**
 * Allocate space for array in memory
 *
@@ -71,15 +75,20 @@ void *calloc(size_t num, size_t size) {
 */
 void *malloc(size_t size) {
 	if(size == 0) return NULL;
-	void *p = sbrk(0);
-	meta_data *newmem = sbrk(sizeof(meta_data) + size);
-	if(newmem == (meta_data *)-1) return NULL;
+	meta_data *newmem;
+	meta_data *curr = head;
+	while(curr -> free_next){
+		
+	}
+	// void *p = sbrk(0);
+	// meta_data *newmem = sbrk(sizeof(meta_data) + size);
+	// if(newmem == (meta_data *)(-1)) return NULL;
 
 	newmem -> size = size;
 	newmem -> loc = p;
-	// head -> prev = md;
+	head -> prev = md;
 	newmem -> next = head;
-	// newmem -> prev = NULL;
+	newmem -> prev = NULL;
 	head = newmem;
 
 	return (void *)(newmem) + sizeof(meta_data);
@@ -110,7 +119,7 @@ void free(void *ptr) {
 	meta_data *curr = head;
 	if(del == head){
 		head = del -> next;
-		free(del);
+		// free(del);
 		return;
 	}
 	while(curr -> next != NULL){
