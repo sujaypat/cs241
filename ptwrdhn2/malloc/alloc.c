@@ -24,7 +24,6 @@ meta_data *first_free = NULL;
 
 void coalesce(void *same){
 	meta_data *co = (meta_data *)same;
-	// size_t new_size = 0;
 	meta_data *a = NULL;
 	if((a = (co + co -> size + sizeof(meta_data))) -> is_free){
 		co -> size += a -> size + sizeof(meta_data);
@@ -33,6 +32,31 @@ void coalesce(void *same){
 	if((a = (co -> prev)) -> is_free){
 		a -> size += co -> size + sizeof(meta_data);
 	}
+}
+
+void *first_fit(size_t size_needed){
+	void *found = NULL;
+	meta_data *curr = first_free;
+	while(curr -> free_next){
+		printf("%p\n", curr -> free_next);
+		if(curr -> size > size){
+			newmem = curr;
+			break;
+		}
+		curr = curr -> free_next;
+	}
+}
+
+void insert_meta_data(struct meta_data* this, size_t is_free, size_t size, void *loc, struct meta_data *next, struct meta_data *prev, struct meta_data *free_next, struct meta_data *free_prev){
+	this -> is_free = is_free;
+	this -> size = size;
+	this -> loc = loc;
+	this -> next = next;
+	this -> prev = prev;
+	this -> free_next = free_next;
+	this -> free_prev = free_prev;
+	head -> prev = this;
+
 }
 
 /**
@@ -88,27 +112,15 @@ void *calloc(size_t num, size_t size) {
 void *malloc(size_t size) {
 	if(size == 0) return NULL;
 	meta_data *newmem = NULL;
-	meta_data *curr = first_free;
-	while(curr -> free_next){
-		printf("%p\n", curr -> free_next);
-		if(curr -> size > size){
-			newmem = curr;
-			break;
-		}
-		curr = curr -> free_next;
-	}
-	if(!newmem){
+	if((newmem = first_fit(size)) == NULL){
 		newmem = sbrk(size + sizeof(meta_data));
 		if(newmem == (meta_data *)(-1)) return NULL;
-		newmem -> is_free = 0;
-		newmem -> size = size;
-		newmem -> loc = newmem - size;
-		head -> prev = newmem;
-		newmem -> next = head;
-		newmem -> prev = NULL;
-		newmem -> free_next = first_free;
+
+		insert_meta_data(newmem, 0, size, newmem - size, head, NULL, first_free, NULL);
 		head = newmem;
+		return (void *)(newmem - size);
 	}
+
 	return (void *)(newmem) + sizeof(meta_data);
 }
 
