@@ -8,10 +8,6 @@
 #include <string.h>
 #include <unistd.h>
 
-unsigned long sbrk_loc;
-meta_data *head;
-meta_data *first_free;
-
 typedef struct _meta_data {
 	size_t is_free;
 	size_t size;
@@ -21,6 +17,10 @@ typedef struct _meta_data {
 	struct _meta_data *free_next;
 	struct _meta_data *free_prev;
 } meta_data;
+
+unsigned long sbrk_loc;
+meta_data *head;
+meta_data *first_free;
 
 void coalesce(void *co){
 	size_t new_size = 0;
