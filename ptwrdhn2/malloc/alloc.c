@@ -24,7 +24,7 @@ meta_data *first_free;
 
 void coalesce(void *same){
 	meta_data *co = (meta_data *)same;
-	size_t new_size = 0;
+	// size_t new_size = 0;
 	meta_data *a = NULL;
 	if((a = (co + co -> size + sizeof(meta_data))) -> is_free){
 		co -> size += a -> size + sizeof(meta_data);
@@ -102,7 +102,7 @@ void *malloc(size_t size) {
 		newmem -> is_free = 0;
 		newmem -> size = size;
 		newmem -> loc = newmem - size;
-		head -> prev = md;
+		head -> prev = newmem;
 		newmem -> next = head;
 		newmem -> prev = NULL;
 		head = newmem;
