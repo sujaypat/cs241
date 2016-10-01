@@ -16,7 +16,7 @@ typedef struct _meta_data {
 	size_t is_free;
 	size_t size;
 	void *loc;
-	struct _meta_data *next;
+	// struct _meta_data *next;
 	struct _meta_data *prev;
 	struct _meta_data *free_next;
 	struct _meta_data *free_prev;
@@ -178,11 +178,17 @@ void free(void *ptr) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/realloc/
 */
 void *realloc(void *ptr, size_t size) {
-	meta_data *curr = (meta_data *)(ptr - sizeof(meta_data))
-	if(curr -> next -> is_free && size < ((curr -> size) + sizeof(meta_data) + (curr -> next -> size))){
-		curr -> size = size;
+	meta_data *curr = (meta_data *)(ptr - sizeof(meta_data));
+	if(size == curr -> size) return;
+	if(size > curr -> size){
+		if(curr -> next -> is_free && size < ((curr -> size) + sizeof(meta_data) + (curr -> next -> size))){
+			curr -> size = size;
+		}
+		else{
+
+		}
 	}
-	else{
+	else if(size < curr -> size){
 
 	}
 	return NULL;
