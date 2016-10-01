@@ -85,7 +85,7 @@ void *calloc(size_t num, size_t size) {
 */
 void *malloc(size_t size) {
 	if(size == 0) return NULL;
-	meta_data *newmem;
+	meta_data *newmem = NULL;
 	meta_data *curr = first_free;
 	while(curr -> free_next){
 		if(curr -> size > size){
@@ -178,6 +178,12 @@ void free(void *ptr) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/realloc/
 */
 void *realloc(void *ptr, size_t size) {
-	// implement realloc!
+	meta_data *curr = (meta_data *)(ptr - sizeof(meta_data))
+	if(curr -> next -> is_free && size < ((curr -> size) + sizeof(meta_data) + (curr -> next -> size))){
+		curr -> size = size;
+	}
+	else{
+
+	}
 	return NULL;
 }
