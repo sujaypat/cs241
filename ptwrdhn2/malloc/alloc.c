@@ -19,8 +19,8 @@ typedef struct _meta_data {
 } meta_data;
 
 unsigned long sbrk_loc;
-meta_data *head;
-meta_data *first_free;
+meta_data *head = NULL;
+meta_data *first_free = NULL;
 
 void coalesce(void *same){
 	meta_data *co = (meta_data *)same;
@@ -105,6 +105,7 @@ void *malloc(size_t size) {
 		head -> prev = newmem;
 		newmem -> next = head;
 		newmem -> prev = NULL;
+		newmem -> free_next = first_free;
 		head = newmem;
 	}
 	return (void *)(newmem) + sizeof(meta_data);
