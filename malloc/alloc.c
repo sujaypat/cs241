@@ -36,13 +36,13 @@ void coalesce(void *same){
 
 void *first_fit(size_t size_needed){
 	void *found = NULL;
-	meta_data *curr = first_free;
-	while(curr -> free_next != NULL){
-		if(curr -> size > size_needed){
+	meta_data *curr = head;
+	while(curr != NULL){
+		if(curr -> size > size_needed && curr -> is_free){
 			found = curr;
 			break;
 		}
-		curr = curr -> free_next;
+		curr = curr + sizeof(meta_data) + curr -> size;
 	}
 	return found;
 }
