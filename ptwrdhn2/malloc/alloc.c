@@ -90,6 +90,7 @@ void *malloc(size_t size) {
 	meta_data *newmem = NULL;
 	meta_data *curr = first_free;
 	while(curr -> free_next){
+		printf("%p\n", curr -> free_next);
 		if(curr -> size > size){
 			newmem = curr;
 			break;
