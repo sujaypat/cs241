@@ -22,6 +22,16 @@ typedef struct _meta_data {
 	struct _meta_data *free_prev;
 } meta_data;
 
+void coalesce(void *co){
+	size_t new_size = 0;
+	if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){
+		co -> size += a -> size + sizeof(meta_data);
+		co -> next = a -> next;
+	}
+	if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){
+		co -> size += a -> size + sizeof(meta_data);
+	}
+}
 
 /**
 * Allocate space for array in memory
@@ -76,21 +86,25 @@ void *calloc(size_t num, size_t size) {
 void *malloc(size_t size) {
 	if(size == 0) return NULL;
 	meta_data *newmem;
-	meta_data *curr = head;
+	meta_data *curr = first_free;
 	while(curr -> free_next){
-		
+		if(curr -> size > size){
+			newmem = curr;
+			break;
+		}
+		curr = curr -> free_next;
 	}
-	// void *p = sbrk(0);
-	// meta_data *newmem = sbrk(sizeof(meta_data) + size);
-	// if(newmem == (meta_data *)(-1)) return NULL;
-
-	newmem -> size = size;
-	newmem -> loc = p;
-	head -> prev = md;
-	newmem -> next = head;
-	newmem -> prev = NULL;
-	head = newmem;
-
+	if(!newmem){
+		newmem = sbrk(size + sizeof(meta_data));
+		if(newmem == (meta_data *)(-1)) return NULL;
+		newmem -> is_free = 0;
+		newmem -> size = size;
+		newmem -> loc = newmem - size;
+		head -> prev = md;
+		newmem -> next = head;
+		newmem -> prev = NULL;
+		head = newmem;
+	}
 	return (void *)(newmem) + sizeof(meta_data);
 }
 
@@ -112,25 +126,10 @@ void *malloc(size_t size) {
 */
 void free(void *ptr) {
 	meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));
-	if(ptr == NULL || head == NULL){
-		return;
+	to_free -> is_free = 1;
+	if(to_free -> next -> is_free || to_free -> prev -> is_free){
+		coalesce(to_free);
 	}
-	meta_data *del = to_free;
-	meta_data *curr = head;
-	if(del == head){
-		head = del -> next;
-		// free(del);
-		return;
-	}
-	while(curr -> next != NULL){
-		if(curr -> next == del){
-			curr -> next = del -> next;
-			// free(del);
-			return;
-		}
-		curr = curr -> next;
-	}
-
 }
 
 /**
