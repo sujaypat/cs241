@@ -22,7 +22,8 @@ unsigned long sbrk_loc;
 meta_data *head;
 meta_data *first_free;
 
-void coalesce(void *co){
+void coalesce(void *same){
+	meta_data *co = (meta_data *)same;
 	size_t new_size = 0;
 	meta_data *a = NULL;
 	if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){
