@@ -39,7 +39,7 @@ void *first_fit(size_t size_needed){
 	meta_data *curr = first_free;
 	while(curr -> free_next){
 		printf("%p\n", curr -> free_next);
-		if(curr -> size > size){
+		if(curr -> size > size_needed){
 			newmem = curr;
 			break;
 		}
