@@ -53,7 +53,7 @@ void insert_meta_data(meta_data* this, size_t is_free, size_t size, meta_data *n
 	this -> prev = prev;
 	this -> free_next = free_next;
 	this -> free_prev = free_prev;
-	head -> prev = this;
+	if(head) head -> prev = this;
 	head = this;
 }
 
