@@ -112,10 +112,11 @@ void *calloc(size_t num, size_t size) {
 void *malloc(size_t size) {
 	if(size == 0) return NULL;
 	meta_data *newmem = NULL;
+	meta_data *temp = first_free;
 	if((newmem = first_fit(size)) == NULL){
 		newmem = sbrk(size + sizeof(meta_data));
 		if(newmem == (meta_data *)(-1)) return NULL;
-		meta_data *temp = newmem -> next;
+		*temp = newmem -> next;
 		while(temp){
 			if(temp -> is_free){
 				break;
@@ -126,7 +127,7 @@ void *malloc(size_t size) {
 		head = newmem;
 		return (void *)(newmem - size);
 	}
-
+	insert_meta_data(newmem, 0, size, newmem - size, head, NULL, temp, NULL);
 	return (void *)(newmem) + sizeof(meta_data);
 }
 
