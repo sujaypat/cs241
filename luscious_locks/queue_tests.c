@@ -1,7 +1,7 @@
 /**
- * Luscious Locks Lab 
- * CS 241 - Fall 2016
- */
+* Luscious Locks Lab
+* CS 241 - Fall 2016
+*/
 #include <assert.h>
 #include <pthread.h>
 #include <stdio.h>
@@ -12,6 +12,6 @@
 
 int main(int argc, char **argv) {
 
-  printf("Please write tests cases\n");
-  return 0;
+	printf("Please write tests cases\n");
+	return 0;
 }
