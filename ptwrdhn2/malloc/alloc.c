@@ -40,11 +40,12 @@ void *first_fit(size_t size_needed){
 	while(curr -> free_next){
 		printf("%p\n", curr -> free_next);
 		if(curr -> size > size_needed){
-			newmem = curr;
+			found = curr;
 			break;
 		}
 		curr = curr -> free_next;
 	}
+	return found;
 }
 
 void insert_meta_data(struct meta_data* this, size_t is_free, size_t size, void *loc, struct meta_data *next, struct meta_data *prev, struct meta_data *free_next, struct meta_data *free_prev){
