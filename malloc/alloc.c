@@ -154,6 +154,7 @@ void *malloc(size_t size) {
 *    passed as argument, no action occurs.
 */
 void free(void *ptr) {
+	write(0, "free called\n", strlen("free called\n") + 1);
 	meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));
 	to_free -> is_free = 1;
 	if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
