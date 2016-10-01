@@ -24,6 +24,7 @@ typedef struct _meta_data {
 
 void coalesce(void *co){
 	size_t new_size = 0;
+	meta_data *a = NULL;
 	if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){
 		co -> size += a -> size + sizeof(meta_data);
 		co -> next = a -> next;
