@@ -112,9 +112,9 @@ void *malloc(size_t size) {
 	meta_data *newmem = NULL;
 	meta_data *temp = first_free;
 	if((newmem = first_fit(size)) == NULL){
-		newmem = sbrk(size + sizeof(meta_data));
-		if((newmem - (size + sizeof(meta_data))) == (meta_data *)(-1)) return NULL;
-		newmem = newmem - (size + sizeof(meta_data));
+		newmem = (meta_data *)sbrk(size + sizeof(meta_data));
+		if(newmem == (void *)(-1)) return NULL;
+		// newmem = newmem - (size + sizeof(meta_data));
 		temp = newmem -> next;
 		while(temp){
 			if(temp -> is_free){
