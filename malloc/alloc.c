@@ -26,11 +26,11 @@ void coalesce(void *same){
 	meta_data *co = (meta_data *)same;
 	size_t new_size = 0;
 	meta_data *a = NULL;
-	if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){
+	if((a = (co + co -> size + sizeof(meta_data))) -> is_free){
 		co -> size += a -> size + sizeof(meta_data);
 		co -> next = a -> next;
 	}
-	if(((meta_data *)a = (co -> prev)) -> is_free){
+	if((a = (co -> prev)) -> is_free){
 		a -> size += co -> size + sizeof(meta_data);
 	}
 }
@@ -181,7 +181,7 @@ void free(void *ptr) {
 */
 void *realloc(void *ptr, size_t size) {
 	meta_data *curr = (meta_data *)(ptr - sizeof(meta_data));
-	if(size == curr -> size) return;
+	if(size == curr -> size) return ptr;
 	if(size > curr -> size){
 		if(curr -> next -> is_free && size < ((curr -> size) + sizeof(meta_data) + (curr -> next -> size))){
 			curr -> size = size;
