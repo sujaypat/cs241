@@ -108,9 +108,6 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
-	write(0, "size: ", strlen("size: ") + 1);
-	write(0, &(curr), sizeof(meta_data));
-	write(0, "\n", strlen("\n") + 1);
 	if(size == 0) return NULL;
 	meta_data *newmem = NULL;
 	meta_data *temp = first_free;
@@ -126,9 +123,15 @@ void *malloc(size_t size) {
 			temp = temp -> next;
 		}
 		insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
+		write(0, "size: ", strlen("size: ") + 1);
+		write(0, &(newmem), sizeof(meta_data));
+		write(0, "\n", strlen("\n") + 1);
 		return (void *)(newmem + sizeof(meta_data));
 	}
 	insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
+	write(0, "size: ", strlen("size: ") + 1);
+	write(0, &(newmem), sizeof(meta_data));
+	write(0, "\n", strlen("\n") + 1);
 	return (void *)(newmem) + sizeof(meta_data);
 }
 
