@@ -11,7 +11,6 @@
 typedef struct _meta_data {
 	size_t is_free;
 	size_t size;
-	void *loc;
 	struct _meta_data *next;
 	struct _meta_data *prev;
 	struct _meta_data *free_next;
@@ -50,12 +49,12 @@ void *first_fit(size_t size_needed){
 void insert_meta_data(meta_data* this, size_t is_free, size_t size, void *loc, meta_data *next, meta_data *prev, meta_data *free_next, meta_data *free_prev){
 	this -> is_free = is_free;
 	this -> size = size;
-	this -> loc = loc;
 	this -> next = next;
 	this -> prev = prev;
 	this -> free_next = free_next;
 	this -> free_prev = free_prev;
 	head -> prev = this;
+	head = this;
 }
 
 /**
@@ -122,11 +121,11 @@ void *malloc(size_t size) {
 			}
 			temp = temp -> next;
 		}
-		insert_meta_data(newmem, 0, size, newmem - size, head, NULL, temp, NULL);
-		head = newmem;
+		insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
+		// head = newmem;
 		return (void *)(newmem - size);
 	}
-	insert_meta_data(newmem, 0, size, newmem - size, head, NULL, temp, NULL);
+	insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
 	return (void *)(newmem) + sizeof(meta_data);
 }
 
