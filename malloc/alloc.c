@@ -116,7 +116,7 @@ void *malloc(size_t size) {
 	meta_data *temp = first_free;
 	if((newmem = first_fit(size)) == NULL){
 		newmem = sbrk(size + sizeof(meta_data));
-		if(newmem == (meta_data *)(-1)) return NULL;
+		if((newmem - (size + sizeof(meta_data))) == (meta_data *)(-1)) return NULL;
 		newmem = newmem - (size + sizeof(meta_data));
 		temp = newmem -> next;
 		while(temp){
@@ -126,8 +126,7 @@ void *malloc(size_t size) {
 			temp = temp -> next;
 		}
 		insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
-		// head = newmem;
-		return (void *)(newmem - size);
+		return (void *)(newmem + sizeof(meta_data));
 	}
 	insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
 	return (void *)(newmem) + sizeof(meta_data);
