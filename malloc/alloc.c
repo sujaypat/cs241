@@ -28,8 +28,8 @@ void coalesce(void *co){
 		co -> size += a -> size + sizeof(meta_data);
 		co -> next = a -> next;
 	}
-	if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){
-		co -> size += a -> size + sizeof(meta_data);
+	if(((meta_data *)a = (co -> prev)) -> is_free){
+		a -> size += co -> size + sizeof(meta_data);
 	}
 }
 
