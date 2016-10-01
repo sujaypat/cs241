@@ -16,7 +16,7 @@ typedef struct _meta_data {
 	size_t is_free;
 	size_t size;
 	void *loc;
-	// struct _meta_data *next;
+	struct _meta_data *next;
 	struct _meta_data *prev;
 	struct _meta_data *free_next;
 	struct _meta_data *free_prev;
