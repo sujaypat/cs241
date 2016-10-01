@@ -37,6 +37,9 @@ void *first_fit(size_t size_needed){
 	void *found = NULL;
 	meta_data *curr = head;
 	while(curr != NULL){
+		write(0, "size: ", strlen("size: ") + 1);
+		write(0, &(curr), sizeof(meta_data));
+		write(0, "\n", strlen("\n") + 1);
 		if(curr -> size > size_needed && curr -> is_free){
 			found = curr;
 			break;
