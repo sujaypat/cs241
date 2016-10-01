@@ -37,7 +37,7 @@ void coalesce(void *same){
 void *first_fit(size_t size_needed){
 	void *found = NULL;
 	meta_data *curr = first_free;
-	while(curr -> free_next){
+	while(curr -> free_next != NULL){
 		if(curr -> size > size_needed){
 			found = curr;
 			break;
