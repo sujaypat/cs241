@@ -108,7 +108,7 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
-	write(0, "malloc called", strlen("malloc called") + 1);
+	write(0, "malloc called\n", strlen("malloc called\n") + 1);
 	if(size == 0) return NULL;
 	meta_data *newmem = NULL;
 	meta_data *temp = first_free;
