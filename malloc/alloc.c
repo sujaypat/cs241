@@ -48,7 +48,7 @@ void *first_fit(size_t size_needed){
 	return found;
 }
 
-void insert_meta_data(struct meta_data* this, size_t is_free, size_t size, void *loc, struct meta_data *next, struct meta_data *prev, struct meta_data *free_next, struct meta_data *free_prev){
+void insert_meta_data(meta_data* this, size_t is_free, size_t size, void *loc, meta_data *next, meta_data *prev, meta_data *free_next, meta_data *free_prev){
 	this -> is_free = is_free;
 	this -> size = size;
 	this -> loc = loc;
@@ -57,7 +57,6 @@ void insert_meta_data(struct meta_data* this, size_t is_free, size_t size, void 
 	this -> free_next = free_next;
 	this -> free_prev = free_prev;
 	head -> prev = this;
-
 }
 
 /**
