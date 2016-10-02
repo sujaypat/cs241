@@ -19,7 +19,7 @@ int main() {
     }
 
     *ptr = 4;
-	printf("%p\n",ptr);
+	printf("iteration %d ptr: %p\n", i, ptr);
     free(ptr);
   }
 
