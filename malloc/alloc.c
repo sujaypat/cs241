@@ -36,12 +36,9 @@ void coalesce(void *same){
 void *first_fit(size_t size_needed){
 	void *found = NULL;
 	meta_data *curr = head;
-	// write(0, &(curr -> size), sizeof(size_t) + 1);
-	// write(0, " = size\n", strlen(" = size\n") + 1);
-	// write(0, &(size_needed), sizeof(size_t) + 1);
-	// write(0, " = size needed\n", strlen(" = size needed\n") + 1);
 	while(curr != NULL){
 		if(curr -> size >= size_needed && curr -> is_free){
+			write(0, "fuck you\n", strlen("fuck you\n") + 1);
 			return curr;
 		}
 		curr = curr -> free_next;
