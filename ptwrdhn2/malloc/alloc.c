@@ -111,6 +111,7 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
+	write(0, sbrk(0), strlen(sbrk(0)));
 	if(size == 0) return NULL;
 	meta_data *newmem = NULL;
 	meta_data *temp = head;
