@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #define NUM_CYCLES 10000000
 
@@ -17,7 +18,7 @@ int main() {
 			printf("Memory failed to allocate!\n");
 			return 1;
 		}
-		// printf("sbrk %d\n", sbrk(0));
+		printf("sbrk %d\n", sbrk(0));
 		*ptr = 4;
 		printf("value %d\n", *ptr);
 		printf("loc %p\n", ptr);
