@@ -43,7 +43,7 @@ void *first_fit(size_t size_needed){
 			found = curr;
 			break;
 		}
-		curr = curr + sizeof(meta_data) + curr -> size;
+		curr = curr -> free_next;
 	}
 	return found;
 }
