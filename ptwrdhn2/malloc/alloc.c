@@ -32,12 +32,20 @@ void coalesce(void *same){
 }
 
 void *first_fit(size_t size_needed){
-	void *found = NULL;
+	meta_data *found = NULL;
 	meta_data *curr = head;
 	while(curr != NULL){
 		if(curr -> size >= size_needed && curr -> is_free){
-			found = curr;
-			break;
+			if(curr -> size <= (size_needed + sizeof(meta_data))){
+				curr -> is_free = 0;
+				break;
+			}
+			else{
+				size_t original = curr -> size;
+				insert_meta_data(found, 1, (original - size_needed - sizeof(meta_data)), curr -> next, curr);
+				curr -> next = (meta_data *)(curr + sizeof(meta_data) + size_needed);
+				curr -> size = size_needed;
+			}
 		}
 		curr = curr -> next;
 	}
@@ -49,7 +57,6 @@ void insert_meta_data(meta_data *this, size_t is_free, size_t size, meta_data *n
 	this -> size = size;
 	this -> next = next;
 	this -> prev = prev;
-
 	if(head){
 		head -> prev = this;
 		this -> next = head;
