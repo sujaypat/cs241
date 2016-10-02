@@ -155,7 +155,7 @@ void free(void *ptr) {
 	meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));
 	to_free -> is_free = 1;
 	if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
-		coalesce(to_free);
+		// coalesce(to_free);
 	}
 }
 
