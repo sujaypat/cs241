@@ -46,6 +46,7 @@ void *first_fit(size_t size_needed){
 		if(curr -> size >= size_needed && curr -> is_free){
 			if(curr -> size <= (size_needed + sizeof(meta_data))){
 				curr -> is_free = 0;
+				found = curr;
 				break;
 			}
 			else{
