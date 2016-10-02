@@ -120,7 +120,7 @@ void *malloc(size_t size) {
 	meta_data *newmem = NULL;
 	meta_data *temp = head;
 	if((newmem = first_fit(size)) == NULL){
-		// write(0, "sbrking: \n", strlen("sbrking: \n") + 1);
+		write(0, "sbrking: \n", strlen("sbrking: \n") + 1);
 		newmem = (meta_data *)sbrk(size + sizeof(meta_data));
 		if(newmem == (void *)(-1)) return NULL;
 
