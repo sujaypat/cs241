@@ -17,6 +17,7 @@ typedef struct _meta_data {
 
 unsigned long sbrk_loc;
 meta_data *head = NULL;
+meta_data *tail = NULL;
 meta_data *first_free = NULL;
 
 void coalesce(void *same){
@@ -31,6 +32,13 @@ void coalesce(void *same){
 	}
 }
 
+void insert_meta_data(meta_data *this, size_t is_free, size_t size, meta_data *next, meta_data *prev){
+	this -> is_free = is_free;
+	this -> size = size;
+	this -> next = next;
+	this -> prev = prev;
+}
+
 void *first_fit(size_t size_needed){
 	meta_data *found = NULL;
 	meta_data *curr = head;
@@ -42,8 +50,9 @@ void *first_fit(size_t size_needed){
 			}
 			else{
 				size_t original = curr -> size;
+				found = (meta_data *)(curr + sizeof(meta_data) + size_needed);
 				insert_meta_data(found, 1, (original - size_needed - sizeof(meta_data)), curr -> next, curr);
-				curr -> next = (meta_data *)(curr + sizeof(meta_data) + size_needed);
+				curr -> next = found;
 				curr -> size = size_needed;
 			}
 		}
@@ -52,17 +61,6 @@ void *first_fit(size_t size_needed){
 	return found;
 }
 
-void insert_meta_data(meta_data *this, size_t is_free, size_t size, meta_data *next, meta_data *prev){
-	this -> is_free = is_free;
-	this -> size = size;
-	this -> next = next;
-	this -> prev = prev;
-	if(head){
-		head -> prev = this;
-		this -> next = head;
-	}
-	head = this;
-}
 
 /**
 * Allocate space for array in memory
@@ -121,11 +119,19 @@ void *malloc(size_t size) {
 	meta_data *newmem = NULL;
 	// meta_data *temp = head;
 	if((newmem = first_fit(size)) == NULL){
-		write(0, "sbrking: \n", strlen("sbrking: \n") + 1);
+		// write(0, "sbrking: \n", strlen("sbrking: \n") + 1);
+
 		newmem = (meta_data *)sbrk(size + sizeof(meta_data));
 		if(newmem == (void *)(-1)) return NULL;
 
-		insert_meta_data(newmem, 0, size, head, NULL);
+		if(head == NULL){
+			insert_meta_data(newmem, 0, size, NULL, NULL);
+			head = newmem;
+		}
+		else {
+			insert_meta_data(newmem, 0, size, NULL, tail);
+		}
+		tail = newmem;
 		return (void *)(newmem + sizeof(meta_data));
 	}
 	// insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
