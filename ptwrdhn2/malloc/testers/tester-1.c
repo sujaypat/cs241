@@ -19,6 +19,7 @@ int main() {
     }
 
     *ptr = 4;
+	printf("%p\n",ptr);
     free(ptr);
   }
 
