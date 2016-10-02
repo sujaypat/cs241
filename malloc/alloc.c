@@ -54,6 +54,8 @@ void *first_fit(size_t size_needed){
 				insert_meta_data(found, 1, (original - size_needed - sizeof(meta_data)), curr -> next, curr);
 				curr -> next = found;
 				curr -> size = size_needed;
+				curr -> is_free = 0;
+				return curr;
 			}
 		}
 		curr = curr -> next;
