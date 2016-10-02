@@ -23,7 +23,7 @@ meta_data *first_free = NULL;
 void coalesce(void *same){
 	meta_data *co = (meta_data *)same;
 	meta_data *a = NULL;
-	if((a = (co + co -> size + sizeof(meta_data))) -> is_free){
+	if((a = (co -> next) -> is_free){
 		co -> size += a -> size + sizeof(meta_data);
 		co -> next = a -> next;
 	}
