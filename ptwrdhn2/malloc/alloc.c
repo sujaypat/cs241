@@ -113,7 +113,7 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
-	write(0, "malloc called\n", strlen("malloc called\n") + 1);
+	// write(0, "malloc called\n", strlen("malloc called\n") + 1);
 	if(size == 0) return NULL;
 	meta_data *newmem = NULL;
 	meta_data *temp = first_free;
@@ -123,9 +123,9 @@ void *malloc(size_t size) {
 		// newmem -> next = NULL;
 
 		insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
-		write(0, "sbrk size: ", strlen("sbrk size: ") + 1);
-		write(0, &(newmem), sizeof(meta_data));
-		write(0, "\n", strlen("\n") + 1);
+		// write(0, "sbrk size: ", strlen("sbrk size: ") + 1);
+		// write(0, &(newmem), sizeof(meta_data));
+		// write(0, "\n", strlen("\n") + 1);
 		return (void *)(newmem + sizeof(meta_data));
 	}
 	while(temp){
@@ -135,9 +135,9 @@ void *malloc(size_t size) {
 		temp = temp -> next;
 	}
 	insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
-	write(0, "add size: ", strlen("add size: ") + 1);
-	write(0, &(newmem), sizeof(meta_data));
-	write(0, "\n", strlen("\n") + 1);
+	// write(0, "add size: ", strlen("add size: ") + 1);
+	// write(0, &(newmem), sizeof(meta_data));
+	// write(0, "\n", strlen("\n") + 1);
 	return (void *)(newmem) + sizeof(meta_data);
 }
 
@@ -158,7 +158,7 @@ void *malloc(size_t size) {
 *    passed as argument, no action occurs.
 */
 void free(void *ptr) {
-	write(0, "free called\n", strlen("free called\n") + 1);
+	// write(0, "free called\n", strlen("free called\n") + 1);
 	meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));
 	to_free -> is_free = 1;
 	if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
