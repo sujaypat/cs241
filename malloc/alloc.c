@@ -38,8 +38,8 @@ void *first_fit(size_t size_needed){
 	meta_data *curr = head;
 	while(curr != NULL){
 		if(curr -> size >= size_needed && curr -> is_free){
-			found = curr;
-			break;
+					write(0, "found a fit!\n", strlen("found a fit!\n") + 1);
+			return curr;
 		}
 		curr = curr -> free_next;
 	}
@@ -117,7 +117,7 @@ void *malloc(size_t size) {
 	meta_data *newmem = NULL;
 	meta_data *temp = head;
 	if((newmem = first_fit(size)) == NULL){
-		write(0, "sbrking: \n", strlen("sbrking: \n") + 1);
+		// write(0, "sbrking: \n", strlen("sbrking: \n") + 1);
 		newmem = (meta_data *)sbrk(size + sizeof(meta_data));
 		if(newmem == (void *)(-1)) return NULL;
 
