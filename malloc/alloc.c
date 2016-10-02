@@ -134,7 +134,7 @@ void *malloc(size_t size) {
 		temp = temp -> free_next;
 	}
 	insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
-	return (void *)(newmem) + sizeof(meta_data);
+	return (void *)(newmem + sizeof(meta_data));
 }
 
 /**
