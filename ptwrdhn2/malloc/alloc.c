@@ -112,7 +112,7 @@ void *calloc(size_t num, size_t size) {
 */
 void *malloc(size_t size) {
 	write(0, "end of heap: ", strlen("end of heap: ") + 1);
-	write(0, (sbrk(0)), sizeof(sbrk(0)) + 1);
+	write(0, &(sbrk(0)), sizeof(sbrk(0)) + 1);
 	write(0, "\n", strlen("\n") + 1);
 	if(size == 0) return NULL;
 	meta_data *newmem = NULL;
