@@ -13,8 +13,6 @@ typedef struct _meta_data {
 	size_t size;
 	struct _meta_data *next;
 	struct _meta_data *prev;
-	struct _meta_data *free_next;
-	struct _meta_data *free_prev;
 } meta_data;
 
 unsigned long sbrk_loc;
@@ -38,21 +36,20 @@ void *first_fit(size_t size_needed){
 	meta_data *curr = head;
 	while(curr != NULL){
 		if(curr -> size >= size_needed && curr -> is_free){
-			write(0, "fuck you\n", strlen("fuck you\n") + 1);
-			return curr;
+			found = curr;
+			break;
 		}
-		curr = curr -> free_next;
+		curr = curr -> next;
 	}
 	return found;
 }
 
-void insert_meta_data(meta_data *this, size_t is_free, size_t size, meta_data *next, meta_data *prev, meta_data *free_next, meta_data *free_prev){
+void insert_meta_data(meta_data *this, size_t is_free, size_t size, meta_data *next, meta_data *prev){
 	this -> is_free = is_free;
 	this -> size = size;
 	this -> next = next;
 	this -> prev = prev;
-	this -> free_next = free_next;
-	this -> free_prev = free_prev;
+
 	if(head){
 		head -> prev = this;
 		this -> next = head;
@@ -124,13 +121,7 @@ void *malloc(size_t size) {
 		insert_meta_data(newmem, 0, size, head, NULL, NULL, NULL);
 		return (void *)(newmem + sizeof(meta_data));
 	}
-	while(temp){
-		if(temp -> is_free){
-			break;
-		}
-		temp = temp -> free_next;
-	}
-	insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
+	// insert_meta_data(newmem, 0, size, head, NULL, temp, NULL);
 	return (void *)(newmem + sizeof(meta_data));
 }
 
