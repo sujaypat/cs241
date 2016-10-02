@@ -16,6 +16,7 @@ typedef struct _meta_data {
 	struct _meta_data *free_next;
 	struct _meta_data *free_prev;
 } meta_data;
+
 int main() {
   int i;
   for (i = 0; i < NUM_CYCLES; i++) {
@@ -28,7 +29,7 @@ int main() {
 
     *ptr = 4;
 	printf("iteration %d ptr: %p\n", i, ptr);
-	printf("metadata: %d\n", sizeof(meta_data));
+	printf("metadata: %lu\n", sizeof(meta_data));
     free(ptr);
   }
 
