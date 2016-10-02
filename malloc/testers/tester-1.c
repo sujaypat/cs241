@@ -20,6 +20,7 @@ int main() {
 
     *ptr = 4;
 	printf("iteration %d ptr: %p\n", i, ptr);
+	printf("metadata: %d\n", sizeof(meta_data));
     free(ptr);
   }
 
