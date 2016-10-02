@@ -111,13 +111,13 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
-	write(0, "end of heap: ", strlen("end of heap: ") + 1);
-	write(0, (sbrk(0)), sizeof(sbrk(0)) + 1);
-	write(0, "\n", strlen("\n") + 1);
+	// write(0, (sbrk(0)), sizeof(sbrk(0)) + 1);
+	// write(0, "\n", strlen("\n") + 1);
 	if(size == 0) return NULL;
 	meta_data *newmem = NULL;
 	meta_data *temp = head;
 	if((newmem = first_fit(size)) == NULL){
+			// write(0, "sbrking: \n", strlen("sbrking: \n") + 1);
 		newmem = (meta_data *)sbrk(size + sizeof(meta_data));
 		if(newmem == (void *)(-1)) return NULL;
 
