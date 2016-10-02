@@ -120,7 +120,7 @@ void *malloc(size_t size) {
 	meta_data *newmem = NULL;
 	if((newmem = first_fit(size)) == NULL){
 
-		newmem = (meta_data *)sbrk(size + sizeof(meta_data));
+		newmem = sbrk(size + sizeof(meta_data));
 		if(newmem == (void *)(-1)) return NULL;
 
 		if(head == NULL){
@@ -153,11 +153,11 @@ void *malloc(size_t size) {
 *    passed as argument, no action occurs.
 */
 void free(void *ptr) {
-	meta_data *to_free = (meta_data *)ptr - sizeof(meta_data);
+	meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));
 	to_free -> is_free = 1;
-	// if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
-	// 	coalesce(to_free);
-	// }
+	if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
+		coalesce(to_free);
+	}
 }
 
 /**
