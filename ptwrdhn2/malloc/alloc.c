@@ -123,7 +123,7 @@ void *malloc(size_t size) {
 		// write(0, "sbrk\n", strlen("sbrk\n")+1);
 		if(newmem == (void *)(-1)) return NULL;
 
-		if(head == NULL){
+		if(tail == NULL){
 			insert_meta_data(newmem, 0, size, NULL, NULL);
 		}
 		else {
