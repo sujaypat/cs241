@@ -46,6 +46,9 @@ void *first_fit(size_t size_needed){
 				if(curr -> prev_free){
 					curr -> prev_free -> next_free = curr -> next_free;
 				}
+				if(curr -> next_free){
+					curr -> next_free -> prev_free = curr -> prev_free;
+				}
 				curr -> is_free = 0;
 				found = curr;
 				break;
