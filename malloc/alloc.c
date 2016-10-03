@@ -8,15 +8,15 @@
 #include <string.h>
 #include <unistd.h>
 
-typedef struct _metadata_entry_t {
+typedef struct _meta_data {
 	void *ptr;
 	size_t size;
 	int free;
-	struct _metadata_entry_t *next;
+	struct _meta_data *next;
 
-} metadata_entry_t;
-int freeFlag = 0;
-metadata_entry_t *head = NULL;
+} meta_data;
+int is_free = 0;
+meta_data *head = NULL;
 /**
 * Allocate space for array in memory
 *
@@ -69,18 +69,16 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
-	metadata_entry_t *p = head;
-	metadata_entry_t *chosen = NULL;
+	meta_data *p = head;
+	meta_data *chosen = NULL;
 	if (size <= 0) return NULL;
-	if (freeFlag) {
+	if (is_free) {
 		while (p != NULL) {
-			if (p->free && p->size >= size) {
-				//if (chosen == NULL || p->size < chosen->size) {
+			if (p -> free && p -> size >= size) {
 				chosen = p;
 				break;
-				//}
 			}
-			p = p->next;
+			p = p -> next;
 		}
 
 		if (chosen) {
@@ -89,7 +87,7 @@ void *malloc(size_t size) {
 		}
 	}
 	chosen = sbrk(0);
-	sbrk(sizeof(metadata_entry_t));
+	sbrk(sizeof(meta_data));
 	chosen->ptr = sbrk(0);
 	if (sbrk(size) == (void*)-1) return NULL;
 	chosen->size = size;
@@ -117,9 +115,9 @@ void *malloc(size_t size) {
 */
 void free(void *ptr) {
 	if (!ptr) return;
-	metadata_entry_t *ptr2 = (metadata_entry_t*)ptr - 1;
-	ptr2->free = 1;
-	freeFlag = 1;
+	meta_data *ptr2 = (meta_data*)ptr - 1;
+	ptr2 -> free = 1;
+	is_free = 1;
 	return;
 }
 
@@ -175,11 +173,11 @@ void *realloc(void *ptr, size_t size) {
 	if (size == 0) {
 		free(ptr);
 	}
-	metadata_entry_t *p = (metadata_entry_t*) ptr - 1;
+	meta_data *p = (meta_data*) ptr - 1;
 	if (p->size >= size) {
 		return ptr;
 	}
-	else {
+	else{
 		void* out = malloc(size);
 		memcpy(out, ptr, p->size);
 		free(ptr);
