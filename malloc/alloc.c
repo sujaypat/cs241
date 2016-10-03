@@ -15,7 +15,6 @@ typedef struct _meta_data {
 	struct _meta_data *next_free;
 } meta_data;
 
-meta_data *head = NULL;
 meta_data *tail = NULL;
 meta_data *first_free = NULL;
 
@@ -154,8 +153,17 @@ void free(void *in) {
 	meta_data *ptr = (meta_data *)in;
 	meta_data *to_free = (meta_data *)(ptr - 1);
 	to_free -> is_free = 1;
-	if(to_free -> prev_free){
-		to_free -> prev_free -> next_free = to_free;
+	if(!first_free){
+		first_free = to_free;
+	}
+	if(!tail){
+		tail = to_free;
+	}
+	else{
+		to_free -> prev_free = tail;
+		if(to_free -> prev_free){
+			to_free -> prev_free -> next_free = to_free;
+		}
 	}
 	// if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
 	// 	coalesce(to_free);
