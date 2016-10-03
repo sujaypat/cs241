@@ -214,6 +214,11 @@ void free(void *in) {
 void *realloc(void *ptr, size_t size) {
 	meta_data *curr = (meta_data *)(ptr - sizeof(meta_data));
 	if(size == curr -> size) return ptr;
+	if(size == 0){
+		free(ptr);
+		return NULL;
+	}
+	if(ptr == NULL) return malloc(size);
 	// if(size > curr -> size){
 	// 	if(curr -> next -> is_free && size < ((curr -> size) + sizeof(meta_data) + (curr -> next -> size))){
 	// 		curr -> size = size;
