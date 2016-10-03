@@ -15,7 +15,7 @@ typedef struct _meta_data {
 	struct _meta_data *next_free;
 } meta_data;
 
-meta_data *tail = NULL;
+meta_data *last_free = NULL;
 meta_data *first_free = NULL;
 
 // void coalesce(void *same){
@@ -125,12 +125,7 @@ void *malloc(size_t size) {
 		// write(0, "sbrk\n", strlen("sbrk\n")+1);
 		if(newmem == (void *)(-1)) return NULL;
 
-		if(tail == NULL){
-			insert_meta_data(newmem, 0, size, NULL, NULL);
-		}
-		else {
-			insert_meta_data(newmem, 0, size, tail, NULL);
-		}
+		insert_meta_data(newmem, 0, size, NULL, NULL);
 	}
 	return (void *)(newmem + 1);
 }
@@ -158,15 +153,13 @@ void free(void *in) {
 	if(!first_free){
 		first_free = to_free;
 	}
-	if(!tail){
-		tail = to_free;
-	}
 	else{
-		to_free -> prev_free = tail;
+		to_free -> prev_free = last_free;
 		if(to_free -> prev_free){
 			to_free -> prev_free -> next_free = to_free;
 		}
 	}
+	last_free = to_free;
 	// if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
 	// 	coalesce(to_free);
 	// }
