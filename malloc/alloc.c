@@ -34,7 +34,7 @@ meta_data *first_free = NULL;
 void insert_meta_data(meta_data *this, size_t is_free, size_t size, meta_data *prev_free, meta_data *next_free){
 	this -> is_free = is_free;
 	this -> size = size;
-	this -> prev = prev_free;
+	this -> prev_free = prev_free;
 	this -> next_free = next_free;
 }
 
