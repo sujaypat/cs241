@@ -153,11 +153,9 @@ void free(void *in) {
 	if(!first_free){
 		first_free = to_free;
 	}
-	else{
-		to_free -> prev_free = last_free;
-		if(to_free -> prev_free){
-			to_free -> prev_free -> next_free = to_free;
-		}
+	to_free -> prev_free = last_free;
+	if(to_free -> prev_free){
+		to_free -> prev_free -> next_free = to_free;
 	}
 	last_free = to_free;
 	// if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
