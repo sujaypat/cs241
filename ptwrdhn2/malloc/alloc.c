@@ -11,40 +11,40 @@
 typedef struct _meta_data {
 	size_t is_free;
 	size_t size;
-	struct _meta_data *next;
-	struct _meta_data *prev;
+	struct _meta_data *prev_free;
+	struct _meta_data *next_free;
 } meta_data;
 
-unsigned long sbrk_loc;
 meta_data *head = NULL;
 meta_data *tail = NULL;
 meta_data *first_free = NULL;
 
-void coalesce(void *same){
-	meta_data *co = (meta_data *)same;
-	meta_data *a = NULL;
-	if((a = (co -> next)) && a -> is_free){
-		co -> size += a -> size + sizeof(meta_data);
-		co -> next = a -> next;
-	}
-	if((a = (co -> prev)) && a -> is_free){
-		a -> size += co -> size + sizeof(meta_data);
-	}
-}
+// void coalesce(void *same){
+// 	meta_data *co = (meta_data *)same;
+// 	meta_data *a = NULL;
+// 	if((a = (co -> next)) && a -> is_free){
+// 		co -> size += a -> size + sizeof(meta_data);
+// 		co -> next = a -> next;
+// 	}
+// 	if((a = (co -> prev)) && a -> is_free){
+// 		a -> size += co -> size + sizeof(meta_data);
+// 	}
+// }
 
-void insert_meta_data(meta_data *this, size_t is_free, size_t size, meta_data *next, meta_data *prev){
+void insert_meta_data(meta_data *this, size_t is_free, size_t size, meta_data *prev_free, meta_data *next_free){
 	this -> is_free = is_free;
 	this -> size = size;
-	this -> next = next;
-	this -> prev = prev;
+	this -> prev = prev_free;
+	this -> next_free = next_free;
 }
 
 void *first_fit(size_t size_needed){
 	meta_data *found = NULL;
-	meta_data *curr = head;
+	meta_data *curr = first_free;
 	while(curr != NULL){
-		if(curr -> size >= size_needed && curr -> is_free){
+		if(curr -> size >= size_needed){
 			if(curr -> size <= (size_needed + sizeof(meta_data))){
+				curr -> prev_free -> next_free = curr -> next_free;
 				curr -> is_free = 0;
 				found = curr;
 				break;
@@ -52,14 +52,14 @@ void *first_fit(size_t size_needed){
 			else{
 				size_t original = curr -> size;
 				found = (meta_data *)(curr + sizeof(meta_data) + size_needed);
-				insert_meta_data(found, 1, (original - size_needed - sizeof(meta_data)), curr -> next, curr);
-				curr -> next = found;
+				insert_meta_data(found, 1, (original - size_needed - sizeof(meta_data)), curr -> prev_free, curr -> next_free);
+				curr -> next_free = found;
 				curr -> size = size_needed;
 				curr -> is_free = 0;
 				return curr;
 			}
 		}
-		curr = curr -> next;
+		curr = curr -> next_free;
 	}
 	return found;
 }
@@ -126,12 +126,10 @@ void *malloc(size_t size) {
 
 		if(head == NULL){
 			insert_meta_data(newmem, 0, size, NULL, NULL);
-			head = newmem;
 		}
 		else {
-			insert_meta_data(newmem, 0, size, NULL, tail);
+			insert_meta_data(newmem, 0, size, tail, NULL);
 		}
-		tail = newmem;
 	}
 	return (void *)(newmem + 1);
 }
@@ -156,9 +154,10 @@ void free(void *in) {
 	meta_data *ptr = (meta_data *)in;
 	meta_data *to_free = (meta_data *)(ptr - 1);
 	to_free -> is_free = 1;
-	if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
-		coalesce(to_free);
-	}
+	to_free -> prev_free -> next_free = to_free;
+	// if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
+	// 	coalesce(to_free);
+	// }
 }
 
 /**
