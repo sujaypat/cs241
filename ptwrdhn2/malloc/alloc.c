@@ -152,8 +152,9 @@ void *malloc(size_t size) {
 *    calloc() or realloc() to be deallocated.  If a null pointer is
 *    passed as argument, no action occurs.
 */
-void free(void *ptr) {
-	meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));
+void free(void *in) {
+	meta_data *ptr = (meta_data *)in;
+	meta_data *to_free = (meta_data *)(ptr - 1);
 	to_free -> is_free = 1;
 	if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
 		coalesce(to_free);
