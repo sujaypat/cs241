@@ -8,67 +8,15 @@
 #include <string.h>
 #include <unistd.h>
 
-typedef struct _meta_data {
-	size_t is_free;
+typedef struct _metadata_entry_t {
+	void *ptr;
 	size_t size;
-	struct _meta_data *prev_free;
-	struct _meta_data *next_free;
-} meta_data;
+	int free;
+	struct _metadata_entry_t *next;
 
-meta_data *last_free = NULL;
-meta_data *first_free = NULL;
-
-// void coalesce(void *same){
-// 	meta_data *co = (meta_data *)same;
-// 	meta_data *a = NULL;
-// 	if((a = (co -> next)) && a -> is_free){
-// 		co -> size += a -> size + sizeof(meta_data);
-// 		co -> next = a -> next;
-// 	}
-// 	if((a = (co -> prev)) && a -> is_free){
-// 		a -> size += co -> size + sizeof(meta_data);
-// 	}
-// }
-
-void insert_meta_data(meta_data *this, size_t is_free, size_t size, meta_data *prev_free, meta_data *next_free){
-	this -> is_free = is_free;
-	this -> size = size;
-	this -> prev_free = prev_free;
-	this -> next_free = next_free;
-}
-
-void *first_fit(size_t size_needed){
-	meta_data *found = NULL;
-	meta_data *curr = first_free;
-	while(curr != NULL){
-		if(curr -> size >= size_needed){
-			if(curr -> size <= (size_needed + sizeof(meta_data))){
-				if(curr -> prev_free){
-					curr -> prev_free -> next_free = curr -> next_free;
-				}
-				if(curr -> next_free){
-					curr -> next_free -> prev_free = curr -> prev_free;
-				}
-				curr -> is_free = 0;
-				found = curr;
-				break;
-			}
-			else{
-				size_t original = curr -> size;
-				found = (meta_data *)(curr + sizeof(meta_data) + size_needed);
-				insert_meta_data(found, 1, (original - size_needed - sizeof(meta_data)), curr -> prev_free, curr -> next_free);
-				curr -> next_free = found;
-				curr -> size = size_needed;
-				curr -> is_free = 0;
-				return curr;
-			}
-		}
-		curr = curr -> next_free;
-	}
-	return found;
-}
-
-
+} metadata_entry_t;
+int freeFlag = 0;
+metadata_entry_t *head = NULL;
 /**
 * Allocate space for array in memory
 *
@@ -93,9 +41,10 @@ void *first_fit(size_t size_needed){
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/calloc/
 */
 void *calloc(size_t num, size_t size) {
-	void *mem = malloc(num * size);
-	if(mem) memset(mem, 0, num * size);
-	return mem;
+	size_t space = num * size;
+	void *ptr = malloc(space);
+	memset(ptr, 0, space);
+	return ptr;
 }
 
 /**
@@ -120,17 +69,34 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
+	metadata_entry_t *p = head;
+	metadata_entry_t *chosen = NULL;
+	if (size <= 0) return NULL;
+	if (freeFlag) {
+		while (p != NULL) {
+			if (p->free && p->size >= size) {
+				//if (chosen == NULL || p->size < chosen->size) {
+				chosen = p;
+				break;
+				//}
+			}
+			p = p->next;
+		}
 
-	if(size == 0) return NULL;
-	meta_data *newmem = NULL;
-	if((newmem = first_fit(size)) == NULL){
-
-		newmem = (meta_data *)sbrk(size + sizeof(meta_data));
-		if(newmem == (void *)(-1)) return NULL;
-
-		insert_meta_data(newmem, 0, size, NULL, NULL);
+		if (chosen) {
+			chosen->free = 0;
+			return chosen->ptr;
+		}
 	}
-	return (void *)(newmem + 1);
+	chosen = sbrk(0);
+	sbrk(sizeof(metadata_entry_t));
+	chosen->ptr = sbrk(0);
+	if (sbrk(size) == (void*)-1) return NULL;
+	chosen->size = size;
+	chosen->free = 0;
+	chosen->next = head;
+	head = chosen;
+	return chosen->ptr;
 }
 
 /**
@@ -149,21 +115,12 @@ void *malloc(size_t size) {
 *    calloc() or realloc() to be deallocated.  If a null pointer is
 *    passed as argument, no action occurs.
 */
-void free(void *in) {
-	meta_data *ptr = (meta_data *)in;
-	meta_data *to_free = (meta_data *)(ptr - 1);
-	to_free -> is_free = 1;
-	if(!first_free){
-		first_free = to_free;
-	}
-	to_free -> prev_free = last_free;
-	if(to_free -> prev_free){
-		to_free -> prev_free -> next_free = to_free;
-	}
-	last_free = to_free;
-	// if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
-	// 	coalesce(to_free);
-	// }
+void free(void *ptr) {
+	if (!ptr) return;
+	metadata_entry_t *ptr2 = (metadata_entry_t*)ptr - 1;
+	ptr2->free = 1;
+	freeFlag = 1;
+	return;
 }
 
 /**
@@ -212,23 +169,20 @@ void free(void *in) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/realloc/
 */
 void *realloc(void *ptr, size_t size) {
-	meta_data *curr = (meta_data *)(ptr - sizeof(meta_data));
-	if(size == curr -> size) return ptr;
-	if(size == 0){
-		free(ptr);
-		return NULL;
+	if (!ptr) {
+		return malloc(size);
 	}
-	if(ptr == NULL) return malloc(size);
-	// if(size > curr -> size){
-	// 	if(curr -> next -> is_free && size < ((curr -> size) + sizeof(meta_data) + (curr -> next -> size))){
-	// 		curr -> size = size;
-	// 	}
-	// 	else{
-	//
-	// 	}
-	// }
-	// else if(size < curr -> size){
-	//
-	// }
-	return NULL;
+	if (size == 0) {
+		free(ptr);
+	}
+	metadata_entry_t *p = (metadata_entry_t*) ptr - 1;
+	if (p->size >= size) {
+		return ptr;
+	}
+	else {
+		void* out = malloc(size);
+		memcpy(out, ptr, p->size);
+		free(ptr);
+		return out;
+	}
 }
