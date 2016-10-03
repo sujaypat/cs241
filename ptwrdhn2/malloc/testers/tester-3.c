@@ -1,7 +1,7 @@
 /**
-* Machine Problem: Malloc
-* CS 241 - Fall 2016
-*/
+ * Machine Problem: Malloc
+ * CS 241 - Fall 2016
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,24 +11,23 @@
 #define ALLOC_SIZE 1024 * 1024
 
 int main() {
-	malloc(1);
+  malloc(1);
 
-	int i;
-	void *ptr = NULL;
+  int i;
+  void *ptr = NULL;
 
-	for (i = 0; i < TOTAL_ALLOCS; i++) {
-		printf("%d\n", i);
-		ptr = malloc(ALLOC_SIZE);
-		if (ptr == NULL) {
-			printf("Memory failed to allocate!\n");
-			return 1;
-		}
+  for (i = 0; i < TOTAL_ALLOCS; i++) {
+    ptr = malloc(ALLOC_SIZE);
+    if (ptr == NULL) {
+      printf("Memory failed to allocate!\n");
+      return 1;
+    }
 
-		memset(ptr, 0xab, ALLOC_SIZE);
+    memset(ptr, 0xab, ALLOC_SIZE);
 
-		free(ptr);
-	}
+    free(ptr);
+  }
 
-	printf("Memory was allocated and freed!\n");
-	return 0;
+  printf("Memory was allocated and freed!\n");
+  return 0;
 }
