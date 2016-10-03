@@ -133,7 +133,7 @@ void *malloc(size_t size) {
 		}
 		tail = newmem;
 	}
-	return (void *)(newmem + (meta_data *)1);
+	return (void *)(newmem + sizeof(meta_data *));
 }
 
 /**
