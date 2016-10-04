@@ -30,10 +30,10 @@ int main() {
     mq_t * queue = create();
 
     pthread_t s, r;
-    pthread_create(&s, null, sender, (void*)queue);
-    pthread_create(&r, null, recver, (void*)queue);
-    pthread_join(s, null);
-    pthread_join(r, null);
+    pthread_create(&s, NULL, sender, (void*)queue);
+    pthread_create(&r, NULL, recver, (void*)queue);
+    pthread_join(s, NULL);
+    pthread_join(r, NULL);
 
     return 0;
 }
