@@ -34,7 +34,8 @@ int main() {
     pthread_create(&r, NULL, recver, (void*)queue);
     pthread_join(s, NULL);
     pthread_join(r, NULL);
-
+	
+	queue_destroy(queue);
     return 0;
 }
 
