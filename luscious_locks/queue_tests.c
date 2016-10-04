@@ -27,7 +27,7 @@ void *recver(void * queue) {
 }
 
 int main() {
-    mq_t * queue = create();
+    queue_t *queue = queue_create(5);
 
     pthread_t s, r;
     pthread_create(&s, NULL, sender, (void*)queue);
