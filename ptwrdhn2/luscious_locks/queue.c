@@ -71,8 +71,8 @@ queue_t *queue_create(int maxSize) {
 	same -> tail = NULL;
 	same -> size = 0;
 	same -> maxSize = maxSize;
-	pthread_cond_init(&(queue -> cv), NULL);
-	pthread_mutex_init(&(queue -> m), NULL);
+	pthread_cond_init(&(same -> cv), NULL);
+	pthread_mutex_init(&(same -> m), NULL);
 	return same;
 }
 
@@ -80,7 +80,7 @@ queue_t *queue_create(int maxSize) {
 *  Destroys the queue, freeing any remaining nodes in it.
 */
 void queue_destroy(queue_t *queue) {
-	while (!isempty(queue)){
+	while (queue -> head){
 		queue -> head = queue -> head -> next;
 		free(queue -> head);
 	}
