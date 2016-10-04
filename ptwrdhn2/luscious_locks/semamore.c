@@ -4,6 +4,7 @@
 */
 
 #include "semamore.h"
+#include <stdlib.h>
 
 /**
 * Initializes the Semamore. Important: the struct is assumed to have been
@@ -24,7 +25,7 @@ void semm_init(Semamore *s, int value, int max_val) {
 */
 void semm_wait(Semamore *s) {
 	while(s -> value == 0){
-		
+
 	}
 
 }
