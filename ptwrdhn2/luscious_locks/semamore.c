@@ -45,6 +45,6 @@ void semm_post(Semamore *s) {
 * The actual Semamore struct must be freed by the user.
 */
 void semm_destroy(Semamore *s) {
-	free(s -> m);
-	free(s -> cv);
+	pthread_mutex_destroy(s -> m);
+	pthread_cond_destroy(s -> cv);
 }
