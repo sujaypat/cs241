@@ -81,7 +81,8 @@ queue_t *queue_create(int maxSize) {
 */
 void queue_destroy(queue_t *queue) {
 	while (queue -> head){
+		queue_node_t q = queue -> head;
 		queue -> head = queue -> head -> next;
-		free(queue -> head);
+		free(q);
 	}
 }
