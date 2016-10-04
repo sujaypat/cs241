@@ -10,7 +10,7 @@
 
 #include "queue.h"
 
-void *sender(void * queue) {
+void *sender(void *queue) {
     queue_push(queue, "hello, ");
     queue_push(queue, "world");
     queue_push(queue, "how are you?");
@@ -18,7 +18,7 @@ void *sender(void * queue) {
 	return 0;
 }
 
-void *recver(void * queue) {
+void *recver(void *queue) {
     sleep(1);
     printf("received '%s'\n", queue_pull(queue));
     printf("received '%s'\n", queue_pull(queue));

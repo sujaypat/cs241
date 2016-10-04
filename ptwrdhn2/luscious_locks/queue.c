@@ -37,7 +37,7 @@ void queue_push(queue_t *queue, void *data) {
 	queue_node_t *new_node = malloc(sizeof(queue_node_t));
 	new_node -> data = data;
 	new_node -> next = NULL;
-	queue -> tail -> next = new_node;
+	if(queue -> tail) queue -> tail -> next = new_node;
 	queue -> tail = new_node;
 	pthread_cond_broadcast(&(queue -> cv));
 	pthread_mutex_unlock(&(queue -> m));
@@ -66,7 +66,7 @@ void *queue_pull(queue_t *queue) {
 *  Returns a pointer to this allocated space.
 */
 queue_t *queue_create(int maxSize) {
-	queue_t *same = malloc(sizeof(queue_t));
+	queue_t *same = malloc(sizeof(queue_t) + maxSize*sizeof(queue_node_t));
 	same -> head = NULL;
 	same -> tail = NULL;
 	same -> size = 0;
