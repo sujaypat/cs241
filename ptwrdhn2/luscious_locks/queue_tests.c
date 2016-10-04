@@ -11,17 +11,19 @@
 #include "queue.h"
 
 void *sender(void * queue) {
-    send(queue, "hello, ");
-    send(queue, "world");
-    send(queue, "how are you?");
+    queue_push(queue, "hello, ");
+    queue_push(queue, "world");
+    queue_push(queue, "how are you?");
     printf("sent data\n");
+	return 0;
 }
 
 void *recver(void * queue) {
     sleep(1);
-    printf("received '%s'\n", recv(queue));
-    printf("received '%s'\n", recv(queue));
-    printf("received '%s'\n", recv(queue));
+    printf("received '%s'\n", queue_pull(queue));
+    printf("received '%s'\n", queue_pull(queue));
+    printf("received '%s'\n", queue_pull(queue));
+	return 0;
 }
 
 int main() {
