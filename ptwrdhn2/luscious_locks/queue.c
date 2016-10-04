@@ -33,14 +33,14 @@ struct queue_t {
 *  Blocks if the queue is full.
 */
 void queue_push(queue_t *queue, void *data) {
-	pthread_mutex_lock(queue -> m);
+	pthread_mutex_lock(&(queue -> m));
 	queue_node_t *new_node = malloc(sizeof(queue_node_t));
 	new_node -> data = data;
 	new_node -> next = NULL;
 	queue -> tail -> next = new_node;
 	queue -> tail = new_node;
-	pthread_cond_broadcast(cv);
-	pthread_mutex_unlock(m);
+	pthread_cond_broadcast(&(queue -> cv));
+	pthread_mutex_unlock(&(queue -> m));
 }
 
 /**
@@ -49,15 +49,15 @@ void queue_push(queue_t *queue, void *data) {
 *  Blocks if the queue is empty.
 */
 void *queue_pull(queue_t *queue) {
-	pthread_mutex_lock(queue -> m);
-	while(q->head == NULL){
-		pthread_cond_wait(cv, m);
+	pthread_mutex_lock(&(queue -> m));
+	while(queue -> head == NULL){
+		pthread_cond_wait(&(queue -> cv), &(queue -> m));
 	}
 	void *val = queue -> head -> data;
 	queue_node_t *tmp = queue -> head;
 	queue -> head = queue -> head -> next;
 	free(tmp);
-	pthread_mutex_unlock(m);
+	pthread_mutex_unlock(&(queue -> m));
 	return val;
 }
 
@@ -71,8 +71,8 @@ queue_t *queue_create(int maxSize) {
 	same -> tail = NULL;
 	same -> size = 0;
 	same -> maxSize = maxSize;
-	pthread_cond_init(cv, NULL);
-	pthread_mutex_init(m, NULL);
+	pthread_cond_init(&(queue -> cv), NULL);
+	pthread_mutex_init(&(queue -> m), NULL);
 	return same;
 }
 
@@ -81,7 +81,6 @@ queue_t *queue_create(int maxSize) {
 */
 void queue_destroy(queue_t *queue) {
 	while (!isempty(queue)){
-
 		queue -> head = queue -> head -> next;
 		free(queue -> head);
 	}
