@@ -40,12 +40,14 @@ void queue_push(queue_t *queue, void *data) {
 	queue_node_t *new_node = malloc(sizeof(queue_node_t));
 	new_node -> data = data;
 	new_node -> next = NULL;
+	if(queue -> tail){
+		queue -> tail -> next = new_node;
+	}
 	queue -> tail = new_node;
 	if(!queue -> head){
 		queue -> head = new_node;
 		queue -> head -> next = queue -> tail;
 	}
-	if(queue -> tail) queue -> tail -> next = new_node;
 	queue -> size++;
 	pthread_cond_broadcast(&queue -> cv);
 	pthread_mutex_unlock(&queue -> m);
