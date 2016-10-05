@@ -30,6 +30,7 @@ void* pusher(void *p)
 		*i = j;
 
 		queue_push(queue,(void*)(i));
+		free(i);
 	}
 	printf("queue size is now %d\n",queue->size);
 	return NULL;
