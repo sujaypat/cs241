@@ -26,14 +26,44 @@ static void *(*libc_calloc)(size_t nmemb, size_t size) = NULL;
 static void *(*libc_malloc)(size_t size) = NULL;
 static void (*libc_free)(void *ptr) = NULL;
 static void *(*libc_realloc)(void *ptr, size_t size) = NULL;
+static void *(*libc_sbrk)(size_t size) = NULL;
 
-static void *sbrk_start = 0;
-static void *sbrk_largest = 0;
-static void *sbrk_init_done = 0;
+static void *sbrk_start = NULL;
+static void *sbrk_end = NULL;
+static void *sbrk_current = NULL;
+static void *sbrk_largest = NULL;
+static void *sbrk_init_done = NULL;
+static size_t sbrk_counter = 0;
 
 static alloc_stats_t *stats = NULL;
 
 static int inside_init = 0;
+
+/*
+ * The replacement sbrk. Naming this the same as sbrk() overrides the actual
+ * sbrk().
+ * We verify that the return pointers from malloc/realloc return with the heap's
+ * bounds.
+ */
+void *sbrk(intptr_t size) {
+  sbrk_counter += 1;
+
+  void *sbrk_return = libc_sbrk(size);
+  sbrk_current = libc_sbrk(0);
+  return sbrk_return;
+}
+
+/*
+ * Ensure that any memory returned by malloc is actually, really allocated
+ * within
+ * the bounds of the heap.
+ */
+void verify_address(void *ptr) {
+  if (ptr < sbrk_start || ptr >= sbrk_end) {
+    fprintf(stderr, "Data allocated outside of heap.");
+    exit(91);
+  }
+}
 
 static void contest_alloc_init() {
   inside_init = 1;
@@ -41,12 +71,14 @@ static void contest_alloc_init() {
   /* Tell malloc() not to use mmap() */
   mallopt(M_MMAP_MAX, 0);
 
-  sbrk_start = sbrk_largest = sbrk(0);
-
   libc_calloc = dlsym(RTLD_NEXT, "calloc");
   libc_malloc = dlsym(RTLD_NEXT, "malloc");
   libc_free = dlsym(RTLD_NEXT, "free");
   libc_realloc = dlsym(RTLD_NEXT, "realloc");
+  libc_sbrk = dlsym(RTLD_NEXT, "sbrk");
+
+  sbrk_start = sbrk_largest = sbrk_current = sbrk(0);
+  sbrk_end = (char *)sbrk_start + MEMORY_LIMIT;
 
   inside_init = 2;
 
@@ -91,7 +123,7 @@ static void contest_alloc_init() {
 }
 
 static void contest_tracking() {
-  void *sbrk_current = sbrk(0);
+  sbrk_current = libc_sbrk(0);
   unsigned long current_mem_usage = ((long)sbrk_current - (long)sbrk_init_done);
 
   if (stats->max_heap_used < current_mem_usage) {
@@ -122,6 +154,7 @@ void *calloc(size_t nmemb, size_t size) {
     contest_alloc_init();
 
   void *addr = alloc_calloc(nmemb, size);
+  verify_address(addr);
   contest_tracking();
 
   return addr;
@@ -135,6 +168,7 @@ void *malloc(size_t size) {
     contest_alloc_init();
 
   void *addr = alloc_malloc(size);
+  verify_address(addr);
   contest_tracking();
 
   return addr;
@@ -168,13 +202,16 @@ void *realloc(void *ptr, size_t size) {
     contest_alloc_init();
 
   void *addr;
-  if (!ptr)
+  if (!ptr) {
     addr = alloc_malloc(size);
-  else if (size == 0) {
+    verify_address(addr);
+  } else if (size == 0) {
     alloc_free(ptr);
     addr = NULL;
-  } else
+  } else {
     addr = alloc_realloc(ptr, size);
+    verify_address(addr);
+  }
   contest_tracking();
 
   return addr;
