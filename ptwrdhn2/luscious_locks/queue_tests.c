@@ -24,7 +24,7 @@ void* pusher(void *p)
 {
 	int i = (*(int*)p);
 	int j =0 ;
-	for(j = 0; j < i ;j++)
+	for(j = 0; j < 2*i ;j++)
 	{
 		int* i = malloc(sizeof(int));
 		*i = j;
@@ -43,7 +43,7 @@ void* puller(void* p)
 	int j =0 ;
 	int sum = 0;
 	int predicted = 0;
-	for(j = 0; j < 2*i ;j++)
+	for(j = 0; j < i ;j++)
 	{
 		//sum += *((int*)queue_pull(queue));
 		void * t = queue_pull(queue);
