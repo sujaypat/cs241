@@ -14,6 +14,12 @@ void *sender(void *queue) {
     queue_push(queue, "hello, ");
     queue_push(queue, "world");
     queue_push(queue, "how are you?");
+	queue_push(queue, "hegfdllo, ");
+    queue_push(queue, "worlfsdgd");
+    queue_push(queue, "how arefdsg you?");
+	queue_push(queue, "hello345, ");
+    queue_push(queue, "world5234");
+    queue_push(queue, "how are 4533245you?");
     printf("sent data\n");
 	return 0;
 }
@@ -23,6 +29,9 @@ void *recver(void *queue) {
     printf("received '%s'\n", queue_pull(queue));
     printf("received '%s'\n", queue_pull(queue));
     printf("received '%s'\n", queue_pull(queue));
+	printf("received '%s'\n", queue_pull(queue));
+	printf("received '%s'\n", queue_pull(queue));
+	printf("received '%s'\n", queue_pull(queue));
 	return 0;
 }
 
@@ -38,10 +47,3 @@ int main() {
 	queue_destroy(queue);
     return 0;
 }
-
-
-// int main(int argc, char **argv) {
-//
-// 	printf("Please write tests cases\n");
-// 	return 0;
-// }
