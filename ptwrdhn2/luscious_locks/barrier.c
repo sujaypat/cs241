@@ -14,9 +14,19 @@ int barrier_destroy(barrier_t *barrier) {
 
 int barrier_init(barrier_t *barrier, unsigned int num_threads) {
 	int error = 0;
+	pthread_mutex_init(&(barrier -> mtx), NULL);
+	pthread_cond_init(&(barrier -> cv), NULL);
+
 	return error;
 }
 
 int barrier_wait(barrier_t *barrier) {
+	pthread_mutex_lock(&(barrier -> mtx));
+	barrier -> count++;
+	if(count == barrier -> n_threads) pthread_cond_broadcast(&(barrier -> cv));
+	else{
+		while(count < barrier -> n_threads) pthread_cond_wait(&(barrier -> cv), &(barrier -> mtx));
+	}
+	pthread_mutex_unlock(&(barrier -> mtx));
 	return 0;
 }
