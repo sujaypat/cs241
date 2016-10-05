@@ -43,7 +43,7 @@ void queue_push(queue_t *queue, void *data) {
 	queue -> tail = new_node;
 	if(!queue -> head){
 		queue -> head = new_node;
-		queue -> head -> next = tail;
+		queue -> head -> next = queue -> tail;
 	}
 	if(queue -> tail) queue -> tail -> next = new_node;
 	queue -> size++;
