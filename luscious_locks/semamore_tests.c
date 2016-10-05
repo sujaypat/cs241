@@ -90,5 +90,12 @@ int main(int argc, char **argv) {
 		pthread_join(thread6,NULL);
 		printf("\n\n Trian %d complete \n\n",q);
 	}
+	semm_destroy(s);
+	semm_destroy(s2);
+	semm_destroy(s3);
+	semm_destroy(s4);
+	semm_destroy(s5);
+	semm_destroy(s6);
+	semm_destroy(s7);
 	return 0;
 }
