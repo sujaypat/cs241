@@ -34,12 +34,16 @@ struct queue_t {
 */
 void queue_push(queue_t *queue, void *data) {
 	pthread_mutex_lock(&queue -> m);
+	while(queue -> size == queue -> maxSize){
+		pthread_cond_wait(&queue -> cv);
+	}
 	queue_node_t *new_node = malloc(sizeof(queue_node_t));
 	new_node -> data = data;
 	new_node -> next = NULL;
 	if(!queue -> head) queue -> head = new_node;
 	if(queue -> tail) queue -> tail -> next = new_node;
 	queue -> tail = new_node;
+	queue -> size++;
 	pthread_cond_broadcast(&queue -> cv);
 	pthread_mutex_unlock(&queue -> m);
 }
@@ -58,6 +62,7 @@ void *queue_pull(queue_t *queue) {
 	queue_node_t *tmp = queue -> head;
 	queue -> head = queue -> head -> next;
 	free(tmp);
+	queue -> size--;
 	// pthread_mutex_unlock(&(queue -> m));
 	return val;
 }
