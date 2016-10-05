@@ -55,9 +55,9 @@ void* puller(void* p)
 }
 int main(int argc, char **argv) {
 	pthread_t thread1, thread2,thread3;
-	int i = 5000000;
+	int i = 5000;
 	int j = 2* i ;
-	queue = queue_create(10000000);
+	queue = queue_create(10000);
 	pthread_create(&thread1,NULL,pusher,(void*)(&i));
 	pthread_create(&thread2,NULL,pusher,(void*)(&i));
 	pthread_join(thread1,NULL);
