@@ -27,10 +27,12 @@ void semm_init(Semamore *s, int value, int max_val) {
 */
 void semm_wait(Semamore *s) {
 	pthread_mutex_lock(&s -> m);
-	s -> value--;
+
 	while(s -> value == 0){
 		pthread_cond_wait(&s -> cv, &s -> m);
 	}
+	s -> value--;
+	pthread_cond_broadcast(&s -> cv);
 	pthread_mutex_unlock(&s -> m);
 }
 
@@ -41,10 +43,12 @@ void semm_wait(Semamore *s) {
 */
 void semm_post(Semamore *s) {
 	pthread_mutex_lock(&s -> m);
-	s -> value++;
+
 	while(s -> value == s -> max_val){
 		pthread_cond_wait(&(s -> cv), &(s -> m));
 	}
+	s -> value++;
+	pthread_cond_broadcast(&s -> cv);
 	pthread_mutex_unlock(&s -> m);
 }
 
