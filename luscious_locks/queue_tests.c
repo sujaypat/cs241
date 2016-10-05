@@ -46,7 +46,9 @@ void* puller(void* p)
 	for(j = 0; j < i ;j++)
 	{
 		//sum += *((int*)queue_pull(queue));
-		sum += *((int*)queue_pull(queue));
+		void * t = queue_pull(queue);
+		sum += *((int*)t);
+		free(t);
 		predicted += j;
 	}
 	printf("queue size is now %d\n",queue->size);
