@@ -61,11 +61,11 @@ int main(int argc, char **argv) {
 	int j = 2* i ;
 	queue = queue_create(1000000);
 	pthread_create(&thread1,NULL,pusher,(void*)(&i));
+	pthread_create(&thread3,NULL,puller,(void*)(&j));
+	pthread_join(thread3,NULL);
 	pthread_create(&thread2,NULL,pusher,(void*)(&i));
 	pthread_join(thread1,NULL);
 	pthread_join(thread2,NULL);
-	pthread_create(&thread3,NULL,puller,(void*)(&j));
-	pthread_join(thread3,NULL);
 	queue_destroy(queue);
 	return 0;
 }
