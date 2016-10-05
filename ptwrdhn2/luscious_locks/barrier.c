@@ -7,6 +7,8 @@
 // The returns are just for errors if you want to check for them.
 int barrier_destroy(barrier_t *barrier) {
 	int error = 0;
+	pthread_mutex_destroy(&(barrier -> mtx));
+	pthread_cond_destroy(&(barrier -> cv));
 	return error;
 }
 

@@ -49,7 +49,7 @@ void queue_push(queue_t *queue, void *data) {
 *  Blocks if the queue is empty.
 */
 void *queue_pull(queue_t *queue) {
-	pthread_mutex_lock(&(queue -> m));
+	// pthread_mutex_lock(&(queue -> m));
 	while(queue -> head == NULL){
 		pthread_cond_wait(&(queue -> cv), &(queue -> m));
 	}
@@ -57,7 +57,7 @@ void *queue_pull(queue_t *queue) {
 	queue_node_t *tmp = queue -> head;
 	queue -> head = queue -> head -> next;
 	free(tmp);
-	pthread_mutex_unlock(&(queue -> m));
+	// pthread_mutex_unlock(&(queue -> m));
 	return val;
 }
 
