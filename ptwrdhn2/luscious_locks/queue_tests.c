@@ -29,9 +29,15 @@ void *recver(void *queue) {
     printf("received '%s'\n", queue_pull(queue));
     printf("received '%s'\n", queue_pull(queue));
     printf("received '%s'\n", queue_pull(queue));
+	sleep(6);
 	printf("received '%s'\n", queue_pull(queue));
 	printf("received '%s'\n", queue_pull(queue));
 	printf("received '%s'\n", queue_pull(queue));
+	sleep(4);
+	printf("received '%s'\n", queue_pull(queue));
+	printf("received '%s'\n", queue_pull(queue));
+	printf("received '%s'\n", queue_pull(queue));
+
 	return 0;
 }
 
