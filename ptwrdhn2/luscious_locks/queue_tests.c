@@ -64,8 +64,5 @@ int main(int argc, char **argv) {
 	pthread_create(&thread3,NULL,puller,(void*)(&j));
 	pthread_join(thread3,NULL);
 	queue_destroy(queue);
-	for(j = 0; j < i; j++){
-		free(j);
-	}
 	return 0;
 }
