@@ -46,7 +46,6 @@ void queue_push(queue_t *queue, void *data) {
 	queue -> tail = new_node;
 	if(!queue -> head){
 		queue -> head = new_node;
-		queue -> head -> next = queue -> tail;
 	}
 	queue -> size++;
 	pthread_cond_broadcast(&queue -> cv);
