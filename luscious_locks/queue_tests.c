@@ -24,7 +24,7 @@ void* pusher(void *p)
 {
 	int i = (*(int*)p);
 	int j =0 ;
-	for(j = 0; j < 20*i ;j++)
+	for(j = 0; j < 2*i ;j++)
 	{
 		int* i = malloc(sizeof(int));
 		*i = j;
