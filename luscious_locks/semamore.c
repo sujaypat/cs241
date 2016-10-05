@@ -39,8 +39,8 @@ void semm_wait(Semamore *s) {
 *  Otherwise, should increment the value.
 */
 void semm_post(Semamore *s) {
-	while(s -> value == s -> max_value){
-		pthread_cond_wait(&(s -> cv), NULL);
+	while(s -> value == s -> max_val){
+		pthread_cond_wait(&(s -> cv), &(s -> m));
 	}
 	s -> value++;
 }
