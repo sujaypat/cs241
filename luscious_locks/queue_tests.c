@@ -62,5 +62,6 @@ int main(int argc, char **argv) {
 	pthread_join(thread2,NULL);
 	pthread_create(&thread3,NULL,puller,(void*)(&j));
 	pthread_join(thread3,NULL);
+	queue_destroy(queue);
 	return 0;
 }
