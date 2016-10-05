@@ -17,6 +17,8 @@
 void semm_init(Semamore *s, int value, int max_val) {
 	s -> value = value;
 	s -> max_val = max_val;
+	pthread_mutex_init(&(s -> m));
+	pthread_cond_init(&(s -> cv));
 }
 
 /**
