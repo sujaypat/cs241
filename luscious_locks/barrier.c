@@ -32,7 +32,7 @@ int barrier_wait(barrier_t *barrier) {
 		barrier -> times_used++;
 	}
 	else{
-		while(barrier -> count < barrier -> n_threads && count){
+		while(barrier -> count < barrier -> n_threads && barrier -> count){
 			pthread_cond_wait(&barrier -> cv, &barrier -> mtx);
 		}
 	}
