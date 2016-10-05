@@ -35,7 +35,7 @@ struct queue_t {
 void queue_push(queue_t *queue, void *data) {
 	pthread_mutex_lock(&queue -> m);
 	while(queue -> size == queue -> maxSize){
-		pthread_cond_wait(&queue -> cv);
+		pthread_cond_wait(&queue -> cv, &queue -> m);
 	}
 	queue_node_t *new_node = malloc(sizeof(queue_node_t));
 	new_node -> data = data;
