@@ -63,6 +63,7 @@ void *queue_pull(queue_t *queue) {
 	queue -> head = queue -> head -> next;
 	free(tmp);
 	queue -> size--;
+	pthread_cond_broadcast(&queue -> cv);
 	// pthread_mutex_unlock(&(queue -> m));
 	return val;
 }
