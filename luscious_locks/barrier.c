@@ -25,7 +25,7 @@ int barrier_init(barrier_t *barrier, unsigned int num_threads) {
 int barrier_wait(barrier_t *barrier) {
 	pthread_mutex_lock(&barrier -> mtx);
 	barrier -> count++;
-	unsigned int previous = barrier -> num_threads;
+	unsigned int previous = barrier -> n_threads;
 	if(barrier -> count == barrier -> n_threads){
 		pthread_cond_broadcast(&barrier -> cv);
 		barrier -> count = 0;
