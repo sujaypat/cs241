@@ -28,7 +28,7 @@ void* pusher(void *p)
 	{
 		int* i = malloc(sizeof(int));
 		*i = j;
-		printf("%d\n",j );
+		// printf("%d\n",j );
 		queue_push(queue,(void*)(i));
 	}
 	printf("queue size is now %d\n",queue->size);
