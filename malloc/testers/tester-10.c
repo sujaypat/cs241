@@ -11,9 +11,28 @@
 #define SIZE (128 * M)
 #define ITERS 100000
 
+// Ensure that the start and end of region are writable
+void verify_write(char *ptr, size_t len) {
+  *(ptr) = 'e';
+  *(ptr + len - 1) = 'k';
+}
+
+int verify_read(char *ptr, size_t len) {
+  int ret = 1;
+
+  if (*ptr != 'e')
+    ret = 0;
+
+  if (*(ptr + len - 1) != 'k')
+    ret = 0;
+
+  if (ret == 0)
+    printf("Failure to verify data.\n");
+
+  return ret;
+}
+
 int main() {
-  // not sure why we need to do this, but all the other testers perform this
-  // initial malloc
   malloc(1);
 
   int i;
@@ -22,16 +41,17 @@ int main() {
     if (!a)
       return 1;
 
-    *a = 'c';
-    if (*a != 'c')
-      return 1;
+    verify_write(a, SIZE);
 
     int *b = malloc(SIZE + i);
     if (!b)
       return 1;
 
-    *b = 'c';
-    if (*b != 'c')
+    verify_write(a, SIZE + i);
+
+    if (!verify_read(a, SIZE))
+      return 1;
+    if (!verify_read(a, SIZE + i))
       return 1;
 
     free(a);
@@ -41,8 +61,8 @@ int main() {
     if (!a)
       return 1;
 
-    *a = 'c';
-    if (*a != 'c')
+    verify_write(a, SIZE);
+    if (!verify_read(a, SIZE))
       return 1;
 
     free(a);
