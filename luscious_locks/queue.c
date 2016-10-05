@@ -81,9 +81,12 @@ queue_t *queue_create(int maxSize) {
 *  Destroys the queue, freeing any remaining nodes in it.
 */
 void queue_destroy(queue_t *queue) {
+	pthread_cond_destroy(&queue -> cv);
+	pthread_mutex_destroy(&queue -> m);
 	while (queue -> head){
 		queue_node_t *q = queue -> head;
 		queue -> head = queue -> head -> next;
 		free(q);
 	}
+	free(queue);
 }
