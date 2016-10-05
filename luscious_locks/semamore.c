@@ -27,7 +27,7 @@ void semm_init(Semamore *s, int value, int max_val) {
 */
 void semm_wait(Semamore *s) {
 	while(s -> value == 0){
-		pthread_cond_wait(&(s -> cv), NULL);
+		pthread_cond_wait(&(s -> cv), &(s -> m));
 	}
 	s -> value--;
 
