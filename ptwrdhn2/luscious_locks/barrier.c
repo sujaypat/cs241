@@ -30,7 +30,7 @@ int barrier_wait(barrier_t *barrier) {
 	if(barrier -> count == barrier -> n_threads) pthread_cond_broadcast(&barrier -> cv);
 	else while(barrier -> count < barrier -> n_threads) pthread_cond_wait(&barrier -> cv, &barrier -> mtx);
 	barrier -> count = 0;
-	pthread_cond_broadcast(&barrier -> cv);
+	// pthread_cond_broadcast(&barrier -> cv);
 	pthread_mutex_unlock(&(barrier -> mtx));
 	return 0;
 }
