@@ -27,14 +27,14 @@ void *recver(void *queue) {
 }
 
 int main() {
-    queue_t *queue = queue_create(5);
+    queue_t *queue = queue_create(2);
 
     pthread_t s, r;
     pthread_create(&s, NULL, sender, (void*)queue);
     pthread_create(&r, NULL, recver, (void*)queue);
     pthread_join(s, NULL);
     pthread_join(r, NULL);
-	
+
 	queue_destroy(queue);
     return 0;
 }
