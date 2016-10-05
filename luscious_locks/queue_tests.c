@@ -26,7 +26,7 @@ void* pusher(void *p)
 	int j =0 ;
 	for(j = 0; j < i ;j++)
 	{
-		int* i = malloc(sizeof(int));
+		int* i = 0;//malloc(sizeof(int));
 		*i = j;
 
 		queue_push(queue,(void*)(i));
