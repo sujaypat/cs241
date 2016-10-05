@@ -97,5 +97,12 @@ int main(int argc, char **argv) {
 	semm_destroy(s5);
 	semm_destroy(s6);
 	semm_destroy(s7);
+	free(s);
+	free(s2);
+	free(s3);
+	free(s4);
+	free(s5);
+	free(s6);
+	free(s7);
 	return 0;
 }
