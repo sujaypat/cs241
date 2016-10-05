@@ -93,7 +93,6 @@ void queue_destroy(queue_t *queue) {
 	while (queue -> head){
 		queue_node_t *q = queue -> head;
 		queue -> head = queue -> head -> next;
-		// free(q -> data);
 		free(q);
 	}
 	free(queue);
