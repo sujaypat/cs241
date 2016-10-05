@@ -19,7 +19,6 @@ int barrier_init(barrier_t *barrier, unsigned int num_threads) {
 	barrier -> times_used = 0;
 	error += pthread_mutex_init(&(barrier -> mtx), NULL);
 	error += pthread_cond_init(&(barrier -> cv), NULL);
-
 	return error;
 }
 
@@ -32,7 +31,7 @@ int barrier_wait(barrier_t *barrier) {
 		barrier -> times_used++;
 	}
 	else{
-		while(barrier -> count < barrier -> n_threads && barrier -> count){
+		while(barrier -> count < barrier -> n_threads + barrier -> count){
 			pthread_cond_wait(&barrier -> cv, &barrier -> mtx);
 		}
 	}
