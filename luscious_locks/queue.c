@@ -75,8 +75,8 @@ void *queue_pull(queue_t *queue) {
 *  Returns a pointer to this allocated space.
 */
 queue_t *queue_create(int maxSize) {
-	queue -> maxSize = maxSize == 0 ? -1 : maxSize;
 	queue_t *same = malloc(sizeof(queue_t));
+	same -> maxSize = maxSize == 0 ? -1 : maxSize;
 	same -> head = NULL;
 	same -> tail = NULL;
 	same -> size = 0;
