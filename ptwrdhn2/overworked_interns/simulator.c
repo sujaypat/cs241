@@ -19,7 +19,7 @@ volatile int working = 0; // Ugly Ugly way to poll all threads
 volatile int running = 1; // Flag for keeping the simulator on (dont touch it!)
 unsigned int delta =
     100000; // Time delta for operations like trying, working, and meeting.
-
+int Signum = 0;
 // Whoa! A global mutex .. I wonder what this can be used for :)
 pthread_mutex_t arbitrator = PTHREAD_MUTEX_INITIALIZER;
 
@@ -44,7 +44,7 @@ void *surveillance_start(void *cp) {
 
   usleep(delta * 3);
 
-  int only_one_intern = 0;
+  int only_one_intern = 0, deadlock = 0;
 
   while (running == 1 && only_one_intern == 0) {
     int working_threads = 0;
@@ -72,31 +72,34 @@ void *surveillance_start(void *cp) {
           company_thread == right_intern_owner)
         working_threads++;
     }
-    if ((working_threads == 0 && working == 0) || only_one_intern == 1)
+    if ((working_threads == 0 && working == 0) || only_one_intern == 1) {
+      deadlock = 1;
       break;
+    }
     usleep(delta);
   }
 
   printf(ANSI_COLOR_RESET "\033[?25h\033[20;H");
 
-  if (running == 1) {
+  if (deadlock == 1)
     printf("Exiting due to potential deadlock\n");
+  else
+    printf("Exiting\n");
+  if (deadlock == 1 || Signum == SIGINT) {
     for (int i = 0; i < num_companies; i++) {
       Company *company = (Company *)companies[i];
       pthread_t company_thread = *(Company_get_thread(company));
       if (0 != pthread_kill(company_thread, SIGTERM))
         fprintf(stderr, "pthread_kill failed\n");
     }
-  } else
-    printf("Exiting\n");
-
+  }
   return NULL;
 }
 
 size_t *arg_parse(int argc, char *argv[]) {
   if (argc != 3 && argc != 4) {
-    fprintf(stderr, "usage: %s [num_companies] [num_interns]\n", argv[0]);
-    fprintf(stderr, "OR usage: %s [num_companies] [num_interns] [delta]\n",
+    fprintf(stderr, "usage: %s [num_interns] [num_companies]\n", argv[0]);
+    fprintf(stderr, "OR usage: %s [num_interns] [num_companies] [delta]\n",
             argv[0]);
     exit(1);
   }
@@ -124,7 +127,7 @@ size_t *arg_parse(int argc, char *argv[]) {
 }
 
 void signalHandler(int signum) {
-  signum = signum; // DO Nothing
+  Signum = signum; // DO Nothing
   running = 0;
 }
 
