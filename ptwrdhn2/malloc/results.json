@@ -3,221 +3,270 @@
     "timestamp": "2016-09-28 22:00:00.585507", 
     "testcases": [
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
         "name": "part1_tester-1", 
-        "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
         "name": "part1_tester-2", 
-        "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
         "name": "part1_tester-3", 
-        "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
         "name": "part1_tester-4", 
-        "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
         "name": "part1_tester-5", 
-        "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)"
+        "ptsPossible": 1.0
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
+        "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
         "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:77:12: error: comparison between pointer and integer ('meta_data *' (aka 'struct _meta_data *') and 'int') [-Werror]\n        if(newmem == -1) return NULL;\n           ~~~~~~ ^  ~~\nalloc.c:81:17: error: use of undeclared identifier 'md'\n        head -> prev = md;\n                       ^\nalloc.c:120:4: error: use of undeclared identifier 'total_free'; did you mean 'to_free'?\n                        total_free += del -> size;\n                        ^~~~~~~~~~\n                        to_free\nalloc.c:106:13: note: 'to_free' declared here\n        meta_data *to_free = (meta_data *)(ptr - sizeof(meta_data));\n                   ^\nalloc.c:174:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:174:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 3 errors generated.\nmake: *** [alloc.so] Error 1\n", 
         "name": "part1_tester-6", 
-        "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)"
+        "ptsPossible": 1.0
       }
     ], 
-    "revision": "35748", 
-    "checksum": "1e6f7fe50ba3a22e91364fc9332411c133bf1bfa  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt"
+    "checksum": "1e6f7fe50ba3a22e91364fc9332411c133bf1bfa  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
+    "revision": "35748"
   }, 
   {
     "timestamp": "2016-09-29 22:00:00.633444", 
     "testcases": [
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 280004120\n[mcontest]: AVG: 140000018.666803\n[mcontest]: TIME: 1.212000\n\n\nstderr:\n", 
         "ptsEarned": 1.0, 
-        "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
-        "name": "part1_tester-1", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 280004120\n[mcontest]: AVG: 140000018.666803\n[mcontest]: TIME: 1.212000\n\n\nstderr:\n"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
-        "name": "part1_tester-2", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nSending a SIGTERM to kill the child process (pid=11416) for running for over 30sec.\n[mcontest]: STATUS: FAILED=(15)\n[mcontest]: MAX: 188743729\n[mcontest]: AVG: 115361302.624609\n[mcontest]: TIME: 30.000000\n\n\nstderr:\n"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)", 
-        "name": "part1_tester-3", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(17408)\n[mcontest]: MAX: 2684416025\n[mcontest]: AVG: 1342033212.809325\n[mcontest]: TIME: 0.932000\n\n\nstderr:\nExceeded Memory Limit (2684354560)\n"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)", 
-        "name": "part1_tester-4", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nMemory failed to allocate!\n[mcontest]: STATUS: FAILED=(256)\n[mcontest]: MAX: 1342181473\n[mcontest]: AVG: 966368519.400000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)", 
-        "name": "part1_tester-5", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nMemory failed to allocate!\n[mcontest]: STATUS: FAILED=(256)\n[mcontest]: MAX: 9894026\n[mcontest]: AVG: 7434660.907473\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
-        "name": "part1_tester-6", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 1789569803\n[mcontest]: AVG: 1073741882.400000\n[mcontest]: TIME: 0.192000\n\n\nstderr:\n"
-      }
-    ], 
-    "checksum": "ee7e7916d04b46770d373f73a083fa40b85c6c5f  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
-    "revision": "37037"
-  }, 
-  {
-    "timestamp": "2016-09-30 22:00:00.520745", 
-    "testcases": [
-      {
-        "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n", 
-        "name": "part1_tester-1", 
-        "ptsPossible": 1.0
-      }, 
-      {
-        "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n", 
-        "name": "part1_tester-2", 
-        "ptsPossible": 1.0
-      }, 
-      {
-        "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n", 
-        "name": "part1_tester-3", 
-        "ptsPossible": 1.0
-      }, 
-      {
-        "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n", 
-        "name": "part1_tester-4", 
-        "ptsPossible": 1.0
-      }, 
-      {
-        "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n", 
-        "name": "part1_tester-5", 
-        "ptsPossible": 1.0
-      }, 
-      {
-        "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n", 
-        "name": "part1_tester-6", 
-        "ptsPossible": 1.0
-      }
-    ], 
-    "revision": "37589", 
-    "checksum": "9e66372c49c92f6d782377b9e9f3f6e45b41181c  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt"
-  }, 
-  {
-    "timestamp": "2016-10-01 19:24:52.146432", 
-    "testcases": [
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 52\n[mcontest]: AVG: 52.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
-        "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "part1_tester-1", 
         "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 49\n[mcontest]: AVG: 49.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nSending a SIGTERM to kill the child process (pid=11416) for running for over 30sec.\n[mcontest]: STATUS: FAILED=(15)\n[mcontest]: MAX: 188743729\n[mcontest]: AVG: 115361302.624609\n[mcontest]: TIME: 30.000000\n\n\nstderr:\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "part1_tester-2", 
         "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 49\n[mcontest]: AVG: 49.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(17408)\n[mcontest]: MAX: 2684416025\n[mcontest]: AVG: 1342033212.809325\n[mcontest]: TIME: 0.932000\n\n\nstderr:\nExceeded Memory Limit (2684354560)\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "part1_tester-3", 
         "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 49\n[mcontest]: AVG: 49.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nMemory failed to allocate!\n[mcontest]: STATUS: FAILED=(256)\n[mcontest]: MAX: 1342181473\n[mcontest]: AVG: 966368519.400000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "part1_tester-4", 
         "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 49\n[mcontest]: AVG: 49.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nMemory failed to allocate!\n[mcontest]: STATUS: FAILED=(256)\n[mcontest]: MAX: 9894026\n[mcontest]: AVG: 7434660.907473\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "part1_tester-5", 
         "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 49\n[mcontest]: AVG: 49.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 1789569803\n[mcontest]: AVG: 1073741882.400000\n[mcontest]: TIME: 0.192000\n\n\nstderr:\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "part1_tester-6", 
         "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)"
       }
     ], 
-    "checksum": "6d3794d8c9b001baa9258bae2ea1b8c4f67b79ef  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
-    "revision": "38235"
+    "revision": "37037", 
+    "checksum": "ee7e7916d04b46770d373f73a083fa40b85c6c5f  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt"
   }, 
   {
-    "timestamp": "2016-10-01 22:00:00.578257", 
+    "timestamp": "2016-09-30 22:00:00.520745", 
     "testcases": [
       {
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
         "name": "part1_tester-1", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 108\n[mcontest]: AVG: 64.800000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n"
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n"
       }, 
       {
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
         "name": "part1_tester-2", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 136314936.999998\n[mcontest]: TIME: 0.592000\n\n\nstderr:\n"
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n"
       }, 
       {
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)", 
         "name": "part1_tester-3", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 2097249\n[mcontest]: AVG: 1048641.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n"
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)", 
+        "name": "part1_tester-4", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)", 
+        "name": "part1_tester-5", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
+        "name": "part1_tester-6", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nalloc.c:12:1: error: unknown type name 'meta_data'\nmeta_data *head;\n^\nalloc.c:13:1: error: unknown type name 'meta_data'\nmeta_data *first_free;\n^\nalloc.c:27:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:27:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:28:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:28:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:29:6: error: member reference base type 'void' is not a structure or union\n                co -> next = a -> next;\n                ~~ ^  ~~~~\nalloc.c:29:16: error: use of undeclared identifier 'a'\n                co -> next = a -> next;\n                             ^\nalloc.c:31:19: error: use of undeclared identifier 'a'\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                         ^\nalloc.c:31:32: error: member reference base type 'void' is not a structure or union\n        if(((meta_data *)a = (co + co -> size + sizeof(meta_data))) -> is_free){\n                                   ~~ ^  ~~~~\nalloc.c:32:6: error: member reference base type 'void' is not a structure or union\n                co -> size += a -> size + sizeof(meta_data);\n                ~~ ^  ~~~~\nalloc.c:32:17: error: use of undeclared identifier 'a'\n                co -> size += a -> size + sizeof(meta_data);\n                              ^\nalloc.c:103:18: error: use of undeclared identifier 'md'\n                head -> prev = md;\n                               ^\nalloc.c:180:21: warning: unused parameter 'ptr' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                    ^\nalloc.c:180:33: warning: unused parameter 'size' [-Wunused-parameter]\nvoid *realloc(void *ptr, size_t size) {\n                                ^\n2 warnings and 13 errors generated.\nmake: *** [alloc.so] Error 1\n"
+      }
+    ], 
+    "checksum": "9e66372c49c92f6d782377b9e9f3f6e45b41181c  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
+    "revision": "37589"
+  }, 
+  {
+    "timestamp": "2016-10-01 19:24:52.146432", 
+    "testcases": [
+      {
+        "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 52\n[mcontest]: AVG: 52.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "name": "part1_tester-1", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 49\n[mcontest]: AVG: 49.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "name": "part1_tester-2", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 49\n[mcontest]: AVG: 49.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "name": "part1_tester-3", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 49\n[mcontest]: AVG: 49.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "name": "part1_tester-4", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 49\n[mcontest]: AVG: 49.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "name": "part1_tester-5", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
+        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 49\n[mcontest]: AVG: 49.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "name": "part1_tester-6", 
+        "ptsPossible": 1.0
+      }
+    ], 
+    "revision": "38235", 
+    "checksum": "6d3794d8c9b001baa9258bae2ea1b8c4f67b79ef  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt"
+  }, 
+  {
+    "timestamp": "2016-10-01 22:00:00.578257", 
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 108\n[mcontest]: AVG: 64.800000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "part1_tester-1", 
+        "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 136314936.999998\n[mcontest]: TIME: 0.592000\n\n\nstderr:\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "part1_tester-2", 
+        "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 2097249\n[mcontest]: AVG: 1048641.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "part1_tester-3", 
+        "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nMemory failed to allocate!\n[mcontest]: STATUS: FAILED=(256)\n[mcontest]: MAX: 1342181505\n[mcontest]: AVG: 966368538.600000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "part1_tester-4", 
+        "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 4947896\n[mcontest]: AVG: 3791236.833333\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "part1_tester-5", 
+        "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 1789569835\n[mcontest]: AVG: 1073741901.600000\n[mcontest]: TIME: 0.196000\n\n\nstderr:\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "part1_tester-6", 
+        "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)"
+      }
+    ], 
+    "checksum": "e639d3c42212038f88f57a1374676fdb50e0af9b  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
+    "revision": "38908"
+  }, 
+  {
+    "timestamp": "2016-10-02 22:00:00.575781", 
+    "testcases": [
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
+        "name": "part1_tester-1", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nSending a SIGTERM to kill the child process (pid=4254) for running for over 30sec.\n[mcontest]: STATUS: FAILED=(15)\n[mcontest]: MAX: 36\n[mcontest]: AVG: 36.000000\n[mcontest]: TIME: 29.988000\n\n\nstderr:\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
+        "name": "part1_tester-2", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 0.732000\n\n\nstderr:\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)", 
+        "name": "part1_tester-3", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1048641\n[mcontest]: AVG: 1048553.630562\n[mcontest]: TIME: 0.316000\n\n\nstderr:\n"
       }, 
       {
         "ptsPossible": 1.0, 
@@ -231,80 +280,80 @@
         "ptsEarned": 0.0, 
         "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)", 
         "name": "part1_tester-5", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 4947896\n[mcontest]: AVG: 3791236.833333\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n"
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 4899665\n[mcontest]: AVG: 3559905.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n"
       }, 
       {
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
         "name": "part1_tester-6", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 1789569835\n[mcontest]: AVG: 1073741901.600000\n[mcontest]: TIME: 0.196000\n\n\nstderr:\n"
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 1789569835\n[mcontest]: AVG: 1073741901.600000\n[mcontest]: TIME: 0.192000\n\n\nstderr:\n"
       }
     ], 
-    "revision": "38908", 
-    "checksum": "e639d3c42212038f88f57a1374676fdb50e0af9b  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt"
+    "revision": "39221", 
+    "checksum": "61a2d950c42611f805fb0780c85354f19fa33a1f  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt"
   }, 
   {
-    "timestamp": "2016-10-02 22:00:00.575781", 
+    "timestamp": "2016-10-03 12:00:00.608271", 
     "testcases": [
       {
         "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nSending a SIGTERM to kill the child process (pid=4254) for running for over 30sec.\n[mcontest]: STATUS: FAILED=(15)\n[mcontest]: MAX: 36\n[mcontest]: AVG: 36.000000\n[mcontest]: TIME: 29.988000\n\n\nstderr:\n", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 4164\n[mcontest]: AVG: 36.000206\n[mcontest]: TIME: 0.284000\n\n\nstderr:\n", 
         "name": "part1_tester-1", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
         "ptsEarned": 1.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 0.732000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 1.028000\n\n\nstderr:\n", 
         "name": "part1_tester-2", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)", 
         "ptsEarned": 1.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1048641\n[mcontest]: AVG: 1048553.630562\n[mcontest]: TIME: 0.316000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1048641\n[mcontest]: AVG: 1048553.630562\n[mcontest]: TIME: 0.320000\n\n\nstderr:\n", 
         "name": "part1_tester-3", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nMemory failed to allocate!\n[mcontest]: STATUS: FAILED=(256)\n[mcontest]: MAX: 1342181505\n[mcontest]: AVG: 966368538.600000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1610612385\n[mcontest]: AVG: 1610611488.998474\n[mcontest]: TIME: 0.084000\n\n\nstderr:\n", 
         "name": "part1_tester-4", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 4899665\n[mcontest]: AVG: 3559905.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1010368158\n[mcontest]: AVG: 514877389.575574\n[mcontest]: TIME: 2.276000\n\n\nstderr:\n", 
         "name": "part1_tester-5", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 1789569835\n[mcontest]: AVG: 1073741901.600000\n[mcontest]: TIME: 0.192000\n\n\nstderr:\n", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 2445745458\n[mcontest]: AVG: 2018237108.023809\n[mcontest]: TIME: 7.912000\n\n\nstderr:\n", 
         "name": "part1_tester-6", 
         "ptsPossible": 1.0
       }
     ], 
-    "checksum": "61a2d950c42611f805fb0780c85354f19fa33a1f  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
-    "revision": "39221"
+    "checksum": "1c1f983985b5a4adfee5369ee7ee3c26c97daee8  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
+    "revision": "39866"
   }, 
   {
-    "timestamp": "2016-10-03 12:00:00.608271", 
+    "timestamp": "2016-10-04 10:32:53.258876", 
     "testcases": [
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 4164\n[mcontest]: AVG: 36.000206\n[mcontest]: TIME: 0.284000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 4164\n[mcontest]: AVG: 36.000206\n[mcontest]: TIME: 0.280000\n\n\nstderr:\n", 
         "ptsEarned": 1.0, 
         "ptsPossible": 1.0, 
         "name": "part1_tester-1", 
         "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 1.028000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 1.036000\n\n\nstderr:\n", 
         "ptsEarned": 1.0, 
         "ptsPossible": 1.0, 
         "name": "part1_tester-2", 
@@ -325,86 +374,121 @@
         "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1010368158\n[mcontest]: AVG: 514877389.575574\n[mcontest]: TIME: 2.276000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1010368158\n[mcontest]: AVG: 514877389.575574\n[mcontest]: TIME: 2.308000\n\n\nstderr:\n", 
         "ptsEarned": 1.0, 
         "ptsPossible": 1.0, 
         "name": "part1_tester-5", 
         "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 2445745458\n[mcontest]: AVG: 2018237108.023809\n[mcontest]: TIME: 7.912000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 2445745458\n[mcontest]: AVG: 2018237108.023809\n[mcontest]: TIME: 7.952000\n\n\nstderr:\n", 
         "ptsEarned": 1.0, 
         "ptsPossible": 1.0, 
         "name": "part1_tester-6", 
         "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)"
       }
     ], 
-    "revision": "39866", 
-    "checksum": "1c1f983985b5a4adfee5369ee7ee3c26c97daee8  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt"
-  }, 
-  {
-    "timestamp": "2016-10-04 10:32:53.258876", 
-    "testcases": [
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
-        "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
-        "name": "part1_tester-1", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 4164\n[mcontest]: AVG: 36.000206\n[mcontest]: TIME: 0.280000\n\n\nstderr:\n"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
-        "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
-        "name": "part1_tester-2", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 1.036000\n\n\nstderr:\n"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
-        "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)", 
-        "name": "part1_tester-3", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1048641\n[mcontest]: AVG: 1048553.630562\n[mcontest]: TIME: 0.320000\n\n\nstderr:\n"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
-        "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)", 
-        "name": "part1_tester-4", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1610612385\n[mcontest]: AVG: 1610611488.998474\n[mcontest]: TIME: 0.084000\n\n\nstderr:\n"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
-        "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)", 
-        "name": "part1_tester-5", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1010368158\n[mcontest]: AVG: 514877389.575574\n[mcontest]: TIME: 2.308000\n\n\nstderr:\n"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
-        "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
-        "name": "part1_tester-6", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 2445745458\n[mcontest]: AVG: 2018237108.023809\n[mcontest]: TIME: 7.952000\n\n\nstderr:\n"
-      }
-    ], 
-    "checksum": "7eabfd2282de35a06e876731b52435c667fd1b40  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
-    "revision": "41738"
+    "revision": "41738", 
+    "checksum": "7eabfd2282de35a06e876731b52435c667fd1b40  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt"
   }, 
   {
     "timestamp": "2016-10-04 22:00:00.129693", 
     "testcases": [
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
+        "name": "part2_tester-1", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nSending a SIGTERM to kill the child process (pid=12535) for running for over 30sec.\n[mcontest]: STATUS: FAILED=(15)\n[mcontest]: MAX: 36\n[mcontest]: AVG: 36.000000\n[mcontest]: TIME: 29.996000\n\n\nstderr:\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
+        "name": "part2_tester-2", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 0.676000\n\n\nstderr:\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "./mcontest testers_exe/tester-3 (timeout 60 seconds)", 
+        "name": "part2_tester-3", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 1048641\n[mcontest]: AVG: 1048553.630562\n[mcontest]: TIME: 0.316000\n\n\nstderr:\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-4 (timeout 60 seconds)", 
+        "name": "part2_tester-4", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1073741889\n[mcontest]: AVG: 536870961.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\nData allocated outside of heap."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)", 
+        "name": "part2_tester-5", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 4899665\n[mcontest]: AVG: 3559905.000000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
+        "name": "part2_tester-6", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1073741889\n[mcontest]: AVG: 536870961.000000\n[mcontest]: TIME: 0.204000\n\n\nstderr:\nData allocated outside of heap."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-7 (timeout 60 seconds)", 
+        "name": "part2_tester-7", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1073741889\n[mcontest]: AVG: 536870961.000000\n[mcontest]: TIME: 0.192000\n\n\nstderr:\nData allocated outside of heap."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-8 (timeout 60 seconds)", 
+        "name": "part2_tester-8", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1073741889\n[mcontest]: AVG: 536870961.000000\n[mcontest]: TIME: 0.192000\n\n\nstderr:\nData allocated outside of heap."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-9 (timeout 60 seconds)", 
+        "name": "part2_tester-9", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1179698\n[mcontest]: AVG: 831911.600000\n[mcontest]: TIME: 0.000000\n\n\nstderr:\nData allocated outside of heap."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-10 (timeout 60 seconds)", 
+        "name": "part2_tester-10", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 536871041\n[mcontest]: AVG: 287609509.571429\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "./mcontest testers_exe/tester-10 (timeout 60 seconds)", 
+        "name": "part2_tester-11", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(11)\n[mcontest]: MAX: 2147483713\n[mcontest]: AVG: 1431655819.666667\n[mcontest]: TIME: 0.000000\n\n\nstderr:\n"
+      }
+    ], 
+    "checksum": "a570508d1fe5f8099ddeda5c2006884c638158b6  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
+    "revision": "42600"
+  }, 
+  {
+    "timestamp": "2016-10-05 22:00:00.588316", 
+    "testcases": [
+      {
         "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)", 
         "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nSending a SIGTERM to kill the child process (pid=12535) for running for over 30sec.\n[mcontest]: STATUS: FAILED=(15)\n[mcontest]: MAX: 36\n[mcontest]: AVG: 36.000000\n[mcontest]: TIME: 29.996000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nSending a SIGTERM to kill the child process (pid=31743) for running for over 30sec.\n[mcontest]: STATUS: FAILED=(15)\n[mcontest]: MAX: 36\n[mcontest]: AVG: 36.000000\n[mcontest]: TIME: 29.988000\n\n\nstderr:\n", 
         "name": "part2_tester-1", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "./mcontest testers_exe/tester-2 (timeout 60 seconds)", 
         "ptsEarned": 1.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 0.676000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 0.680000\n\n\nstderr:\n", 
         "name": "part2_tester-2", 
         "ptsPossible": 1.0
       }, 
@@ -432,7 +516,7 @@
       {
         "description": "./mcontest testers_exe/tester-6 (timeout 60 seconds)", 
         "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1073741889\n[mcontest]: AVG: 536870961.000000\n[mcontest]: TIME: 0.204000\n\n\nstderr:\nData allocated outside of heap.", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1073741889\n[mcontest]: AVG: 536870961.000000\n[mcontest]: TIME: 0.200000\n\n\nstderr:\nData allocated outside of heap.", 
         "name": "part2_tester-6", 
         "ptsPossible": 1.0
       }, 
@@ -472,21 +556,21 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "42600", 
+    "revision": "44036", 
     "checksum": "a570508d1fe5f8099ddeda5c2006884c638158b6  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt"
   }, 
   {
-    "timestamp": "2016-10-05 22:00:00.588316", 
+    "timestamp": "2016-10-06 22:00:00.571802", 
     "testcases": [
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nSending a SIGTERM to kill the child process (pid=31743) for running for over 30sec.\n[mcontest]: STATUS: FAILED=(15)\n[mcontest]: MAX: 36\n[mcontest]: AVG: 36.000000\n[mcontest]: TIME: 29.988000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\nSending a SIGTERM to kill the child process (pid=17981) for running for over 30sec.\n[mcontest]: STATUS: FAILED=(15)\n[mcontest]: MAX: 36\n[mcontest]: AVG: 36.000000\n[mcontest]: TIME: 29.988000\n\n\nstderr:\n", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "part2_tester-1", 
         "description": "./mcontest testers_exe/tester-1 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 0.680000\n\n\nstderr:\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n\nstdout:\nMemory was allocated, used, and freed!\n[mcontest]: STATUS: OK\n[mcontest]: MAX: 230686785\n[mcontest]: AVG: 183500852.000002\n[mcontest]: TIME: 0.688000\n\n\nstderr:\n", 
         "ptsPossible": 1.0, 
         "ptsEarned": 1.0, 
         "name": "part2_tester-2", 
@@ -514,7 +598,7 @@
         "description": "./mcontest testers_exe/tester-5 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1073741889\n[mcontest]: AVG: 536870961.000000\n[mcontest]: TIME: 0.200000\n\n\nstderr:\nData allocated outside of heap.", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1073741889\n[mcontest]: AVG: 536870961.000000\n[mcontest]: TIME: 0.192000\n\n\nstderr:\nData allocated outside of heap.", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "part2_tester-6", 
@@ -528,7 +612,7 @@
         "description": "./mcontest testers_exe/tester-7 (timeout 60 seconds)"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1073741889\n[mcontest]: AVG: 536870961.000000\n[mcontest]: TIME: 0.192000\n\n\nstderr:\nData allocated outside of heap.", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test\n\nstdout:\n[mcontest]: STATUS: FAILED=(23296)\n[mcontest]: MAX: 1073741889\n[mcontest]: AVG: 536870961.000000\n[mcontest]: TIME: 0.196000\n\n\nstderr:\nData allocated outside of heap.", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "part2_tester-8", 
@@ -557,6 +641,6 @@
       }
     ], 
     "checksum": "a570508d1fe5f8099ddeda5c2006884c638158b6  alloc.c\n97d2485eab34967d8061e620834ddab4e9aeaf95  nickname.txt", 
-    "revision": "44036"
+    "revision": "44914"
   }
 ]
