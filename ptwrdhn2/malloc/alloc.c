@@ -9,9 +9,7 @@
 #include <unistd.h>
 
 typedef struct _meta_data {
-	size_t is_free;
 	size_t size;
-	struct _meta_data *prev_free;
 	struct _meta_data *next_free;
 } meta_data;
 
@@ -29,45 +27,6 @@ static meta_data *first_free = NULL;
 // 		a -> size += co -> size + sizeof(meta_data);
 // 	}
 // }
-
-void insert_meta_data(meta_data *this, size_t is_free, size_t size, meta_data *prev_free, meta_data *next_free){
-	this -> is_free = is_free;
-	this -> size = size;
-	this -> prev_free = prev_free;
-	this -> next_free = next_free;
-}
-
-void *first_fit(size_t size_needed){
-	meta_data *found = NULL;
-	meta_data *curr = first_free;
-	while(curr != NULL){
-		if(curr -> size >= size_needed){
-			if(curr -> size <= (size_needed + sizeof(meta_data))){
-				if(curr -> prev_free){
-					curr -> prev_free -> next_free = curr -> next_free;
-				}
-				if(curr -> next_free){
-					curr -> next_free -> prev_free = curr -> prev_free;
-				}
-				curr -> is_free = 0;
-				found = curr;
-				break;
-			}
-			else{
-				size_t original = curr -> size;
-				found = (meta_data *)(curr + sizeof(meta_data) + size_needed);
-				insert_meta_data(found, 1, (original - size_needed - sizeof(meta_data)), curr -> prev_free, curr -> next_free);
-				curr -> next_free = found;
-				curr -> size = size_needed;
-				curr -> is_free = 0;
-				return curr;
-			}
-		}
-		curr = curr -> next_free;
-	}
-	return found;
-}
-
 
 /**
 * Allocate space for array in memory
@@ -98,6 +57,43 @@ void *calloc(size_t num, size_t size) {
 	return mem;
 }
 
+/*
+void insert_meta_data(meta_data *this, size_t size, meta_data *prev_free, meta_data *next_free){
+this -> size = size;
+this -> prev_free = prev_free;
+this -> next_free = next_free;
+}
+
+void *first_fit(size_t size_needed){
+meta_data *found = NULL;
+meta_data *curr = first_free;
+while(curr != NULL){
+if(curr -> size >= size_needed){
+if(curr -> size <= (size_needed + sizeof(meta_data))){
+if(curr -> prev_free){
+curr -> prev_free -> next_free = curr -> next_free;
+}
+if(curr -> next_free){
+curr -> next_free -> prev_free = curr -> prev_free;
+}
+found = curr;
+break;
+}
+else{
+size_t original = curr -> size;
+found = (meta_data *)(curr + sizeof(meta_data) + size_needed);
+insert_meta_data(found, (original - size_needed - sizeof(meta_data)), curr -> prev_free, curr -> next_free);
+curr -> next_free = found;
+curr -> size = size_needed;
+return curr;
+}
+}
+curr = curr -> next_free;
+}
+return found;
+}
+*/
+
 /**
 * Allocate memory block
 *
@@ -119,51 +115,59 @@ void *calloc(size_t num, size_t size) {
 *
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
-void *malloc(size_t size) {
-
+void *malloc(size_t size){
 	if(size == 0) return NULL;
-	meta_data *newmem = NULL;
-	if((newmem = first_fit(size)) == NULL){
+	meta_data *temp = first_free;
 
-		newmem = (meta_data *)sbrk(size + sizeof(meta_data));
-		if(newmem == (void *)(-1)) return NULL;
+	if(first_free != NULL) {
+		if(first_free -> size >= size) {
+			first_free = first_free -> next;
 
-		insert_meta_data(newmem, 0, size, NULL, NULL);
+
+			return (void*)temp+sizeof(meta_data);
+		}
+		else
+		{
+			while(temp -> next != NULL)
+			{
+				if(temp -> next -> size >= size) {
+					meta_data *touse = temp -> next;
+					temp -> next = touse -> next;
+
+					return (void*)touse+sizeof(meta_data);
+				}
+				temp = temp -> next;
+			}
+		}
 	}
-	return (void *)(newmem + 1);
+
+
+	void *p = sbrk(0);
+	p = sbrk(size+sizeof(meta_data));
+
+	if(p == (void*)-1) return NULL;
+
+	meta_data *last_free = p;
+	meta_data *newmem = p;
+
+	newmem -> size = size;
+	newmem -> next = NULL;
+
+	return (void*)newmem+sizeof(meta_data);
+
 }
 
-/**
-* Deallocate space in memory
-*
-* A block of memory previously allocated using a call to malloc(),
-* calloc() or realloc() is deallocated, making it available again for
-* further allocations.
-*
-* Notice that this function leaves the value of ptr unchanged, hence
-* it still points to the same (now invalid) location, and not to the
-* null pointer.
-*
-* @param ptr
-*    Pointer to a memory block previously allocated with malloc(),
-*    calloc() or realloc() to be deallocated.  If a null pointer is
-*    passed as argument, no action occurs.
-*/
-void free(void *in) {
-	meta_data *ptr = (meta_data *)in;
-	meta_data *to_free = (meta_data *)(ptr - 1);
-	to_free -> is_free = 1;
-	if(!first_free){
-		first_free = to_free;
-	}
-	to_free -> prev_free = last_free;
-	if(to_free -> prev_free){
-		to_free -> prev_free -> next_free = to_free;
-	}
-	last_free = to_free;
-	// if((to_free -> next && to_free -> next -> is_free) || (to_free -> prev && to_free -> prev -> is_free)){
-	// 	coalesce(to_free);
-	// }
+
+
+void free(void *ptr) {
+	if (!ptr) return;
+
+	meta_data *tofree = ptr-sizeof(meta_data);
+
+	tofree -> next = first_free;
+	first_free = tofree;
+
+	return;
 }
 
 /**
@@ -212,23 +216,23 @@ void free(void *in) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/realloc/
 */
 void *realloc(void *ptr, size_t size) {
-	meta_data *curr = (meta_data *)(ptr - sizeof(meta_data));
-	if(size == curr -> size) return ptr;
-	if(size == 0){
+	if (!ptr) return malloc(size);
+
+	if (!size){
 		free(ptr);
 		return NULL;
 	}
-	if(ptr == NULL) return malloc(size);
-	// if(size > curr -> size){
-	// 	if(curr -> next -> is_free && size < ((curr -> size) + sizeof(meta_data) + (curr -> next -> size))){
-	// 		curr -> size = size;
-	// 	}
-	// 	else{
-	//
-	// 	}
-	// }
-	// else if(size < curr -> size){
-	//
-	// }
-	return NULL;
+
+	meta_data *p = ptr-sizeof(meta_data);
+	if(p -> size >= size) return ptr;
+
+	if(p -> size < size){
+		free(ptr);
+
+		void* newptr = malloc(size);
+		memcpy(newptr, ptr, p -> size);
+
+		return newptr;
+	}
+	return ptr;
 }
