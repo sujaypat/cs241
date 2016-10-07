@@ -13,7 +13,6 @@ typedef struct _meta_data {
 	struct _meta_data *next_free;
 } meta_data;
 
-static meta_data *last_free = NULL;
 static meta_data *first_free = NULL;
 
 // void coalesce(void *same){
@@ -143,7 +142,6 @@ void *malloc(size_t size){
 
 	if(p == (void*)-1) return NULL;
 
-	last_free = p;
 	meta_data *newmem = p;
 
 	newmem -> size = size;
@@ -219,7 +217,7 @@ void *realloc(void *ptr, size_t size) {
 		return NULL;
 	}
 
-	meta_data *p = ptr-sizeof(meta_data);
+	meta_data *p = ptr - sizeof(meta_data);
 	if(p -> size >= size) return ptr;
 
 	if(p -> size < size){
