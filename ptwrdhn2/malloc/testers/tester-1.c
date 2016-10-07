@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define NUM_CYCLES 10000000
+#define NUM_CYCLES 100
 
 int main() {
 	int i;
