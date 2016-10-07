@@ -122,7 +122,7 @@ void *malloc(size_t size){
 	if(first_free != NULL) {
 		if(first_free -> size >= size) {
 			first_free = first_free -> next_free;
-			return (void*)temp+sizeof(meta_data);
+			return (void*)temp + sizeof(meta_data);
 		}
 		else {
 			while(temp -> next_free != NULL) {
@@ -158,7 +158,7 @@ void *malloc(size_t size){
 void free(void *ptr) {
 	if (!ptr) return;
 
-	meta_data *tofree = ptr-sizeof(meta_data);
+	meta_data *tofree = ptr - sizeof(meta_data);
 
 	tofree -> next_free = first_free;
 	first_free = tofree;
