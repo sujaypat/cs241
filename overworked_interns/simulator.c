@@ -98,8 +98,8 @@ void *surveillance_start(void *cp) {
 
 size_t *arg_parse(int argc, char *argv[]) {
   if (argc != 3 && argc != 4) {
-    fprintf(stderr, "usage: %s [num_interns] [num_companies]\n", argv[0]);
-    fprintf(stderr, "OR usage: %s [num_interns] [num_companies] [delta]\n",
+    fprintf(stderr, "usage: %s [num_companies] [num_interns]\n", argv[0]);
+    fprintf(stderr, "OR usage: %s [num_companies] [num_interns] [delta]\n",
             argv[0]);
     exit(1);
   }
