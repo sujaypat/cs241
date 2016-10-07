@@ -18,6 +18,7 @@ int main() {
 			printf("Memory failed to allocate!\n");
 			return 1;
 		}
+		printf("%p\n", ptr);
 		*ptr = 4;
 		free(ptr);
 	}
