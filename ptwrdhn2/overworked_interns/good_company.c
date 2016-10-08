@@ -19,7 +19,7 @@ void *work_interns(void *p) {
 		right_intern = Company_get_right_intern(meme_inc);
 
 		if(comp_num % 2){
-			pthread_mutex_t temp = left_intern;
+			pthread_mutex_t *temp = left_intern;
 			left_intern = right_intern;
 			right_intern = temp;
 		}
