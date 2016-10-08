@@ -15,9 +15,9 @@ void *work_interns(void *p) {
 
 	while (running) {
 		int comp_num = Company_get_company_number(meme_inc);
-		left_intern = !(comp_num % 2) ? Company_get_left_intern(meme_inc); : Company_get_right_intern(meme_inc);
+		left_intern = !(comp_num % 2) ? Company_get_left_intern(meme_inc) : Company_get_right_intern(meme_inc);
 
-		right_intern = !(comp_num % 2) ? Company_get_right_intern(meme_inc); : Company_get_left_intern(meme_inc);
+		right_intern = !(comp_num % 2) ? Company_get_right_intern(meme_inc) : Company_get_left_intern(meme_inc);
 
 		if(comp_num % 2){
 			pthread_mutex_t *temp = left_intern;
