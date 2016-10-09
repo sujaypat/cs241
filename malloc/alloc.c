@@ -25,7 +25,7 @@ void coalesce(void *same){
 	if(a && a -> free){
 		co -> size += a -> size + sizeof(meta_data);
 		if((meta_data *)(co + sizeof(meta_data) + co -> size))
-			(meta_data *)(co + sizeof(meta_data) + co -> size) -> next = co;
+			((meta_data *)(co + sizeof(meta_data) + co -> size)) -> next = co;
 		write(0, "coalescing\n", 12);
 	}
 	// if((a = (co -> prev)) && a -> free){
