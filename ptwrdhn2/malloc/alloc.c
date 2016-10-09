@@ -130,7 +130,7 @@ void *malloc(size_t size) {
 */
 void free(void *ptr) {
 	if (!ptr) return;
-	meta_data *ptr2 = (meta_data*)ptr - 1;
+	meta_data *ptr2 = (meta_data*)ptr + 1;
 	ptr2 -> free = 1;
 	is_free = 1;
 	coalesce(ptr2);
@@ -185,7 +185,7 @@ void free(void *ptr) {
 void *realloc(void *ptr, size_t size) {
 	if (!ptr) return malloc(size);
 	if (size == 0) free(ptr);
-	meta_data *p = (meta_data*) ptr - 1;
+	meta_data *p = (meta_data*) ptr + 1;
 	if (p -> size >= size) {
 		return ptr;
 	}
