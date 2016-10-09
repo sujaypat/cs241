@@ -21,7 +21,7 @@ meta_data *head = NULL;
 void coalesce(void *same){
 	meta_data *co = (meta_data *)same;
 	meta_data *a = NULL;
-	if((a = (co + sizeof(meta_data) + co -> size)) && a -> free){
+	if((a = (co + sizeof(meta_data) + co -> size)) && a && a -> free){
 		co -> size += a -> size + sizeof(meta_data);
 		co -> next = a -> next;
 	}
@@ -132,7 +132,7 @@ void free(void *ptr) {
 	meta_data *ptr2 = (meta_data*)ptr - 1;
 	ptr2 -> free = 1;
 	is_free = 1;
-	// coalesce(ptr2);
+	coalesce(ptr2);
 	return;
 }
 
