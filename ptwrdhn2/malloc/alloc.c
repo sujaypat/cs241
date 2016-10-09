@@ -20,13 +20,14 @@ int is_free = 0;
 meta_data *head = NULL;
 
 void coalesce(void *same){
+	meta_data *a = same + sizeof(meta_data) + (meta_data *)same -> size;
 	meta_data *co = (meta_data *)same;
-	meta_data *a = co + sizeof(meta_data) + co -> size;
 	if(a && a->size) write(0, "exists\n", 8);
 	if(a && a -> free){
 		co -> size += a -> size + sizeof(meta_data);
-		if((meta_data *)(co + sizeof(meta_data) + co -> size))
+		if((meta_data *)(co + sizeof(meta_data) + co -> size)){
 			((meta_data *)(co + sizeof(meta_data) + co -> size)) -> next = co;
+		}
 		write(0, "coalescing\n", 12);
 	}
 	// if((a = (co -> prev)) && a -> free){
