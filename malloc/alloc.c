@@ -13,7 +13,7 @@ typedef struct _meta_data {
 	size_t size;
 	int free;
 	struct _meta_data *next;
-	struct _meta_data *prev;
+	// struct _meta_data *prev;
 
 } meta_data;
 int is_free = 0;
