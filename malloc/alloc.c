@@ -13,6 +13,7 @@ typedef struct _meta_data {
 	size_t size;
 	int free;
 	struct _meta_data *next;
+	struct _meta_data *prev;
 
 } meta_data;
 int is_free = 0;
@@ -21,7 +22,7 @@ meta_data *head = NULL;
 void coalesce(void *same){
 	meta_data *co = (meta_data *)same;
 	meta_data *a = NULL;
-	if((a = (co + sizeof(meta_data) + co -> size)) && a && a -> free){
+	if((a = (co - sizeof(meta_data) - co -> size)) && a && a -> free){
 		co -> size += a -> size + sizeof(meta_data);
 		co -> next = a -> next;
 	}
