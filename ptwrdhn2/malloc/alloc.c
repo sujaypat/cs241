@@ -19,6 +19,7 @@ typedef struct _meta_data {
 int is_free = 0;
 meta_data *head = NULL;
 
+
 void coalesce(void *same){
 	meta_data *a = same + sizeof(meta_data) + ((meta_data *)same) -> size;
 	meta_data *co = (meta_data *)same;
@@ -113,10 +114,13 @@ void *malloc(size_t size) {
 				if(p == head){
 					head = newBlock;
 				}
-
-				if(((void*)p) + sizeof(meta_data) + p -> size <= ((void*)head) + sizeof(meta_data) + head -> size){
+				else{
 					((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
 				}
+
+				// if(((void*)p) + sizeof(meta_data) + p -> size <= ((void*)head) + sizeof(meta_data) + head -> size){
+				// 	((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
+				// }
 				p -> size = size;
 				chosen = p;
 				break;
