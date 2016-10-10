@@ -8,15 +8,16 @@
 #include <string.h>
 #include <unistd.h>
 
-
 typedef struct _meta_data {
+	void *ptr;
 	size_t size;
-	struct _meta_data* next;
+	int free;
+	struct _meta_data *next;
+	// struct _meta_data *prev;
+
 } meta_data;
-
+int is_free = 0;
 meta_data *head = NULL;
-meta_data *tail = NULL;
-
 
 
 void coalesce(void *same){
@@ -28,7 +29,7 @@ void coalesce(void *same){
 		if(a == head){
 			head = co;
 		}
-		if(((meta_data *)(same + sizeof(meta_data) + co -> size)) -> size){
+		if((meta_data *)(same + sizeof(meta_data) + co -> size)){
 			((meta_data *)(same + sizeof(meta_data) + co -> size)) -> next = co;
 		}
 	}
@@ -94,7 +95,6 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
-	
 	meta_data *p = head;
 	meta_data *chosen = NULL;
 	if (size <= 0) return NULL;
