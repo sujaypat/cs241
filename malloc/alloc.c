@@ -13,9 +13,8 @@ typedef struct _meta_data {
 	size_t size;
 	int free;
 	struct _meta_data *next;
-	// struct _meta_data *prev;
-
 } meta_data;
+
 int is_free = 0;
 meta_data *head = NULL;
 
@@ -165,7 +164,7 @@ void free(void *ptr) {
 	meta_data *ptr2 = (meta_data*)ptr - 1;
 	ptr2 -> free = 1;
 	is_free = 1;
-	coalesce(ptr2);
+	// coalesce(ptr2);
 	return;
 }
 
