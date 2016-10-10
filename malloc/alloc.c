@@ -15,8 +15,7 @@ typedef struct _meta_data {
 	struct _meta_data *next;
 } meta_data;
 
-int num_free = 0;
-int num_alloced = 0;
+int is_free = 0;
 meta_data *head = NULL;
 
 
@@ -98,11 +97,10 @@ void *malloc(size_t size) {
 	meta_data *p = head;
 	meta_data *chosen = NULL;
 	if (size <= 0) return NULL;
-	if (num_free > 0){
+	if (is_free){
 		while (p != NULL) { // block splitting needs to be done here
 			if (p -> free && p -> size >= size && p -> size <= size + sizeof(meta_data)) {
 				chosen = p;
-				num_free--;
 				break;
 			}
 			else if(p -> free && p -> size > size + 2 * sizeof(meta_data)){
@@ -142,7 +140,7 @@ void *malloc(size_t size) {
 	chosen -> free = 0;
 	chosen -> next = head;
 	head = chosen;
-	num_free--;
+	is_free = 0;
 	return chosen -> ptr;
 }
 
@@ -166,7 +164,7 @@ void free(void *ptr) {
 	if (!ptr) return;
 	meta_data *ptr2 = (meta_data*)ptr - 1;
 	ptr2 -> free = 1;
-	num_free++;
+	is_free = 1;
 	coalesce(ptr2);
 	return;
 }
@@ -217,14 +215,8 @@ void free(void *ptr) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/realloc/
 */
 void *realloc(void *ptr, size_t size) {
-	if (!ptr){
-		num_free--;
-		return malloc(size);
-	}
-	if (size == 0){
-		num_free++;
-		free(ptr);
-	}
+	if (!ptr) return malloc(size);
+	if (size == 0) free(ptr);
 	meta_data *p = (meta_data*) ptr - 1;
 	if (p -> size >= size) {
 		return ptr;
