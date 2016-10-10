@@ -216,7 +216,7 @@ void *realloc(void *ptr, size_t size) {
 	}
 	else{
 		void* out = malloc(size);
-		memcpy(out, ptr, p -> size);
+		memcpy(out, ptr, size);
 		free(ptr);
 		return out;
 	}
