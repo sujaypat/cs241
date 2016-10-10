@@ -24,7 +24,7 @@ void coalesce(void *same){
 	meta_data *a = same + sizeof(meta_data) + ((meta_data *)same) -> size;
 	meta_data *co = (meta_data *)same;
 
-	if((void *)a < (void *)head && a -> free){
+	if((void *)a != (void *)head && a -> free){
 		// write(0, "coalesce\n", 10);
 		co -> size += a -> size + sizeof(meta_data);
 		if(a == head){
