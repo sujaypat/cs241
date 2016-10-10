@@ -112,6 +112,24 @@ void *malloc(size_t size) {
 	if (num_free > 0){
 		while (p != NULL) { // block splitting needs to be done here
 			if (p -> free && p -> size >= size){
+				if(p -> size > size + 2 * sizeof(meta_data)){
+					// write(0, "split\n", 7);
+					meta_data *newBlock = (meta_data *)(((void*)p) + sizeof(meta_data) + size);
+					newBlock -> next = p;
+					newBlock -> free = 1;
+					newBlock -> size = p -> size - sizeof(meta_data) - size;
+					newBlock -> ptr = (((void *)newBlock) + sizeof(meta_data));
+					if(p == head){
+						head = newBlock;
+					}
+					else{
+						((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
+					}
+					num_free++;
+					p -> size = size;
+					chosen = p;
+					break;
+				}
 				num_free--;
 				chosen = p;
 				break;
@@ -141,24 +159,7 @@ void *malloc(size_t size) {
 			prev_prev_prev = prev_prev;
 			prev_prev = prev;
 			prev = p;
-			// else if(p -> free && p -> size > size + 2 * sizeof(meta_data)){
-			// 	// write(0, "split\n", 7);
-			// 	meta_data *newBlock = (meta_data *)(((void*)p) + sizeof(meta_data) + size);
-			// 	newBlock -> next = p;
-			// 	newBlock -> free = 1;
-			// 	newBlock -> size = p -> size - sizeof(meta_data) - size;
-			// 	newBlock -> ptr = (((void *)newBlock) + sizeof(meta_data));
-			// 	if(p == head){
-			// 		head = newBlock;
-			// 	}
-			// 	else{
-			// 		((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
-			// 	}
-			// 	num_free++;
-			// 	p -> size = size;
-			// 	chosen = p;
-			// 	break;
-			// }
+
 			p = p -> next;
 		}
 
