@@ -96,8 +96,20 @@ void *malloc(size_t size) {
 	if (size <= 0) return NULL;
 	if (is_free){
 		while (p != NULL) { // block splitting needs to be done here
-			if (p -> free && p -> size >= size) {
+			if (p -> free && p -> size >= size && p -> size <= size + sizeof(meta_data)) {
 				chosen = p;
+				break;
+			}
+			else if(p -> free && p -> size > size + sizeof(meta_data)){
+				metadata *newBlock = ((void*)p) + sizeof(meta_data) + size;
+				newBlock -> next = p;
+				newBlock -> free = 1;
+				newBlock -> size = p -> size - sizeof(meta_data) - size;
+				if(((void*)p) + sizeof(meta_data) + p -> size <= ((void*)head) + sizeof(meta_data) + head -> size){
+					(meta_data*(((void*)p)+ sizeof(md) + p -> size)) -> next = newBlock;
+				}
+				p -> size = size;
+				p -> free = 0;
 				break;
 			}
 			p = p -> next;
