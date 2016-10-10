@@ -9,8 +9,8 @@
 #define MIN_ALLOC_SIZE 24
 #define MAX_ALLOC_SIZE 1024 * 100
 #define CHANCE_OF_FREE 95
-#define CHANCE_OF_REALLOC 95
-#define TOTAL_ALLOCS 4
+#define CHANCE_OF_REALLOC 50
+#define TOTAL_ALLOCS 400000
 
 int main() {
   malloc(1);
