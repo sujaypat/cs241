@@ -122,7 +122,7 @@ void *malloc(size_t size) {
 
 	if(p == (void*)-1) return NULL;
 
-	*tail = p;
+	tail = p;
 	meta_data *cell = p;
 
 	cell->size = size;
