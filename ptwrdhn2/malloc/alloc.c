@@ -109,12 +109,10 @@ void *malloc(size_t size) {
 				newBlock -> ptr = (void *)(newBlock + sizeof(meta_data));
 
 				if(((void*)p) + sizeof(meta_data) + p -> size <= ((void*)head) + sizeof(meta_data) + head -> size){
-					((meta_data *)(((void*)p)+ sizeof(meta_data) + p -> size)) -> next = newBlock;
+					((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
 				}
 				p -> size = size;
-				// p -> ptr = (void *)(p + sizeof(meta_data));
 				chosen = p;
-				// p -> free = 0;
 				break;
 			}
 			p = p -> next;
@@ -122,7 +120,7 @@ void *malloc(size_t size) {
 
 		if (chosen) {
 			chosen -> free = 0;
-			return chosen->ptr;
+			return chosen -> ptr;
 		}
 	}
 	chosen = sbrk(0);
