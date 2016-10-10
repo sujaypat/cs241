@@ -104,9 +104,9 @@ void *malloc(size_t size) {
 	meta_data *p = head;
 	meta_data *chosen = NULL;
 
-	meta_data *prev = NULL;
-	meta_data *prev_prev = NULL;
-	meta_data *prev_prev_prev = NULL;
+	meta_data *metoothanks = NULL;
+	meta_data *same_tbh = NULL;
+	meta_data *metoothanks_metoothanks_metoothanks = NULL;
 
 	if (size <= 0) return NULL;
 	if (num_free > 0){
@@ -134,9 +134,9 @@ void *malloc(size_t size) {
 				chosen = p;
 				break;
 			}
-			else if (prev && prev -> free && p -> free && prev -> size + p -> size + sizeof(meta_data) >= size){
-				p -> size += prev -> size + sizeof(meta_data);
-				if(prev_prev) prev_prev -> next = p;
+			else if (metoothanks && metoothanks -> free && p -> free && metoothanks -> size + p -> size + sizeof(meta_data) >= size){
+				p -> size += metoothanks -> size + sizeof(meta_data);
+				if(same_tbh) same_tbh -> next = p;
 				else{
 					head = p;
 				}
@@ -144,21 +144,21 @@ void *malloc(size_t size) {
 				chosen = p;
 				break;
 			}
-			else if (prev && prev_prev && prev -> free && prev_prev -> free && p -> free && prev -> size + prev_prev -> size + p -> size + 2 * sizeof(meta_data) >= size){
-				p -> size += prev -> size + prev_prev -> size + 2 * sizeof(meta_data);
-				if(!prev_prev_prev){
+			else if (metoothanks && same_tbh && metoothanks -> free && same_tbh -> free && p -> free && metoothanks -> size + same_tbh -> size + p -> size + 2 * sizeof(meta_data) >= size){
+				p -> size += metoothanks -> size + same_tbh -> size + 2 * sizeof(meta_data);
+				if(!metoothanks_metoothanks_metoothanks){
 					head = p;
 				}
 				else{
-					prev_prev_prev -> next = p;
+					metoothanks_metoothanks_metoothanks -> next = p;
 				}
 				num_free -= 3;
 				chosen = p;
 				break;
 			}
-			prev_prev_prev = prev_prev;
-			prev_prev = prev;
-			prev = p;
+			metoothanks_metoothanks_metoothanks = same_tbh;
+			same_tbh = metoothanks;
+			metoothanks = p;
 			p = p -> next;
 		}
 
