@@ -29,7 +29,7 @@ void coalesce(void *same){
 		if(a == head){
 			head = co;
 		}
-		if((meta_data *)(same + sizeof(meta_data) + co -> size) -> size){
+		if(((meta_data *)(same + sizeof(meta_data) + co -> size)) -> size){
 			((meta_data *)(same + sizeof(meta_data) + co -> size)) -> next = co;
 		}
 	}
