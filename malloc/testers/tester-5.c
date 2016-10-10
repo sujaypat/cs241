@@ -10,7 +10,7 @@
 #define MAX_ALLOC_SIZE 1024 * 100
 #define CHANCE_OF_FREE 95
 #define CHANCE_OF_REALLOC 50
-#define TOTAL_ALLOCS 400000
+#define TOTAL_ALLOCS 4
 
 int main() {
   malloc(1);
