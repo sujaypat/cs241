@@ -103,7 +103,7 @@ void *malloc(size_t size) {
 		while (p != NULL) { // block splitting needs to be done here
 			if (p -> free && p -> size >= size && p -> size <= size + sizeof(meta_data)) {
 				chosen = p;
-				num_free--;
+				// num_free--;
 				break;
 			}
 			else if(p -> free && p -> size > size + 2 * sizeof(meta_data)){
