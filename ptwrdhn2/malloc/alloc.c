@@ -129,6 +129,8 @@ void *malloc(size_t size) {
 
 		if (chosen) {
 			chosen -> free = 0;
+			chosen -> next = head;
+			head = chosen;
 			return chosen -> ptr;
 		}
 	}
