@@ -140,6 +140,7 @@ void *malloc(size_t size) {
 	chosen -> free = 0;
 	chosen -> next = head;
 	head = chosen;
+	is_free = 0;
 	return chosen -> ptr;
 }
 
