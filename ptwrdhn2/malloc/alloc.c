@@ -25,6 +25,9 @@ void coalesce(void *same){
 	// if(a && a->size) write(0, "exists\n", 8);
 	if(((void *)a < ((void *)head + sizeof(meta_data) + head -> size)) && a -> free){
 		co -> size += a -> size + sizeof(meta_data);
+		if(a == head){
+			head = co;
+		}
 		if((meta_data *)(same + sizeof(meta_data) + co -> size)){
 			((meta_data *)(same + sizeof(meta_data) + co -> size)) -> next = co;
 		}
@@ -216,7 +219,7 @@ void *realloc(void *ptr, size_t size) {
 	}
 	else{
 		void* out = malloc(size);
-		memcpy(out, ptr, size);
+		memcpy(out, ptr, p -> size);
 		free(ptr);
 		return out;
 	}
