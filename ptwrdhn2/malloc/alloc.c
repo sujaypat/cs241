@@ -15,7 +15,8 @@ typedef struct _meta_data {
 	struct _meta_data *next;
 } meta_data;
 
-int is_free = 0;
+int num_free = 0;
+int num_alloc = 0;
 meta_data *head = NULL;
 
 
@@ -31,6 +32,7 @@ void coalesce(void *same){
 		if(same != head){
 			((meta_data *)(same + sizeof(meta_data) + co -> size)) -> next = co;
 		}
+		num_free--;
 	}
 	// if(co -> next && co -> next -> free){
 	// 	a = co -> next;
@@ -97,10 +99,11 @@ void *malloc(size_t size) {
 	meta_data *p = head;
 	meta_data *chosen = NULL;
 	if (size <= 0) return NULL;
-	if (is_free){
+	if (num_free > 0){
 		while (p != NULL) { // block splitting needs to be done here
 			if (p -> free && p -> size >= size && p -> size <= size + sizeof(meta_data)) {
 				chosen = p;
+				num_free--;
 				break;
 			}
 			else if(p -> free && p -> size > size + 2 * sizeof(meta_data)){
@@ -116,7 +119,7 @@ void *malloc(size_t size) {
 				else{
 					((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
 				}
-
+				num_free++;
 				p -> size = size;
 				chosen = p;
 				break;
@@ -126,6 +129,7 @@ void *malloc(size_t size) {
 
 		if (chosen) {
 			chosen -> free = 0;
+			num_free--;
 			return chosen -> ptr;
 		}
 	}
@@ -137,7 +141,7 @@ void *malloc(size_t size) {
 	chosen -> free = 0;
 	chosen -> next = head;
 	head = chosen;
-	is_free = 0;
+	num_alloc++;
 	return chosen -> ptr;
 }
 
@@ -161,7 +165,7 @@ void free(void *ptr) {
 	if (!ptr) return;
 	meta_data *ptr2 = (meta_data*)ptr - 1;
 	ptr2 -> free = 1;
-	is_free = 1;
+	num_free++;
 	coalesce(ptr2);
 	return;
 }
