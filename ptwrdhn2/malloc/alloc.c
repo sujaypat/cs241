@@ -116,7 +116,7 @@ void *malloc(size_t size) {
 				else{
 					((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
 				}
-			
+
 				// if(((void*)p) + sizeof(meta_data) + p -> size <= ((void*)head) + sizeof(meta_data) + head -> size){
 				// 	((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
 				// }
@@ -165,7 +165,7 @@ void free(void *ptr) {
 	meta_data *ptr2 = (meta_data*)ptr - 1;
 	ptr2 -> free = 1;
 	is_free = 1;
-	coalesce(ptr2);
+	// coalesce(ptr2);
 	return;
 }
 
