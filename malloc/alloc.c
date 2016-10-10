@@ -107,6 +107,9 @@ void *malloc(size_t size) {
 				newBlock -> free = 1;
 				newBlock -> size = p -> size - sizeof(meta_data) - size;
 				newBlock -> ptr = (void *)(newBlock + sizeof(meta_data));
+				if(p == head){
+					head = newBlock;
+				}
 
 				if(((void*)p) + sizeof(meta_data) + p -> size <= ((void*)head) + sizeof(meta_data) + head -> size){
 					((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
