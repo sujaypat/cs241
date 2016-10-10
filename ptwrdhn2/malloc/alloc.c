@@ -33,7 +33,6 @@ void coalesce(void *same){
 		a = co -> next;
 		a -> size += sizeof(meta_data) + co -> size;
 			((meta_data *)(co + sizeof(meta_data) + co -> size)) -> next = a;
-		}
 	}
 }
 
