@@ -98,11 +98,11 @@ void *malloc(size_t size) {
 	meta_data *p = head;
 	meta_data *chosen = NULL;
 	if (size <= 0) return NULL;
-	if (num_frees > 0){
+	if (num_free > 0){
 		while (p != NULL) { // block splitting needs to be done here
 			if (p -> free && p -> size >= size && p -> size <= size + sizeof(meta_data)) {
 				chosen = p;
-				num_frees--;
+				num_free--;
 				break;
 			}
 			else if(p -> free && p -> size > size + 2 * sizeof(meta_data)){
@@ -142,7 +142,7 @@ void *malloc(size_t size) {
 	chosen -> free = 0;
 	chosen -> next = head;
 	head = chosen;
-	num_frees--;
+	num_free--;
 	return chosen -> ptr;
 }
 
@@ -166,7 +166,7 @@ void free(void *ptr) {
 	if (!ptr) return;
 	meta_data *ptr2 = (meta_data*)ptr - 1;
 	ptr2 -> free = 1;
-	num_frees++;
+	num_free++;
 	coalesce(ptr2);
 	return;
 }
@@ -218,11 +218,11 @@ void free(void *ptr) {
 */
 void *realloc(void *ptr, size_t size) {
 	if (!ptr){
-		num_frees--;
+		num_free--;
 		return malloc(size);
 	}
 	if (size == 0){
-		num_frees++;
+		num_free++;
 		free(ptr);
 	}
 	meta_data *p = (meta_data*) ptr - 1;
