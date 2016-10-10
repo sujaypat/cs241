@@ -159,13 +159,11 @@ void *malloc(size_t size) {
 			prev_prev_prev = prev_prev;
 			prev_prev = prev;
 			prev = p;
-
 			p = p -> next;
 		}
 
 		if (chosen) {
 			chosen -> free = 0;
-			// num_free--;
 			return chosen -> ptr;
 		}
 	}
