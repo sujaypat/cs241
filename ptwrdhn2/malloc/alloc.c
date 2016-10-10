@@ -94,89 +94,41 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
-	/*
-	meta_data *p = head;
-	meta_data *chosen = NULL;
-	if (size <= 0) return NULL;
-	if (is_free){
-	while (p != NULL) { // block splitting needs to be done here
-	if (p -> free && p -> size >= size){//} && p -> size <= size + sizeof(meta_data)) {
-	chosen = p;
-	break;
-}
-// else if(p -> free && p -> size > size + 2 * sizeof(meta_data)){
-//
-// 	meta_data *newBlock = (meta_data *)(((void*)p) + sizeof(meta_data) + size);
-// 	newBlock -> next = p;
-// 	newBlock -> free = 1;
-// 	newBlock -> size = p -> size - sizeof(meta_data) - size;
-// 	newBlock -> ptr = (((void *)newBlock) + sizeof(meta_data));
-// 	if(p == head){
-// 		head = newBlock;
-// 	}
-// 	else{
-// 		((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
-// 	}
-//
-// 	// if(((void*)p) + sizeof(meta_data) + p -> size <= ((void*)head) + sizeof(meta_data) + head -> size){
-// 	// 	((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
-// 	// }
-// 	p -> size = size;
-// 	chosen = p;
-// 	break;
-// }
-p = p -> next;
-}
 
-if (chosen) {
-chosen -> free = 0;
-return chosen -> ptr;
-}
-}
-chosen = sbrk(0);
-sbrk(sizeof(meta_data));
-chosen -> ptr = sbrk(0);
-if (sbrk(size) == (void*)-1) return NULL;
-chosen -> size = size;
-chosen -> free = 0;
-chosen -> next = head;
-head = chosen;
-return chosen -> ptr;
-*/
-if(size == 0) return NULL;
-meta_data *temp = head;
+	if(size == 0) return NULL;
+	meta_data *temp = head;
 
-if(head != NULL){
-	if(head->size >= size){
-		head = head->next;
-		return (void*)temp+sizeof(meta_data);
-	}
-	else{
-		while(temp->next != NULL){
-			if(temp->next->size >= size){
-				meta_data *touse = temp->next;
-				temp->next = touse->next;
+	if(head != NULL){
+		if(head->size >= size){
+			head = head->next;
+			return (void*)temp+sizeof(meta_data);
+		}
+		else{
+			while(temp->next != NULL){
+				if(temp->next->size >= size){
+					meta_data *touse = temp->next;
+					temp->next = touse->next;
 
-				return (void*)touse+sizeof(meta_data);
+					return (void*)touse+sizeof(meta_data);
+				}
+				temp = temp->next;
 			}
-			temp = temp->next;
 		}
 	}
-}
 
 
-void *p = sbrk(0);
-p = sbrk(size+sizeof(meta_data));
+	void *p = sbrk(0);
+	p = sbrk(size+sizeof(meta_data));
 
-if(p == (void*)-1) return NULL;
+	if(p == (void*)-1) return NULL;
 
-meta_data *tail = p;
-meta_data *cell = p;
+	*tail = p;
+	meta_data *cell = p;
 
-cell->size = size;
-cell->next = NULL;
+	cell->size = size;
+	cell->next = NULL;
 
-return (void*)cell+sizeof(meta_data);
+	return (void*)cell+sizeof(meta_data);
 }
 
 /**
