@@ -117,9 +117,6 @@ void *malloc(size_t size) {
 					((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
 				}
 
-				// if(((void*)p) + sizeof(meta_data) + p -> size <= ((void*)head) + sizeof(meta_data) + head -> size){
-				// 	((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
-				// }
 				p -> size = size;
 				chosen = p;
 				break;
