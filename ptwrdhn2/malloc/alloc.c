@@ -8,6 +8,7 @@
 #include <string.h>
 #include <unistd.h>
 
+
 typedef struct _meta_data {
 	void *ptr;
 	size_t size;
@@ -20,29 +21,31 @@ int num_alloc = 0;
 meta_data *head = NULL;
 
 
-void coalesce(void *same){
-	meta_data *a = same + sizeof(meta_data) + (((meta_data *)same) -> size);
-	meta_data *co = (meta_data *)same;
-
-	if(same != (void *)head && a -> free){
-		// write(0, "coalesce\n", 10);
-		co -> size += a -> size + sizeof(meta_data);
-		if(co == head->next){
-			head = co;
-		}
-		if(same != head){
-			((meta_data *)(same + sizeof(meta_data) + co -> size)) -> next = co;
-		}
-		num_free--;
-	}
-	// if(co -> next && co -> next -> free){
-	// 	a = co -> next;
-	// 	a -> size += sizeof(meta_data) + co -> size;
-	// 	if((co + sizeof(meta_data) + co -> size) < (head + sizeof(meta_data) + head -> size)){
-	// 		((meta_data *)(co + sizeof(meta_data) + co -> size)) -> next = a;
-	// 	}
-	// }
-}
+// void coalesce(void *same){
+//
+// 	// meta_data *a = same + sizeof(meta_data) + (((meta_data *)same) -> size);
+// 	// meta_data *co = (meta_data *)same;
+// 	//
+// 	// if(same != (void *)head && a -> free){
+// 	// 	// write(0, "coalesce\n", 10);
+// 	// 	co -> size += a -> size + sizeof(meta_data);
+// 	// 	if(co == head->next){
+// 	// 		head = co;
+// 	// 	}
+// 	// 	if(same != head){
+// 	// 		((meta_data *)(same + sizeof(meta_data) + co -> size)) -> next = co;
+// 	// 	}
+// 	// 	num_free--;
+//
+// 	}
+// 	// if(co -> next && co -> next -> free){
+// 	// 	a = co -> next;
+// 	// 	a -> size += sizeof(meta_data) + co -> size;
+// 	// 	if((co + sizeof(meta_data) + co -> size) < (head + sizeof(meta_data) + head -> size)){
+// 	// 		((meta_data *)(co + sizeof(meta_data) + co -> size)) -> next = a;
+// 	// 	}
+// 	// }
+// }
 
 
 /**
@@ -97,40 +100,71 @@ void *calloc(size_t num, size_t size) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/malloc/
 */
 void *malloc(size_t size) {
+
 	meta_data *p = head;
 	meta_data *chosen = NULL;
+
+	meta_data *prev = NULL;
+	meta_data *prev_prev = NULL;
+	meta_data *prev_prev_prev = NULL;
+
 	if (size <= 0) return NULL;
 	if (num_free > 0){
 		while (p != NULL) { // block splitting needs to be done here
-			if (p -> free && p -> size >= size && p -> size <= size + sizeof(meta_data)) {
+			if (p -> free && p -> size >= size){
+				num_free--;
 				chosen = p;
-				// num_free--;
 				break;
 			}
-			else if(p -> free && p -> size > size + 2 * sizeof(meta_data)){
-				// write(0, "split\n", 7);
-				meta_data *newBlock = (meta_data *)(((void*)p) + sizeof(meta_data) + size);
-				newBlock -> next = p;
-				newBlock -> free = 1;
-				newBlock -> size = p -> size - sizeof(meta_data) - size;
-				newBlock -> ptr = (((void *)newBlock) + sizeof(meta_data));
-				if(p == head){
-					head = newBlock;
+			else if (prev && prev -> free && p -> free && prev -> size + p -> size + sizeof(meta_data) >= size){
+				p -> size += prev -> size + sizeof(meta_data);
+				if(prev_prev) prev_prev -> next = p;
+				else{
+					head = p;
+				}
+				num_free -= 2;
+				chosen = p;
+				break;
+			}
+			else if (prev && prev_prev && prev -> free && prev_prev -> free && p -> free && prev -> size + prev_prev -> size + p -> size + 2 * sizeof(meta_data) >= size){
+				p -> size += prev -> size + prev_prev -> size + 2 * sizeof(meta_data);
+				if(!prev_prev_prev){
+					head = p;
 				}
 				else{
-					((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
+					prev_prev_prev -> next = p;
 				}
-				num_free++;
-				p -> size = size;
+				num_free -= 3;
 				chosen = p;
 				break;
 			}
+			prev_prev_prev = prev_prev;
+			prev_prev = prev;
+			prev = p;
+			// else if(p -> free && p -> size > size + 2 * sizeof(meta_data)){
+			// 	// write(0, "split\n", 7);
+			// 	meta_data *newBlock = (meta_data *)(((void*)p) + sizeof(meta_data) + size);
+			// 	newBlock -> next = p;
+			// 	newBlock -> free = 1;
+			// 	newBlock -> size = p -> size - sizeof(meta_data) - size;
+			// 	newBlock -> ptr = (((void *)newBlock) + sizeof(meta_data));
+			// 	if(p == head){
+			// 		head = newBlock;
+			// 	}
+			// 	else{
+			// 		((meta_data *)(((void*)p) + sizeof(meta_data) + p -> size)) -> next = newBlock;
+			// 	}
+			// 	num_free++;
+			// 	p -> size = size;
+			// 	chosen = p;
+			// 	break;
+			// }
 			p = p -> next;
 		}
 
 		if (chosen) {
 			chosen -> free = 0;
-			num_free--;
+			// num_free--;
 			return chosen -> ptr;
 		}
 	}
@@ -144,6 +178,7 @@ void *malloc(size_t size) {
 	head = chosen;
 	num_alloc++;
 	return chosen -> ptr;
+
 }
 
 /**
@@ -163,12 +198,14 @@ void *malloc(size_t size) {
 *    passed as argument, no action occurs.
 */
 void free(void *ptr) {
+
 	if (!ptr) return;
 	meta_data *ptr2 = (meta_data*)ptr - 1;
 	ptr2 -> free = 1;
 	num_free++;
-	coalesce(ptr2);
+	// coalesce(ptr2);
 	return;
+
 }
 
 /**
@@ -217,6 +254,7 @@ void free(void *ptr) {
 * @see http://www.cplusplus.com/reference/clibrary/cstdlib/realloc/
 */
 void *realloc(void *ptr, size_t size) {
+
 	if (!ptr) return malloc(size);
 	if (size == 0) free(ptr);
 	meta_data *p = (meta_data*) ptr - 1;
@@ -229,4 +267,8 @@ void *realloc(void *ptr, size_t size) {
 		free(ptr);
 		return out;
 	}
+
 }
+
+
+
