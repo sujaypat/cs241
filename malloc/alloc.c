@@ -25,7 +25,7 @@ void coalesce(void *same){
 	meta_data *co = (meta_data *)same;
 
 	if(((void *)a < ((void *)head + sizeof(meta_data) + head -> size)) && a -> free){
-		write(0, "coalesce\n", 10);
+		// write(0, "coalesce\n", 10);
 		co -> size += a -> size + sizeof(meta_data);
 		if(a == head){
 			head = co;
@@ -108,7 +108,7 @@ void *malloc(size_t size) {
 				break;
 			}
 			else if(p -> free && p -> size > size + 2 * sizeof(meta_data)){
-				write(0, "split\n", 7);
+				// write(0, "split\n", 7);
 				meta_data *newBlock = (meta_data *)(((void*)p) + sizeof(meta_data) + size);
 				newBlock -> next = p;
 				newBlock -> free = 1;
