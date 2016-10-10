@@ -29,13 +29,13 @@ void coalesce(void *same){
 			((meta_data *)(same + sizeof(meta_data) + co -> size)) -> next = co;
 		}
 	}
-	if(co -> next && co -> next -> free){
-		a = co -> next;
-		a -> size += sizeof(meta_data) + co -> size;
-		if((co + sizeof(meta_data) + co -> size) < (head + sizeof(meta_data) + head -> size)){
-			((meta_data *)(co + sizeof(meta_data) + co -> size)) -> next = a;
-		}
-	}
+	// if(co -> next && co -> next -> free){
+	// 	a = co -> next;
+	// 	a -> size += sizeof(meta_data) + co -> size;
+	// 	if((co + sizeof(meta_data) + co -> size) < (head + sizeof(meta_data) + head -> size)){
+	// 		((meta_data *)(co + sizeof(meta_data) + co -> size)) -> next = a;
+	// 	}
+	// }
 }
 
 
