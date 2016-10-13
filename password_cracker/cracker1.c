@@ -18,6 +18,7 @@
 #include <time.h>
 
 size_t numRecovered = 0, numFailed = 0, quit = 0, total = 0;
+pthread_mutex_t ct, tot;
 
 typedef struct thread_data{
 	queue_t *queue;
@@ -32,7 +33,7 @@ void *start_routine(void *data){
 
 	cdata.initialized = 0;
 
-	while(!quit || total > 0){
+	while(1){
 
 		char *line = NULL;
 		line = queue_pull((info -> queue));
@@ -77,13 +78,21 @@ void *start_routine(void *data){
 
 		if(incrementing && found){
 			v1_print_thread_result(info -> id, username, incomplete, count, time_diff, 0);
+			pthread_mutex_lock(&ct);
 			numRecovered++;
+			pthread_mutex_unlock(&ct);
+			pthread_mutex_lock(&tot);
 			total--;
+			pthread_mutex_unlock(&tot);
 		}
 		else{
 			v1_print_thread_result(info -> id, username, incomplete, count, time_diff, 1);
+			pthread_mutex_lock(&ct);
 			numFailed++;
+			pthread_mutex_unlock(&ct);
+			pthread_mutex_lock(&tot);
 			total--;
+			pthread_mutex_unlock(&tot);
 		}
 		// free(line);
 		// free(username);
@@ -95,6 +104,8 @@ void *start_routine(void *data){
 
 int start(size_t thread_count) {
 
+	pthread_mutex_init(&ct, 0);
+	pthread_mutex_init(&tot, 0);
 	queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?
 	int status = 0;
 	size_t length = 0;
@@ -103,7 +114,6 @@ int start(size_t thread_count) {
 	td *arguments = malloc(thread_count * sizeof(td));
 
 	while((status = getline(&line, &length, stdin)) != -1){
-
 		char *line_dup = strdup(line);
 		char *nl = strchr(line_dup, '\n');
 		if (nl) *nl = 0;
