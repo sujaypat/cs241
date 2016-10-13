@@ -95,7 +95,7 @@ void *start_routine(void *data){
 			pthread_mutex_unlock(&tot);
 		}
 		// free(line);
-		// free(username);
+		free(username);
 		// free(result);
 	}
 	return 0;
@@ -133,7 +133,11 @@ int start(size_t thread_count) {
 		free(threads[i]);
 	}
 	free(threads);
+	free(arguments);
+	free(line);
 	queue_destroy(jobs);
+	pthread_mutex_destroy(&ct);
+	pthread_mutex_destroy(&tot);
 	v1_print_summary(numRecovered, numFailed);
 	return 0;
 }
