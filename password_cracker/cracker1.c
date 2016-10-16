@@ -65,12 +65,6 @@ void *start_routine(void *data){
 				break;
 			}
 			incrementing = incrementString(where_is_dot);
-			// if(*where_is_dot){
-			// 	if(*where_is_dot == 'z'){
-			// 		where_is_dot++;
-			// 	}
-			// }
-			// else incrementing = 0;
 		}
 
 		clock_gettime(CLOCK_MONOTONIC, &end);

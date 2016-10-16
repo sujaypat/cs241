@@ -101,7 +101,7 @@ void *start_routine(void *data){
 	return 0;
 }
 
-
+*/
 int start(size_t thread_count) {
 
 	pthread_mutex_init(&ct, 0);
@@ -135,7 +135,6 @@ int start(size_t thread_count) {
 	free(threads);
 	free(arguments);
 	queue_destroy(jobs);
-	v1_print_summary(numRecovered, numFailed);
+	v2_print_summary(numRecovered, numFailed);
 	return 0;
 }
-*/
