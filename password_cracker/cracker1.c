@@ -17,7 +17,7 @@
 #include <string.h>
 #include <time.h>
 
-size_t numRecovered = 0, numFailed = 0, quit = 0, total = 0;
+size_t numRecovered = 0, numFailed = 0, quit = 0;
 pthread_mutex_t ct, tot;
 
 typedef struct thread_data{
@@ -64,13 +64,13 @@ void *start_routine(void *data){
 				found = 1;
 				break;
 			}
-			incrementing = incrementString(incomplete);
-			if(*where_is_dot){
-				if(*where_is_dot == 'z'){
-					where_is_dot++;
-				}
-			}
-			else incrementing = 0;
+			incrementing = incrementString(where_is_dot);
+			// if(*where_is_dot){
+			// 	if(*where_is_dot == 'z'){
+			// 		where_is_dot++;
+			// 	}
+			// }
+			// else incrementing = 0;
 		}
 
 		clock_gettime(CLOCK_MONOTONIC, &end);
@@ -81,22 +81,14 @@ void *start_routine(void *data){
 			pthread_mutex_lock(&ct);
 			numRecovered++;
 			pthread_mutex_unlock(&ct);
-			pthread_mutex_lock(&tot);
-			total--;
-			pthread_mutex_unlock(&tot);
 		}
 		else{
 			v1_print_thread_result(info -> id, username, incomplete, count, time_diff, 1);
 			pthread_mutex_lock(&ct);
 			numFailed++;
 			pthread_mutex_unlock(&ct);
-			pthread_mutex_lock(&tot);
-			total--;
-			pthread_mutex_unlock(&tot);
 		}
-		// free(line);
 		free(username);
-		// free(result);
 	}
 	return 0;
 }
@@ -105,7 +97,6 @@ void *start_routine(void *data){
 int start(size_t thread_count) {
 
 	pthread_mutex_init(&ct, 0);
-	pthread_mutex_init(&tot, 0);
 	queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?
 	int status = 0;
 	size_t length = 0;
@@ -118,12 +109,11 @@ int start(size_t thread_count) {
 		char *nl = strchr(line_dup, '\n');
 		if (nl) *nl = 0;
 		queue_push(jobs, line_dup);
-		total++;
 	}
 	for(size_t i = 0; i < thread_count; i++){
 		threads[i] = malloc(sizeof(pthread_t));
 		(arguments[i]).queue = jobs;
-		(arguments[i]).id = i;
+		(arguments[i]).id = i + 1;
 		pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));
 		queue_push(jobs, NULL);
 	}
