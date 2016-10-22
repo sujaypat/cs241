@@ -3,6 +3,111 @@
     "timestamp": "2016-10-11 22:00:00.171516", 
     "testcases": [
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test that crypt was not used", 
+        "name": "test_no_crypt", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test a single valid password", 
+        "name": "test_one_valid_password", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find correct password in stdout"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test a single invalid password", 
+        "name": "test_one_invalid_password", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find output for not found password"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that two threads run at same time", 
+        "name": "test_two_threads", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTook to long to execute, are you threading?"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that four threads run at same time, cracking 4 passwords", 
+        "name": "test_four_threads", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTook to long to execute, are you threading?"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that 4 threads run at same time cracking 12 passwords", 
+        "name": "test_12_threads", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTook to long to execute, are you threading?"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that the program doesn't busy wait", 
+        "name": "test_no_busy_wait_threads", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDid not find correct outputs"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that the program doesn't exit until EOF is found", 
+        "name": "test_eof_end", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find total_time output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that your queue works properly by checking order of outputs", 
+        "name": "test_queue_by_output", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDid not find correct outputs"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test the order of output of imbalanced loads", 
+        "name": "test_imbalanced_load", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test a single password", 
+        "name": "test_memory_easy", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test a couple of passwords", 
+        "name": "test_memory_medium", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test a lot of password", 
+        "name": "test_memory_hard", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test correct password and crypt_r() count", 
+        "name": "test_crypt_r_count", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFound correct output, wrong hash count"
+      }
+    ], 
+    "revision": "49513", 
+    "checksum": "87162e62639b15263fb684964d11d60ced853364  cracker1.c"
+  }, 
+  {
+    "timestamp": "2016-10-12 22:00:00.163325", 
+    "testcases": [
+      {
         "description": "Test that crypt was not used", 
         "ptsEarned": 1.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
@@ -102,117 +207,117 @@
       }
     ], 
     "checksum": "87162e62639b15263fb684964d11d60ced853364  cracker1.c", 
-    "revision": "49513"
-  }, 
-  {
-    "timestamp": "2016-10-12 22:00:00.163325", 
-    "testcases": [
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_no_crypt", 
-        "description": "Test that crypt was not used"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find correct password in stdout", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_one_valid_password", 
-        "description": "Test a single valid password"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find output for not found password", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_one_invalid_password", 
-        "description": "Test a single invalid password"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTook to long to execute, are you threading?", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_two_threads", 
-        "description": "Test that two threads run at same time"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTook to long to execute, are you threading?", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_four_threads", 
-        "description": "Test that four threads run at same time, cracking 4 passwords"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTook to long to execute, are you threading?", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_12_threads", 
-        "description": "Test that 4 threads run at same time cracking 12 passwords"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDid not find correct outputs", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_no_busy_wait_threads", 
-        "description": "Test that the program doesn't busy wait"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find total_time output", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_eof_end", 
-        "description": "Test that the program doesn't exit until EOF is found"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDid not find correct outputs", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_queue_by_output", 
-        "description": "Test that your queue works properly by checking order of outputs"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed the test", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_imbalanced_load", 
-        "description": "Test the order of output of imbalanced loads"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_memory_easy", 
-        "description": "Test a single password"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_memory_medium", 
-        "description": "Test a couple of passwords"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_memory_hard", 
-        "description": "Test a lot of password"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFound correct output, wrong hash count", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_crypt_r_count", 
-        "description": "Test correct password and crypt_r() count"
-      }
-    ], 
-    "revision": "50179", 
-    "checksum": "87162e62639b15263fb684964d11d60ced853364  cracker1.c"
+    "revision": "50179"
   }, 
   {
     "timestamp": "2016-10-13 22:00:00.790071", 
     "testcases": [
       {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_no_crypt", 
+        "description": "Test that crypt was not used"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_one_valid_password", 
+        "description": "Test a single valid password"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_one_invalid_password", 
+        "description": "Test a single invalid password"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_two_threads", 
+        "description": "Test that two threads run at same time"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_four_threads", 
+        "description": "Test that four threads run at same time, cracking 4 passwords"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_12_threads", 
+        "description": "Test that 4 threads run at same time cracking 12 passwords"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_no_busy_wait_threads", 
+        "description": "Test that the program doesn't busy wait"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_eof_end", 
+        "description": "Test that the program doesn't exit until EOF is found"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDid not find correct outputs", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_queue_by_output", 
+        "description": "Test that your queue works properly by checking order of outputs"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_imbalanced_load", 
+        "description": "Test the order of output of imbalanced loads"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_memory_easy", 
+        "description": "Test a single password"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_memory_medium", 
+        "description": "Test a couple of passwords"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_memory_hard", 
+        "description": "Test a lot of password"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_crypt_r_count", 
+        "description": "Test correct password and crypt_r() count"
+      }
+    ], 
+    "revision": "50662", 
+    "checksum": "ba165d02c7626f5bee8cc2575bee7272c6408788  cracker1.c"
+  }, 
+  {
+    "timestamp": "2016-10-14 22:00:00.812016", 
+    "testcases": [
+      {
         "ptsPossible": 1.0, 
         "ptsEarned": 1.0, 
         "description": "Test that crypt was not used", 
@@ -312,10 +417,10 @@
       }
     ], 
     "checksum": "ba165d02c7626f5bee8cc2575bee7272c6408788  cracker1.c", 
-    "revision": "50662"
+    "revision": "51224"
   }, 
   {
-    "timestamp": "2016-10-14 22:00:00.812016", 
+    "timestamp": "2016-10-15 22:00:01.465871", 
     "testcases": [
       {
         "description": "Test that crypt was not used", 
@@ -416,11 +521,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "51224", 
+    "revision": "51902", 
     "checksum": "ba165d02c7626f5bee8cc2575bee7272c6408788  cracker1.c"
   }, 
   {
-    "timestamp": "2016-10-15 22:00:01.465871", 
+    "timestamp": "2016-10-16 22:00:00.816241", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
@@ -521,11 +626,11 @@
         "description": "Test correct password and crypt_r() count"
       }
     ], 
-    "checksum": "ba165d02c7626f5bee8cc2575bee7272c6408788  cracker1.c", 
-    "revision": "51902"
+    "checksum": "943e9419adff317c64b67a02adc7f2b88fb45ffc  cracker1.c", 
+    "revision": "52418"
   }, 
   {
-    "timestamp": "2016-10-16 22:00:00.816241", 
+    "timestamp": "2016-10-17 12:00:00.778115", 
     "testcases": [
       {
         "ptsPossible": 1.0, 
@@ -585,20 +690,6 @@
       }, 
       {
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "Test that your queue works properly by checking order of outputs", 
-        "name": "test_queue_by_output", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDid not find correct outputs"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
-        "description": "Test the order of output of imbalanced loads", 
-        "name": "test_imbalanced_load", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)"
-      }, 
-      {
-        "ptsPossible": 1.0, 
         "ptsEarned": 1.0, 
         "description": "Test a single password", 
         "name": "test_memory_easy", 
@@ -626,11 +717,11 @@
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)"
       }
     ], 
-    "revision": "52418", 
+    "revision": "53180", 
     "checksum": "943e9419adff317c64b67a02adc7f2b88fb45ffc  cracker1.c"
   }, 
   {
-    "timestamp": "2016-10-17 12:00:00.778115", 
+    "timestamp": "2016-10-18 00:00:00.768710", 
     "testcases": [
       {
         "description": "Test that crypt was not used", 
@@ -718,101 +809,94 @@
       }
     ], 
     "checksum": "943e9419adff317c64b67a02adc7f2b88fb45ffc  cracker1.c", 
-    "revision": "53180"
+    "revision": "54564"
   }, 
   {
-    "timestamp": "2016-10-18 00:00:00.768710", 
+    "timestamp": "2016-10-18 22:00:03.220476", 
     "testcases": [
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_no_crypt", 
-        "description": "Test that crypt was not used"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "test_one_valid_password", 
         "description": "Test a single valid password"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "test_one_invalid_password", 
         "description": "Test a single invalid password"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 5.0, 
         "name": "test_two_threads", 
-        "description": "Test that two threads run at same time"
+        "description": "Test that 2 threads run at same time, cracking 1 password"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 5.0, 
         "name": "test_four_threads", 
-        "description": "Test that four threads run at same time, cracking 4 passwords"
+        "description": "Test that 4 threads run at same time, cracking 1 password"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 5.0, 
+        "name": "test_13_threads", 
+        "description": "Test that 13 threads run at same time, cracking 1 password"
+      }, 
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
-        "name": "test_12_threads", 
-        "description": "Test that 4 threads run at same time cracking 12 passwords"
+        "name": "test_use_same_threads", 
+        "description": "Test that same threads were used for second password"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_no_busy_wait_threads", 
-        "description": "Test that the program doesn't busy wait"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "test_eof_end", 
         "description": "Test that the program doesn't exit until EOF is found"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_sanity", 
+        "description": "Test many many passwords."
+      }, 
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-tsan.o] Error 1\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_tsan", 
+        "description": "Test tsan doesnt throw warnings"
+      }, 
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_early_exit", 
+        "description": "Test that program stops when 1 thread finds password"
+      }, 
+      {
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "test_memory_easy", 
-        "description": "Test a single password"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_memory_medium", 
-        "description": "Test a couple of passwords"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_memory_hard", 
-        "description": "Test a lot of password"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nSuccess :)", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_crypt_r_count", 
-        "description": "Test correct password and crypt_r() count"
+        "description": "Test a single password with memory checks"
       }
     ], 
-    "revision": "54564", 
-    "checksum": "943e9419adff317c64b67a02adc7f2b88fb45ffc  cracker1.c"
+    "revision": "55043", 
+    "checksum": "af523d8da92b5118843a448190d47ca6a617c77a  cracker2.c"
   }, 
   {
-    "timestamp": "2016-10-18 22:00:03.220476", 
+    "timestamp": "2016-10-19 22:00:00.902649", 
     "testcases": [
       {
         "ptsPossible": 1.0, 
@@ -893,10 +977,10 @@
       }
     ], 
     "checksum": "af523d8da92b5118843a448190d47ca6a617c77a  cracker2.c", 
-    "revision": "55043"
+    "revision": "55981"
   }, 
   {
-    "timestamp": "2016-10-19 22:00:00.902649", 
+    "timestamp": "2016-10-20 22:00:01.114373", 
     "testcases": [
       {
         "description": "Test a single valid password", 
@@ -976,11 +1060,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "55981", 
+    "revision": "56733", 
     "checksum": "af523d8da92b5118843a448190d47ca6a617c77a  cracker2.c"
   }, 
   {
-    "timestamp": "2016-10-20 22:00:01.114373", 
+    "timestamp": "2016-10-21 22:00:00.961350", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nFAILED TO COMPILE!\ncracker2.c: In function \u2018start\u2019:\ncracker2.c:107:22: error: \u2018ct\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&ct, 0);\n                      ^\ncracker2.c:107:22: note: each undeclared identifier is reported only once for each function it appears in\ncracker2.c:108:22: error: \u2018tot\u2019 undeclared (first use in this function)\n  pthread_mutex_init(&tot, 0);\n                      ^\ncracker2.c:109:2: error: unknown type name \u2018queue_t\u2019\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n  ^\ncracker2.c:109:18: error: implicit declaration of function \u2018queue_create\u2019 [-Werror=implicit-function-declaration]\n  queue_t *jobs = queue_create(-1); //maybe -1 for unbounded?\n                  ^\ncracker2.c:109:18: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]\ncracker2.c:114:2: error: unknown type name \u2018td\u2019\n  td *arguments = malloc(thread_count * sizeof(td));\n  ^\ncracker2.c:114:47: error: \u2018td\u2019 undeclared (first use in this function)\n  td *arguments = malloc(thread_count * sizeof(td));\n                                               ^\ncracker2.c:120:3: error: implicit declaration of function \u2018queue_push\u2019 [-Werror=implicit-function-declaration]\n   queue_push(jobs, line_dup);\n   ^\ncracker2.c:121:3: error: \u2018total\u2019 undeclared (first use in this function)\n   total++;\n   ^\ncracker2.c:125:17: error: request for member \u2018queue\u2019 in something not a structure or union\n   (arguments[i]).queue = jobs;\n                 ^\ncracker2.c:126:17: error: request for member \u2018id\u2019 in something not a structure or union\n   (arguments[i]).id = i;\n                 ^\ncracker2.c:127:43: error: \u2018start_routine\u2019 undeclared (first use in this function)\n   pthread_create((threads[i]), 0, (void *)start_routine, &(arguments[i]));\n                                           ^\ncracker2.c:130:2: error: \u2018quit\u2019 undeclared (first use in this function)\n  quit = 1;\n  ^\ncracker2.c:137:2: error: implicit declaration of function \u2018queue_destroy\u2019 [-Werror=implicit-function-declaration]\n  queue_destroy(jobs);\n  ^\ncracker2.c:138:19: error: \u2018numRecovered\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                   ^\ncracker2.c:138:33: error: \u2018numFailed\u2019 undeclared (first use in this function)\n  v2_print_summary(numRecovered, numFailed);\n                                 ^\ncracker2.c:138:2: error: too few arguments to function \u2018v2_print_summary\u2019\n  v2_print_summary(numRecovered, numFailed);\n  ^\nIn file included from cracker2.c:7:0:\nlibs/format.h:102:6: note: declared here\n void v2_print_summary(char *username, char *password, int hashCount,\n      ^\ncc1: all warnings being treated as errors\nmake: *** [.objs/cracker2-release.o] Error 1\n", 
@@ -1061,6 +1145,6 @@
       }
     ], 
     "checksum": "af523d8da92b5118843a448190d47ca6a617c77a  cracker2.c", 
-    "revision": "56733"
+    "revision": "57046"
   }
 ]
