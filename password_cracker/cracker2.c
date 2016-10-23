@@ -39,13 +39,11 @@ void *start_routine(void *data){
 
 	size_t count = 0;
 
-
 	char *test = NULL;
 	int found = 0;
-	// printf("%s\n", info -> start);
+
 	char *first_dot = strchr(info -> start, '.');
 	setStringPosition(first_dot, info -> offset);
-	// printf("%s %zu\n", first_dot, info -> offset);
 
 	v2_print_thread_start(info -> id, info -> user, (info -> offset), info -> start);
 	size_t i;
@@ -53,7 +51,6 @@ void *start_routine(void *data){
 		// check if this thread should give up
 		pthread_mutex_lock(&q);
 		if(quit){
-			// printf("id: %zu gave up\n", info -> id);
 			pthread_mutex_unlock(&q);
 			break;
 		}
@@ -65,14 +62,14 @@ void *start_routine(void *data){
 			quit = 1;
 			pthread_mutex_unlock(&q);
 			found = 1;
-			// printf("id: %zu found it\n", info -> id);
 			break;
 		}
 		incrementString(first_dot);
 	}
-	// printf("id: %zu out of loop\n", info -> id);
+	pthread_mutex_lock(&tot);
 	tot_ct += i;
 	cputime += getThreadCPUTime();
+	pthread_mutex_unlock(&tot);
 	if(found){
 		v2_print_thread_result(info -> id, i, 0);
 		res = info -> start;
@@ -122,6 +119,12 @@ int start(size_t thread_count) {
 			(arguments[i]).target = result;
 			(arguments[i]).id = i + 1;
 			(arguments[i]).user = username;
+
+			if((arguments[i]).start != NULL){
+				free((arguments[i]).start);
+				(arguments[i]).start = NULL;
+			}
+
 			(arguments[i]).start = strdup(incomplete);
 
 			getSubrange(num_dots, thread_count, i + 1, &(arguments[i]).offset, &(arguments[i]).max);
@@ -135,10 +138,19 @@ int start(size_t thread_count) {
 		clock_gettime(CLOCK_MONOTONIC, &end);
 		double time_diff = (double)(end.tv_sec - start.tv_sec) + (double)(end.tv_nsec - start.tv_nsec)/(1000000000);
 		v2_print_summary(username, res, tot_ct, time_diff, cputime, !quit);
+		free(username);
 		cputime = 0;
 		tot_ct = 0;
 	} // end while
+	free(line);
+	line = NULL;
 	free(threads);
+	for(size_t i = 0; i < thread_count; i++){
+		if((arguments[i]).start != NULL){
+			free((arguments[i]).start);
+			(arguments[i]).start = NULL;
+		}
+	}
 	free(arguments);
 	return 0;
 }
