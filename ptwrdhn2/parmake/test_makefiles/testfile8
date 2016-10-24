@@ -1,0 +1,10 @@
+all: a c
+
+a: b
+	echo A
+
+b: a
+	echo B
+
+c:
+	echo C
