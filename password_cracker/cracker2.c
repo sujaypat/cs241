@@ -120,10 +120,11 @@ int start(size_t thread_count) {
 			(arguments[i]).id = i + 1;
 			(arguments[i]).user = username;
 
-			if((arguments[i]).start != NULL){
-				free((arguments[i]).start);
-				(arguments[i]).start = NULL;
-			}
+			// if((arguments[i]).start){
+			(arguments[i]).start = NULL;
+			free((arguments[i]).start);
+			(arguments[i]).start = NULL;
+			// }
 
 			(arguments[i]).start = strdup(incomplete);
 
