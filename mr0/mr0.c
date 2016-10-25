@@ -19,13 +19,11 @@ int main(int argc, char **argv) {
 	int m_status = 0;
 	// Open the input file.
 	int input = open(argv[1], O_RDONLY);
-	// descriptors_add(input);
 	// Create a pipe to connect the mapper to the reducer.
 	int pipes[2]; // 0 is read end, 1 is write end
 	pipe(pipes);
 	// Open the output file.
 	int output = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, S_IWUSR | S_IRUSR);
-	// descriptors_add(output);
 	// Start the mapper.
 	pid_t map_child = fork();
 	if(map_child == 0){
@@ -54,12 +52,11 @@ int main(int argc, char **argv) {
 	waitpid(map_child, &m_status, 0);
 	waitpid(reduce_child, &r_status, 0);
 	// Print nonzero subprocess exit codes.
-	if(m_status) printf("my_mapper exited with status \n", m_status);
-	if(r_status) printf("my_reducer exited with status \n", r_status);
+	if(m_status) printf("my_mapper exited with status %d\n", m_status);
+	if(r_status) printf("my_reducer exited with status %d\n", r_status);
 	close(input);
 	close(output);
 	// Count the number of lines in the output file.
 	print_num_lines(argv[2]);
-
 	return 0;
 }
