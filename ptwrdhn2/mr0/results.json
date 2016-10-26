@@ -3,6 +3,41 @@
     "timestamp": "2016-10-21 22:00:01.163497", 
     "testcases": [
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 prints the correct output on a small input", 
+        "name": "small_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 print the correct output on a large input", 
+        "name": "large_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 prints the correct output on an empty input.", 
+        "name": "empty_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Memory tests", 
+        "name": "mem_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==27084== Memcheck, a memory error detector\n==27084== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==27084== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==27084== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==27084== \n==27084== \n==27084== HEAP SUMMARY:\n==27084==     in use at exit: 0 bytes in 0 blocks\n==27084==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==27084== \n==27084== All heap blocks were freed -- no leaks are possible\n==27084== \n==27084== For counts of detected and suppressed errors, rerun with: -v\n==27084== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)"
+      }
+    ], 
+    "revision": "57046", 
+    "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c"
+  }, 
+  {
+    "timestamp": "2016-10-22 22:00:01.575694", 
+    "testcases": [
+      {
         "description": "Test that mr0 prints the correct output on a small input", 
         "ptsEarned": 0.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
@@ -26,16 +61,16 @@
       {
         "description": "Memory tests", 
         "ptsEarned": 1.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==27084== Memcheck, a memory error detector\n==27084== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==27084== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==27084== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==27084== \n==27084== \n==27084== HEAP SUMMARY:\n==27084==     in use at exit: 0 bytes in 0 blocks\n==27084==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==27084== \n==27084== All heap blocks were freed -- no leaks are possible\n==27084== \n==27084== For counts of detected and suppressed errors, rerun with: -v\n==27084== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==4356== Memcheck, a memory error detector\n==4356== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==4356== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==4356== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==4356== \n==4356== \n==4356== HEAP SUMMARY:\n==4356==     in use at exit: 0 bytes in 0 blocks\n==4356==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==4356== \n==4356== All heap blocks were freed -- no leaks are possible\n==4356== \n==4356== For counts of detected and suppressed errors, rerun with: -v\n==4356== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
         "name": "mem_test", 
         "ptsPossible": 1.0
       }
     ], 
     "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c", 
-    "revision": "57046"
+    "revision": "57437"
   }, 
   {
-    "timestamp": "2016-10-22 22:00:01.575694", 
+    "timestamp": "2016-10-23 22:00:01.173741", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
@@ -59,88 +94,88 @@
         "description": "Test that mr0 prints the correct output on an empty input."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==4356== Memcheck, a memory error detector\n==4356== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==4356== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==4356== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==4356== \n==4356== \n==4356== HEAP SUMMARY:\n==4356==     in use at exit: 0 bytes in 0 blocks\n==4356==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==4356== \n==4356== All heap blocks were freed -- no leaks are possible\n==4356== \n==4356== For counts of detected and suppressed errors, rerun with: -v\n==4356== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==13926== Memcheck, a memory error detector\n==13926== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==13926== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==13926== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==13926== \n==13926== \n==13926== HEAP SUMMARY:\n==13926==     in use at exit: 0 bytes in 0 blocks\n==13926==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==13926== \n==13926== All heap blocks were freed -- no leaks are possible\n==13926== \n==13926== For counts of detected and suppressed errors, rerun with: -v\n==13926== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
         "ptsEarned": 1.0, 
         "ptsPossible": 1.0, 
         "name": "mem_test", 
         "description": "Memory tests"
       }
     ], 
-    "revision": "57437", 
+    "revision": "58112", 
     "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c"
-  }, 
-  {
-    "timestamp": "2016-10-23 22:00:01.173741", 
-    "testcases": [
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "Test that mr0 prints the correct output on a small input", 
-        "name": "small_input", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "Test that mr0 print the correct output on a large input", 
-        "name": "large_input", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "Test that mr0 prints the correct output on an empty input.", 
-        "name": "empty_input", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
-        "description": "Memory tests", 
-        "name": "mem_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==13926== Memcheck, a memory error detector\n==13926== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==13926== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==13926== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==13926== \n==13926== \n==13926== HEAP SUMMARY:\n==13926==     in use at exit: 0 bytes in 0 blocks\n==13926==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==13926== \n==13926== All heap blocks were freed -- no leaks are possible\n==13926== \n==13926== For counts of detected and suppressed errors, rerun with: -v\n==13926== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)"
-      }
-    ], 
-    "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c", 
-    "revision": "58112"
   }, 
   {
     "timestamp": "2016-10-24 22:00:01.100515", 
     "testcases": [
       {
-        "description": "Test that mr0 prints the correct output on a small input", 
+        "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "description": "Test that mr0 prints the correct output on a small input", 
+        "name": "small_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 print the correct output on a large input", 
+        "name": "large_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr0 prints the correct output on an empty input.", 
+        "name": "empty_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Memory tests", 
+        "name": "mem_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==23531== Memcheck, a memory error detector\n==23531== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==23531== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==23531== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==23531== \n==23531== \n==23531== HEAP SUMMARY:\n==23531==     in use at exit: 0 bytes in 0 blocks\n==23531==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==23531== \n==23531== All heap blocks were freed -- no leaks are possible\n==23531== \n==23531== For counts of detected and suppressed errors, rerun with: -v\n==23531== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)"
+      }
+    ], 
+    "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c", 
+    "revision": "59585"
+  }, 
+  {
+    "timestamp": "2016-10-25 22:00:01.172421", 
+    "testcases": [
+      {
+        "description": "Test that mr0 prints the correct output on a small input", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "small_input", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Test that mr0 print the correct output on a large input", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "large_input", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Test that mr0 prints the correct output on an empty input.", 
-        "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "empty_input", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Memory tests", 
         "ptsEarned": 1.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==23531== Memcheck, a memory error detector\n==23531== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==23531== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==23531== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==23531== \n==23531== \n==23531== HEAP SUMMARY:\n==23531==     in use at exit: 0 bytes in 0 blocks\n==23531==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==23531== \n==23531== All heap blocks were freed -- no leaks are possible\n==23531== \n==23531== For counts of detected and suppressed errors, rerun with: -v\n==23531== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==1134== Memcheck, a memory error detector\n==1134== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==1134== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==1134== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==1134== \n==1134== \n==1134== HEAP SUMMARY:\n==1134==     in use at exit: 0 bytes in 0 blocks\n==1134==   total heap usage: 3 allocs, 3 frees, 8,744 bytes allocated\n==1134== \n==1134== All heap blocks were freed -- no leaks are possible\n==1134== \n==1134== For counts of detected and suppressed errors, rerun with: -v\n==1134== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
         "name": "mem_test", 
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "59585", 
-    "checksum": "8ed34b870399bdb37532d4f2a96a250f93d22055  mr0.c"
+    "revision": "60208", 
+    "checksum": "de1e0ac7a1523651f9c77c96e294c0bcc4b92bcd  mr0.c"
   }, 
   {
-    "timestamp": "2016-10-25 22:00:01.172421", 
+    "timestamp": "2016-10-26 12:00:01.240049", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
@@ -164,7 +199,7 @@
         "description": "Test that mr0 prints the correct output on an empty input."
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==1134== Memcheck, a memory error detector\n==1134== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==1134== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==1134== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==1134== \n==1134== \n==1134== HEAP SUMMARY:\n==1134==     in use at exit: 0 bytes in 0 blocks\n==1134==   total heap usage: 3 allocs, 3 frees, 8,744 bytes allocated\n==1134== \n==1134== All heap blocks were freed -- no leaks are possible\n==1134== \n==1134== For counts of detected and suppressed errors, rerun with: -v\n==1134== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==11342== Memcheck, a memory error detector\n==11342== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==11342== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==11342== Command: ././mr0 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum\n==11342== \n==11342== \n==11342== HEAP SUMMARY:\n==11342==     in use at exit: 0 bytes in 0 blocks\n==11342==   total heap usage: 3 allocs, 3 frees, 8,744 bytes allocated\n==11342== \n==11342== All heap blocks were freed -- no leaks are possible\n==11342== \n==11342== For counts of detected and suppressed errors, rerun with: -v\n==11342== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
         "ptsPossible": 1.0, 
         "ptsEarned": 1.0, 
         "name": "mem_test", 
@@ -172,6 +207,6 @@
       }
     ], 
     "checksum": "de1e0ac7a1523651f9c77c96e294c0bcc4b92bcd  mr0.c", 
-    "revision": "60208"
+    "revision": "60409"
   }
 ]
