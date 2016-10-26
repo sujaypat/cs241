@@ -52,8 +52,8 @@ int main(int argc, char **argv) {
 	waitpid(map_child, &m_status, 0);
 	waitpid(reduce_child, &r_status, 0);
 	// Print nonzero subprocess exit codes.
-	if(m_status) printf("my_mapper exited with status %d\n", m_status);
-	if(r_status) printf("my_reducer exited with status %d\n", r_status);
+	if(m_status) printf("%s exited with status %d\n", argv[3], m_status);
+	if(r_status) printf("%s exited with status %d\n", argv[4], r_status);
 	close(input);
 	close(output);
 	// Count the number of lines in the output file.
