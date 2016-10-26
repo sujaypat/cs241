@@ -1,5 +1,5 @@
 a: b
-    echo "should not display"
-
+	echo "This should not display, since its dependency failed"
 b:
-    cat asdf
+	echo "This rule is going to fail, since 'asdf' does not exist"
+	cat asdf
