@@ -1,0 +1,51 @@
+[
+  {
+    "timestamp": "2016-10-27 22:00:00.984747", 
+    "testcases": [
+      {
+        "log": "Output did not match solution output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "test_fcfs", 
+        "description": "Compare output of solutions"
+      }, 
+      {
+        "log": "Output did not match solution output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "test_ppri", 
+        "description": "Compare output of solutions"
+      }, 
+      {
+        "log": "Output did not match solution output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "test_pri", 
+        "description": "Compare output of solutions"
+      }, 
+      {
+        "log": "Output did not match solution output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "test_psjf", 
+        "description": "Compare output of solutions"
+      }, 
+      {
+        "log": "Output did not match solution output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "test_rr2", 
+        "description": "Compare output of solutions"
+      }, 
+      {
+        "log": "Output did not match solution output", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "name": "test_sjf", 
+        "description": "Compare output of solutions"
+      }
+    ], 
+    "checksum": "7521ea593a1fcbe12f609017aae59905026663ec  libscheduler.c", 
+    "revision": "61215"
+  }
+]
