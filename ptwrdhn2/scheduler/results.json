@@ -3,6 +3,55 @@
     "timestamp": "2016-10-27 22:00:00.984747", 
     "testcases": [
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Compare output of solutions", 
+        "name": "test_fcfs", 
+        "log": "Output did not match solution output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Compare output of solutions", 
+        "name": "test_ppri", 
+        "log": "Output did not match solution output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Compare output of solutions", 
+        "name": "test_pri", 
+        "log": "Output did not match solution output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Compare output of solutions", 
+        "name": "test_psjf", 
+        "log": "Output did not match solution output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Compare output of solutions", 
+        "name": "test_rr2", 
+        "log": "Output did not match solution output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Compare output of solutions", 
+        "name": "test_sjf", 
+        "log": "Output did not match solution output"
+      }
+    ], 
+    "checksum": "7521ea593a1fcbe12f609017aae59905026663ec  libscheduler.c", 
+    "revision": "61215"
+  }, 
+  {
+    "timestamp": "2016-10-28 22:00:01.306534", 
+    "testcases": [
+      {
         "description": "Compare output of solutions", 
         "ptsEarned": 0.0, 
         "log": "Output did not match solution output", 
@@ -45,11 +94,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "61215", 
+    "revision": "61479", 
     "checksum": "7521ea593a1fcbe12f609017aae59905026663ec  libscheduler.c"
   }, 
   {
-    "timestamp": "2016-10-28 22:00:01.306534", 
+    "timestamp": "2016-10-29 22:00:00.960245", 
     "testcases": [
       {
         "log": "Output did not match solution output", 
@@ -95,6 +144,6 @@
       }
     ], 
     "checksum": "7521ea593a1fcbe12f609017aae59905026663ec  libscheduler.c", 
-    "revision": "61479"
+    "revision": "61842"
   }
 ]
