@@ -3,6 +3,118 @@
     "timestamp": "2016-10-27 22:00:01.248084", 
     "testcases": [
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that target command gets run", 
+        "name": "basic_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find correct output (or extra printouts?)"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that targets don't get run until dependencies are satisfied", 
+        "name": "basic_test1", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDid not find the correct output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that a more complex dependencies list gets printed correctly", 
+        "name": "basic_test2", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test correct commands are run when command fails", 
+        "name": "fail_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find correct output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test that all parent dependencies stop when child dependency commands fail", 
+        "name": "fail_dep_command_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that specified makefile targets get run correctly", 
+        "name": "target_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find correct output in the correct order (or extra printouts?)"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that specified makefile targets with dependencies get run correctly", 
+        "name": "target_test1", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that targets don't run if dependency not modified", 
+        "name": "touch_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDid not find the correct output"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Test that tsan doesn't throw warnings/errors", 
+        "name": "tsan_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 6.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that ensure doing threading properly", 
+        "name": "thread_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCould not find correct output in correct order (or extra printouts?)"
+      }, 
+      {
+        "ptsPossible": 2.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that threading done properly with more involved makefile, part 1", 
+        "name": "thread_test_2", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCould not find output in correct order (or extra printouts?)"
+      }, 
+      {
+        "ptsPossible": 3.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that threading done properly with more involved makefile, part 2", 
+        "name": "thread_test_3", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCould not find output in correct order (or extra printouts?)"
+      }, 
+      {
+        "ptsPossible": 2.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that threading done properly with more involved makefile, part 3", 
+        "name": "thread_test_4", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCould not find output in correct order (or extra printouts?)"
+      }, 
+      {
+        "ptsPossible": 6.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that a more complex dependencies list gets printed correctly (but needs to be threaded this time", 
+        "name": "basic_test2_threaded", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
+        "description": "Memory test", 
+        "name": "memory_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
+      }
+    ], 
+    "checksum": "932e8fe8298422834c4cdc3d48e3fcf0311c4e94  parmake.c", 
+    "revision": "61215"
+  }, 
+  {
+    "timestamp": "2016-10-28 22:00:01.239211", 
+    "testcases": [
+      {
         "description": "Test that target command gets run", 
         "ptsEarned": 0.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find correct output (or extra printouts?)", 
@@ -108,11 +220,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "61215", 
+    "revision": "61479", 
     "checksum": "932e8fe8298422834c4cdc3d48e3fcf0311c4e94  parmake.c"
   }, 
   {
-    "timestamp": "2016-10-28 22:00:01.239211", 
+    "timestamp": "2016-10-29 22:00:01.098031", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nFailed to find correct output (or extra printouts?)", 
@@ -221,6 +333,6 @@
       }
     ], 
     "checksum": "932e8fe8298422834c4cdc3d48e3fcf0311c4e94  parmake.c", 
-    "revision": "61479"
+    "revision": "61842"
   }
 ]
