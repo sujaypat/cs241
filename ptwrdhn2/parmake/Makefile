@@ -21,12 +21,12 @@ CFLAGS_RELEASE = -O2 $(WARNINGS) $(INC) -g -std=c99 -c -MMD -MP -D_GNU_SOURCE -p
 
 # tsan needs some funky flags
 CFLAGS_TSAN    = $(CFLAGS_DEBUG)
-CFLAGS_TSAN    += -fsanitize=thread -DSANITIZE_THREADS -fPIC
+CFLAGS_TSAN    += -fsanitize=thread -DSANITIZE_THREADS
 
 # set up linker
 LD = gcc
 LDFLAGS = -pthread -Llibs/ -lprovided
-LDFLAGS_TSAN = $(LDFLAGS) -ltsan -pie
+LDFLAGS_TSAN = $(LDFLAGS) -ltsan
 
 # the string in grep must appear in the hostname, otherwise the Makefile will
 # not allow the assignment to compile
