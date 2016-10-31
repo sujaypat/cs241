@@ -3,121 +3,170 @@
     "timestamp": "2016-10-27 22:00:00.984747", 
     "testcases": [
       {
-        "ptsPossible": 1.0, 
+        "log": "Output did not match solution output", 
         "ptsEarned": 0.0, 
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "name": "test_fcfs", 
-        "log": "Output did not match solution output"
+        "description": "Compare output of solutions"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Output did not match solution output", 
         "ptsEarned": 0.0, 
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "name": "test_ppri", 
-        "log": "Output did not match solution output"
+        "description": "Compare output of solutions"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Output did not match solution output", 
         "ptsEarned": 0.0, 
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "name": "test_pri", 
-        "log": "Output did not match solution output"
+        "description": "Compare output of solutions"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Output did not match solution output", 
         "ptsEarned": 0.0, 
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "name": "test_psjf", 
-        "log": "Output did not match solution output"
+        "description": "Compare output of solutions"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Output did not match solution output", 
         "ptsEarned": 0.0, 
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "name": "test_rr2", 
-        "log": "Output did not match solution output"
+        "description": "Compare output of solutions"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Output did not match solution output", 
         "ptsEarned": 0.0, 
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "name": "test_sjf", 
-        "log": "Output did not match solution output"
+        "description": "Compare output of solutions"
       }
     ], 
-    "checksum": "7521ea593a1fcbe12f609017aae59905026663ec  libscheduler.c", 
-    "revision": "61215"
+    "revision": "61215", 
+    "checksum": "7521ea593a1fcbe12f609017aae59905026663ec  libscheduler.c"
   }, 
   {
     "timestamp": "2016-10-28 22:00:01.306534", 
     "testcases": [
       {
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
-        "log": "Output did not match solution output", 
+        "description": "Compare output of solutions", 
         "name": "test_fcfs", 
-        "ptsPossible": 1.0
+        "log": "Output did not match solution output"
       }, 
       {
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
-        "log": "Output did not match solution output", 
+        "description": "Compare output of solutions", 
         "name": "test_ppri", 
-        "ptsPossible": 1.0
+        "log": "Output did not match solution output"
       }, 
       {
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
-        "log": "Output did not match solution output", 
+        "description": "Compare output of solutions", 
         "name": "test_pri", 
-        "ptsPossible": 1.0
+        "log": "Output did not match solution output"
       }, 
       {
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
-        "log": "Output did not match solution output", 
+        "description": "Compare output of solutions", 
         "name": "test_psjf", 
-        "ptsPossible": 1.0
+        "log": "Output did not match solution output"
       }, 
       {
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
-        "log": "Output did not match solution output", 
+        "description": "Compare output of solutions", 
         "name": "test_rr2", 
-        "ptsPossible": 1.0
+        "log": "Output did not match solution output"
       }, 
       {
-        "description": "Compare output of solutions", 
+        "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
-        "log": "Output did not match solution output", 
+        "description": "Compare output of solutions", 
         "name": "test_sjf", 
-        "ptsPossible": 1.0
+        "log": "Output did not match solution output"
       }
     ], 
-    "revision": "61479", 
-    "checksum": "7521ea593a1fcbe12f609017aae59905026663ec  libscheduler.c"
+    "checksum": "7521ea593a1fcbe12f609017aae59905026663ec  libscheduler.c", 
+    "revision": "61479"
   }, 
   {
     "timestamp": "2016-10-29 22:00:00.960245", 
     "testcases": [
       {
-        "log": "Output did not match solution output", 
-        "ptsPossible": 1.0, 
+        "description": "Compare output of solutions", 
         "ptsEarned": 0.0, 
+        "log": "Output did not match solution output", 
+        "name": "test_fcfs", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Compare output of solutions", 
+        "ptsEarned": 0.0, 
+        "log": "Output did not match solution output", 
+        "name": "test_ppri", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Compare output of solutions", 
+        "ptsEarned": 0.0, 
+        "log": "Output did not match solution output", 
+        "name": "test_pri", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Compare output of solutions", 
+        "ptsEarned": 0.0, 
+        "log": "Output did not match solution output", 
+        "name": "test_psjf", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Compare output of solutions", 
+        "ptsEarned": 0.0, 
+        "log": "Output did not match solution output", 
+        "name": "test_rr2", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Compare output of solutions", 
+        "ptsEarned": 0.0, 
+        "log": "Output did not match solution output", 
+        "name": "test_sjf", 
+        "ptsPossible": 1.0
+      }
+    ], 
+    "revision": "61842", 
+    "checksum": "7521ea593a1fcbe12f609017aae59905026663ec  libscheduler.c"
+  }, 
+  {
+    "timestamp": "2016-10-30 22:00:01.223610", 
+    "testcases": [
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsPossible": 1.0, 
+        "ptsEarned": 1.0, 
         "name": "test_fcfs", 
         "description": "Compare output of solutions"
       }, 
       {
-        "log": "Output did not match solution output", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "test_ppri", 
         "description": "Compare output of solutions"
       }, 
       {
-        "log": "Output did not match solution output", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "test_pri", 
         "description": "Compare output of solutions"
       }, 
@@ -129,9 +178,9 @@
         "description": "Compare output of solutions"
       }, 
       {
-        "log": "Output did not match solution output", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "test_rr2", 
         "description": "Compare output of solutions"
       }, 
@@ -143,7 +192,7 @@
         "description": "Compare output of solutions"
       }
     ], 
-    "checksum": "7521ea593a1fcbe12f609017aae59905026663ec  libscheduler.c", 
-    "revision": "61842"
+    "checksum": "63f04cf91f444e80f581d337fa07267ff226d477  libscheduler.c", 
+    "revision": "62235"
   }
 ]
