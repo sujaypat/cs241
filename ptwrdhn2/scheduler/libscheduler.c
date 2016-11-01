@@ -19,6 +19,7 @@ struct _job_t {
 	float length;
 	float start;
 	float arrival;
+	// float remain;
 	/* Add whatever other bookkeeping you need into this struct. */
 };
 
@@ -126,6 +127,7 @@ int scheduler_new_job(int job_number, int time, int running_time, int priority) 
 	j -> arrival = time;
 	j -> length = running_time;
 	j -> start = 0;
+	// j-> remain = j -> length;
 
 	num_procs++;
 
@@ -138,6 +140,10 @@ int scheduler_new_job(int job_number, int time, int running_time, int priority) 
 		case PSJF:
 		preempt = 1;
 		break;
+
+		// case SJF:
+		// preempt = 3;
+		// break;
 
 		default:
 		break;
