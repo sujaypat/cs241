@@ -161,6 +161,7 @@ int scheduler_new_job(int job_number, int time, int running_time, int priority) 
 		}
 		if(preempt == 1){
 			if(comparer_psjf(j, cores[i].job) == -1){
+				cores[i].job -> length -= (time - cores[i].job -> start);
 				priqueue_offer(&pqueue, cores[i].job);
 				cores[i].free = 0;
 				j -> start = time;
