@@ -127,7 +127,6 @@ int scheduler_new_job(int job_number, int time, int running_time, int priority) 
 	j -> arrival = time;
 	j -> length = running_time;
 	j -> start = 0;
-	// j-> remain = j -> length;
 
 	num_procs++;
 
@@ -141,16 +140,11 @@ int scheduler_new_job(int job_number, int time, int running_time, int priority) 
 		preempt = 1;
 		break;
 
-		// case SJF:
-		// preempt = 3;
-		// break;
-
 		default:
 		break;
 	}
 
 	for(size_t i = 0; i < num_cores; i++){
-		// printf("core %zu is free? %d\n", i, cores[i].free);
 		if(cores[i].free == 1){
 			cores[i].free = 0;
 			j -> start = time;
@@ -181,7 +175,8 @@ int scheduler_new_job(int job_number, int time, int running_time, int priority) 
 
 int scheduler_job_finished(int core_id, int job_number, int time) {
 
-	// free(cores[core_id].job);
+	printf("waiting: %f\n", (time - cores[core_id].job -> arrival) - cores[core_id].job -> length);
+	waiting += (time - cores[core_id].job -> arrival) - cores[core_id].job -> length;
 	job_t *job = (job_t *)(priqueue_poll(&pqueue));
 	if(!job){
 		cores[core_id].free = 1;
@@ -189,9 +184,7 @@ int scheduler_job_finished(int core_id, int job_number, int time) {
 	}
 	job -> start = time;
 	response += time - job -> arrival;
-	// printf("wait: %f\n", (time - cores[core_id].job -> start));
-	turnaround += time - cores[core_id].job -> start;
-	waiting += (time - cores[core_id].job -> arrival) - cores[core_id].job -> length;
+	turnaround += time - cores[core_id].job -> arrival;
 	return job -> id;
 }
 
