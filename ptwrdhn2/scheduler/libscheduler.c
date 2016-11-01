@@ -53,6 +53,7 @@ int comparer_ppri(const void *a, const void *b) {
 
 int comparer_pri(const void *a, const void *b) {
 	int diff = ((job_t *)a) -> priority - ((job_t *)b) -> priority;
+	if (diff == 0) return break_tie(a,b);
 	return (diff > 0) ? -1 : ((diff < 0) ? 1 : 0);
 }
 
@@ -74,6 +75,7 @@ int comparer_rr(const void *a, const void *b) {
 
 int comparer_sjf(const void *a, const void *b) {
 	int diff = ((job_t *)a) -> length - ((job_t *)b) -> length;
+	if(diff == 0) return break_tie(a, b);
 	return (diff > 0) ? 1 : ((diff < 0) ? -1 : 0);
 }
 
@@ -181,7 +183,7 @@ int scheduler_job_finished(int core_id, int job_number, int time) {
 	job -> start = time;
 	response += time - job -> arrival;
 	// printf("wait: %f\n", (time - cores[core_id].job -> start));
-	turnaround += time - cores[core_id].job -> arrival;
+	turnaround += time - cores[core_id].job -> start;
 	waiting += (time - cores[core_id].job -> arrival) - cores[core_id].job -> length;
 	return job -> id;
 }
@@ -195,7 +197,6 @@ int scheduler_quantum_expired(int core_id, int time) {
 }
 
 float scheduler_average_waiting_time() {
-	printf("%d\n", num_procs);
 	return waiting / num_procs;
 }
 
