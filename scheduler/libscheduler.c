@@ -54,7 +54,7 @@ int comparer_ppri(const void *a, const void *b) {
 int comparer_pri(const void *a, const void *b) {
 	int diff = ((job_t *)a) -> priority - ((job_t *)b) -> priority;
 	if (diff == 0) return break_tie(a,b);
-	return (diff > 0) ? -1 : ((diff < 0) ? 1 : 0);
+	return (diff > 0) ? -1 : 1;
 }
 
 int comparer_psjf(const void *a, const void *b) {
@@ -151,29 +151,29 @@ int scheduler_new_job(int job_number, int time, int running_time, int priority) 
 		}
 		cores[i].job -> remain -= (time - cores[i].job -> start);
 	}
-	priqueue_offer(&pqueue, j);
-	job_t *new = priqueue_poll(&pqueue);
+	//priqueue_offer(&pqueue, j);
+	//job_t *new = priqueue_poll(&pqueue);
 	if(preempt == 0){
 		for (size_t k = 0; k < num_cores; k++) {
-			if(comparer_ppri(new, cores[k].job) == -1){
+			if(comparer_ppri(j, cores[k].job) == -1){
 				priqueue_offer(&pqueue, cores[k].job);
 				cores[k].free = 0;
-				new -> start = time;
+				j -> start = time;
 				return k;
 			}
 		}
 	}
 	if(preempt == 1){
 		for (size_t k = 0; k < num_cores; k++) {
-			if(comparer_psjf(new, cores[k].job) == -1){
+			if(comparer_psjf(j, cores[k].job) == -1){
 				priqueue_offer(&pqueue, cores[k].job);
 				cores[k].free = 0;
-				new -> start = time;
+				j -> start = time;
 				return k;
 			}
 		}
 	}
-	priqueue_offer(&pqueue, new);
+	priqueue_offer(&pqueue, j);
 	return -1;
 }
 
@@ -185,6 +185,7 @@ int scheduler_job_finished(int core_id, int job_number, int time) {
 		cores[core_id].free = 1;
 		return -1;
 	}
+	cores[core_id].free = 0;
 	job -> start = time;
 	response += time - job -> arrival;
 	turnaround += time - cores[core_id].job -> arrival;
