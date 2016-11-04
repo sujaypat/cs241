@@ -74,15 +74,9 @@ int parmake(int argc, char **argv) {
 
 	if(!path){
 		// if not makefile then Makefile else quit
-		if (access("makefile", F_OK) != -1){
-			path = "makefile";
-		}
-		else if (access("Makefile", F_OK) != -1){
-			path = "Makefile";
-		}
-		else{
-			exit(1);
-		}
+		if (access("makefile", F_OK) != -1) path = "makefile";
+		else if (access("Makefile", F_OK) != -1) path = "Makefile";
+		else exit(1);
 	}
 
 	rules = Vector_create(&my_copy_ctor, &my_destructor);
