@@ -19,7 +19,7 @@
 #include "parser.h"
 
 int num_threads = 1;
-char *path;
+char *path = NULL;
 Vector *rules;
 queue_t *jobs;
 pthread_mutex_t vec;
@@ -69,6 +69,19 @@ int parmake(int argc, char **argv) {
 				default:
 				break;
 			}
+		}
+	}
+
+	if(!path){
+		// if not makefile then Makefile else quit
+		if (access("makefile", F_OK) != -1){
+			path = "makefile";
+		}
+		else if (access("Makefile", F_OK) != -1){
+			path = "Makefile";
+		}
+		else{
+			exit(1);
 		}
 	}
 
