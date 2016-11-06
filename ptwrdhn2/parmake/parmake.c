@@ -24,16 +24,15 @@ Vector *rules;
 queue_t *jobs;
 pthread_mutex_t vec;
 
-// This is the constructor function for string element.
 void *my_copy_ctor(void *elem) {
 	return elem;
 }
-// This is the destructor function for string element.
 void my_destructor(void *elem) {
 	elem = (rule_t *)elem;
 }
 
 void callback(rule_t *target){
+	printf("rule target added to vector: %s\n", target -> target);
 	Vector_append(rules, target);
 }
 
@@ -42,7 +41,18 @@ void * start_routine(void *input){
 	while(1){
 		rule_t *thread_rule = queue_pull(use);
 		if(!thread_rule) break;
-
+		if(thread_rule -> state == 0){
+			// int all_satisfied = 0;
+			for(size_t j = 0; j < Vector_size(thread_rule -> dependencies); j++){
+				if(Vector_get(thread_rule -> dependencies, j) == Vector_get(rules, i)){
+					Vector_delete(thread_rule -> dependencies, i);
+				}
+			}
+			if(!Vector_size(thread_rule -> dependencies)){
+				thread_rule -> state = 1; // complete
+				queue_push(jobs, thread_rule);
+			}
+		}
 	}
 	return 0;
 }
@@ -87,8 +97,11 @@ int parmake(int argc, char **argv) {
 	for (size_t i = 0; i < Vector_size(rules); i++) {
 		rule_t *temp = Vector_get(rules, i);
 		if(Vector_size(temp -> dependencies) == 0){
+			((rule_t *)(Vector_get(rules, i))) -> state = 1;
+			printf("rule pushed to queue: %s\n", temp -> target);
 			queue_push(jobs, temp);
 		}
+		Vector_delete(rules, i);
 	}
 
 	for(int j = 0; j < num_threads; j++){
@@ -102,8 +115,6 @@ int parmake(int argc, char **argv) {
 		free(threads[k]);
 	}
 	free(threads);
-
-
 
 	return 0;
 }
