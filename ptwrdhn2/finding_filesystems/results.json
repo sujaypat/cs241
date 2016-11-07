@@ -3,6 +3,62 @@
     "timestamp": "2016-11-03 22:00:00.927400", 
     "testcases": [
       {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "ls simple test", 
+        "description": "\nTests ls prints out (any order) using one data block\n"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "ls cat does not exist test", 
+        "description": "\nTests invalid ls and cat\n"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "ls a lot of files", 
+        "description": "\nTests ls prints out (any order) using one data block\n"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "ls even more files", 
+        "description": "\nTests ls prints out (any order) using one data block\n"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "cat simple test", 
+        "description": "\nTests that cat prints out the correct text\n"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "cat a lot of bytes", 
+        "description": "\nTests that cat prints out the correct text\n"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "cat a even more bytes", 
+        "description": "\nTests that cat prints out the correct text\n"
+      }
+    ], 
+    "revision": "64899", 
+    "checksum": "e8ed0624db523c76c626cb11c2dae2a809da4e96  fs.c"
+  }, 
+  {
+    "timestamp": "2016-11-04 22:00:01.306913", 
+    "testcases": [
+      {
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "description": "\nTests ls prints out (any order) using one data block\n", 
@@ -53,10 +109,10 @@
       }
     ], 
     "checksum": "e8ed0624db523c76c626cb11c2dae2a809da4e96  fs.c", 
-    "revision": "64899"
+    "revision": "65317"
   }, 
   {
-    "timestamp": "2016-11-04 22:00:01.306913", 
+    "timestamp": "2016-11-05 22:00:00.834659", 
     "testcases": [
       {
         "description": "\nTests ls prints out (any order) using one data block\n", 
@@ -108,11 +164,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "65317", 
+    "revision": "65925", 
     "checksum": "e8ed0624db523c76c626cb11c2dae2a809da4e96  fs.c"
   }, 
   {
-    "timestamp": "2016-11-05 22:00:00.834659", 
+    "timestamp": "2016-11-06 22:00:04.745168", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
@@ -165,6 +221,6 @@
       }
     ], 
     "checksum": "e8ed0624db523c76c626cb11c2dae2a809da4e96  fs.c", 
-    "revision": "65925"
+    "revision": "66915"
   }
 ]
