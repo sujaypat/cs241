@@ -84,11 +84,11 @@ void * start_routine(void *input){
 					pthread_mutex_lock(&vec);
 					thread_rule -> state = 3;
 					pthread_mutex_unlock(&vec);
-					continue;
+					break;;
 				}
 			}
 			pthread_mutex_lock(&vec);
-			thread_rule -> state = 2;
+			if(thread_rule -> state == 0 || thread_rule -> state == 1) thread_rule -> state = 2;
 			pthread_mutex_unlock(&vec);
 		}
 	}
@@ -135,18 +135,23 @@ int parmake(int argc, char **argv) {
 
 	parser_parse_makefile(path, &argv[optind], callback);
 
+	for(int j = 0; j < num_threads; j++){
+		// threads[j] = malloc(sizeof(pthread_t));
+		pthread_create(&(threads[j]), 0, (void *)start_routine, jobs);
+		// queue_push(jobs, NULL);
+	}
 
 	for (size_t i = 0; i < Vector_size(rules); i++) {
 		rule_t *temp = Vector_get(rules, i);
 		if(Vector_size(temp -> dependencies) == 0){
 			((rule_t *)(Vector_get(rules, i))) -> state = 1;
-			// printf("added to queue with 0 dependencies: %s\n", ((rule_t *)(Vector_get(rules, i))) -> target);
 			queue_push(jobs, temp);
 			num_jobs++;
 			Vector_append(satisfied, temp);
 			// print_vector(satisfied);
 		}
 	}
+
 	size_t total_rules = Vector_size(rules);
 	int flag = 0; // 0 if found, 1 if not found
 	while(total_rules > 0){
@@ -154,16 +159,13 @@ int parmake(int argc, char **argv) {
 		for(size_t i = 0; i < Vector_size(rules); i++){
 			flag = 0;
 			for(size_t j = 0; j < Vector_size(((rule_t *)Vector_get(rules, i)) -> dependencies); j++){
-				// printf("current rule: %s\n", ((rule_t *)Vector_get(rules, i)) -> target);
-				// printf("searching for %s in %s\n", ((rule_t *)Vector_get(((rule_t *)Vector_get(rules, i)) -> dependencies, j)) -> target, "satisfied");
+				// printf("state: %d\n", ((rule_t *)Vector_get(((rule_t *)Vector_get(rules, i)) -> dependencies, j)) -> state);
 				if(((rule_t *)Vector_get(((rule_t *)Vector_get(rules, i)) -> dependencies, j)) -> state == 3 || !contains(satisfied, Vector_get(((rule_t *)Vector_get(rules, i)) -> dependencies, j))){
-					// printf("not found\n");
 					flag = 1;
 					break;
 				}
 			}
 			if(!flag && !contains(satisfied, ((rule_t *)Vector_get(rules, i)))){
-				// printf("adding to queue: %s\n", ((rule_t *)(Vector_get(rules, i))) -> target);
 				num_jobs++;
 				queue_push(jobs, Vector_get(rules, i));
 				Vector_append(satisfied, Vector_get(rules, i));
@@ -179,7 +181,7 @@ int parmake(int argc, char **argv) {
 
 	for(int j = 0; j < num_threads; j++){
 		// threads[j] = malloc(sizeof(pthread_t));
-		pthread_create(&(threads[j]), 0, (void *)start_routine, jobs);
+		// pthread_create(&(threads[j]), 0, (void *)start_routine, jobs);
 		queue_push(jobs, NULL);
 	}
 
