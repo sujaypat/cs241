@@ -37,12 +37,14 @@ void my_destructor(void *elem) {
 
 int contains(Vector *search, rule_t *in){
 	int res = 0;
+	pthread_mutex_lock(&vec);
 	for(size_t i = 0; i < Vector_size(search); i++){
 		// printf("comparing %s with %s\n", in -> target, ((rule_t *)Vector_get(search, i)) -> target);
 		if(!strcmp(in -> target, ((rule_t *)Vector_get(search, i)) -> target)){
 			res = 1;
 		}
 	}
+	pthread_mutex_unlock(&vec);
 	return res;
 }
 
@@ -65,7 +67,12 @@ void * start_routine(void *input){
 		if(!thread_rule) break;
 
 		for(size_t j = 0; j < Vector_size(thread_rule -> dependencies); j++){
-			while(((rule_t *)Vector_get(thread_rule -> dependencies, j)) -> state != 2 && ((rule_t *)Vector_get(thread_rule -> dependencies, j)) -> state != 3){}
+			pthread_mutex_lock(&vec);
+			while(((rule_t *)Vector_get(thread_rule -> dependencies, j)) -> state != 2 && ((rule_t *)Vector_get(thread_rule -> dependencies, j)) -> state != 3){
+				pthread_mutex_unlock(&vec);
+				pthread_mutex_lock(&vec);
+			}
+			pthread_mutex_unlock(&vec);
 			if(((rule_t *)Vector_get(thread_rule -> dependencies, j)) -> state == 3){
 				flag = 1;
 			}
@@ -74,11 +81,15 @@ void * start_routine(void *input){
 			for(size_t i = 0; i < Vector_size(thread_rule -> commands); i++){
 				int out = system(Vector_get(thread_rule -> commands, i));
 				if(out != 0){
+					pthread_mutex_lock(&vec);
 					thread_rule -> state = 3;
+					pthread_mutex_unlock(&vec);
 					continue;
 				}
 			}
+			pthread_mutex_lock(&vec);
 			thread_rule -> state = 2;
+			pthread_mutex_unlock(&vec);
 		}
 	}
 	return 0;
@@ -88,7 +99,7 @@ void * start_routine(void *input){
 
 int parmake(int argc, char **argv) {
 
-	pthread_t **threads = malloc(num_threads * sizeof(pthread_t *));
+	pthread_t *threads = malloc(num_threads * sizeof(pthread_t));
 
 	pthread_mutex_init(&vec, 0);
 	// arg parsing
@@ -145,7 +156,7 @@ int parmake(int argc, char **argv) {
 			for(size_t j = 0; j < Vector_size(((rule_t *)Vector_get(rules, i)) -> dependencies); j++){
 				// printf("current rule: %s\n", ((rule_t *)Vector_get(rules, i)) -> target);
 				// printf("searching for %s in %s\n", ((rule_t *)Vector_get(((rule_t *)Vector_get(rules, i)) -> dependencies, j)) -> target, "satisfied");
-				if(!contains(satisfied, Vector_get(((rule_t *)Vector_get(rules, i)) -> dependencies, j))){
+				if(((rule_t *)Vector_get(((rule_t *)Vector_get(rules, i)) -> dependencies, j)) -> state == 3 || !contains(satisfied, Vector_get(((rule_t *)Vector_get(rules, i)) -> dependencies, j))){
 					// printf("not found\n");
 					flag = 1;
 					break;
@@ -167,16 +178,17 @@ int parmake(int argc, char **argv) {
 	}
 
 	for(int j = 0; j < num_threads; j++){
-		threads[j] = malloc(sizeof(pthread_t));
-		pthread_create((threads[j]), 0, (void *)start_routine, jobs);
+		// threads[j] = malloc(sizeof(pthread_t));
+		pthread_create(&(threads[j]), 0, (void *)start_routine, jobs);
 		queue_push(jobs, NULL);
 	}
 
 	for(int k = 0; k < num_threads; k++){
-		pthread_join(*(threads[k]), 0);
-		free(threads[k]);
+		pthread_join((threads[k]), 0);
+		// free(threads[k]);
 	}
-	free(threads);
+	// free(path);
+	// free(threads);
 
 	return 0;
 }
