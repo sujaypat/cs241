@@ -77,17 +77,32 @@ void fs_cat(file_system *fs, char *path) {
 		print_no_file_or_directory();
 		return;
 	}
-
+	size_t size = res -> size;
 	size_t count = (size_t)((res -> size + sizeof(data_block) - 1) / sizeof(data_block));
 	size_t max = (count > 11) ? 11 : count;
 	for (size_t i = 0; i < max; i++) {
 		data_block data = fs -> data_root[res -> direct_nodes[i]];
-		write(fileno(stdout), &data, 16*KILOBYTE);
+
+		if(size >= 16 * KILOBYTE){
+			write(fileno(stdout), &data, 16 * KILOBYTE);
+			size -= 16 * KILOBYTE;
+		}
+		else{
+			write(fileno(stdout), &data, size);
+			return;
+		}
 	}
 	if(count > max){
 		for(size_t j = max; j < count; j++){
 			data_block indir_data = fs -> data_root[fs -> inode_root[res -> single_indirect].direct_nodes[j - 11]];
-			write(fileno(stdout), &indir_data, 16*KILOBYTE);
+			if(size >= 16 * KILOBYTE){
+				write(fileno(stdout), &indir_data, 16 * KILOBYTE);
+				size -= 16 * KILOBYTE;
+			}
+			else{
+				write(fileno(stdout), &indir_data, size);
+				return;
+			}
 		}
 	}
 	if(is_directory(res)){
