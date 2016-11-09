@@ -44,6 +44,26 @@ void fs_ls(file_system *fs, char *path) {
 				}
 				// printf("num_entries: %d\n", num_entries);
 				num_entries--;
+				if(num_entries == 0) break;
+			}
+			if(num_entries == 0) break;
+		}
+		res = &(fs -> inode_root[res -> single_indirect]);
+		// num_entries = res -> size / 256;
+		for(size_t i = 0; i < 11; i++){
+			for (size_t j = 0; j < 64; j++) {
+				char *same = (char *)(((void *)(&(fs -> data_root[res -> direct_nodes[i]]))) + 256 * j);
+				make_dirent_from_string(same, &dir);
+
+				inode *file_or_dir = &(fs -> inode_root[dir.inode_num]);
+				if(is_file(file_or_dir)) print_file(dir.name);
+				else if(is_directory(file_or_dir)) print_directory(dir.name);
+				else{
+					print_no_file_or_directory();
+					return;
+				}
+				// printf("num_entries: %d\n", num_entries);
+				num_entries--;
 				if(num_entries == 0) return;
 			}
 		}
