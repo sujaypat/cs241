@@ -44,9 +44,8 @@ void fs_ls(file_system *fs, char *path) {
 				}
 				// printf("num_entries: %d\n", num_entries);
 				num_entries--;
-				if(num_entries == 0) break;
+				if(num_entries == 0) return;;
 			}
-			if(num_entries == 0) break;
 		}
 		res = &(fs -> inode_root[res -> single_indirect]);
 		// num_entries = res -> size / 256;
