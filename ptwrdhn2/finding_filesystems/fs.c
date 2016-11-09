@@ -26,20 +26,22 @@ void fs_ls(file_system *fs, char *path) {
 
 void fs_cat(file_system *fs, char *path) {
 	// Shiver me triggers
-	// int val = 0; // 0-neither, 1-directory, 2-file
 	inode *res = NULL;
 	if(!(res = get_inode(fs, path))){
 		print_no_file_or_directory();
 		return;
 	}
-	// val = is_directory(res);
-	// if(!val && is_file(res)) val = 2;
 
 	size_t count = (size_t)((res -> size + sizeof(data_block) - 1) / sizeof(data_block));
-
-	for (size_t i = 0; i < count; i++) {
+	size_t max = (count > 11) ? 11 : count;
+	for (size_t i = 0; i < max; i++) {
 		data_block data = fs -> data_root[res -> direct_nodes[i]];
 		write(fileno(stdout), &data, 16*KILOBYTE);
 	}
-
+	if(count > max){
+		for(size_t j = max; j < count; j++){
+			data_block indir_data = fs -> data_root[fs -> inode_root[res -> single_indirect].direct_nodes[j - 11]];
+			write(fileno(stdout), &indir_data, 16*KILOBYTE);
+		}
+	}
 }
