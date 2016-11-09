@@ -90,4 +90,7 @@ void fs_cat(file_system *fs, char *path) {
 			write(fileno(stdout), &indir_data, 16*KILOBYTE);
 		}
 	}
+	if(is_directory(res)){
+		write(fileno(stdout), "\n", 2);
+	}
 }
