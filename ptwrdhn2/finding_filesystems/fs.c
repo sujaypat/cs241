@@ -38,10 +38,10 @@ void fs_ls(file_system *fs, char *path) {
 				inode *file_or_dir = &(fs -> inode_root[dir.inode_num]);
 				if(is_file(file_or_dir)) print_file(dir.name);
 				else if(is_directory(file_or_dir)) print_directory(dir.name);
-				else{
-					print_no_file_or_directory();
-					return;
-				}
+				// else{
+					// print_no_file_or_directory();
+					// return;
+				// }
 				// printf("num_entries: %d\n", num_entries);
 				num_entries--;
 				if(num_entries == 0) return;;
@@ -57,10 +57,10 @@ void fs_ls(file_system *fs, char *path) {
 				inode *file_or_dir = &(fs -> inode_root[dir.inode_num]);
 				if(is_file(file_or_dir)) print_file(dir.name);
 				else if(is_directory(file_or_dir)) print_directory(dir.name);
-				else{
-					print_no_file_or_directory();
-					return;
-				}
+				// else{
+				// 	print_no_file_or_directory();
+				// 	return;
+				// }
 				// printf("num_entries: %d\n", num_entries);
 				num_entries--;
 				if(num_entries == 0) return;
