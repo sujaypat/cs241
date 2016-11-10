@@ -104,7 +104,7 @@ void fs_cat(file_system *fs, char *path) {
 			}
 		}
 	}
-	if(is_directory(res)){
-		write(fileno(stdout), "\n", 2);
-	}
+	// if(is_directory(res)){
+	// 	write(fileno(stdout), "\n", 2);
+	// }
 }
