@@ -3,6 +3,55 @@
     "timestamp": "2016-11-09 22:00:01.721502", 
     "testcases": [
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test splitter is used correctly to feed data to mappers", 
+        "name": "splitter", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr1 print the correct output on a small input with multiple mappers", 
+        "name": "small_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers, with mappers of 0\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that tests mr1 on a large input", 
+        "name": "large_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nCouldn't open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test one reducer is used correctly", 
+        "name": "reducer_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that tests that multiple mappers are used", 
+        "name": "test_mapper", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers with mappers of 0"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test one reducer is used correctly", 
+        "name": "performance_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files"
+      }
+    ], 
+    "checksum": "1ede3e3576238c82d0f00cdef30f372ad7a3ab7e  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
+    "revision": "70923"
+  }, 
+  {
+    "timestamp": "2016-11-10 22:00:45.412502", 
+    "testcases": [
+      {
         "description": "Test splitter is used correctly to feed data to mappers", 
         "ptsEarned": 0.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers", 
@@ -45,11 +94,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "70923", 
+    "revision": "71942", 
     "checksum": "1ede3e3576238c82d0f00cdef30f372ad7a3ab7e  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
   }, 
   {
-    "timestamp": "2016-11-10 22:00:45.412502", 
+    "timestamp": "2016-11-11 22:00:12.376633", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers", 
@@ -95,6 +144,6 @@
       }
     ], 
     "checksum": "1ede3e3576238c82d0f00cdef30f372ad7a3ab7e  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
-    "revision": "71942"
+    "revision": "72285"
   }
 ]
