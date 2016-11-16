@@ -67,6 +67,7 @@ int main(int argc, char **argv) {
 					terminator++;
 					if(temp == '\0') break;
 				}
+				temp = realloc(temp, sizeof(BinaryTreeNode) + terminator);
 				fseek(f, temp -> right_child, SEEK_SET);
 				fread(temp, sizeof(BinaryTreeNode) + terminator, 1, f);
 			}
@@ -80,6 +81,7 @@ int main(int argc, char **argv) {
 					terminator++;
 					if(temp == '\0') break;
 				}
+				temp = realloc(temp, sizeof(BinaryTreeNode) + terminator);
 				fseek(f, temp -> left_child, SEEK_SET);
 				fread(temp, sizeof(BinaryTreeNode) + terminator, 1, f);
 			}
