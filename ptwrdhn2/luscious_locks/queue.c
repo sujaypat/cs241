@@ -44,6 +44,7 @@ void queue_push(queue_t *queue, void *data) {
 		queue -> tail -> next = new_node;
 	}
 	queue -> tail = new_node;
+	queue -> tail -> next = NULL;
 	if(!queue -> head){
 		queue -> head = new_node;
 	}
@@ -58,6 +59,9 @@ void queue_push(queue_t *queue, void *data) {
 */
 void *queue_pull(queue_t *queue) {
 	pthread_mutex_lock(&queue -> m);
+	if(queue -> head == queue -> tail){
+		queue -> tail = NULL;
+	}
 	while(queue -> head == NULL){
 		pthread_cond_wait(&queue -> cv, &queue -> m);
 	}
