@@ -2,7 +2,6 @@
 * MapReduce
 * CS 241 - Fall 2016
 */
-
 #include "common.h"
 #include "utils.h"
 #include <fcntl.h>
@@ -28,7 +27,7 @@ int main(int argc, char **argv) { //
 	int pipes[num_mappers * 2];
 	int reduce[2];
 	pipe2(reduce, O_CLOEXEC);
-	// Create an input pipe for each mapper.
+
 	for (size_t i = 0; i < num_mappers; i++) {
 		pipe2(&(pipes[i * 2]), O_CLOEXEC); // read, write
 	}
@@ -40,14 +39,12 @@ int main(int argc, char **argv) { //
 		}
 		else if(splitters[i] == 0){
 			dup2(pipes[(2 * i) + 1], fileno(stdout));
-			// fprintf(stderr, "what the split fuck %zu\n", ((i*2)+1));
 			close(pipes[2 * i]);
 			close(reduce[0]);
 			close(reduce[1]);
 
 			char iter[10];
 			sprintf(iter, "%zu", i);
-			// fprintf(stderr, "iter: %s\n", iter);
 
 			execl("./splitter", "./splitter", argv[1], argv[5], iter, NULL);
 			perror("split exec failed: ");
@@ -58,7 +55,6 @@ int main(int argc, char **argv) { //
 				perror("fork failed: ");
 			}
 			else if(mappers[i] == 0){
-				// fprintf(stderr, "what the map fuck %zu\n", ((i*2)));
 				dup2(pipes[2 * i], fileno(stdin));
 				dup2(reduce[1], fileno(stdout));
 				close(pipes[(2 * i) + 1]);
@@ -76,7 +72,7 @@ int main(int argc, char **argv) { //
 	}
 	else if(red == 0){
 		int output = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, S_IWUSR | S_IRUSR);
-		// fprintf(stderr, "output descriptor: %d\n", output);
+
 		dup2(reduce[0], fileno(stdin));
 		dup2(output, fileno(stdout));
 
@@ -89,8 +85,6 @@ int main(int argc, char **argv) { //
 		close(reduce[0]);
 	}
 
-
-	// Wait for the reducer to finish.
 	for (size_t map = 0; map < num_mappers; map++) {
 		int split_return;
 		int map_return;
