@@ -39,7 +39,7 @@ int main(int argc, char **argv) {
 	}
 
 	for (size_t i = 0; i < num_mappers; i++) {
-		splitters[i] = fork();
+		// splitters[i] = fork();
 		if (splitters[i] < 0) {
 			perror("fork failed: ");
 		}
@@ -57,7 +57,7 @@ int main(int argc, char **argv) {
 			perror("split exec failed: ");
 		}
 		else{
-			mappers[i] = fork();
+			// mappers[i] = fork();
 			if (mappers[i] < 0) {
 				perror("fork failed: ");
 			}
@@ -80,7 +80,7 @@ int main(int argc, char **argv) {
 	}
 
 
-	pid_t shuffler = fork();
+	// pid_t shuffler = fork();
 	if(shuffler < 0){
 		perror("fork failed: ");
 	}
@@ -93,7 +93,7 @@ int main(int argc, char **argv) {
 
 
 	for (size_t i = 0; i < num_reducers; i++) {
-		reducers[i] = fork();
+		// reducers[i] = fork();
 		if (reducers[i] < 0) {
 			perror("fork failed: ");
 		}
