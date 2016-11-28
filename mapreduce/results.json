@@ -3,6 +3,55 @@
     "timestamp": "2016-11-09 22:00:01.721502", 
     "testcases": [
       {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "splitter", 
+        "description": "Test splitter is used correctly to feed data to mappers"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers, with mappers of 0\nUnable to open/read output file", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "small_input", 
+        "description": "Test that mr1 print the correct output on a small input with multiple mappers"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nCouldn't open/read output file", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "large_input", 
+        "description": "Test that tests mr1 on a large input"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "reducer_test", 
+        "description": "Test one reducer is used correctly"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers with mappers of 0", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_mapper", 
+        "description": "Test that tests that multiple mappers are used"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 1.0, 
+        "name": "performance_test", 
+        "description": "Test one reducer is used correctly"
+      }
+    ], 
+    "checksum": "1ede3e3576238c82d0f00cdef30f372ad7a3ab7e  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
+    "revision": "70923"
+  }, 
+  {
+    "timestamp": "2016-11-10 22:00:45.412502", 
+    "testcases": [
+      {
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "description": "Test splitter is used correctly to feed data to mappers", 
@@ -45,11 +94,11 @@
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files"
       }
     ], 
-    "revision": "70923", 
+    "revision": "71942", 
     "checksum": "1ede3e3576238c82d0f00cdef30f372ad7a3ab7e  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
   }, 
   {
-    "timestamp": "2016-11-10 22:00:45.412502", 
+    "timestamp": "2016-11-11 22:00:12.376633", 
     "testcases": [
       {
         "description": "Test splitter is used correctly to feed data to mappers", 
@@ -95,61 +144,61 @@
       }
     ], 
     "checksum": "1ede3e3576238c82d0f00cdef30f372ad7a3ab7e  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
-    "revision": "71942"
-  }, 
-  {
-    "timestamp": "2016-11-11 22:00:12.376633", 
-    "testcases": [
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "splitter", 
-        "description": "Test splitter is used correctly to feed data to mappers"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers, with mappers of 0\nUnable to open/read output file", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "small_input", 
-        "description": "Test that mr1 print the correct output on a small input with multiple mappers"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nCouldn't open/read output file", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "large_input", 
-        "description": "Test that tests mr1 on a large input"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "reducer_test", 
-        "description": "Test one reducer is used correctly"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers with mappers of 0", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "test_mapper", 
-        "description": "Test that tests that multiple mappers are used"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files", 
-        "ptsEarned": 0.0, 
-        "ptsPossible": 1.0, 
-        "name": "performance_test", 
-        "description": "Test one reducer is used correctly"
-      }
-    ], 
-    "revision": "72285", 
-    "checksum": "1ede3e3576238c82d0f00cdef30f372ad7a3ab7e  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
+    "revision": "72285"
   }, 
   {
     "timestamp": "2016-11-12 22:02:07.547311", 
     "testcases": [
       {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "splitter", 
+        "description": "Test splitter is used correctly to feed data to mappers"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "small_input", 
+        "description": "Test that mr1 print the correct output on a small input with multiple mappers"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "large_input", 
+        "description": "Test that tests mr1 on a large input"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTest passed", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "reducer_test", 
+        "description": "Test one reducer is used correctly"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "test_mapper", 
+        "description": "Test that tests that multiple mappers are used"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTest passed", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "performance_test", 
+        "description": "Test one reducer is used correctly"
+      }
+    ], 
+    "revision": "72739", 
+    "checksum": "8f37ae5a1f84b8c891cdd16f1aea464938029189  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
+  }, 
+  {
+    "timestamp": "2016-11-13 22:00:21.936500", 
+    "testcases": [
+      {
         "ptsPossible": 1.0, 
         "ptsEarned": 1.0, 
         "description": "Test splitter is used correctly to feed data to mappers", 
@@ -193,10 +242,10 @@
       }
     ], 
     "checksum": "8f37ae5a1f84b8c891cdd16f1aea464938029189  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
-    "revision": "72739"
+    "revision": "73366"
   }, 
   {
-    "timestamp": "2016-11-13 22:00:21.936500", 
+    "timestamp": "2016-11-14 12:00:59.286203", 
     "testcases": [
       {
         "description": "Test splitter is used correctly to feed data to mappers", 
@@ -241,11 +290,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "73366", 
+    "revision": "73692", 
     "checksum": "8f37ae5a1f84b8c891cdd16f1aea464938029189  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
   }, 
   {
-    "timestamp": "2016-11-14 12:00:59.286203", 
+    "timestamp": "2016-11-15 00:00:12.888100", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
@@ -291,10 +340,10 @@
       }
     ], 
     "checksum": "8f37ae5a1f84b8c891cdd16f1aea464938029189  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
-    "revision": "73692"
+    "revision": "74726"
   }, 
   {
-    "timestamp": "2016-11-15 00:00:12.888100", 
+    "timestamp": "2016-11-15 18:10:40.280653", 
     "testcases": [
       {
         "ptsPossible": 1.0, 
@@ -343,7 +392,7 @@
     "checksum": "8f37ae5a1f84b8c891cdd16f1aea464938029189  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
   }, 
   {
-    "timestamp": "2016-11-15 18:10:40.280653", 
+    "timestamp": "2016-11-15 23:10:28.985669", 
     "testcases": [
       {
         "description": "Test splitter is used correctly to feed data to mappers", 
@@ -392,142 +441,177 @@
     "revision": "74726"
   }, 
   {
-    "timestamp": "2016-11-15 23:10:28.985669", 
+    "timestamp": "2016-11-16 12:30:05.940315", 
     "testcases": [
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
-        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers", 
+        "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "splitter", 
         "description": "Test splitter is used correctly to feed data to mappers"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "small_input", 
-        "description": "Test that mr1 print the correct output on a small input with multiple mappers"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "large_input", 
-        "description": "Test that tests mr1 on a large input"
-      }, 
-      {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTest passed", 
-        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "reducer_test", 
         "description": "Test one reducer is used correctly"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
-        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers", 
+        "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "test_mapper", 
         "description": "Test that tests that multiple mappers are used"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTest passed", 
-        "ptsEarned": 1.0, 
-        "ptsPossible": 1.0, 
-        "name": "performance_test", 
-        "description": "Test one reducer is used correctly"
-      }
-    ], 
-    "revision": "74726", 
-    "checksum": "8f37ae5a1f84b8c891cdd16f1aea464938029189  mr1.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
-  }, 
-  {
-    "timestamp": "2016-11-16 12:30:05.940315", 
-    "testcases": [
-      {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mkfifo files", 
         "ptsEarned": 0.0, 
-        "description": "Test splitter is used correctly to feed data to mappers", 
-        "name": "splitter", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers"
-      }, 
-      {
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "Test one reducer is used correctly", 
-        "name": "reducer_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "Test that tests that multiple mappers are used", 
-        "name": "test_mapper", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers"
-      }, 
-      {
-        "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
-        "description": "Test that tests that mkfifo is used", 
         "name": "test_mkfifo", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mkfifo files"
+        "description": "Test that tests that mkfifo is used"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files", 
         "ptsEarned": 0.0, 
-        "description": "Test performance of slow reducer", 
+        "ptsPossible": 1.0, 
         "name": "performance_test", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files"
+        "description": "Test performance of slow reducer"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nOutput file did not match solution\nOutput file did not match solution", 
         "ptsEarned": 0.0, 
-        "description": "Test that shuffler outputs correctly to given files", 
+        "ptsPossible": 1.0, 
         "name": "shuffler_test_small", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nOutput file did not match solution\nOutput file did not match solution"
+        "description": "Test that shuffler outputs correctly to given files"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file", 
         "ptsEarned": 0.0, 
-        "description": "Test that mr2 print the correct output on a small input with multiple mappers", 
+        "ptsPossible": 1.0, 
         "name": "small_input", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file"
+        "description": "Test that mr2 print the correct output on a small input with multiple mappers"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nIncorrect number of reducers\nCouldn't open/read output file", 
         "ptsEarned": 0.0, 
-        "description": "Test that tests mr2 on a large input", 
+        "ptsPossible": 1.0, 
         "name": "large_input", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nIncorrect number of reducers\nCouldn't open/read output file"
+        "description": "Test that tests mr2 on a large input"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files", 
         "ptsEarned": 0.0, 
-        "description": "Test performance of slow reducer", 
+        "ptsPossible": 1.0, 
         "name": "performance_test2", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files"
+        "description": "Test performance of slow reducer"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==6231== Memcheck, a memory error detector\n==6231== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==6231== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==6231== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==6231== \n==6231== \n==6231== HEAP SUMMARY:\n==6231==     in use at exit: 0 bytes in 0 blocks\n==6231==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==6231== \n==6231== All heap blocks were freed -- no leaks are possible\n==6231== \n==6231== For counts of detected and suppressed errors, rerun with: -v\n==6231== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
         "ptsEarned": 0.0, 
-        "description": "Memory test for mr2", 
+        "ptsPossible": 1.0, 
         "name": "memory_mapreduce", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==6231== Memcheck, a memory error detector\n==6231== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==6231== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==6231== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==6231== \n==6231== \n==6231== HEAP SUMMARY:\n==6231==     in use at exit: 0 bytes in 0 blocks\n==6231==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==6231== \n==6231== All heap blocks were freed -- no leaks are possible\n==6231== \n==6231== For counts of detected and suppressed errors, rerun with: -v\n==6231== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)"
+        "description": "Memory test for mr2"
       }, 
       {
-        "ptsPossible": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nOutput file did not match solution\nOutput file did not match solution\n", 
         "ptsEarned": 0.0, 
-        "description": "Test that shuffler outputs correctly to given files", 
+        "ptsPossible": 1.0, 
         "name": "shuffler_memory", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nOutput file did not match solution\nOutput file did not match solution\n"
+        "description": "Test that shuffler outputs correctly to given files"
       }
     ], 
-    "checksum": "8301e7b289ae86718bd4fd366398fb7226cb3e0a  mr2.c\nf3979b5fe69ac6c87bb50ab8a00a9aa9d88b901e  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
-    "revision": "75357"
+    "revision": "75357", 
+    "checksum": "8301e7b289ae86718bd4fd366398fb7226cb3e0a  mr2.c\nf3979b5fe69ac6c87bb50ab8a00a9aa9d88b901e  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
   }, 
   {
     "timestamp": "2016-11-16 22:00:28.879176", 
     "testcases": [
       {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test splitter is used correctly to feed data to mappers", 
+        "name": "splitter", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test one reducer is used correctly", 
+        "name": "reducer_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that tests that multiple mappers are used", 
+        "name": "test_mapper", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that tests that mkfifo is used", 
+        "name": "test_mkfifo", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mkfifo files"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test performance of slow reducer", 
+        "name": "performance_test", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that shuffler outputs correctly to given files", 
+        "name": "shuffler_test_small", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nOutput file did not match solution\nOutput file did not match solution"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that mr2 print the correct output on a small input with multiple mappers", 
+        "name": "small_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that tests mr2 on a large input", 
+        "name": "large_input", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nIncorrect number of reducers\nCouldn't open/read output file"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test performance of slow reducer", 
+        "name": "performance_test2", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Memory test for mr2", 
+        "name": "memory_mapreduce", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==15574== Memcheck, a memory error detector\n==15574== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==15574== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==15574== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==15574== \n==15574== \n==15574== HEAP SUMMARY:\n==15574==     in use at exit: 0 bytes in 0 blocks\n==15574==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==15574== \n==15574== All heap blocks were freed -- no leaks are possible\n==15574== \n==15574== For counts of detected and suppressed errors, rerun with: -v\n==15574== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)"
+      }, 
+      {
+        "ptsPossible": 1.0, 
+        "ptsEarned": 0.0, 
+        "description": "Test that shuffler outputs correctly to given files", 
+        "name": "shuffler_memory", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nOutput file did not match solution\nOutput file did not match solution\n"
+      }
+    ], 
+    "checksum": "8301e7b289ae86718bd4fd366398fb7226cb3e0a  mr2.c\nf3979b5fe69ac6c87bb50ab8a00a9aa9d88b901e  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
+    "revision": "76112"
+  }, 
+  {
+    "timestamp": "2016-11-18 09:15:45.750076", 
+    "testcases": [
+      {
         "description": "Test splitter is used correctly to feed data to mappers", 
         "ptsEarned": 0.0, 
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers", 
@@ -593,7 +677,7 @@
       {
         "description": "Memory test for mr2", 
         "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==15574== Memcheck, a memory error detector\n==15574== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==15574== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==15574== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==15574== \n==15574== \n==15574== HEAP SUMMARY:\n==15574==     in use at exit: 0 bytes in 0 blocks\n==15574==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==15574== \n==15574== All heap blocks were freed -- no leaks are possible\n==15574== \n==15574== For counts of detected and suppressed errors, rerun with: -v\n==15574== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==6036== Memcheck, a memory error detector\n==6036== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==6036== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==6036== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==6036== \n==6036== \n==6036== HEAP SUMMARY:\n==6036==     in use at exit: 0 bytes in 0 blocks\n==6036==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==6036== \n==6036== All heap blocks were freed -- no leaks are possible\n==6036== \n==6036== For counts of detected and suppressed errors, rerun with: -v\n==6036== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
         "name": "memory_mapreduce", 
         "ptsPossible": 1.0
       }, 
@@ -605,11 +689,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "76112", 
+    "revision": "76629", 
     "checksum": "8301e7b289ae86718bd4fd366398fb7226cb3e0a  mr2.c\nf3979b5fe69ac6c87bb50ab8a00a9aa9d88b901e  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
   }, 
   {
-    "timestamp": "2016-11-18 09:15:45.750076", 
+    "timestamp": "2016-11-18 12:00:04.172857", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers", 
@@ -675,7 +759,7 @@
         "description": "Test performance of slow reducer"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==6036== Memcheck, a memory error detector\n==6036== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==6036== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==6036== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==6036== \n==6036== \n==6036== HEAP SUMMARY:\n==6036==     in use at exit: 0 bytes in 0 blocks\n==6036==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==6036== \n==6036== All heap blocks were freed -- no leaks are possible\n==6036== \n==6036== For counts of detected and suppressed errors, rerun with: -v\n==6036== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==16768== Memcheck, a memory error detector\n==16768== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==16768== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==16768== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==16768== \n==16768== \n==16768== HEAP SUMMARY:\n==16768==     in use at exit: 0 bytes in 0 blocks\n==16768==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==16768== \n==16768== All heap blocks were freed -- no leaks are possible\n==16768== \n==16768== For counts of detected and suppressed errors, rerun with: -v\n==16768== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "memory_mapreduce", 
@@ -690,10 +774,10 @@
       }
     ], 
     "checksum": "8301e7b289ae86718bd4fd366398fb7226cb3e0a  mr2.c\nf3979b5fe69ac6c87bb50ab8a00a9aa9d88b901e  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
-    "revision": "76629"
+    "revision": "76635"
   }, 
   {
-    "timestamp": "2016-11-18 12:00:04.172857", 
+    "timestamp": "2016-11-18 22:01:04.729370", 
     "testcases": [
       {
         "ptsPossible": 1.0, 
@@ -763,7 +847,7 @@
         "ptsEarned": 0.0, 
         "description": "Memory test for mr2", 
         "name": "memory_mapreduce", 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==16768== Memcheck, a memory error detector\n==16768== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==16768== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==16768== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==16768== \n==16768== \n==16768== HEAP SUMMARY:\n==16768==     in use at exit: 0 bytes in 0 blocks\n==16768==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==16768== \n==16768== All heap blocks were freed -- no leaks are possible\n==16768== \n==16768== For counts of detected and suppressed errors, rerun with: -v\n==16768== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)"
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==27693== Memcheck, a memory error detector\n==27693== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==27693== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==27693== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==27693== \n==27693== \n==27693== HEAP SUMMARY:\n==27693==     in use at exit: 0 bytes in 0 blocks\n==27693==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==27693== \n==27693== All heap blocks were freed -- no leaks are possible\n==27693== \n==27693== For counts of detected and suppressed errors, rerun with: -v\n==27693== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)"
       }, 
       {
         "ptsPossible": 1.0, 
@@ -773,11 +857,11 @@
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nOutput file did not match solution\nOutput file did not match solution\n"
       }
     ], 
-    "revision": "76635", 
+    "revision": "76708", 
     "checksum": "8301e7b289ae86718bd4fd366398fb7226cb3e0a  mr2.c\nf3979b5fe69ac6c87bb50ab8a00a9aa9d88b901e  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
   }, 
   {
-    "timestamp": "2016-11-18 22:01:04.729370", 
+    "timestamp": "2016-11-19 22:00:24.068327", 
     "testcases": [
       {
         "description": "Test splitter is used correctly to feed data to mappers", 
@@ -845,7 +929,7 @@
       {
         "description": "Memory test for mr2", 
         "ptsEarned": 0.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==27693== Memcheck, a memory error detector\n==27693== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==27693== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==27693== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==27693== \n==27693== \n==27693== HEAP SUMMARY:\n==27693==     in use at exit: 0 bytes in 0 blocks\n==27693==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==27693== \n==27693== All heap blocks were freed -- no leaks are possible\n==27693== \n==27693== For counts of detected and suppressed errors, rerun with: -v\n==27693== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==7020== Memcheck, a memory error detector\n==7020== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==7020== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==7020== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==7020== \n==7020== \n==7020== HEAP SUMMARY:\n==7020==     in use at exit: 0 bytes in 0 blocks\n==7020==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==7020== \n==7020== All heap blocks were freed -- no leaks are possible\n==7020== \n==7020== For counts of detected and suppressed errors, rerun with: -v\n==7020== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
         "name": "memory_mapreduce", 
         "ptsPossible": 1.0
       }, 
@@ -858,94 +942,94 @@
       }
     ], 
     "checksum": "8301e7b289ae86718bd4fd366398fb7226cb3e0a  mr2.c\nf3979b5fe69ac6c87bb50ab8a00a9aa9d88b901e  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
-    "revision": "76708"
+    "revision": "76770"
   }, 
   {
-    "timestamp": "2016-11-19 22:00:24.068327", 
+    "timestamp": "2016-11-20 22:01:23.258206", 
     "testcases": [
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nData was not split evenly among mappers", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nfind: \u2018.../ptwrdhn2/mapreduce/.objs\u2019: No such file or directory\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "splitter", 
         "description": "Test splitter is used correctly to feed data to mappers"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nUnable to open/read output file", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "reducer_test", 
         "description": "Test one reducer is used correctly"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "test_mapper", 
         "description": "Test that tests that multiple mappers are used"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mkfifo files", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "test_mkfifo", 
         "description": "Test that tests that mkfifo is used"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "performance_test", 
         "description": "Test performance of slow reducer"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nOutput file did not match solution\nOutput file did not match solution", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nshuffler.c:28:16: error: too few arguments to function call, expected 3, have 0\n        while(getline() != -1){\n              ~~~~~~~ ^\n/usr/include/x86_64-linux-gnu/bits/stdio.h:114:1: note: 'getline' declared here\n__STDIO_INLINE _IO_ssize_t\n^\n/usr/include/x86_64-linux-gnu/bits/stdio.h:26:25: note: expanded from macro '__STDIO_INLINE'\n# define __STDIO_INLINE __extern_inline\n                        ^\n/usr/include/x86_64-linux-gnu/sys/cdefs.h:333:27: note: expanded from macro '__extern_inline'\n#  define __extern_inline extern __inline __attribute__ ((__gnu_inline__))\n                          ^\nshuffler.c:29:15: error: expected expression\n                char *key = ;\n                            ^\nshuffler.c:30:17: error: expected expression\n                char *value = ;\n                              ^\nshuffler.c:31:44: error: use of undeclared identifier 'N'\n                FILE *outf = output_files[hashKey(key) % N];\n                                                         ^\nshuffler.c:31:16: error: use of undeclared identifier 'output_files'\n                FILE *outf = output_files[hashKey(key) % N];\n                             ^\nshuffler.c:32:40: error: expected ';' after expression\n                fprintf(outf, \"%s: %s\\n\", key, value)\n                                                     ^\n                                                     ;\nshuffler.c:19:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 6 errors generated.\nmake: *** [.objs/shuffler-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "shuffler_test_small", 
         "description": "Test that shuffler outputs correctly to given files"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "small_input", 
         "description": "Test that mr2 print the correct output on a small input with multiple mappers"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nIncorrect number of reducers\nCouldn't open/read output file", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "large_input", 
         "description": "Test that tests mr2 on a large input"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nCouldn't open/read output files", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "performance_test2", 
         "description": "Test performance of slow reducer"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nIncorrect number of mappers\nUnable to open/read output file\n==7020== Memcheck, a memory error detector\n==7020== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==7020== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==7020== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==7020== \n==7020== \n==7020== HEAP SUMMARY:\n==7020==     in use at exit: 0 bytes in 0 blocks\n==7020==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==7020== \n==7020== All heap blocks were freed -- no leaks are possible\n==7020== \n==7020== For counts of detected and suppressed errors, rerun with: -v\n==7020== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "memory_mapreduce", 
         "description": "Memory test for mr2"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nOutput file did not match solution\nOutput file did not match solution\n", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nshuffler.c:28:16: error: too few arguments to function call, expected 3, have 0\n        while(getline() != -1){\n              ~~~~~~~ ^\n/usr/include/x86_64-linux-gnu/bits/stdio.h:114:1: note: 'getline' declared here\n__STDIO_INLINE _IO_ssize_t\n^\n/usr/include/x86_64-linux-gnu/bits/stdio.h:26:25: note: expanded from macro '__STDIO_INLINE'\n# define __STDIO_INLINE __extern_inline\n                        ^\n/usr/include/x86_64-linux-gnu/sys/cdefs.h:333:27: note: expanded from macro '__extern_inline'\n#  define __extern_inline extern __inline __attribute__ ((__gnu_inline__))\n                          ^\nshuffler.c:29:15: error: expected expression\n                char *key = ;\n                            ^\nshuffler.c:30:17: error: expected expression\n                char *value = ;\n                              ^\nshuffler.c:31:44: error: use of undeclared identifier 'N'\n                FILE *outf = output_files[hashKey(key) % N];\n                                                         ^\nshuffler.c:31:16: error: use of undeclared identifier 'output_files'\n                FILE *outf = output_files[hashKey(key) % N];\n                             ^\nshuffler.c:32:40: error: expected ';' after expression\n                fprintf(outf, \"%s: %s\\n\", key, value)\n                                                     ^\n                                                     ;\nshuffler.c:19:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 6 errors generated.\nmake: *** [.objs/shuffler-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "shuffler_memory", 
         "description": "Test that shuffler outputs correctly to given files"
       }
     ], 
-    "revision": "76770", 
-    "checksum": "8301e7b289ae86718bd4fd366398fb7226cb3e0a  mr2.c\nf3979b5fe69ac6c87bb50ab8a00a9aa9d88b901e  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
+    "revision": "76983", 
+    "checksum": "ee68bec0245f98d7b2817521d7bd8d115f0d4f83  mr2.c\n6b4ad9b4d74211ce95ffffdc67c9d10c50740ec4  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
   }, 
   {
-    "timestamp": "2016-11-20 22:01:23.258206", 
+    "timestamp": "2016-11-27 00:46:08.826163", 
     "testcases": [
       {
         "ptsPossible": 1.0, 
@@ -1026,10 +1110,10 @@
       }
     ], 
     "checksum": "ee68bec0245f98d7b2817521d7bd8d115f0d4f83  mr2.c\n6b4ad9b4d74211ce95ffffdc67c9d10c50740ec4  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
-    "revision": "76983"
+    "revision": "78062"
   }, 
   {
-    "timestamp": "2016-11-27 00:46:08.826163", 
+    "timestamp": "2016-11-27 23:23:50.768707", 
     "testcases": [
       {
         "description": "Test splitter is used correctly to feed data to mappers", 
@@ -1109,91 +1193,91 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "78062", 
+    "revision": "79025", 
     "checksum": "ee68bec0245f98d7b2817521d7bd8d115f0d4f83  mr2.c\n6b4ad9b4d74211ce95ffffdc67c9d10c50740ec4  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h"
   }, 
   {
-    "timestamp": "2016-11-27 23:23:50.768707", 
+    "timestamp": "2016-11-28 12:00:23.457284", 
     "testcases": [
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nfind: \u2018.../ptwrdhn2/mapreduce/.objs\u2019: No such file or directory\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "splitter", 
         "description": "Test splitter is used correctly to feed data to mappers"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTest passed", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "reducer_test", 
         "description": "Test one reducer is used correctly"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "test_mapper", 
         "description": "Test that tests that multiple mappers are used"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "test_mkfifo", 
         "description": "Test that tests that mkfifo is used"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTest passed", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "performance_test", 
         "description": "Test performance of slow reducer"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nshuffler.c:28:16: error: too few arguments to function call, expected 3, have 0\n        while(getline() != -1){\n              ~~~~~~~ ^\n/usr/include/x86_64-linux-gnu/bits/stdio.h:114:1: note: 'getline' declared here\n__STDIO_INLINE _IO_ssize_t\n^\n/usr/include/x86_64-linux-gnu/bits/stdio.h:26:25: note: expanded from macro '__STDIO_INLINE'\n# define __STDIO_INLINE __extern_inline\n                        ^\n/usr/include/x86_64-linux-gnu/sys/cdefs.h:333:27: note: expanded from macro '__extern_inline'\n#  define __extern_inline extern __inline __attribute__ ((__gnu_inline__))\n                          ^\nshuffler.c:29:15: error: expected expression\n                char *key = ;\n                            ^\nshuffler.c:30:17: error: expected expression\n                char *value = ;\n                              ^\nshuffler.c:31:44: error: use of undeclared identifier 'N'\n                FILE *outf = output_files[hashKey(key) % N];\n                                                         ^\nshuffler.c:31:16: error: use of undeclared identifier 'output_files'\n                FILE *outf = output_files[hashKey(key) % N];\n                             ^\nshuffler.c:32:40: error: expected ';' after expression\n                fprintf(outf, \"%s: %s\\n\", key, value)\n                                                     ^\n                                                     ;\nshuffler.c:19:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 6 errors generated.\nmake: *** [.objs/shuffler-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "shuffler_test_small", 
         "description": "Test that shuffler outputs correctly to given files"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "small_input", 
         "description": "Test that mr2 print the correct output on a small input with multiple mappers"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "large_input", 
         "description": "Test that tests mr2 on a large input"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nTest passed", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "performance_test2", 
         "description": "Test performance of slow reducer"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nmr2.c:26:24: error: subscript of pointer to function type 'int (const char *)'\n        size_t num_reducers = atoi[6];\n                              ^~~~\nmr2.c:84:5: error: use of undeclared identifier 'shuffler'\n        if(shuffler < 0){\n           ^\nmr2.c:87:10: error: use of undeclared identifier 'shuffler'\n        else if(shuffler == 0){\n                ^\n3 errors generated.\nmake: *** [.objs/mr2-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n==25175== Memcheck, a memory error detector\n==25175== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==25175== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info\n==25175== Command: ././mr2 ././data/input_small.txt ./temp/output.out ././mapper_asciicount ././reducer_sum 2 2\n==25175== \n==25175== \n==25175== HEAP SUMMARY:\n==25175==     in use at exit: 0 bytes in 0 blocks\n==25175==   total heap usage: 5 allocs, 5 frees, 8,762 bytes allocated\n==25175== \n==25175== All heap blocks were freed -- no leaks are possible\n==25175== \n==25175== For counts of detected and suppressed errors, rerun with: -v\n==25175== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "memory_mapreduce", 
         "description": "Memory test for mr2"
       }, 
       {
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nshuffler.c:28:16: error: too few arguments to function call, expected 3, have 0\n        while(getline() != -1){\n              ~~~~~~~ ^\n/usr/include/x86_64-linux-gnu/bits/stdio.h:114:1: note: 'getline' declared here\n__STDIO_INLINE _IO_ssize_t\n^\n/usr/include/x86_64-linux-gnu/bits/stdio.h:26:25: note: expanded from macro '__STDIO_INLINE'\n# define __STDIO_INLINE __extern_inline\n                        ^\n/usr/include/x86_64-linux-gnu/sys/cdefs.h:333:27: note: expanded from macro '__extern_inline'\n#  define __extern_inline extern __inline __attribute__ ((__gnu_inline__))\n                          ^\nshuffler.c:29:15: error: expected expression\n                char *key = ;\n                            ^\nshuffler.c:30:17: error: expected expression\n                char *value = ;\n                              ^\nshuffler.c:31:44: error: use of undeclared identifier 'N'\n                FILE *outf = output_files[hashKey(key) % N];\n                                                         ^\nshuffler.c:31:16: error: use of undeclared identifier 'output_files'\n                FILE *outf = output_files[hashKey(key) % N];\n                             ^\nshuffler.c:32:40: error: expected ';' after expression\n                fprintf(outf, \"%s: %s\\n\", key, value)\n                                                     ^\n                                                     ;\nshuffler.c:19:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 6 errors generated.\nmake: *** [.objs/shuffler-release.o] Error 1\n", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\n", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "shuffler_memory", 
         "description": "Test that shuffler outputs correctly to given files"
       }
     ], 
-    "checksum": "ee68bec0245f98d7b2817521d7bd8d115f0d4f83  mr2.c\n6b4ad9b4d74211ce95ffffdc67c9d10c50740ec4  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
-    "revision": "79025"
+    "checksum": "24922df57cc97c70042bd03391b12a553af46501  mr2.c\na9faefac67691d774abce58bf1d34cf294d7bf0d  shuffler.c\n132eba5cc41fa0a819ebd1c0e4427ac740b40284  core/common.c\n07cca03af33f6ef902db07f5fe2c6df7d186b0fb  core/common.h", 
+    "revision": "79256"
   }
 ]
