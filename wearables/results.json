@@ -3,6 +3,55 @@
     "timestamp": "2016-11-29 22:00:01.812548", 
     "testcases": [
       {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDiffing your output with the expected solution...\nRESULTS DIFFERED FROM SOLUTION!\n\n0a1,15\n> Results for heart_beat:\n> Size:1\n> Median:100\n> Average:100\n> \n> Results for blood_sugar:\n> Size:1\n> Median:104\n> Average:104\n> \n> Results for body_temp:\n> Size:1\n> Median:104\n> Average:104\n> \n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 2.0, 
+        "name": "One Wearable", 
+        "description": "Testing server with one wearable ..."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDiffing your output with the expected solution...\nRESULTS DIFFERED FROM SOLUTION!\n\n0a1,30\n> Results for heart_beat:\n> Size:5\n> Median:100\n> Average:104\n> \n> Results for blood_sugar:\n> Size:1\n> Median:104\n> Average:104\n> \n> Results for body_temp:\n> Size:4\n> Median:111\n> Average:109\n> \n> Results for heart_beat:\n> Size:5\n> Median:100\n> Average:104\n> \n> Results for blood_sugar:\n> Size:2\n> Median:104\n> Average:104\n> \n> Results for body_temp:\n> Size:5\n> Median:111\n> Average:108\n> \n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 2.0, 
+        "name": "Two Wearable", 
+        "description": "Testing server with two wearables"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDiffing your output with the expected solution...\nRESULTS DIFFERED FROM SOLUTION!\n\n0a1,30\n> Results for heart_beat:\n> Size:472\n> Median:104\n> Average:100\n> \n> Results for blood_sugar:\n> Size:516\n> Median:92\n> Average:96\n> \n> Results for body_temp:\n> Size:553\n> Median:104\n> Average:100\n> \n> Results for heart_beat:\n> Size:555\n> Median:104\n> Average:100\n> \n> Results for blood_sugar:\n> Size:596\n> Median:96\n> Average:97\n> \n> Results for body_temp:\n> Size:640\n> Median:104\n> Average:100\n> \n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 2.0, 
+        "name": "Synchronized", 
+        "description": "Testing Server for synchronization..."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDiffing your output with the expected solution...\nRESULTS DIFFERED FROM SOLUTION!\n\n0a1,30\n> Results for heart_beat:\n> Size:180\n> Median:102\n> Average:102\n> \n> Results for blood_sugar:\n> Size:211\n> Median:101\n> Average:100\n> \n> Results for body_temp:\n> Size:204\n> Median:102\n> Average:101\n> \n> Results for heart_beat:\n> Size:4507\n> Median:100\n> Average:99\n> \n> Results for blood_sugar:\n> Size:4591\n> Median:99\n> Average:99\n> \n> Results for body_temp:\n> Size:4502\n> Median:100\n> Average:99\n> \n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 4.0, 
+        "name": "Stress", 
+        "description": "Stress Testing Server..."
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDiffing your output with the expected solution...\nRESULTS DIFFERED FROM SOLUTION!\n\n0a1,60\n> Results for heart_beat:\n> Size:10\n> Median:126\n> Average:153\n> \n> Results for blood_sugar:\n> Size:3\n> Median:104\n> Average:114\n> \n> Results for body_temp:\n> Size:2\n> Median:124\n> Average:124\n> \n> Results for heart_beat:\n> Size:10\n> Median:126\n> Average:153\n> \n> Results for blood_sugar:\n> Size:3\n> Median:104\n> Average:114\n> \n> Results for body_temp:\n> Size:2\n> Median:124\n> Average:124\n> \n> Results for heart_beat:\n> Size:10\n> Median:126\n> Average:153\n> \n> Results for blood_sugar:\n> Size:4\n> Median:104\n> Average:111\n> \n> Results for body_temp:\n> Size:3\n> Median:104\n> Average:117\n> \n> Results for heart_beat:\n> Size:11\n> Median:120\n> Average:149\n> \n> Results for blood_sugar:\n> Size:4\n> Median:104\n> Average:111\n> \n> Results for body_temp:\n> Size:7\n> Median:111\n> Average:112\n> \n", 
+        "ptsEarned": 0.0, 
+        "ptsPossible": 4.0, 
+        "name": "Tricky", 
+        "description": "Now I'm just messing with you :)"
+      }, 
+      {
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
+        "ptsPossible": 1.0, 
+        "name": "Memory Leak", 
+        "description": "Checking for memory leaks..."
+      }
+    ], 
+    "revision": "80500", 
+    "checksum": "423e504c6572d4d57c4b4c5a11cb9667da6be7c1  wearable_server.c"
+  }, 
+  {
+    "timestamp": "2016-11-30 22:00:01.194712", 
+    "testcases": [
+      {
         "ptsPossible": 2.0, 
         "ptsEarned": 0.0, 
         "description": "Testing server with one wearable ...", 
@@ -46,10 +95,10 @@
       }
     ], 
     "checksum": "423e504c6572d4d57c4b4c5a11cb9667da6be7c1  wearable_server.c", 
-    "revision": "80500"
+    "revision": "81671"
   }, 
   {
-    "timestamp": "2016-11-30 22:00:01.194712", 
+    "timestamp": "2016-12-01 22:00:07.462088", 
     "testcases": [
       {
         "description": "Testing server with one wearable ...", 
@@ -94,11 +143,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "81671", 
+    "revision": "82448", 
     "checksum": "423e504c6572d4d57c4b4c5a11cb9667da6be7c1  wearable_server.c"
   }, 
   {
-    "timestamp": "2016-12-01 22:00:07.462088", 
+    "timestamp": "2016-12-02 22:01:02.606087", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..\nDiffing your output with the expected solution...\nRESULTS DIFFERED FROM SOLUTION!\n\n0a1,15\n> Results for heart_beat:\n> Size:1\n> Median:100\n> Average:100\n> \n> Results for blood_sugar:\n> Size:1\n> Median:104\n> Average:104\n> \n> Results for body_temp:\n> Size:1\n> Median:104\n> Average:104\n> \n", 
@@ -144,6 +193,6 @@
       }
     ], 
     "checksum": "423e504c6572d4d57c4b4c5a11cb9667da6be7c1  wearable_server.c", 
-    "revision": "82448"
+    "revision": "82798"
   }
 ]
