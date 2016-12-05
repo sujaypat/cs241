@@ -20,12 +20,10 @@ struct queue_t {
 	pthread_mutex_t m;
 };
 queue_t* queue;
-void* pusher(void *p)
-{
+void* pusher(void *p){
 	int i = (*(int*)p);
-	int j =0 ;
-	for(j = 0; j < i ;j++)
-	{
+	int j = 0;
+	for(j = 0; j < i ;j++){
 		int* i = malloc(sizeof(int));
 		*i = j;
 
@@ -36,15 +34,13 @@ void* pusher(void *p)
 
 	return NULL;
 }
-void* puller(void* p)
-{
+void* puller(void* p){
 	int i = (*(int*)p);
 	int n = (i/2) - 1;
-	int j =0 ;
+	int j = 0;
 	int sum = 0;
 	int predicted = 0;
-	for(j = 0; j < i ;j++)
-	{
+	for(j = 0; j < i ;j++){
 		//sum += *((int*)queue_pull(queue));
 		void * t = queue_pull(queue);
 		sum += *((int*)t);
@@ -56,16 +52,23 @@ void* puller(void* p)
 	return NULL;
 }
 int main(int argc, char **argv) {
-	pthread_t thread1, thread2,thread3;
-	int i = 5000;
-	int j = 2*i;
-	queue = queue_create(-2);
-	pthread_create(&thread1,NULL,pusher,(void*)(&i));
-	pthread_create(&thread2,NULL,pusher,(void*)(&i));
-	pthread_join(thread1,NULL);
-	pthread_join(thread2,NULL);
-	pthread_create(&thread3,NULL,puller,(void*)(&j));
-	pthread_join(thread3,NULL);
+	// pthread_t thread1, thread2,thread3;
+	// int i = 5000;
+	// int j = 2*i;
+	queue = queue_create(3);
+	queue_push(queue, (void *)1);
+	queue_push(queue, (void *)1);
+	printf("done pushing\n");
+	queue_pull(queue);
+	queue_pull(queue);
+	queue_pull(queue);
+	printf("did I make it\n");
+	// pthread_create(&thread1,NULL,pusher,(void*)(&i));
+	// pthread_create(&thread2,NULL,pusher,(void*)(&i));
+	// pthread_join(thread1,NULL);
+	// pthread_join(thread2,NULL);
+	// pthread_create(&thread3,NULL,puller,(void*)(&j));
+	// pthread_join(thread3,NULL);
 	queue_destroy(queue);
 	return 0;
 }
