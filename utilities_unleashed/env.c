@@ -3,111 +3,108 @@
 * CS 241 - Fall 2016
 */
 #include "format.h"
-#include <stdio.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include <errno.h>
-#include <ctype.h>
-#include <sys/types.h>
 #include <sys/wait.h>
-
-
-extern char **environ;
-
-char * replace_vars(char * input){
-	char *res = malloc(512);
-	// char *a = malloc(512);
-	char *beg;
-	// beg = calloc(512, 1);
-
-	char *var = NULL;
-	var = calloc(512, 1);
-
-	char *end;
-	end = calloc(strlen(input), 1);
-	// printf("29 input: %s\n", input);
-	beg = strsep(&input, "%%");
-	// printf("31 beg: %s\n", beg);
-	// printf("32 input: %s\n", input);
-	int i = 0;
-	while(*input){
-
-		// printf("beg at top of loop: %s\n", beg);
-		// printf("input at top of loop: %s\n", input);
-		if(!(isalpha(*input) || isdigit(*input) || *input == '_')){
-			// printf("37 var before replacement: %s\n", var);
-			// printf("input: %s\n", input);
-			char *endpart = strdup(input);
-			var = getenv(var);
-			// printf("38 var after replacement: %s\n", var);
-			// printf("42 beg before strcat:   %s\n", beg);
-			res = strcat(beg, var);
-			res = strcat(res, endpart);
-			// printf("input: %s\n", input);
-			// printf("46 res so far: %s\n", res);
-			// printf("47 endpart: %s\n", endpart);
-			// input = strdup(endpart);
-			// beg = strsep(&input, "%%");
-			// // printf("50 input: %s\n", input);
-			// input = strcat(input, beg);
-			// res = strcat(res, beg);
-			// printf("53 input: %s\n", input);
-			// printf("54 beg: %s\n", beg);
-			var = memset(var, 0, 128);
-			// input++;
-			i = 0;
-			continue;
-		}
-		// printf("60 %c\n", *input);
-		// printf("61 %s\n", input);
-		var[i++] = *input;
-		input ++;
-	}
-	// printf("res at the end:    %s\n", res);
-	return res;
-}
-
-char ** comma_split(char * input){
-	char ** res = NULL;
-	int i = 0;
-	char *token = NULL;
-	while ((token = strsep(&input, ",")) != NULL) {
-		res = realloc(res, (i + 1) * sizeof(char *));
-		// res[i] = malloc(sizeof(token));
-		res[i] = replace_vars(token);
-		i++;
-	}
-	return res;
-}
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+extern char** eviron;
 
 int main(int argc, char *argv[]) {
-	int status;
-
+	int env_status;
 	if(argc == 1){
 		for (char **env = environ; *env; ++env){
 			printf("%s\n", *env);
 		}
+		return 0;
 	}
+	if(argc < 3){
+		print_env_usage();
+		exit(1);
+	}
+	pid_t env_fork = fork();
+	if(env_fork == 0){
+		// actual code
+		// fprintf(stderr, "fuck me sideways\n");
+		char *env_args = strdup(argv[1]);
+		char *temp = strsep(&env_args, ",");
 
-	// if parent, fork for env changes, fork for command after
-	// 1 arg for env, 2 args for command
+		while(temp != NULL){
+			// fprintf(stderr, "temp: %s\n", temp);
+			char *tempcopy = strdup(temp);
+			if(strchr(temp, '%') == NULL){
+				// fprintf(stderr, "putting temp in env\n");
+				putenv(tempcopy);
+			}
+			else{
+				int len = strlen(tempcopy) + 1;
+				int curr_index = 0;
+				char *res = calloc(len, 1);
+
+				while(*tempcopy != '='){
+					res[curr_index] = *tempcopy;
+					curr_index++;
+					tempcopy++;
+				}
+				res[curr_index] = *tempcopy;
+				tempcopy++;
+				curr_index++;
+
+				while(*tempcopy){
+					if(*tempcopy == '%'){
+						tempcopy++;
+						int iter = 0;
+						char* env_entry = calloc(len, 1);
+						while(isalpha(*tempcopy) || isdigit(*tempcopy) || *tempcopy == '_'){
+							env_entry[iter] = *tempcopy;
+							iter++;
+							tempcopy++;
+						}
+						len -= (iter + 1);
+						char* value = getenv(env_entry);
+						if(value){
+							len += strlen(value);
+						}
+						else value = "";
+
+						free(env_entry);
+						char * orig = strdup(res);
+						// fprintf(stderr, "1len: %d res: %s value: %s\n", len, res, value);
+						res = calloc(len + 100, 1);
+
+						strcpy(res, orig);
+						free(orig);
+						// fprintf(stderr, "2len: %d res: %s value: %s\n", len, res, value);
+						strcat(res, value);
+						curr_index += strlen(value);
+					}
+					else{
+						res[curr_index] = *tempcopy;
+						tempcopy++;
+						curr_index++;
+					}
+				}
+				res[curr_index] = 0;
+				putenv(res);
+			}
+			temp = strsep(&env_args, ",");
+		}
+
+		free(env_args);
+
+		execvp(argv[2], argv + 2);
+		perror("fuck: ");
+		print_exec_failed();
+	}
+	else if(env_fork > 0){
+		// parent
+		waitpid(env_fork, &env_status, 0);
+	}
 	else{
-		pid_t p = fork();
-		if(p == 0){
-			waitpid(p, &status, 0);
-		}
-		else if(p > 0){
-			char **env_changes = comma_split(argv[1]);
-			execvpe(argv[2], argv + 2, env_changes);
-			print_exec_failed();
-			exit(errno);
-		}
-		else{
-			print_fork_failed();
-			exit(errno);
-		}
+		print_fork_failed();
+		exit(errno);
 	}
 	return 0;
 }
