@@ -191,14 +191,14 @@ int wearable_server(const char *wearable_port, const char *request_port) {
 	pthread_create(&request_thread, NULL, user_request_thread, &request_socket);
 	close(request_server_fd);
 
-	wearable_threads = calloc(200, sizeof(thread_data *));
+	wearable_threads = calloc(600, sizeof(thread_data *));
 
 	// TODO accept continous requests on the wearable port
 	//sessionEnd from chatroom
 	while(!sessionEnd) {
 		int client = accept(wearable_server_fd, NULL, NULL);
 		if(client == -1) break;
-		thread_data * td = malloc(sizeof(thread_data));
+		thread_data *td = calloc(sizeof(thread_data), 1);
 		td->fd = client;
 		td->timestamp = LONG_MAX;
 		pthread_mutex_lock(&vec_mutex);
@@ -206,7 +206,7 @@ int wearable_server(const char *wearable_port, const char *request_port) {
 		pthread_mutex_unlock(&vec_mutex);
 		int retval = pthread_create(&(td->thread), NULL, wearable_processor_thread, td);
 		if(retval != 0) {
-			fprintf(stderr, "Wearable processor thread creation failed!\n");
+			fprintf(stderr, "Rip\n");
 		}
 	}
 	// TODO join all threads we spawned from the wearables.
