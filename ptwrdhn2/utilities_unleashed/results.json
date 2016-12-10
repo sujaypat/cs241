@@ -3,6 +3,83 @@
     "timestamp": "2016-09-10 00:00:00.205191", 
     "testcases": [
       {
+        "description": "Test time usage", 
+        "ptsEarned": 0.0, 
+        "log": "Did not find correct output", 
+        "name": "time_test_usage", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test env usage", 
+        "ptsEarned": 0.0, 
+        "log": "Did not find correct output", 
+        "name": "env_test_usage", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test time exec failure", 
+        "ptsEarned": 0.0, 
+        "log": "Did not find correct output", 
+        "name": "time_test_exec", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test env exec failure", 
+        "ptsEarned": 0.0, 
+        "log": "Did not find correct output", 
+        "name": "env_test_exec", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test time", 
+        "ptsEarned": 0.0, 
+        "log": "Invalid reported time", 
+        "name": "time_test", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test env", 
+        "ptsEarned": 0.0, 
+        "log": "Something Failed, report to Autograding staff", 
+        "name": "env_test", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test env", 
+        "ptsEarned": 0.0, 
+        "log": "Did not find correct output", 
+        "name": "env_test_one", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test env", 
+        "ptsEarned": 0.0, 
+        "log": "Something Failed, report to Autograding staff", 
+        "name": "env_test_two", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test env referencing variable", 
+        "ptsEarned": 0.0, 
+        "log": "Something Failed, report to Autograding staff", 
+        "name": "env_test_ref", 
+        "ptsPossible": 1.0
+      }, 
+      {
+        "description": "Test env referencing nonexistence variable", 
+        "ptsEarned": 0.0, 
+        "log": "Something Failed, report to Autograding staff", 
+        "name": "env_test_ref_empty", 
+        "ptsPossible": 1.0
+      }
+    ], 
+    "revision": "12194", 
+    "checksum": "034a86d0649e74b23984b18d419f41c4176aea32  env.c\n1649c787d7f52f05cd78940e3ecc3760b07764ac  time.c"
+  }, 
+  {
+    "timestamp": "2016-09-10 20:40:00.114211", 
+    "testcases": [
+      {
         "log": "Did not find correct output", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
@@ -38,7 +115,7 @@
         "description": "Test time"
       }, 
       {
-        "log": "Something Failed, report to Autograding staff", 
+        "log": "Did not find correct output", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test", 
@@ -52,21 +129,21 @@
         "description": "Test env"
       }, 
       {
-        "log": "Something Failed, report to Autograding staff", 
+        "log": "Did not find correct output", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test_two", 
         "description": "Test env"
       }, 
       {
-        "log": "Something Failed, report to Autograding staff", 
+        "log": "Did not find correct output", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test_ref", 
         "description": "Test env referencing variable"
       }, 
       {
-        "log": "Something Failed, report to Autograding staff", 
+        "log": "Did not find correct output", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test_ref_empty", 
@@ -74,10 +151,10 @@
       }
     ], 
     "checksum": "034a86d0649e74b23984b18d419f41c4176aea32  env.c\n1649c787d7f52f05cd78940e3ecc3760b07764ac  time.c", 
-    "revision": "12194"
+    "revision": "12702"
   }, 
   {
-    "timestamp": "2016-09-10 20:40:00.114211", 
+    "timestamp": "2016-09-11 00:00:00.573402", 
     "testcases": [
       {
         "ptsPossible": 1.0, 
@@ -150,11 +227,11 @@
         "log": "Did not find correct output"
       }
     ], 
-    "revision": "12702", 
+    "revision": "13069", 
     "checksum": "034a86d0649e74b23984b18d419f41c4176aea32  env.c\n1649c787d7f52f05cd78940e3ecc3760b07764ac  time.c"
   }, 
   {
-    "timestamp": "2016-09-11 00:00:00.573402", 
+    "timestamp": "2016-09-12 00:00:00.578407", 
     "testcases": [
       {
         "description": "Test time usage", 
@@ -193,8 +270,8 @@
       }, 
       {
         "description": "Test env", 
-        "ptsEarned": 0.0, 
-        "log": "Did not find correct output", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "env_test", 
         "ptsPossible": 1.0
       }, 
@@ -227,21 +304,21 @@
         "ptsPossible": 1.0
       }
     ], 
-    "checksum": "034a86d0649e74b23984b18d419f41c4176aea32  env.c\n1649c787d7f52f05cd78940e3ecc3760b07764ac  time.c", 
-    "revision": "13069"
+    "checksum": "3b26dd87f3c383af93afc5a821ab580cd07c764f  env.c\n589721845cd9e3c641359f8a9c03f12818bf5190  time.c", 
+    "revision": "14320"
   }, 
   {
-    "timestamp": "2016-09-12 00:00:00.578407", 
+    "timestamp": "2016-09-13 00:00:00.575210", 
     "testcases": [
       {
-        "log": "Did not find correct output", 
-        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
         "ptsPossible": 1.0, 
         "name": "time_test_usage", 
         "description": "Test time usage"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test_usage", 
@@ -255,60 +332,60 @@
         "description": "Test time exec failure"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test_exec", 
         "description": "Test env exec failure"
       }, 
       {
-        "log": "Invalid reported time", 
-        "ptsEarned": 0.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 1.0, 
         "ptsPossible": 1.0, 
         "name": "time_test", 
         "description": "Test time"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
-        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n", 
+        "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test", 
         "description": "Test env"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test_one", 
         "description": "Test env"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test_two", 
         "description": "Test env"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test_ref", 
         "description": "Test env referencing variable"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n", 
         "ptsEarned": 0.0, 
         "ptsPossible": 1.0, 
         "name": "env_test_ref_empty", 
         "description": "Test env referencing nonexistence variable"
       }
     ], 
-    "revision": "14320", 
-    "checksum": "3b26dd87f3c383af93afc5a821ab580cd07c764f  env.c\n589721845cd9e3c641359f8a9c03f12818bf5190  time.c"
+    "revision": "16163", 
+    "checksum": "5f037a3170ae7fa001a50e6505a08257099b9e38  env.c\n64d49e20d1aa9d06e99f198305abaeefbc92f4c6  time.c"
   }, 
   {
-    "timestamp": "2016-09-13 00:00:00.575210", 
+    "timestamp": "2016-09-14 00:00:00.597500", 
     "testcases": [
       {
         "ptsPossible": 1.0, 
@@ -322,7 +399,7 @@
         "ptsEarned": 0.0, 
         "description": "Test env usage", 
         "name": "env_test_usage", 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n"
+        "log": "Did not find correct output"
       }, 
       {
         "ptsPossible": 1.0, 
@@ -333,10 +410,10 @@
       }, 
       {
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "description": "Test env exec failure", 
         "name": "env_test_exec", 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n"
+        "log": "Trying to compile your code...\nSuccessfully compiled your code.."
       }, 
       {
         "ptsPossible": 1.0, 
@@ -350,42 +427,42 @@
         "ptsEarned": 0.0, 
         "description": "Test env", 
         "name": "env_test", 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n"
+        "log": "Did not find correct output"
       }, 
       {
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "description": "Test env", 
         "name": "env_test_one", 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n"
+        "log": "Did not find correct output"
       }, 
       {
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "description": "Test env", 
         "name": "env_test_two", 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n"
+        "log": "Did not find correct output"
       }, 
       {
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "description": "Test env referencing variable", 
         "name": "env_test_ref", 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n"
+        "log": "Did not find correct output"
       }, 
       {
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "description": "Test env referencing nonexistence variable", 
         "name": "env_test_ref_empty", 
-        "log": "Trying to compile your code...\nFAILED TO COMPILE!\nenv.c:28:2: error: expected expression\n        else{\n        ^\nenv.c:17:26: warning: unused parameter 'argv' [-Wunused-parameter]\nint main(int argc, char *argv[]) {\n                         ^\n1 warning and 1 error generated.\nmake: *** [.objs/env-release.o] Error 1\n"
+        "log": "Did not find correct output"
       }
     ], 
-    "checksum": "5f037a3170ae7fa001a50e6505a08257099b9e38  env.c\n64d49e20d1aa9d06e99f198305abaeefbc92f4c6  time.c", 
-    "revision": "16163"
+    "checksum": "3b6af8666eb30172b2dd13bfd55e39fcd5ce4e3b  env.c\nc46e804d0ff039da914cd63c4fe913818c1ec9db  time.c", 
+    "revision": "19328"
   }, 
   {
-    "timestamp": "2016-09-14 00:00:00.597500", 
+    "timestamp": "2016-09-15 00:00:00.653157", 
     "testcases": [
       {
         "description": "Test time usage", 
@@ -403,15 +480,15 @@
       }, 
       {
         "description": "Test time exec failure", 
-        "ptsEarned": 0.0, 
-        "log": "Did not find correct output", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "time_test_exec", 
         "ptsPossible": 1.0
       }, 
       {
         "description": "Test env exec failure", 
-        "ptsEarned": 1.0, 
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "ptsEarned": 0.0, 
+        "log": "Did not find correct output", 
         "name": "env_test_exec", 
         "ptsPossible": 1.0
       }, 
@@ -424,8 +501,8 @@
       }, 
       {
         "description": "Test env", 
-        "ptsEarned": 0.0, 
-        "log": "Did not find correct output", 
+        "ptsEarned": 1.0, 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "name": "env_test", 
         "ptsPossible": 1.0
       }, 
@@ -458,11 +535,11 @@
         "ptsPossible": 1.0
       }
     ], 
-    "revision": "19328", 
-    "checksum": "3b6af8666eb30172b2dd13bfd55e39fcd5ce4e3b  env.c\nc46e804d0ff039da914cd63c4fe913818c1ec9db  time.c"
+    "revision": "21563", 
+    "checksum": "88a5c3fc32c6d17baa4e129d65cd5ffcf1bcaa94  env.c\nd3ad93202bcba84ba29d894c5fbeac4135ce068d  time.c"
   }, 
   {
-    "timestamp": "2016-09-15 00:00:00.653157", 
+    "timestamp": "2016-12-09 23:31:42.791093", 
     "testcases": [
       {
         "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
@@ -472,9 +549,9 @@
         "description": "Test time usage"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "env_test_usage", 
         "description": "Test env usage"
       }, 
@@ -486,9 +563,9 @@
         "description": "Test time exec failure"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "env_test_exec", 
         "description": "Test env exec failure"
       }, 
@@ -500,42 +577,42 @@
         "description": "Test time"
       }, 
       {
-        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
+        "log": "Something Failed, report to Autograding staff", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 1.0, 
+        "ptsEarned": 0.0, 
         "name": "env_test", 
         "description": "Test env"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Trying to compile your code...\nSuccessfully compiled your code..", 
         "ptsPossible": 1.0, 
-        "ptsEarned": 0.0, 
+        "ptsEarned": 1.0, 
         "name": "env_test_one", 
         "description": "Test env"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Something Failed, report to Autograding staff", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "env_test_two", 
         "description": "Test env"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Something Failed, report to Autograding staff", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "env_test_ref", 
         "description": "Test env referencing variable"
       }, 
       {
-        "log": "Did not find correct output", 
+        "log": "Something Failed, report to Autograding staff", 
         "ptsPossible": 1.0, 
         "ptsEarned": 0.0, 
         "name": "env_test_ref_empty", 
         "description": "Test env referencing nonexistence variable"
       }
     ], 
-    "checksum": "88a5c3fc32c6d17baa4e129d65cd5ffcf1bcaa94  env.c\nd3ad93202bcba84ba29d894c5fbeac4135ce068d  time.c", 
-    "revision": "21563"
+    "checksum": "7e59a613f5c0e33b85ad71dbbae3f2bcb2870814  env.c\nd3ad93202bcba84ba29d894c5fbeac4135ce068d  time.c", 
+    "revision": "87381"
   }
 ]
